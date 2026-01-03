@@ -1,0 +1,7 @@
+function Button(name) {
+
+  console.log("Hello", name)
+
+}
+
+Button("Mohan")

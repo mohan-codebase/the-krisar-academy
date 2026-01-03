@@ -1,0 +1,26 @@
+/* Josepin Sans */
+@font-face {
+  font-family: 'JosefinSans';
+  font-weight: 400;
+  src: url('../font/JosefinSans-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Outfit  */
+@font-face {
+  font-family: 'Outfit';
+  font-weight: 400;
+  src: url('../font/Outfit-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-main: 'JosefinSans';
+  --font-sub: 'Outfit';
+}
+
+body {
+  font-family: var(--font-main);
+}

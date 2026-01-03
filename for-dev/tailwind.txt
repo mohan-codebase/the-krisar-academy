@@ -1,0 +1,4 @@
+npx tailwindcss init -p
+
+this is for create taliwind.config.js file and vite.config.js file
+
