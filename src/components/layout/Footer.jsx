@@ -93,7 +93,7 @@ const Footer = () => {
                 {/* Footer Bottom */}
                 <div className="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-sm">
-                        Copyright © 2025 All Rights Reserved by The Krisar Academy.
+                        Copyright © 2026 All Rights Reserved by The Krisar Academy.
                     </p>
                     <div className="flex items-center gap-6">
                         <a href="#" className="hover:text-brand-secondary transition-colors" aria-label="Instagram">
