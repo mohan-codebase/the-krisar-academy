@@ -184,7 +184,7 @@ const Banner = () => {
 
                                             {/* CTA Button */}
                                             <Button
-                                                className="flex items-center gap-2 hover:bg-yellow-400 transition-colors cursor-pointer mt-4"
+                                                className="inline-flex items-center gap-2 hover:bg-yellow-400 transition-colors cursor-pointer mt-4"
                                             >
                                                 CALL NOW <ArrowRight size={20} />
                                             </Button>

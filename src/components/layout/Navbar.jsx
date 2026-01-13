@@ -17,9 +17,9 @@ const Navbar = () => {
       <div className='bg-transparent py-3 absolute w-full left-0 z-50'>
         <div className='max-w-[1440px] mx-auto w-full flex items-center justify-between px-4'>
           {/* logo */}
-          <div>
+          <a href='/'>
             <img src={logo} alt="logo" className="w-32 md:w-auto" />
-          </div>
+          </a>
 
           {/* Desktop Menu */}
           <div className="hidden md:block">
@@ -29,13 +29,14 @@ const Navbar = () => {
               <li><Link to="/facilities" className="hover:text-brand-secondary transition-colors">FACILITIES</Link></li>
               <li><Link to="/academics" className="hover:text-brand-secondary transition-colors">ACADEMICS</Link></li>
               <li><Link to="/beyond-academics" className="hover:text-brand-secondary transition-colors">BEYOND ACADEMICS</Link></li>
+              <li><Link to="/gallery" className="hover:text-brand-secondary transition-colors">GALLERY</Link></li>
               <li><Link to="/blog" className="hover:text-brand-secondary transition-colors">BLOG</Link></li>
             </ul>
           </div>
 
           {/* Desktop Button */}
           <div className="hidden md:block">
-            <Button onclick={() => { console.log("contact"); }}>CONTACT</Button>
+            <Button to="/contact">CONTACT US</Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -57,9 +58,10 @@ const Navbar = () => {
               <li><Link to="/facilities" onClick={() => setIsMenuOpen(false)}>FACILITIES</Link></li>
               <li><Link to="/academics" onClick={() => setIsMenuOpen(false)}>ACADEMICS</Link></li>
               <li><Link to="/beyond-academics" onClick={() => setIsMenuOpen(false)}>BEYOND ACADEMICS</Link></li>
+              <li><Link to="/gallery" onClick={() => setIsMenuOpen(false)}>GALLERY</Link></li>
               <li><Link to="/blog" onClick={() => setIsMenuOpen(false)}>BLOG</Link></li>
             </ul>
-            <Button onclick={() => { console.log("contact"); setIsMenuOpen(false); }}>CONTACT</Button>
+            <Button to="/contact" onClick={() => setIsMenuOpen(false)}>CONTACT US</Button>
           </div>
         )}
       </div>

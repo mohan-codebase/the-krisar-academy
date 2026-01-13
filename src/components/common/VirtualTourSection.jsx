@@ -12,8 +12,9 @@ const VirtualTourSection = () => {
                 style={{ backgroundImage: `url(${bgImage})` }}
             >
                 {/* Heavy Dark Blue Overlay */}
-                <div className="absolute inset-0 bg-brand-primary/90 mix-blend-multiply"></div>
-                <div className="absolute inset-0 bg-brand-primary/80"></div>
+                {/* Overlay with reduced opacity to let image show through */}
+                <div className="absolute inset-0 bg-brand-primary/10 mix-blend-multiply"></div>
+
             </div>
 
             {/* Content Container */}
@@ -43,6 +44,8 @@ const VirtualTourSection = () => {
                     >
                         START VIRTUAL TOUR <ArrowRight size={20} />
                     </Button>
+
+
                 </div>
 
             </div>
