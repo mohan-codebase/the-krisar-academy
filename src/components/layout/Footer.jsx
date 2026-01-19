@@ -11,11 +11,11 @@ const Footer = () => {
                         <div className="mb-6">
                             <img src={logo} alt="The Krisar Academy" className="h-auto w-48" />
                         </div>
-                        <div className="text-lg leading-relaxed">
+                        <p className="text-lg leading-relaxed">
                             The advanced visionary step<br />
                             towards the future of Education.
                             <div className="w-16 h-1 bg-brand-secondary mt-2"></div>
-                        </div>
+                        </p>
                     </div>
 
                     {/* Column 2: Address */}
