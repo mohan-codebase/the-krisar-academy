@@ -65,10 +65,10 @@ const WhyChooseUs = () => {
                 setLayoutParams({ radius: 320, cardAngle: 28 });
             } else if (width < 1024) {
                 // Tablet
-                setLayoutParams({ radius: 500, cardAngle: 30 });
+                setLayoutParams({ radius: 450, cardAngle: 25 });
             } else {
                 // Desktop
-                setLayoutParams({ radius: 700, cardAngle: 35 });
+                setLayoutParams({ radius: 600, cardAngle: 25 });
             }
         };
 
