@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
     Leaf,
     Baby,
@@ -15,35 +15,35 @@ const features = [
     {
         icon: Stethoscope,
         type: 'component',
-        title: <p>Hygienic <span className='text-brand-secondary font-bold'>Environment</span></p>,
+        title: <span>Hygienic <span className='text-brand-secondary font-bold'>Environment</span></span>,
         description: "Clean, Safe & Healthy Campus",
         color: "text-blue-400"
     },
     {
         icon: Leaf,
         type: 'component',
-        title: <p>Green <span className='text-brand-secondary font-bold'>Campus</span></p>,
+        title: <span>Green <span className='text-brand-secondary font-bold'>Campus</span></span>,
         description: "Learn in Nature's Calm",
         color: "text-green-400"
     },
     {
         icon: Baby,
         type: 'component',
-        title: <p>Montessori <span className='text-brand-secondary font-bold'>Kindergarten</span></p>,
+        title: <span>Montessori <span className='text-brand-secondary font-bold'>Kindergarten</span></span>,
         description: "Early Learning with Trained Teachers",
         color: "text-yellow-400"
     },
     {
         icon: Building2,
         type: 'component',
-        title: <p>Indoor <span className='text-brand-secondary font-bold'>Auditorium</span></p>,
+        title: <span>Indoor <span className='text-brand-secondary font-bold'>Auditorium</span></span>,
         description: "1000-Seat Space for Events & Play",
         color: "text-purple-400"
     },
     {
         icon: Trophy,
         type: 'component',
-        title: <p>Competitive <span className='text-brand-secondary font-bold'>Exams</span></p>,
+        title: <span>Competitive <span className='text-brand-secondary font-bold'>Exams</span></span>,
         description: "Foundation for IIT-JEE, NEET & More",
         color: "text-red-400"
     }
@@ -51,8 +51,35 @@ const features = [
 
 const WhyChooseUs = () => {
     const [activeIndex, setActiveIndex] = useState(2); // Start with middle item
-    const radius = 700; // Radius of the circle
-    const cardAngle = 35; // Angle between cards
+    // Responsive state for layout math
+    const [layoutParams, setLayoutParams] = useState({
+        radius: 700,
+        cardAngle: 35
+    });
+
+    useEffect(() => {
+        const handleResize = () => {
+            const width = window.innerWidth;
+            if (width < 768) {
+                // Mobile
+                setLayoutParams({ radius: 320, cardAngle: 28 });
+            } else if (width < 1024) {
+                // Tablet
+                setLayoutParams({ radius: 500, cardAngle: 30 });
+            } else {
+                // Desktop
+                setLayoutParams({ radius: 700, cardAngle: 35 });
+            }
+        };
+
+        // Initial call
+        handleResize();
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    const { radius, cardAngle } = layoutParams;
 
     const handlePrev = () => {
         setActiveIndex((prev) => (prev > 0 ? prev - 1 : features.length - 1));
@@ -63,7 +90,7 @@ const WhyChooseUs = () => {
     };
 
     return (
-        <section className="bg-[url('src/assets/images/home/WhyChooseUs/bg.avif')] bg-cover bg-center md:py-20 py-10 relative overflow-hidden min-h-[600px] text-white">
+        <section className="bg-[url('src/assets/images/home/WhyChooseUs/bg.avif')] bg-cover bg-center md:py-20 py-10 relative overflow-hidden min-h-[500px] md:min-h-[600px] text-white">
             <div className="max-w-[1440px] mx-auto px-4 relative z-10 flex flex-col items-center">
 
                 {/* Header */}
@@ -81,17 +108,10 @@ const WhyChooseUs = () => {
                 </div>
 
                 {/* Curved Carousel Container */}
-                <div className="relative w-full md:h-[400px] h-[300px] flex justify-center mt-10">
+                <div className="relative w-full md:h-[400px] h-[300px] flex justify-center mt-4 md:mt-10">
                     {/* The "Wheel" */}
                     <div
                         className="relative w-full h-full flex justify-center transition-transform duration-500 ease-out"
-                        style={{
-                            // We don't rotate the container itself for this effect, 
-                            // instead we position items relative to a center point far below.
-                            // Actually, rotating the container to counter-rotate cards is a valid strategy,
-                            // OR we can calculate positions based on active index.
-                            // Let's go with calculating absolute positions for simpler "React" control.
-                        }}
                     >
                         {features.map((feature, index) => {
                             // Calculate angle relative to active index
@@ -101,7 +121,9 @@ const WhyChooseUs = () => {
 
                             // Calculate opacity/scale/visibility
                             const isActive = index === activeIndex;
-                            const isVisible = Math.abs(offset) <= 2; // Only show close neighbors
+                            // On mobile we might want to be stricter with visibility if things get crowded, 
+                            // but radius adjustment usually handles it.
+                            const isVisible = Math.abs(offset) <= 2;
 
                             return (
                                 <div
@@ -118,7 +140,6 @@ const WhyChooseUs = () => {
                                         // We want the point to be far below the card.
                                         transformOrigin: `50% ${radius}px`,
                                         transform: `translateX(-50%) rotate(${angle}deg)`,
-                                        // Ensure standard stacking context logic doesn't break origin
                                     }}
                                     onClick={() => setActiveIndex(index)}
                                 >
