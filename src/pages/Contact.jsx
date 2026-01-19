@@ -79,7 +79,7 @@ const Contact = () => {
                         {/* Map Placeholder */}
                         <div className="w-full h-64 bg-gray-800 rounded-xl overflow-hidden border border-white/10 relative group">
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3893.670268593452!2d79.319793074541!3d12.603378987680715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad35a5136fffff%3A0x62953047d96aae9c!2sThe%20Krisar%20Academy!5e0!3m2!1sen!2sin!4v1710924519999!5m2!1sen!2sin"
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3890.8881124565596!2d79.311696!3d12.785774!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad3241faaaaa83%3A0xdc48c341af23cc33!2sThe%20Krisar%20Academy%20-%20CBSE%20Affiliation%20NO%3A1931107!5e0!3m2!1sen!2sus!4v1768822858161!5m2!1sen!2sus"
                                 width="100%"
                                 height="100%"
                                 style={{ border: 0 }}
