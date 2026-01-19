@@ -4,12 +4,17 @@ import Button from '../../ui/Button';
 import { blogData } from '../../../data/blogData.jsx';
 import { Link } from 'react-router-dom';
 
+import bgImage from '../../../assets/images/home/NewsUpdates/bg.avif';
+
 const NewsUpdates = () => {
     // Take the first 3 items from blogData
     const newsItems = blogData.slice(0, 3);
 
     return (
-        <section className="bg-[url('src/assets/images/home/NewsUpdates/bg.avif')] bg-cover bg-center py-20 relative overflow-hidden text-center text-white">
+        <section
+            className="bg-cover bg-center py-20 relative overflow-hidden text-center text-white"
+            style={{ backgroundImage: `url(${bgImage})` }}
+        >
             <div className="max-w-[1440px] mx-auto px-4 md:px-8 flex flex-col items-center">
 
                 {/* Header */}

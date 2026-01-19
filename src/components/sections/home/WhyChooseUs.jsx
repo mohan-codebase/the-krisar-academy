@@ -9,6 +9,8 @@ import {
     ArrowRight,
     GraduationCap
 } from 'lucide-react';
+import bgImage from '../../../assets/images/home/WhyChooseUs/bg.avif';
+
 // import Button from '../../ui/Button';
 
 const features = [
@@ -90,7 +92,10 @@ const WhyChooseUs = () => {
     };
 
     return (
-        <section className="bg-[url('src/assets/images/home/WhyChooseUs/bg.avif')] bg-cover bg-center md:py-20 py-10 relative overflow-hidden min-h-[500px] md:min-h-[600px] text-white">
+        <section
+            className="bg-cover bg-center md:py-20 py-10 relative overflow-hidden min-h-[500px] md:min-h-[600px] text-white"
+            style={{ backgroundImage: `url(${bgImage})` }}
+        >
             <div className="max-w-[1440px] mx-auto px-4 relative z-10 flex flex-col items-center">
 
                 {/* Header */}
@@ -129,7 +134,7 @@ const WhyChooseUs = () => {
                                 <div
                                     key={index}
                                     className={`absolute top-0 left-1/2 w-64 md:w-72 p-6 rounded-2xl border transition-all duration-500 ease-out flex flex-col items-center text-center gap-4 cursor-pointer
-                                        ${isActive
+                                        \${isActive
                                             ? 'bg-white/0 border-brand-secondary shadow-[0_0_30px_rgba(255,165,0,0.2)] z-20 scale-100 opacity-100'
                                             : 'bg-white/5 border-white/10 z-10 scale-90 opacity-60 hover:opacity-80'
                                         }
@@ -138,18 +143,18 @@ const WhyChooseUs = () => {
                                         // Mathematics of the arc:
                                         // transform-origin is point around which we rotate. 
                                         // We want the point to be far below the card.
-                                        transformOrigin: `50% ${radius}px`,
-                                        transform: `translateX(-50%) rotate(${angle}deg)`,
+                                        transformOrigin: `50% \${radius}px`,
+                                        transform: `translateX(-50%) rotate(\${angle}deg)`,
                                     }}
                                     onClick={() => setActiveIndex(index)}
                                 >
                                     <div
-                                        className={`p-4 rounded-full ${feature.color} mb-2 flex items-center justify-center transition-transform duration-500 ease-out`}
-                                        style={{ transform: `rotate(${-angle}deg)` }}
+                                        className={`p-4 rounded-full \${feature.color} mb-2 flex items-center justify-center transition-transform duration-500 ease-out`}
+                                        style={{ transform: `rotate(\${-angle}deg)` }}
                                     >
                                         <feature.icon size={32} />
                                     </div>
-                                    <h3 className={`text-lg font-bold ${isActive ? 'text-white' : 'text-gray-300'}`}>
+                                    <h3 className={`text-lg font-bold \${isActive ? 'text-white' : 'text-gray-300'}`}>
                                         {feature.title}
                                     </h3>
                                     <p className="text-sm text-gray-400">
