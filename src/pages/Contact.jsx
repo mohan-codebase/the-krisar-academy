@@ -3,17 +3,17 @@ import React from 'react';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import Button from '../components/ui/Button';
 import PageHero from '../components/common/PageHero';
-import bgImage from '../assets/images/PageHero/PageHero.avif';
+// import bgImage from '../assets/images/PageHero/PageHero.avif';
 
 const Contact = () => {
     return (
         <div className="min-h-screen bg-[#0B1221] text-white">
             {/* Hero Section */}
-            <PageHero h1="We're here to help 24/7" title='Contact Us' bgImage={bgImage} />
+            <PageHero h1="We're here to help 24/7" title='Contact Us' />
 
             {/* Content Section */}
-            <section className="max-w-7xl mx-auto px-4 md:px-8 pb-20">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+            <section className="max-w-7xl mx-auto px-4 md:px-8 pb-20 md:p-10 ">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 border  border-white/50 p-10 rounded-xl">
 
                     {/* Left Column: Contact Info */}
                     <div className="space-y-12">
@@ -27,6 +27,26 @@ const Contact = () => {
                         </div>
 
                         <div className="space-y-6">
+                            <div className="space-y-4">
+                                <h4 className="text-xl font-semibold text-yellow-400">Address</h4>
+                                <div className="flex items-start gap-3">
+                                    <MapPin className="w-5 h-5 text-gray-400 mt-1 shrink-0" />
+                                    <div className="text-gray-300">
+                                        <a
+                                            href="https://www.google.com/maps?ll=12.785774,79.311696&z=17&t=m&hl=en-US&gl=US&mapclient=embed&cid=15873151573545962547"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="hover:text-white transition-colors"
+                                        >
+                                            <p>#136/6, Arcot to Arani Main Road,</p>
+                                            <p>Paradarami Village, Arcot Taluk,</p>
+                                            <p>Ranipet District, Pin - 632512,</p>
+                                            <p>Tamil Nadu, India</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
                             <h4 className="text-xl font-semibold text-yellow-400">Contact Us</h4>
 
                             <div className="space-y-4">
