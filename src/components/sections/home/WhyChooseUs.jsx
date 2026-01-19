@@ -63,7 +63,7 @@ const WhyChooseUs = () => {
     };
 
     return (
-        <section className="bg-[url('src/assets/images/home/WhyChooseUs/bg.avif')] bg-cover bg-center md:py-20 py-10 relative overflow-hidden min-h-[600px] text-white">
+        <section className="bg-[url('./assets/images/home/WhyChooseUs/bg.avif')] bg-cover bg-center md:py-20 py-10 relative overflow-hidden min-h-[600px] text-white">
             <div className="max-w-[1440px] mx-auto px-4 relative z-10 flex flex-col items-center">
 
                 {/* Header */}
