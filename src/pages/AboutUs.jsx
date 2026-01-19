@@ -123,11 +123,11 @@ const AboutUs = () => {
 
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
                         {valuesData.map((val, idx) => (
-                            <div key={idx} className="bg-[#151E38] border border-white/10 p-6 rounded-xl flex items-center gap-4 hover:border-brand-secondary/50 transition-colors group">
-                                <div className="p-3 bg-white/5 rounded-lg group-hover:bg-brand-secondary/20 transition-colors">
-                                    <val.icon size={24} className="text-brand-secondary" />
+                            <div key={idx} className="bg-transparent border border-white/10 p-3 md:p-6 rounded-xl flex items-center gap-3 md:gap-4 hover:border-brand-secondary/50 transition-colors group">
+                                <div className="p-2 md:p-3 bg-white/5 rounded-lg group-hover:bg-brand-secondary/20 transition-colors shrink-0">
+                                    <val.icon className="text-brand-secondary w-5 h-5 md:w-6 md:h-6" />
                                 </div>
-                                <span className="font-semibold text-lg">{val.title}</span>
+                                <span className="font-semibold text-sm md:text-lg break-words">{val.title}</span>
                             </div>
                         ))}
                     </div>
