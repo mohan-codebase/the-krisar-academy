@@ -26,42 +26,42 @@ import img6 from '../../../assets/images/home/Facilities/Rectangle 4520 (1).png'
 const facilities = [
     {
         id: 1,
-        title: <p className='underline'>Academics</p>,
+        title: <p className=''>Academics</p>,
         icon: BookOpen,
         // color: "from-blue-500 to-blue-700",
         image: img1
     },
     {
         id: 2,
-        title: <p className='underline'>Beyond Academics</p>,
+        title: <p className=''>Beyond Academics</p>,
         icon: Trophy,
         // color: "from-pink-500 to-pink-700",
         image: img5
     },
     {
         id: 3,
-        title: <p className='underline'>Campus Life</p>,
+        title: <p className=''>Campus Life</p>,
         icon: Library,
         // color: "from-green-500 to-green-700",
         image: img2
     },
     {
         id: 4,
-        title: <p className='underline'>Transport</p>,
+        title: <p className=''>Transport</p>,
         icon: FlaskConical,
         color: "from-purple-500 to-purple-700",
         image: img3
     },
     {
         id: 5,
-        title: <p className='underline'>Qualified Teachers</p>,
+        title: <p className=''>Qualified Teachers</p>,
         icon: Bus,
         // color: "from-yellow-500 to-orange-700",
         image: img6
     },
     {
         id: 6,
-        title: <p className='underline'>Modern Library</p>,
+        title: <p className=''>Modern Library</p>,
         icon: Drumstick,
         // color: "from-red-500 to-pink-700",
         image: img4
@@ -124,8 +124,8 @@ const Facilities = () => {
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
 
                             {/* Content */}
-                            <div className={`absolute bottom-0 left-0 w-full p-6 flex flex-col justify-end transition-all duration-500
-                                ${activeId === facility.id ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}
+                            <div className={`absolute bottom-0 left-0 w-full md:p-6 p-3 flex flex-col justify-end transition-all duration-500
+                                ${activeId === facility.id ? 'opacity-100 translate-y-0 ' : 'opacity-100 translate-y-0 md:opacity-0 md:translate-y-4'}
                             `}>
                                 <div className={`p-3 rounded-xl bg-white/20 backdrop-blur-md w-fit mb-3
                                      ${activeId === facility.id ? 'block' : 'hidden md:block'}

@@ -29,7 +29,7 @@ import counsel3 from '../assets/images/beyond-academics/Rectangle 4542.avif'
 
 const BeyondAcademics = () => {
     return (
-        <div className="bg-[url('src/assets/images/home/NewsUpdates/bg.avif')] bg-cover bg-center min-h-screen">
+        <div className="bg-[url('./assets/images/home/NewsUpdates/bg.avif')] bg-cover bg-center min-h-screen">
             <PageHero
                 title="Beyond Academics"
                 h1={<span>Learning Does <span className="text-brand-secondary">Not End In Classrooms.</span></span>}

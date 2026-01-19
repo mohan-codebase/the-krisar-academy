@@ -49,7 +49,7 @@ const InstagramFeed = () => {
     };
 
     return (
-        <section className="bg-[url('src/assets/images/home/NewsUpdates/bg.avif')] bg-cover bg-center py-20 relative overflow-hidden text-center text-white">
+        <section className="bg-[url('./assets/images/home/NewsUpdates/bg.avif')] bg-cover bg-center py-20 relative overflow-hidden text-center text-white">
             <div className="max-w-[1440px] mx-auto px-4 md:px-8 flex flex-col items-center">
 
                 {/* Header */}

@@ -39,8 +39,8 @@ const Gallery = () => {
                 h1={<span>Memories <span className="text-yellow-400">That Matter</span></span>}
                 description="Videos And Photographs Capturing Life, Learning, And Celebrations At Krisar Academy."
             >
-                <Button className="mt-8 flex items-center gap-2">
-                    CALL NOW <ArrowRight size={18} />
+                <Button className="mt-8 inline-flex items-center justify-center gap-2 px-6 py-3 md:px-8 md:py-4 text-sm md:text-lg font-bold rounded-xl whitespace-nowrap transition-transform text-brand-primary">
+                    CALL NOW <ArrowRight className="w-5 h-5 md:w-6 md:h-6" />
                 </Button>
             </PageHero>
 

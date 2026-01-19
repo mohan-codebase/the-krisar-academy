@@ -13,8 +13,8 @@ const Blog = () => {
                 h1={<span>From Our <span className="text-yellow-400">School To You</span></span>}
                 description="Read About Academic Insights, Student Experiences, Events, And Educational Perspectives From Krisar Academy."
             >
-                <Button className="mt-8 flex items-center gap-2">
-                    KNOW MORE <ArrowRight size={18} />
+                <Button className="mt-8 inline-flex items-center justify-center gap-2 px-6 py-3 md:px-8 md:py-4 text-sm md:text-lg font-bold rounded-xl whitespace-nowrap transition-transform text-brand-primary">
+                    KNOW MORE <ArrowRight className="w-5 h-5 md:w-6 md:h-6" />
                 </Button>
             </PageHero>
 

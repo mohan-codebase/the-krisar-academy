@@ -135,14 +135,14 @@ const Academics = () => {
                     {/* Navigation Buttons - Absolute on desktop */}
                     <button
                         onClick={prevSlide}
-                        className="absolute left-0 md:-left-12 top-1/2 -translate-y-1/2 z-10 p-3 rounded-xl bg-white/10 hover:bg-white/20 border border-white/10 backdrop-blur-sm transition-all text-white hidden md:block"
+                        className="absolute left-4 2xl:-left-12 top-1/2 -translate-y-1/2 z-10 p-3 rounded-xl bg-white/10 hover:bg-white/20 border border-white/10 backdrop-blur-sm transition-all text-white hidden md:block"
                     >
                         <ChevronLeft size={24} />
                     </button>
 
                     <button
                         onClick={nextSlide}
-                        className="absolute right-0 md:-right-12 top-1/2 -translate-y-1/2 z-10 p-3 rounded-xl bg-white/10 hover:bg-white/20 border border-white/10 backdrop-blur-sm transition-all text-white hidden md:block"
+                        className="absolute right-4 2xl:-right-12 top-1/2 -translate-y-1/2 z-10 p-3 rounded-xl bg-white/10 hover:bg-white/20 border border-white/10 backdrop-blur-sm transition-all text-white hidden md:block"
                     >
                         <ChevronRight size={24} />
                     </button>

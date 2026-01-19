@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Button = (props) => {
     const { children, onClick, to, className = "", type = "button", ...rest } = props;
-    const styles = `font-bold px-8 py-3 rounded bg-brand-secondary text-text-secondary inline-block border-none cursor-pointer hover:brightness-110 transition-all ${className}`;
+    const styles = `font-bold px-6 py-3 md:px-4 md:py-2 rounded bg-brand-secondary text-brand-primary inline-flex items-center justify-center border-none cursor-pointer transition-all text-sm md:text-lg whitespace-nowrap ${className}`;
 
     if (to) {
         return (

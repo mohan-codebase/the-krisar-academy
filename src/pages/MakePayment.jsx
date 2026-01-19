@@ -41,8 +41,8 @@ const MakePayment = () => {
                     </div>
 
                     <a href="https://rzp.io/l/KrisarAcademy" target="_blank" rel="noopener noreferrer">
-                        <Button className="w-full md:w-auto min-w-[300px] flex items-center justify-center gap-2 text-lg py-4">
-                            MAKE A PAYMENT <ArrowRight size={20} />
+                        <Button className="w-full md:w-auto min-w-[300px] inline-flex items-center justify-center gap-2 px-6 py-3 md:px-8 md:py-4 text-sm md:text-lg font-bold rounded-xl whitespace-nowrap transition-transform text-brand-primary">
+                            MAKE A PAYMENT <ArrowRight className="w-5 h-5 md:w-6 md:h-6" />
                         </Button>
                     </a>
                 </div>

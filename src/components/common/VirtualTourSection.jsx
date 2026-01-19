@@ -40,9 +40,9 @@ const VirtualTourSection = () => {
                 {/* CTA Button */}
                 <div className="flex justify-center">
                     <Button
-                        className="flex items-center gap-2 hover:bg-yellow-400 transition-transform hover:scale-105 active:scale-95 text-brand-primary"
+                        className="inline-flex items-center justify-center gap-2 px-6 py-3 md:px-8 md:py-4 text-sm md:text-lg font-bold rounded-xl whitespace-nowrap hover:bg-yellow-400 transition-transform hover:scale-105 active:scale-95 text-brand-primary"
                     >
-                        START VIRTUAL TOUR <ArrowRight size={20} />
+                        START VIRTUAL TOUR <ArrowRight className="w-5 h-5 md:w-6 md:h-6" />
                     </Button>
 
 

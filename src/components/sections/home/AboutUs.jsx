@@ -35,7 +35,7 @@ const AboutUs = () => {
         {/* Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 md:gap-40 items-stretch">
           {/* Left Card */}
-          <div className="bg-gradient-to-br from-white/10 to-transparent p-7 rounded-tr-[30px] rounded-br-[30px] border border-white/30 flex backdrop-blur flex-col justify-center h-full text-center lg:text-center">
+          <div className="bg-gradient-to-br from-white/10 to-transparent p-7 rounded-[30px] lg:rounded-tr-[30px] lg:rounded-br-[30px] lg:rounded-tl-none lg:rounded-bl-none border border-white/30 flex backdrop-blur flex-col justify-center h-full text-center lg:text-center">
             <h3 className="text-xl md:text-2xl font-medium leading-relaxed">
               The School Takes Pride In <br /> Adopting The Motto <br />
               <span className="text-brand-secondary font-bold">"Learners Today, Leaders <br /> Tomorrow".</span>
@@ -44,19 +44,19 @@ const AboutUs = () => {
 
           {/* Center Image Collage */}
           <div className="relative h-[300px] md:h-[200px] flex items-center justify-center my-8 lg:my-0">
-            <div className="relative w-full h-full flex justify-center items-center">
+            <div className="relative w-full h-full flex justify-center items-center ">
               {/* Left Image */}
-              <img src={imgRight} alt="Awards" className="absolute w-40 md:w-48 h-56 md:h-84 object-contain rounded-xl transform rotate-6 right-1/2 translate-x-[160%] md:translate-x-[120%] z-10 shadow-xl" />
+              <img src={imgRight} alt="Awards" className="absolute w-30 md:w-48 h-40 md:h-84 object-contain rounded-xl transform rotate-5 right-1/2 translate-x-[150%] md:translate-x-[145%] z-10 shadow-xl" />
 
-              <img src={imgLeft} alt="Activities" className="absolute w-40 md:w-48 h-56 md:h-84 object-contain rounded-xl transform -rotate-6 left-1/2 -translate-x-[160%] md:-translate-x-[120%] z-10 shadow-xl" />
+              <img src={imgLeft} alt="Activities" className="absolute w-30 md:w-48 h-40 md:h-84 object-contain rounded-xl transform -rotate-2 left-1/2 -translate-x-[150%] md:-translate-x-[145%] z-10 shadow-xl" />
               {/* Center Image */}
-              <img src={imgCenter} alt="Students" className="absolute w-44 md:w-56 h-64 md:h-84 object-contain rounded-xl z-20 shadow-2xl" />
+              <img src={imgCenter} alt="Students" className="absolute w-36 md:w-56 h-48 md:h-84 object-contain rounded-xl z-20 shadow-2xl" />
               {/* Right Image */}
             </div>
           </div>
 
           {/* Right Card */}
-          <div className="bg-gradient-to-bl from-white/10 to-transparent p-7 rounded-tl-[30px] rounded-bl-[30px] border border-white/30 flex flex-col justify-center h-full text-center lg:text-center">
+          <div className="bg-gradient-to-bl from-white/10 to-transparent p-7 rounded-[30px] lg:rounded-tl-[30px] lg:rounded-bl-[30px] lg:rounded-tr-none lg:rounded-br-none border border-white/30 flex flex-col justify-center h-full text-center lg:text-center">
             <h3 className="text-xl md:text-2xl font-medium leading-relaxed ">
               The School Is Managed By <br />
               <span className="text-brand-secondary font-bold">Sri Krisar Trust.</span>

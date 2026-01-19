@@ -247,9 +247,9 @@ const Admissions = () => {
                                 </button>
                             ) : <div></div>}
 
-                            <Button type="submit" className="min-w-[140px]">
+                            <Button type="submit" className="min-w-[140px] inline-flex items-center justify-center gap-2 px-6 py-3 md:px-8 md:py-4 text-sm md:text-lg font-bold rounded-xl whitespace-nowrap transition-transform text-brand-primary">
                                 {step === 3 ? 'Submit Application' : 'Next Step'}
-                                {step !== 3 && <ChevronRight size={18} className="ml-1" />}
+                                {step !== 3 && <ChevronRight className="w-5 h-5 md:w-6 md:h-6 ml-1" />}
                             </Button>
                         </div>
                     </form>

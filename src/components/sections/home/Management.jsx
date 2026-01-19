@@ -31,7 +31,7 @@ const managementTeam = [
 
 const Management = () => {
     return (
-        <section className="bg-[url('src/assets/images/home/NewsUpdates/bg.avif')] bg-cover bg-center md:py-20 relative overflow-hidden">
+        <section className="bg-[url('./assets/images/home/NewsUpdates/bg.avif')] bg-cover bg-center md:py-20 relative overflow-hidden">
             <div className="max-w-[1440px] mx-auto px-4 md:px-8">
 
                 {/* Header */}
