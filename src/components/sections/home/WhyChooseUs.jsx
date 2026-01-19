@@ -61,14 +61,14 @@ const WhyChooseUs = () => {
         const handleResize = () => {
             const width = window.innerWidth;
             if (width < 768) {
-                // Mobile
-                setLayoutParams({ radius: 320, cardAngle: 28 });
+                // Mobile: Tighter curve but readable
+                setLayoutParams({ radius: 400, cardAngle: 20 });
             } else if (width < 1024) {
-                // Tablet
-                setLayoutParams({ radius: 450, cardAngle: 25 });
+                // Tablet: Flatter
+                setLayoutParams({ radius: 800, cardAngle: 18 });
             } else {
-                // Desktop
-                setLayoutParams({ radius: 600, cardAngle: 25 });
+                // Desktop: Very flat arc, close together
+                setLayoutParams({ radius: 1200, cardAngle: 15 });
             }
         };
 
