@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import PageHero from '../components/common/PageHero';
+import SEO from '../components/common/SEO';
 import Button from '../components/ui/Button';
 import { ArrowRight, Check, ChevronRight, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -122,6 +123,10 @@ const Admissions = () => {
 
     return (
         <div className="min-h-screen bg-[#0B1221] text-white pb-20">
+            <SEO
+                title="Admissions"
+                description="Apply for admission to The Krisar Academy. Fill out the online application form for Pre-KG to Grade 12."
+            />
             <PageHero
                 title="Admissions"
                 h1={<span>Start Your Child's <span className="text-yellow-400">Admission</span></span>}

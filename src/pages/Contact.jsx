@@ -3,11 +3,16 @@ import React from 'react';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import Button from '../components/ui/Button';
 import PageHero from '../components/common/PageHero';
+import SEO from '../components/common/SEO';
 // import bgImage from '../assets/images/PageHero/PageHero.avif';
 
 const Contact = () => {
     return (
         <div className="min-h-screen bg-[#0B1221] text-white">
+            <SEO
+                title="Contact"
+                description="Contact The Krisar Academy for admissions, transport, or general enquiries. We are here to help."
+            />
             {/* Hero Section */}
             <PageHero h1="We're here to help 24/7" title='Contact Us' />
 

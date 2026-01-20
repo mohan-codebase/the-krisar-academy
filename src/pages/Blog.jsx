@@ -1,6 +1,7 @@
 import React from 'react';
 import { Anchor, Trophy, ArrowRight } from 'lucide-react';
 import PageHero from '../components/common/PageHero';
+import SEO from '../components/common/SEO';
 import Button from '../components/ui/Button';
 import { Link } from 'react-router-dom';
 import { blogData } from '../data/blogData.jsx';
@@ -8,14 +9,18 @@ import { blogData } from '../data/blogData.jsx';
 const Blog = () => {
     return (
         <div className="min-h-screen bg-[#0B1221] text-white">
+            <SEO
+                title="Blog"
+                description="Stay updated with the latest news, achievements, and educational insights from The Krisar Academy."
+            />
             <PageHero
                 title="Blogs & Updates"
                 h1={<span>From Our <span className="text-yellow-400">School To You</span></span>}
                 description="Read About Academic Insights, Student Experiences, Events, And Educational Perspectives From Krisar Academy."
             >
-                <Button className="mt-8 inline-flex items-center justify-center gap-2 px-6 py-3 md:px-8 md:py-4 text-sm md:text-lg font-bold rounded-xl whitespace-nowrap transition-transform text-brand-primary">
+                {/* <Button >
                     KNOW MORE <ArrowRight className="w-5 h-5 md:w-6 md:h-6" />
-                </Button>
+                </Button> */}
             </PageHero>
 
             {/* List Section */}
@@ -66,7 +71,7 @@ const Blog = () => {
                                     <p className="text-gray-400 text-sm mb-4">{item.date}</p>
                                 </div>
 
-                                <Button to={`/blog/${item.id}`} className="w-full">Know more</Button>
+                                <Button to={`/blog/${item.slug}`} className="w-full">Know more</Button>
                             </div>
                         </div>
                     ))}

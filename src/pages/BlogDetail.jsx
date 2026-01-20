@@ -3,10 +3,11 @@ import { useParams, Link } from 'react-router-dom';
 import { Phone, Mail } from 'lucide-react';
 import { blogData } from '../data/blogData.jsx';
 import PageHero from '../components/common/PageHero';
+import SEO from '../components/common/SEO';
 
 const BlogDetail = () => {
-    const { id } = useParams();
-    const blog = blogData.find((item) => item.id === parseInt(id));
+    const { slug } = useParams();
+    const blog = blogData.find((item) => item.slug === slug);
 
     // Fallback if blog not found
     if (!blog) {
@@ -25,8 +26,13 @@ const BlogDetail = () => {
 
     return (
         <div className="min-h-screen bg-[#0B1221] text-white">
+            <SEO
+                title={blog.title}
+                description={`Read ${blog.title} - The Krisar Academy Blog`}
+                image={blog.image}
+            />
             {/* Using Page Header style but maybe simpler or same */}
-            <section className="bg-brand-primary py-24 px-4 text-center">
+            <section className="bg-brand-primary pt-48 pb-16 px-4 text-center">
                 <div className="max-w-4xl mx-auto">
                     <h1 className="text-3xl md:text-5xl font-bold mb-6 text-white leading-tight">
                         {blog.title}
@@ -67,7 +73,7 @@ const BlogDetail = () => {
                             <h3 className="text-xl font-bold mb-6 text-yellow-400 border-b border-white/10 pb-2">Recent Articles</h3>
                             <div className="space-y-4">
                                 {recentArticles.map(article => (
-                                    <Link to={`/blog/${article.id}`} key={article.id} className="flex gap-4 group">
+                                    <Link to={`/blog/${article.slug}`} key={article.id} className="flex gap-4 group">
                                         <div className="w-20 h-20 flex-shrink-0 rounded-lg overflow-hidden">
                                             <img src={article.image} alt={article.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
                                         </div>

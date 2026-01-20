@@ -4,15 +4,16 @@ import '../../assets/styles/fonts.css'
 const NavbarTop = () => {
     return (
         <>
-            <div className="bg-brand-secondary overflow-hidden py-2 md:py-4 px-4 text-center relative z-50">
-                <div className="animate-marquee whitespace-nowrap inline-block text-xs md:text-base font-medium">
-                    <span className="mx-4">
-                        <Link to="/payment" className="hover:underline">ERP & Payment</Link>
-                        <span className="mx-2">|</span>
-                        <Link to="/cbse-disclosure" className="hover:underline">CBSE Disclosure</Link>
-                        <span className="mx-2">|</span>
-                        <Link to="/admission" className="hover:underline">Admission Registration Form</Link>
-                    </span>
+            <div className="bg-brand-secondary overflow-hidden py-2 md:py-4 px-4 relative z-50 flex flex-col md:flex-row items-center justify-center md:justify-between gap-2 md:gap-0">
+                <div className='animate-marquee hidden md:block'>
+                    <Link to="/" className="hover:underline">Success begins with the right guidance.</Link>
+                </div>
+                <div className="text-[10px] sm:text-xs md:text-base font-medium flex flex-wrap justify-center gap-2 md:gap-0">
+                    <Link to="/payment" className="hover:underline whitespace-nowrap">ERP & Payment</Link>
+                    <span className="hidden sm:inline mx-1 md:mx-2 text-gray-600">|</span>
+                    <Link to="/cbse-disclosure" className="hover:underline whitespace-nowrap">CBSE Disclosure</Link>
+                    <span className="hidden sm:inline mx-1 md:mx-2 text-gray-600">|</span>
+                    <Link to="/admission" className="hover:underline text-center">Admission Registration Form</Link>
                 </div>
             </div>
         </>

@@ -1,5 +1,6 @@
 import React from 'react'
 import PageHero from '../components/common/PageHero'
+import SEO from '../components/common/SEO'
 import '../assets/styles/fonts.css'
 import {
     Users,
@@ -34,6 +35,10 @@ const valuesData = [
 const AboutUs = () => {
     return (
         <div className="bg-brand-primary min-h-screen text-white">
+            <SEO
+                title="About Us"
+                description="Learn about The Krisar Academy, a visionary institution providing world-class education near Arani, Timiri, Arcot, Vellore, Ranipet & Walajapet."
+            />
             {/* 1. Hero Section */}
             <PageHero
                 title="About Us"
@@ -74,16 +79,16 @@ const AboutUs = () => {
                         <img
                             src={aboutMain}
                             alt="Founders and Awards"
-                            className="w-full rounded-2xl shadow-2xl border border-white/10"
+                            className="w-full rounded-xl "
                         />
                         {/* Decorative glow */}
-                        <div className="absolute -inset-4 bg-brand-secondary/20 blur-3xl -z-10 rounded-full"></div>
+                        <div className="absolute "></div>
                     </div>
                 </div>
 
                 {/* 3. Topmost Banner */}
                 <div className="relative rounded-3xl overflow-hidden border border-white/20">
-                    <div className="absolute inset-0 bg-gradient-to-r from-[#0B132B] to-[#151E38] z-0"></div>
+                    <div className="absolute inset-0 bg-transparent blur-3xl shadow-4xl z-0"></div>
                     <div className="relative z-10 p-10 md:p-14 text-center">
                         <h3 className="text-2xl md:text-4xl font-bold mb-4">
                             Topmost Among The Leading CBSE Schools
@@ -105,9 +110,9 @@ const AboutUs = () => {
                     </p>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <img src={gallery1} alt="Children Learning" className="w-full h-64 object-cover rounded-2xl  hover:scale-105 transition-transform duration-500" />
-                        <img src={gallery2} alt="Group Activity" className="w-full h-64 object-cover rounded-2xl  hover:scale-105 transition-transform duration-500" />
-                        <img src={gallery3} alt="Play Time" className="w-full h-64 object-cover rounded-2xl  hover:scale-105 transition-transform duration-500" />
+                        <img src={gallery1} alt="Children Learning" className="w-full h-80 object-cover rounded-2xl  hover:scale-105 transition-transform duration-500" />
+                        <img src={gallery2} alt="Group Activity" className="w-full h-80 object-cover rounded-2xl  hover:scale-105 transition-transform duration-500" />
+                        <img src={gallery3} alt="Play Time" className="w-full h-80 object-cover rounded-2xl  hover:scale-105 transition-transform duration-500" />
                     </div>
                 </div>
 
@@ -115,7 +120,7 @@ const AboutUs = () => {
                 <div>
                     <div className="text-center mb-16">
                         <div className="inline-block px-4 py-1.5 rounded border border-white/20 bg-white/5 backdrop-blur-sm mb-4">
-                            <span className="text-gray-300 text-sm uppercase tracking-wider">Core Principles</span>
+                            <span className="text-gray-300 text-sm uppercase tracking-wider mb-5">Core Principles</span>
                         </div>
                         <h2 className="text-3xl md:text-5xl font-bold">Our <span className="text-brand-secondary">Values</span></h2>
                         <p className="mt-4 text-gray-400">We nurture values that guide our students in every walk of life.</p>
@@ -136,7 +141,7 @@ const AboutUs = () => {
                 {/* 6. Vision & Mission */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {/* Vision */}
-                    <div className="bg-[#151E38] border border-white/10 p-10 rounded-3xl relative overflow-hidden group">
+                    <div className="bg-transparent border border-white/10 p-10 rounded-3xl relative overflow-hidden group">
                         <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
                             <Eye size={120} />
                         </div>
@@ -155,7 +160,7 @@ const AboutUs = () => {
                     </div>
 
                     {/* Mission */}
-                    <div className="bg-[#151E38] border border-white/10 p-10 rounded-3xl relative overflow-hidden group">
+                    <div className="bg-transparent border border-white/10 p-10 rounded-3xl relative overflow-hidden group">
                         <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
                             <Target size={120} />
                         </div>

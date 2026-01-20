@@ -16,6 +16,8 @@ import MakePayment from './pages/MakePayment'
 import Navbar from './components/layout/Navbar'
 import NavbarTop from './components/layout/NavbarTop'
 import Footer from './components/layout/Footer'
+import WhatsAppButton from './components/common/WhatsAppButton'
+import CallButton from './components/common/CallButton'
 import ScrollToTop from './components/common/ScrollToTop'
 
 function App() {
@@ -31,7 +33,7 @@ function App() {
         <Route path="/academics" element={<Academics />} />
         <Route path="/beyond-academics" element={<BeyondAcademics />} />
         <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/:id" element={<BlogDetail />} />
+        <Route path="/blog/:slug" element={<BlogDetail />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/admission" element={<Admissions />} />
@@ -39,6 +41,8 @@ function App() {
         <Route path="/payment" element={<MakePayment />} />
       </Routes>
       <Footer />
+      <WhatsAppButton />
+      <CallButton />
       <ScrollToTop />
     </div>
   )

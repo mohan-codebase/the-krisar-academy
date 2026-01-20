@@ -60,6 +60,12 @@ const Navbar = () => {
               <li><Link to="/beyond-academics" onClick={() => setIsMenuOpen(false)}>BEYOND ACADEMICS</Link></li>
               <li><Link to="/gallery" onClick={() => setIsMenuOpen(false)}>GALLERY</Link></li>
               <li><Link to="/blog" onClick={() => setIsMenuOpen(false)}>BLOG</Link></li>
+
+              <div className="w-full h-[1px] bg-white/10 my-2"></div>
+
+              <li className="text-brand-secondary text-sm"><Link to="/payment" onClick={() => setIsMenuOpen(false)}>ERP & PAYMENT</Link></li>
+              <li className="text-brand-secondary text-sm"><Link to="/cbse-disclosure" onClick={() => setIsMenuOpen(false)}>CBSE DISCLOSURE</Link></li>
+              <li className="text-brand-secondary text-sm"><Link to="/admission" onClick={() => setIsMenuOpen(false)}>ADMISSION FORM</Link></li>
             </ul>
             <Button to="/contact" onClick={() => setIsMenuOpen(false)}>CONTACT US</Button>
           </div>

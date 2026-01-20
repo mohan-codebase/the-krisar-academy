@@ -1,6 +1,7 @@
 
 import React from 'react';
 import PageHero from '../components/common/PageHero';
+import SEO from '../components/common/SEO';
 import Button from '../components/ui/Button';
 import { CreditCard, CheckCircle, Headphones, ArrowRight, ShieldCheck } from 'lucide-react';
 
@@ -15,6 +16,10 @@ const FeatureCard = ({ icon: Icon, title, description }) => (
 const MakePayment = () => {
     return (
         <div className="min-h-screen bg-[#0B1221] text-white pb-20">
+            <SEO
+                title="Make Payment"
+                description="Securely pay school fees online via UPI, Credit Card, Debit Card, or Net Banking."
+            />
             <PageHero
                 title="Payment"
                 h1={<span>Make a <span className="text-yellow-400">Payment</span></span>}
@@ -24,7 +29,7 @@ const MakePayment = () => {
             <div className="max-w-7xl mx-auto px-4 md:px-8 -mt-20 relative z-10">
 
                 {/* Main Payment Card */}
-                <div className="bg-[#151E38]/80 backdrop-blur-xl border border-gray-800 rounded-3xl p-10 md:p-20 text-center shadow-2xl mb-12 max-w-4xl mx-auto">
+                <div className="bg-[#151E38]/10 backdrop-blur-xl border border-gray-400/20 rounded-3xl p-10 md:p-20 text-center shadow-2xl mb-12 max-w-4xl mx-auto">
                     <div className="w-20 h-20 bg-yellow-400/10 rounded-full flex items-center justify-center mx-auto mb-8 border border-yellow-400/20">
                         <CreditCard size={40} className="text-yellow-400" />
                     </div>
@@ -41,7 +46,7 @@ const MakePayment = () => {
                     </div>
 
                     <a href="https://rzp.io/l/KrisarAcademy" target="_blank" rel="noopener noreferrer">
-                        <Button className="w-full md:w-auto min-w-[300px] inline-flex items-center justify-center gap-2 px-6 py-3 md:px-8 md:py-4 text-sm md:text-lg font-bold rounded-xl whitespace-nowrap transition-transform text-brand-primary">
+                        <Button className="w-full md:w-auto min-w-[300px] inline-flex items-center justify-center gap-2 px-6 py-3 md:px-4 md:py-3 text-sm md:text-lg font-bold rounded-xl whitespace-nowrap transition-transform text-brand-primary">
                             MAKE A PAYMENT <ArrowRight className="w-5 h-5 md:w-6 md:h-6" />
                         </Button>
                     </a>

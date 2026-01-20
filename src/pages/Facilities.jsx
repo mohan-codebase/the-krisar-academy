@@ -1,5 +1,6 @@
 import React from 'react'
 import PageHero from '../components/common/PageHero'
+import SEO from '../components/common/SEO'
 import '../assets/styles/fonts.css'
 import { BookOpen, Bot, FlaskConical, Monitor, Calculator, Bus, Droplets, Stethoscope } from 'lucide-react'
 
@@ -79,6 +80,10 @@ const facilitiesData = [
 const Facilities = () => {
     return (
         <div className="bg-brand-primary min-h-screen">
+            <SEO
+                title="Facilities"
+                description="Explore the world-class facilities at The Krisar Academy, including modern libraries, labs, and sports infrastructure."
+            />
             <PageHero
                 title="Our Facilities"
                 h1={<span>Learning Spaces <span className="text-brand-secondary">That Inspire</span></span>}

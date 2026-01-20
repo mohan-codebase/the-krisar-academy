@@ -50,7 +50,7 @@ const slides = [
 
 const Banner = () => {
     // Memoize plugins to prevent re-initialization on every render
-    const plugins = React.useMemo(() => [Autoplay({ delay: 5000 })], [])
+    const plugins = React.useMemo(() => [Autoplay({ delay: 10000 })], [])
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, plugins)
 
     const scrollPrev = useCallback(() => {
@@ -88,14 +88,14 @@ const Banner = () => {
             {/* Navigation Arrows */}
             <button
                 type="button"
-                className="absolute top-1/2 left-4 md:left-8 -translate-y-1/2 bg-white/10 hover:bg-white/20 backdrop-blur-sm p-2 md:p-3 rounded-lg border border-white/10 transition-colors z-30 cursor-pointer hidden md:block"
+                className="absolute top-1/2 left-4 md:left-8 -translate-y-1/2 bg-white/10 hover:bg-white/20 backdrop-blur-sm p-2 md:p-3 rounded-xl border border-white/20 transition-colors z-30 cursor-pointer hidden md:block"
                 onClick={scrollPrev}
             >
                 <ArrowLeft size={24} />
             </button>
             <button
                 type="button"
-                className="absolute top-1/2 right-4 md:right-8 -translate-y-1/2 bg-white/10 hover:bg-white/20 backdrop-blur-sm p-2 md:p-3 rounded-lg border border-white/10 transition-colors z-30 cursor-pointer hidden md:block"
+                className="absolute top-1/2 right-4 md:right-8 -translate-y-1/2 bg-white/10 hover:bg-white/20 backdrop-blur-sm p-2 md:p-3 rounded-xl border border-white/20 transition-colors z-30 cursor-pointer hidden md:block"
                 onClick={scrollNext}
             >
                 <ArrowRight size={24} />
@@ -121,9 +121,9 @@ const Banner = () => {
 
                                 {slide.layout === 'standard' ? (
                                     // Standard Layout (Centered Title, Split Content)
-                                    <div className="flex flex-col items-center w-full pt-28  pb-8 md:py-12 h-full justify-center">
+                                    <div className="flex flex-col items-center w-full pt-28  pb-8 md:py-1 h-full justify-center">
                                         {/* Main Heading */}
-                                        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-center mb-4 md:mb-6 leading-tight">
+                                        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-center mb-4 md:mb-0 leading-tight">
                                             {slide.title}
                                         </h1>
 
@@ -144,9 +144,10 @@ const Banner = () => {
                                             </div>
 
                                             {/* Center Spacer */}
-                                            <div className="flex justify-center md:mt-28">
+                                            <div className="flex justify-center mb-5 md:mt-98">
                                                 <Button
-                                                    className="flex items-center gap-2 hover:bg-yellow-400 transition-colors cursor-pointer"
+                                                    href="tel:919585335552"
+                                                    className="flex items-center gap-3 transition-colors cursor-pointer"
                                                 >
                                                     CALL NOW <ArrowRight size={20} />
                                                 </Button>
@@ -184,6 +185,7 @@ const Banner = () => {
 
                                             {/* CTA Button */}
                                             <Button
+                                                href="tel:919585335552"
                                                 className="inline-flex items-center gap-2 hover:bg-yellow-400 transition-colors cursor-pointer mt-4"
                                             >
                                                 CALL NOW <ArrowRight size={20} />

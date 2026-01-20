@@ -13,59 +13,35 @@ import img7 from '../../../assets/images/home/SuccessStories/Ellipse 18.svg';
 const stories = [
     {
         id: 1,
-        name: "Induja",
-        role: "Founder @ rideverse",
+        name: "Revathi G",
+        role: "Parent",
         image: img1,
-        rating: 4.0,
-        review: "The values and discipline I gained here became the foundation of my journey as a founder."
+        rating: 5.0,
+        review: "It is truly innovative and creative projects explanations in all the levels. The day was mesmerizing. Kudos for the team."
     },
     {
         id: 2,
-        name: "Kiran Ravichandran",
-        role: "UXUI Designer",
-        image: img2,
-        rating: 5.0,
-        review: "I completed my schooling here, where discipline and values shaped my thinking and led me into design. Today, those lessons guide me as a UI/UX designer."
+        name: "vijaya kumar",
+        role: "Parent",
+        image: img1,
+        rating: 3.0,
+        review: "Good experience overall."
     },
     {
         id: 3,
-        name: "Aditiya Gaurav",
-        role: "Developer",
-        image: img3,
+        name: "SARIKA SABAPATHY",
+        role: "Parent",
+        image: img1,
         rating: 5.0,
-        review: "The strong foundation I gained here led me into development and still influences how I build and think."
+        review: "The students are excellent The performance were too good ❤️❤️"
     },
     {
         id: 4,
-        name: "Meera Nair",
-        role: "Architect",
-        image: img4,
+        name: "Lakshmi Lak",
+        role: "Parent",
+        image: img1,
         rating: 5.0,
-        review: "Krisar Academy taught me to dream big. The holistic education I received here was pivotal in my career."
-    },
-    {
-        id: 5,
-        name: "Rahul Varma",
-        role: "Entrepreneur",
-        image: img5,
-        rating: 5.0,
-        review: "The leadership skills I honed at school have been invaluable in my entrepreneurial journey."
-    },
-    {
-        id: 6,
-        name: "Priya Sharma",
-        role: "Medical Researcher",
-        image: img6,
-        rating: 5.0,
-        review: "The science programs here sparked my curiosity and led me to a fulfilling career in medical research."
-    },
-    {
-        id: 7,
-        name: "Arjun Mehta",
-        role: "Civil Engineer",
-        image: img7,
-        rating: 5.0,
-        review: "Building a strong character was just as important as the academic excellence I achieved here."
+        review: "It was a truly mesmerizing and incredible job by our krisarites"
     }
 ];
 
@@ -88,7 +64,7 @@ const SuccessStories = () => {
                 <div className="mb-12">
                     <div className="inline-flex items-center gap-2 border border-white/20 rounded px-4 py-1.5 bg-white/5 backdrop-blur-sm mb-6">
                         <User size={16} className="text-gray-300" />
-                        <span className="uppercase tracking-wider text-sm text-gray-300">Our Alumni Say</span>
+                        <span className="uppercase tracking-wider text-sm text-gray-300">Our Parents Say</span>
                     </div>
 
                     <h2 className="text-4xl md:text-5xl font-bold mb-6">

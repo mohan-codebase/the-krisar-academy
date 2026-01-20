@@ -1,17 +1,34 @@
 
 import React from 'react';
 import PageHero from '../components/common/PageHero';
+import SEO from '../components/common/SEO';
 import { FileText, Shield, Flame, Droplets, Users, Calendar, Award, CheckCircle } from 'lucide-react';
 import { Download } from 'lucide-react';
 
+import recognitionPdf from '../assets/pdf/recognition.pdf';
+import nocPdf from '../assets/pdf/noc.pdf';
+import extensionLetterPdf from '../assets/pdf/extension-letter.pdf';
+import mandatoryDisclosurePdf from '../assets/pdf/mandatory-disclosure.pdf';
+import selfCertificationPdf from '../assets/pdf/self-certification.pdf';
+import buildingSafetyPdf from '../assets/pdf/building-safety.pdf';
+import fireSafetyPdf from '../assets/pdf/fire-safety.pdf';
+import sanitationPdf from '../assets/pdf/sanitation.pdf';
+import trustDeedPdf from '../assets/pdf/trust-deed.pdf';
+import smcPdf from '../assets/pdf/smc.pdf';
+import ptcPdf from '../assets/pdf/ptc.pdf';
+import academicCalendarPdf from '../assets/pdf/academic-calendar.pdf';
+import dFormPdf from '../assets/pdf/d-form.pdf';
+
 const DisclosureCard = ({ title, icon: Icon, href = "#" }) => (
-    <div className="bg-[#151E38]/50 backdrop-blur-md border border-white/10 rounded-xl p-8 flex flex-col items-center text-center hover:border-yellow-400/50 transition-all group">
+    <div className="bg-[#151E38]/10 backdrop-blur-md border border-white/10 rounded-xl p-8 flex flex-col items-center text-center hover:border-yellow-400/50 transition-all group">
         <div className="w-16 h-16 rounded-full bg-transparent border-2 border-yellow-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
             <Icon size={32} className="text-yellow-400" />
         </div>
         <h3 className="text-white text-lg font-semibold mb-6 min-h-[56px] flex items-center justify-center">{title}</h3>
         <a
             href={href}
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-full py-3 px-4 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center gap-2 text-sm text-gray-300 hover:bg-white/10 hover:text-white transition-colors"
         >
             <Download size={16} />
@@ -30,6 +47,10 @@ const SectionTitle = ({ title, subtitle }) => (
 const CBSEDisclosure = () => {
     return (
         <div className="min-h-screen bg-[#0B1221] text-white pb-20">
+            <SEO
+                title="CBSE Disclosure"
+                description="Access mandatory public disclosures and compliance documents of The Krisar Academy as per CBSE norms."
+            />
             <PageHero
                 title="Approvals And Certifications"
                 h1={<span>CBSE <span className="text-yellow-400">Disclosure</span></span>}
@@ -37,7 +58,7 @@ const CBSEDisclosure = () => {
             />
 
             <div className="max-w-7xl mx-auto px-4 md:px-8 -mt-10 relative z-10">
-                <div className="bg-[#0B1221]/80 backdrop-blur-xl border border-gray-800 rounded-3xl p-8 md:p-12 shadow-2xl space-y-20">
+                <div className="bg-[#0B1221]/10 backdrop-blur-xl border border-gray-800 rounded-3xl p-8 md:p-12 shadow-2xl space-y-20">
 
                     {/* Section 1: Recognition & Compliance */}
                     <section>
@@ -46,11 +67,11 @@ const CBSEDisclosure = () => {
                             subtitle="Official Approvals And Certifications Issued By Governing Authorities."
                         />
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            <DisclosureCard title="Recognition" icon={FileText} />
-                            <DisclosureCard title="NOC" icon={FileText} />
-                            <DisclosureCard title="Extension Letter" icon={FileText} />
-                            <DisclosureCard title="Mandatory Disclosure" icon={FileText} />
-                            <DisclosureCard title="Self Certification" icon={Shield} />
+                            <DisclosureCard title="Recognition" icon={Award} href={recognitionPdf} />
+                            <DisclosureCard title="NOC" icon={FileText} href={nocPdf} />
+                            <DisclosureCard title="Extension Letter" icon={FileText} href={extensionLetterPdf} />
+                            <DisclosureCard title="Mandatory Disclosure" icon={FileText} href={mandatoryDisclosurePdf} />
+                            <DisclosureCard title="Self Certification" icon={Shield} href={selfCertificationPdf} />
                         </div>
                     </section>
 
@@ -61,9 +82,9 @@ const CBSEDisclosure = () => {
                             subtitle="Certificates Ensuring Student Safety And Infrastructure Standards."
                         />
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            <DisclosureCard title="Building Safety Certificate" icon={CheckCircle} />
-                            <DisclosureCard title="Fire Safety Certificate" icon={Flame} />
-                            <DisclosureCard title="Sanitation Certificate" icon={Shield} />
+                            <DisclosureCard title="Building Safety Certificate" icon={CheckCircle} href={buildingSafetyPdf} />
+                            <DisclosureCard title="Fire Safety Certificate" icon={Flame} href={fireSafetyPdf} />
+                            <DisclosureCard title="Sanitation Certificate" icon={Droplets} href={sanitationPdf} />
                         </div>
                     </section>
 
@@ -74,9 +95,9 @@ const CBSEDisclosure = () => {
                             subtitle="Documents Related To School Governance And Statutory Committees."
                         />
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            <DisclosureCard title="Trust Deed" icon={FileText} />
-                            <DisclosureCard title="School Management Committee (SMC)" icon={Users} />
-                            <DisclosureCard title="Parents Teachers Committee (PTC)" icon={Users} />
+                            <DisclosureCard title="Trust Deed" icon={FileText} href={trustDeedPdf} />
+                            <DisclosureCard title="School Management Committee (SMC)" icon={Users} href={smcPdf} />
+                            <DisclosureCard title="Parents Teachers Committee (PTC)" icon={Users} href={ptcPdf} />
                         </div>
                     </section>
 
@@ -87,8 +108,8 @@ const CBSEDisclosure = () => {
                             subtitle="Academic Planning And CBSE-Related Academic Disclosures."
                         />
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            <DisclosureCard title="Academic Calendar" icon={Calendar} />
-                            <DisclosureCard title="D Form" icon={FileText} />
+                            <DisclosureCard title="Academic Calendar" icon={Calendar} href={academicCalendarPdf} />
+                            <DisclosureCard title="D Form" icon={FileText} href={dFormPdf} />
                         </div>
                     </section>
 

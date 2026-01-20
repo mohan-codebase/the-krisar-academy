@@ -27,11 +27,6 @@ const posts = [
     },
     {
         id: 4,
-        image: reel4,
-        link: "https://www.instagram.com/reel/DTSj1Y5E7AO/"
-    },
-    {
-        id: 5,
         image: reel5,
         link: "https://www.instagram.com/reel/DTQAVQdkzuw/"
     }
@@ -64,8 +59,7 @@ const InstagramFeed = () => {
                     </h2>
 
                     <p className="text-gray-400 max-w-xl mx-auto text-lg leading-relaxed">
-                        Discipline, guidance, and confidence — discover more real stories on Instagram.
-                    </p>
+                        Discover real stories of discipline, confidence, and success from our students and mentors. Experience how learning at Krisar shapes futures beyond the classroom.                    </p>
                 </div>
 
                 {/* Carousel */}

@@ -8,14 +8,14 @@ const PageHero = (props) => {
   return (
     <div>
       <section
-        className="relative min-h-[600px] md:min-h-[700px] px-4 flex flex-col items-center justify-center text-center bg-cover bg-center bg-no-repeat"
+        className="relative min-h-[600px] md:min-h-[500px] px-4 flex flex-col items-center justify-center text-center bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url(${bgImage || defaultBg})`,
           backgroundColor: !bgImage ? '#0B1221' : 'transparent'
         }}
       >
         {/* Overlay for better text readability if image exists */}
-        {bgImage && <div className="absolute inset-0 bg-black/60 z-0"></div>}
+        {bgImage && <div className="absolute inset-0 bg-black/10 z-0"></div>}
 
         <div className="relative z-10 w-full flex flex-col items-center">
           <div className="inline-block px-4 py-1.5 rounded border border-white/20 bg-white/5 backdrop-blur-sm mb-6">
@@ -33,7 +33,7 @@ const PageHero = (props) => {
               {props.description}
             </p>
           ) : (
-            <p className="text-gray-400 max-w-2xl text-lg">
+            <p className="max-w-2xl text-lg text-white">
               Reach Out To Us For Admissions, Enquiries, Or Any Assistance You Need.
             </p>
           )}

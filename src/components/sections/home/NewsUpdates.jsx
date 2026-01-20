@@ -60,7 +60,7 @@ const NewsUpdates = () => {
                                     {item.title}
                                 </h3>
 
-                                <Button to={`/blog/${item.id}`} className="w-full">Know More</Button>
+                                <Button to={`/blog/${item.slug}`} className="w-full">Know More</Button>
                             </div>
                         </div>
                     ))}

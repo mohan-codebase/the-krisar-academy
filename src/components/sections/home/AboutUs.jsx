@@ -8,7 +8,7 @@ import imgRight from '../../../assets/images/home/about/img2.png'
 const AboutUs = () => {
   return (
     <section
-      className="bg-cover bg-center text-white py-16 md:py-20 relative overflow-hidden"
+      className="bg-cover bg-center text-white py-16 md:py-40 relative overflow-hidden"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       <div className=" mx-auto md:px-0 px-4">
@@ -43,15 +43,14 @@ const AboutUs = () => {
           </div>
 
           {/* Center Image Collage */}
-          <div className="relative h-[300px] md:h-[200px] flex items-center justify-center my-8 lg:my-0">
+          <div className="relative h-[400px] md:h-[300px] flex items-center justify-center my-8 lg:my-0">
             <div className="relative w-full h-full flex justify-center items-center ">
               {/* Left Image */}
-              <img src={imgRight} alt="Awards" className="absolute w-30 md:w-48 h-40 md:h-84 object-contain rounded-xl transform rotate-5 right-1/2 translate-x-[150%] md:translate-x-[145%] z-10 shadow-xl" />
+              <img src={imgRight} alt="Awards" className="absolute w-32 md:w-64 h-44 md:h-[350px] object-cover rounded-xl transform rotate-5 right-1/2 translate-x-[110%] md:translate-x-[115%] z-10 shadow-xl" />
 
-              <img src={imgLeft} alt="Activities" className="absolute w-30 md:w-48 h-40 md:h-84 object-contain rounded-xl transform -rotate-2 left-1/2 -translate-x-[150%] md:-translate-x-[145%] z-10 shadow-xl" />
+              <img src={imgLeft} alt="Activities" className="absolute w-32 md:w-64 h-44 md:h-[350px] object-cover rounded-xl transform -rotate-2 left-1/2 -translate-x-[110%] md:-translate-x-[115%] z-10 shadow-xl" />
               {/* Center Image */}
-              <img src={imgCenter} alt="Students" className="absolute w-36 md:w-56 h-48 md:h-84 object-contain rounded-xl z-20 shadow-2xl" />
-              {/* Right Image */}
+              <img src={imgCenter} alt="Students" className="absolute w-40 md:w-72 h-52 md:h-[390px] object-cover rounded-xl z-20 shadow-2xl" />
             </div>
           </div>
 

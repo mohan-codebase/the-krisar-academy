@@ -15,6 +15,14 @@ const Button = (props) => {
         )
     }
 
+    if (rest.href) {
+        return (
+            <a className={styles} onClick={onClick} {...rest}>
+                {children}
+            </a>
+        )
+    }
+
     return (
         <button type={type} className={styles} onClick={onClick} {...rest}>
             {children}

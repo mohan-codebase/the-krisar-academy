@@ -1,5 +1,6 @@
 import React from 'react'
 import PageHero from '../components/common/PageHero'
+import SEO from '../components/common/SEO'
 import DimensionCard from '../components/sections/beyond-academics/DimensionCard'
 import '../assets/styles/fonts.css'
 
@@ -30,11 +31,15 @@ import counsel3 from '../assets/images/beyond-academics/Rectangle 4542.avif'
 const BeyondAcademics = () => {
     return (
         <div className="bg-[url('./assets/images/home/NewsUpdates/bg.avif')] bg-cover bg-center min-h-screen">
+            <SEO
+                title="Beyond Academics"
+                description="Explore The Krisar Academy's co-curricular activities, including sports, arts, diet, and special education."
+            />
             <PageHero
                 title="Beyond Academics"
                 h1={<span>Learning Does <span className="text-brand-secondary">Not End In Classrooms.</span></span>}
                 description="At Krisar Academy, Students Grow Through Experiences That Shape Character, Confidence, And Care."
-                // bgImage={heroBg}
+            // bgImage={heroBg}
             />
 
             <section className="max-w-[1440px] mx-auto px-4 md:px-8 py-10 pb-20">

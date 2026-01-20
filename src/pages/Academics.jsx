@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import PageHero from '../components/common/PageHero'
+import SEO from '../components/common/SEO'
 import '../assets/styles/fonts.css'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
@@ -111,6 +112,10 @@ const Academics = () => {
 
     return (
         <div className="bg-brand-primary min-h-screen">
+            <SEO
+                title="Academics"
+                description="Discover The Krisar Academy's academic approach, curriculum, and holistic learning framework."
+            />
             <PageHero
                 title="Academic Excellence"
                 h1={<span>Academic Excellence <span className="text-brand-secondary">At Krisar</span></span>}

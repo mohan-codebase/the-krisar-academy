@@ -3,7 +3,7 @@ import logo from '../../assets/images/navbar/logo.svg';
 
 const Footer = () => {
     return (
-        <footer className="bg-brand-primary text-text-primary pt-12 pb-6">
+        <footer className="bg-brand-primary text-text-primary py-38 pb-26">
             <div className="max-w-[1440px] mx-auto px-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
                     {/* Column 1: Logo & Tagline */}
@@ -96,13 +96,13 @@ const Footer = () => {
                         Copyright © 2026 All Rights Reserved by The Krisar Academy.
                     </p>
                     <div className="flex items-center gap-6">
-                        <a href="#" className="hover:text-brand-secondary transition-colors" aria-label="Instagram">
+                        <a href="https://www.instagram.com/thekrisaracademycbse/" className="hover:text-brand-secondary transition-colors" aria-label="Instagram">
                             <Instagram size={24} />
                         </a>
-                        <a href="#" className="hover:text-brand-secondary transition-colors" aria-label="Facebook">
+                        <a href="https://www.facebook.com/thekrisaracademycbse" className="hover:text-brand-secondary transition-colors" aria-label="Facebook">
                             <Facebook size={24} />
                         </a>
-                        <a href="#" className="hover:text-brand-secondary transition-colors" aria-label="YouTube">
+                        <a href="https://www.youtube.com/@thekrisaracademycbse" className="hover:text-brand-secondary transition-colors" aria-label="YouTube">
                             <Youtube size={24} />
                         </a>
                     </div>
