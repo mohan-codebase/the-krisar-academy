@@ -1,3 +1,6 @@
+
+import { Helmet } from 'react-helmet-async';
+
 const SEO = ({
     title,
     description,
@@ -13,7 +16,7 @@ const SEO = ({
     const metaUrl = url || window.location.href;
 
     return (
-        <>
+        <Helmet>
             <title>{fullTitle}</title>
             <meta name="description" content={metaDescription} />
             {keywords && <meta name="keywords" content={keywords} />}
@@ -31,7 +34,7 @@ const SEO = ({
             <meta property="twitter:title" content={fullTitle} />
             <meta property="twitter:description" content={metaDescription} />
             <meta property="twitter:image" content={metaImage} />
-        </>
+        </Helmet>
     );
 };
 
