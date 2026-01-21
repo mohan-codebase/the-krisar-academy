@@ -1,13 +1,13 @@
-import puppeteer from 'puppeteer';
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const distDir = path.join(__dirname, '../dist');
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const toAbsolute = (p) => path.resolve(__dirname, '..', p);
 
-// Define routes to prerender
+const template = fs.readFileSync(toAbsolute('dist/index.html'), 'utf-8');
+const { render } = await import(toAbsolute('dist/server/entry-server.js'));
+
 const routes = [
     '/',
     '/about',
@@ -22,9 +22,7 @@ const routes = [
     '/payment'
 ];
 
-// Add blog routes - manually added for now based on known data or we could parse it
-// Ideally we would parse src/data/blogData.jsx but since it's JSX it's tricky in Node.
-// For now, I'll rely on the main pages and maybe add a few known blog slugs if I can find them.
+// Add blog routes (manually for now, ideally fetched from data source)
 const blogSlugs = [
     'grand-celebration-sports-spirit-krisars-sports-fiesta-2024-2025',
     'krisar-academy-students-create-history-world-record-proverbs-recitation',
@@ -39,87 +37,37 @@ const blogSlugs = [
 
 blogSlugs.forEach(slug => routes.push(`/blog/${slug}`));
 
-async function prerender() {
-    console.log('Starting prerendering...');
-    const browser = await puppeteer.launch({ headless: "new" });
-    const page = await browser.newPage();
+(async () => {
+    // pre-render each route...
+    for (const url of routes) {
+        const context = {};
+        const appHtml = render(url, context);
 
-    // We need a local server to serve the built files
-    // Since we are running this AFTER vite build, we can just serve the dist folder
-    // But we need a server. We can use `preview` command or just a simple express/http-server.
-    // However, simplest way effectively is to rely on the user having run `npm run preview` 
-    // OR we can spin up a simple static file server here.
+        // helmet info
+        const { helmet } = appHtml;
 
-    // Actually, let's use `vite preview` in the background? 
-    // Or just file:// protocol? file:// might have issues with routing.
-    // Let's assume we can run a simple server.
+        const html = template
+            .replace('<!--app-head-->', `
+                ${helmet.title.toString()}
+                ${helmet.meta.toString()}
+                ${helmet.link.toString()}
+                ${helmet.script.toString()} 
+            `)
+            .replace('<!--app-html-->', appHtml.html)
+            // Cleanup placeholder if it existed (not needed with SSR injection)
+            .replace(/<div id="root"><\/div>/, `<div id="root">${appHtml.html}</div>`);
 
-    // Easier: Use `puppeteer` to request from the running dev server? 
-    // No, we want to prerender the BUILD output.
+        const filePath = url === '/'
+            ? 'dist/index.html'
+            : `dist${url}/index.html`;
 
-    // Let's use `http-server` or similar, OR just write a tiny http server here.
-    const { createServer } = await import('http');
-    const { default: handler } = await import('serve-handler');
-
-    const server = createServer((request, response) => {
-        return handler(request, response, {
-            public: distDir,
-            rewrites: [
-                { source: '**', destination: '/index.html' }
-            ]
-        });
-    });
-
-    const PORT = 4173; // Standard Vite preview port
-    server.listen(PORT, () => {
-        console.log(`Prerender server running at http://localhost:${PORT}`);
-    });
-
-    for (const route of routes) {
-        console.log(`Prerendering: ${route}`);
-        try {
-            await page.goto(`http://localhost:${PORT}${route}`, { waitUntil: 'networkidle0' });
-
-            // Wait for title to not be default (optional, if your SEO comp works fast)
-            // await page.waitForFunction('document.title !== "Vite + React"');
-
-            // Wait for Helmet to update the head
-            try {
-                await page.waitForFunction(() => document.querySelector('meta[data-rh="true"]'), { timeout: 5000 });
-            } catch (e) {
-                console.warn(`Timeout waiting for Helmet meta tags on ${route}, proceeding anyway.`);
-            }
-
-            let content = await page.content();
-
-            // Remove the static placeholder tags using regex
-            content = content.replace(/<meta[^>]*data-prerender-remove="true"[^>]*>/g, '');
-            // Remove the specific comment
-            content = content.replace('<!-- Default Social Media Meta Tags (Placeholder for Prerendering Removal) -->', '');
-
-            // Determine output path
-            // / -> dist/index.html
-            // /about -> dist/about/index.html
-            const filePath = route === '/'
-                ? path.join(distDir, 'index.html')
-                : path.join(distDir, route.substring(1), 'index.html');
-
-            const dir = path.dirname(filePath);
-            if (!fs.existsSync(dir)) {
-                fs.mkdirSync(dir, { recursive: true });
-            }
-
-            fs.writeFileSync(filePath, content);
-            console.log(`Generated: ${filePath}`);
-        } catch (err) {
-            console.error(`Error prerendering ${route}:`, err);
+        // Ensure dir exists
+        const dir = path.dirname(toAbsolute(filePath));
+        if (!fs.existsSync(dir)) {
+            fs.mkdirSync(dir, { recursive: true });
         }
+
+        fs.writeFileSync(toAbsolute(filePath), html);
+        console.log('pre-rendered:', filePath);
     }
-
-    await browser.close();
-    server.close();
-    console.log('Prerendering complete.');
-    process.exit(0);
-}
-
-prerender();
+})();

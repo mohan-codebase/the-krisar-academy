@@ -13,7 +13,7 @@ const SEO = ({
     const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
     const metaDescription = description || 'The Krisar Academy - A visionary institution dedicated to nurturing young minds through holistic education.';
     const metaImage = image || '/og-image.png'; // Default OG image
-    const metaUrl = url || window.location.href;
+    const metaUrl = url || (typeof window !== 'undefined' ? window.location.href : '');
 
     return (
         <Helmet>
