@@ -1,11 +1,11 @@
 {
-  "name": "vite-project",
+  "name": "the-krisar-academy",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && npm run prerender",
+    "build": "vite build && npx puppeteer browsers install chrome && npm run prerender",
     "lint": "eslint .",
     "preview": "vite preview",
     "prerender": "node scripts/prerender.js"
