@@ -1,4 +1,5 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
+import { AnimatePresence } from 'framer-motion'
 import './App.css'
 import './assets/styles/fonts.css'
 import Home from './pages/Home'
@@ -19,27 +20,31 @@ import Footer from './components/layout/Footer'
 import WhatsAppButton from './components/common/WhatsAppButton'
 import CallButton from './components/common/CallButton'
 import ScrollToTop from './components/common/ScrollToTop'
+import PageTransition from './components/common/PageTransition'
 
 function App() {
+  const location = useLocation();
 
   return (
     <div>
       <NavbarTop />
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<AboutUs />} />
-        <Route path="/facilities" element={<Facilities />} />
-        <Route path="/academics" element={<Academics />} />
-        <Route path="/beyond-academics" element={<BeyondAcademics />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/:slug" element={<BlogDetail />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/gallery" element={<Gallery />} />
-        <Route path="/admission" element={<Admissions />} />
-        <Route path="/cbse-disclosure" element={<CBSEDisclosure />} />
-        <Route path="/payment" element={<MakePayment />} />
-      </Routes>
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<PageTransition><Home /></PageTransition>} />
+          <Route path="/about" element={<PageTransition><AboutUs /></PageTransition>} />
+          <Route path="/facilities" element={<PageTransition><Facilities /></PageTransition>} />
+          <Route path="/academics" element={<PageTransition><Academics /></PageTransition>} />
+          <Route path="/beyond-academics" element={<PageTransition><BeyondAcademics /></PageTransition>} />
+          <Route path="/blog" element={<PageTransition><Blog /></PageTransition>} />
+          <Route path="/blog/:slug" element={<PageTransition><BlogDetail /></PageTransition>} />
+          <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
+          <Route path="/gallery" element={<PageTransition><Gallery /></PageTransition>} />
+          <Route path="/admission" element={<PageTransition><Admissions /></PageTransition>} />
+          <Route path="/cbse-disclosure" element={<PageTransition><CBSEDisclosure /></PageTransition>} />
+          <Route path="/payment" element={<PageTransition><MakePayment /></PageTransition>} />
+        </Routes>
+      </AnimatePresence>
       <Footer />
       <WhatsAppButton />
       <CallButton />

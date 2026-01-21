@@ -1,10 +1,16 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import { ArrowUp } from "lucide-react";
 
 export const ScrollToTop = () => {
+    const { pathname } = useLocation();
     const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
 
     useEffect(() => {
         const toggleVisibility = () => {
@@ -43,6 +49,7 @@ export const ScrollToTop = () => {
               w-11 h-11 
               rounded-full 
               bg-brand-secondary
+             
               border-[1.5px] border-white/40
               transition-all duration-300 
               group 
@@ -60,7 +67,7 @@ export const ScrollToTop = () => {
                         {/* Bottom Reflection */}
                         <div className="absolute bottom-1 left-2 right-2 h-1/3 bg-gradient-to-t from-white/10 to-transparent rounded-b-full pointer-events-none filter blur-[2px]"></div>
 
-                        <ArrowUp size={22} className="text-white drop-shadow-md z-10" />
+                        <ArrowUp size={22} className=" text-white drop-shadow-md z-10" />
                     </button>
                 </div>
             )}

@@ -2,6 +2,7 @@ import React from 'react'
 import PageHero from '../components/common/PageHero'
 import SEO from '../components/common/SEO'
 import '../assets/styles/fonts.css'
+import ScrollReveal from '../components/common/ScrollReveal'
 import { BookOpen, Bot, FlaskConical, Monitor, Calculator, Bus, Droplets, Stethoscope } from 'lucide-react'
 
 // Images
@@ -93,49 +94,52 @@ const Facilities = () => {
 
             <div className="bg-cover bg-center relative" style={{ backgroundImage: `url(${bgImage})` }}>
                 <section className="max-w-[1440px] mx-auto px-4 md:px-8 py-10 pb-20">
-
-                    <div className="text-center mb-16">
-                        <div className="inline-block px-4 py-1.5 rounded border border-white/20 bg-white/5 backdrop-blur-sm mb-4">
-                            <span className="text-gray-300 text-sm uppercase tracking-wider">Our Facilities</span>
+                    <ScrollReveal>
+                        <div className="text-center mb-16">
+                            <div className="inline-block px-4 py-1.5 rounded border border-white/20 bg-white/5 backdrop-blur-sm mb-4">
+                                <span className="text-gray-300 text-sm uppercase tracking-wider">Our Facilities</span>
+                            </div>
+                            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">World-Class <span className="text-brand-secondary">Facilities</span></h2>
+                            <p className="text-gray-400 max-w-2xl mx-auto">
+                                Modern amenities and resources created to enhance every student's learning experience.
+                            </p>
                         </div>
-                        <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">World-Class <span className="text-brand-secondary">Facilities</span></h2>
-                        <p className="text-gray-400 max-w-2xl mx-auto">
-                            Modern amenities and resources created to enhance every student's learning experience.
-                        </p>
-                    </div>
+                    </ScrollReveal>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
                         {facilitiesData.map((facility, index) => (
-                            <div key={index} className="bg-transparent border border-white/10 rounded-2xl overflow-hidden group hover:border-brand-secondary/50 transition-all duration-300 hover:shadow-xl hover:shadow-brand-secondary/10 flex flex-col">
-                                {/* Image Area */}
-                                <div className="p-2">
-                                    <div className="h-50 relative overflow-hidden rounded-xl">
-                                        <img
-                                            src={facility.image}
-                                            alt={facility.title}
-                                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                        />
-                                    </div>
-                                </div>
-
-                                {/* Content Area */}
-                                <div className="p-6 flex-1 flex flex-col pt-2">
-                                    <div className="flex items-center gap-4 mb-3">
-                                        <img src={facility.icon} alt={facility.title} className="w-12 h-12 shrink-0" />
-                                        <h3 className="text-xl font-bold text-white group-hover:text-brand-secondary transition-colors">
-                                            {facility.title}
-                                        </h3>
+                            <ScrollReveal key={index} delay={index * 0.1}>
+                                <div className="bg-transparent border border-white/10 rounded-2xl overflow-hidden group hover:border-brand-secondary/50 transition-all duration-300 hover:shadow-xl hover:shadow-brand-secondary/10 flex flex-col">
+                                    {/* Image Area */}
+                                    <div className="p-2">
+                                        <div className="h-50 relative overflow-hidden rounded-xl">
+                                            <img
+                                                src={facility.image}
+                                                alt={facility.title}
+                                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                            />
+                                        </div>
                                     </div>
 
-                                    <p className="text-gray-400 text-sm leading-relaxed mb-4 flex-1">
-                                        {facility.description}
-                                    </p>
+                                    {/* Content Area */}
+                                    <div className="p-6 flex-1 flex flex-col pt-2">
+                                        <div className="flex items-center gap-4 mb-3">
+                                            <img src={facility.icon} alt={facility.title} className="w-12 h-12 shrink-0" />
+                                            <h3 className="text-xl font-bold text-white group-hover:text-brand-secondary transition-colors">
+                                                {facility.title}
+                                            </h3>
+                                        </div>
 
-                                    <span className="text-brand-secondary text-xs font-bold cursor-pointer hover:underline tracking-wider">
-                                        See more..
-                                    </span>
+                                        <p className="text-gray-400 text-sm leading-relaxed mb-4 flex-1">
+                                            {facility.description}
+                                        </p>
+
+                                        <span className="text-brand-secondary text-xs font-bold cursor-pointer hover:underline tracking-wider">
+                                            See more..
+                                        </span>
+                                    </div>
                                 </div>
-                            </div>
+                            </ScrollReveal>
                         ))}
                     </div>
 

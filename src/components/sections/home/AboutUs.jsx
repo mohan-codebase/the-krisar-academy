@@ -1,11 +1,38 @@
 import React from 'react'
 import { Info } from 'lucide-react'
+import useEmblaCarousel from 'embla-carousel-react'
+import Autoplay from 'embla-carousel-autoplay'
+import activeDot from '../../../assets/images/home/banner/active.svg'
+import inactiveDot from '../../../assets/images/home/banner/not-active.svg'
 import bgImage from '../../../assets/images/home/about/bg-img.avif'
-import imgLeft from '../../../assets/images/home/about/img.png'
-import imgCenter from '../../../assets/images/home/about/img1.png'
-import imgRight from '../../../assets/images/home/about/img2.png'
+import imgLeft from '../../../assets/images/home/about/about-1.avif'
+import imgCenter from '../../../assets/images/home/about/about-2.avif'
+import imgRight from '../../../assets/images/home/about/about-3.avif'
 
 const AboutUs = () => {
+  // Embla setup for mobile slider
+  const plugins = React.useMemo(() => [Autoplay({ delay: 3000 })], [])
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, plugins)
+  const [selectedIndex, setSelectedIndex] = React.useState(0)
+  const [scrollSnaps, setScrollSnaps] = React.useState([])
+
+  const onInit = React.useCallback((emblaApi) => {
+    setScrollSnaps(emblaApi.scrollSnapList())
+  }, [])
+
+  const onSelect = React.useCallback((emblaApi) => {
+    setSelectedIndex(emblaApi.selectedScrollSnap())
+  }, [])
+
+  React.useEffect(() => {
+    if (!emblaApi) return
+    onInit(emblaApi)
+    onSelect(emblaApi)
+    emblaApi.on('reInit', onInit)
+    emblaApi.on('reInit', onSelect)
+    emblaApi.on('select', onSelect)
+  }, [emblaApi, onInit, onSelect])
+
   return (
     <section
       className="bg-cover bg-center text-white py-16 md:py-40 relative overflow-hidden"
@@ -42,16 +69,49 @@ const AboutUs = () => {
             </h3>
           </div>
 
-          {/* Center Image Collage */}
-          <div className="relative h-[400px] md:h-[300px] flex items-center justify-center my-8 lg:my-0">
-            <div className="relative w-full h-full flex justify-center items-center ">
-              {/* Left Image */}
-              <img src={imgRight} alt="Awards" className="absolute w-32 md:w-64 h-44 md:h-[350px] object-cover rounded-xl transform rotate-5 right-1/2 translate-x-[110%] md:translate-x-[115%] z-10 shadow-xl" />
+          {/* Center Image Area */}
+          <div className="relative flex flex-col items-center justify-center my-8 lg:my-0">
 
-              <img src={imgLeft} alt="Activities" className="absolute w-32 md:w-64 h-44 md:h-[350px] object-cover rounded-xl transform -rotate-2 left-1/2 -translate-x-[110%] md:-translate-x-[115%] z-10 shadow-xl" />
-              {/* Center Image */}
-              <img src={imgCenter} alt="Students" className="absolute w-40 md:w-72 h-52 md:h-[390px] object-cover rounded-xl z-20 shadow-2xl" />
+            {/* Desktop Layout - Hidden on mobile */}
+            <div className="hidden md:flex justify-center items-center gap-3 md:gap-4">
+              <img src={imgLeft} alt="Activities" className="w-28 md:w-56 h-40 md:h-84 object-cover rounded-xl shadow-lg border border-white/100" />
+              <img src={imgCenter} alt="Students" className="w-32 md:w-56 h-48 md:h-84 object-cover rounded-xl shadow-xl border border-white/100" />
+              <img src={imgRight} alt="Awards" className="w-28 md:w-56 h-40 md:h-84 object-cover rounded-xl shadow-lg border border-white/100" />
             </div>
+
+            {/* Mobile Slider - Hidden on desktop */}
+            <div className="md:hidden w-full max-w-[300px]" ref={emblaRef}>
+              <div className="flex">
+                <div className="flex-[0_0_100%] min-w-0 flex justify-center px-2">
+                  <img src={imgLeft} alt="Activities" className="w-full h-64 object-cover rounded-xl shadow-lg border border-white/100" />
+                </div>
+                <div className="flex-[0_0_100%] min-w-0 flex justify-center px-2">
+                  <img src={imgCenter} alt="Students" className="w-full h-64 object-cover rounded-xl shadow-lg border border-white/100" />
+                </div>
+                <div className="flex-[0_0_100%] min-w-0 flex justify-center px-2">
+                  <img src={imgRight} alt="Awards" className="w-full h-64 object-cover rounded-xl shadow-lg border border-white/100" />
+                </div>
+              </div>
+            </div>
+
+            {/* Pagination Dots (Mobile Only) */}
+            <div className="flex justify-center gap-3 mt-6 md:hidden">
+              {scrollSnaps.map((_, index) => (
+                <button
+                  key={index}
+                  type="button"
+                  className="transition-all focus:outline-none cursor-pointer"
+                  onClick={() => emblaApi && emblaApi.scrollTo(index)}
+                >
+                  <img
+                    src={index === selectedIndex ? activeDot : inactiveDot}
+                    alt={`Slide ${index + 1}`}
+                    className="w-2.5 h-2.5"
+                  />
+                </button>
+              ))}
+            </div>
+
           </div>
 
           {/* Right Card */}
