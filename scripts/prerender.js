@@ -83,7 +83,19 @@ async function prerender() {
             // Wait for title to not be default (optional, if your SEO comp works fast)
             // await page.waitForFunction('document.title !== "Vite + React"');
 
-            const content = await page.content();
+            // Wait for Helmet to update the head
+            try {
+                await page.waitForFunction(() => document.querySelector('meta[data-rh="true"]'), { timeout: 5000 });
+            } catch (e) {
+                console.warn(`Timeout waiting for Helmet meta tags on ${route}, proceeding anyway.`);
+            }
+
+            let content = await page.content();
+
+            // Remove the static placeholder tags using regex
+            content = content.replace(/<meta[^>]*data-prerender-remove="true"[^>]*>/g, '');
+            // Remove the specific comment
+            content = content.replace('<!-- Default Social Media Meta Tags (Placeholder for Prerendering Removal) -->', '');
 
             // Determine output path
             // / -> dist/index.html
