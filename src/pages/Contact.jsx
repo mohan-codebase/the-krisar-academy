@@ -12,6 +12,7 @@ const Contact = () => {
             <SEO
                 title="Contact"
                 description="Contact The Krisar Academy for admissions, transport, or general enquiries. We are here to help."
+                keywords="Contact School, Admissions Enquiry, School Transport, School Address, Phone Number"
             />
             {/* Hero Section */}
             <PageHero h1="We're here to help 24/7" title='Contact Us' />

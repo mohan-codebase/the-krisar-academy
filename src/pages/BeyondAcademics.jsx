@@ -8,7 +8,7 @@ import '../assets/styles/fonts.css'
 // import heroBg from '../assets/images/beyond-academics/hero-beyond-academics.png'
 
 // Sports Images
-import sports1 from '../assets/images/beyond-academics/Sports & Activities-1.avif'
+import sports1 from '../assets/images/beyond-academics/sports-activities-1.avif'
 import sports2 from '../assets/images/beyond-academics/Sports & Activities-2.avif'
 import sports3 from '../assets/images/beyond-academics/Sports & Activities-3.avif'
 
@@ -34,6 +34,7 @@ const BeyondAcademics = () => {
             <SEO
                 title="Beyond Academics"
                 description="Explore The Krisar Academy's co-curricular activities, including sports, arts, diet, and special education."
+                keywords="Co-curricular Activities, Sports Education, Student Wellness, Holisitc Development, Arts and Culture"
             />
             <PageHero
                 title="Beyond Academics"

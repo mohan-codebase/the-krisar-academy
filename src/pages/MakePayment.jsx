@@ -19,6 +19,7 @@ const MakePayment = () => {
             <SEO
                 title="Make Payment"
                 description="Securely pay school fees online via UPI, Credit Card, Debit Card, or Net Banking."
+                keywords="Online Fee Payment, School Fees, Secure Payment, Razorpay, Fee Collection"
             />
             <PageHero
                 title="Payment"

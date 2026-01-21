@@ -42,6 +42,7 @@ const Gallery = () => {
             <SEO
                 title="Gallery"
                 description="View photos and videos of life at The Krisar Academy, including events, celebrations, and academic activities."
+                keywords="School Photos, School Events, Photo Gallery, Video Gallery, Student Activities"
             />
             <PageHero
                 title="Media Gallery"

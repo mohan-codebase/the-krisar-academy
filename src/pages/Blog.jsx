@@ -12,6 +12,7 @@ const Blog = () => {
             <SEO
                 title="Blog"
                 description="Stay updated with the latest news, achievements, and educational insights from The Krisar Academy."
+                keywords="School Blog, Education News, Student Achievements, Educational Insights, School Events"
             />
             <PageHero
                 title="Blogs & Updates"

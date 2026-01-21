@@ -38,6 +38,7 @@ const AboutUs = () => {
             <SEO
                 title="About Us"
                 description="Learn about The Krisar Academy, a visionary institution providing world-class education near Arani, Timiri, Arcot, Vellore, Ranipet & Walajapet."
+                keywords="About Krisar Academy, School History, Educational Vision, Best Faclities Arani, School Mission"
             />
             {/* 1. Hero Section */}
             <PageHero

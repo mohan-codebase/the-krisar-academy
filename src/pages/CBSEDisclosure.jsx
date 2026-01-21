@@ -50,6 +50,7 @@ const CBSEDisclosure = () => {
             <SEO
                 title="CBSE Disclosure"
                 description="Access mandatory public disclosures and compliance documents of The Krisar Academy as per CBSE norms."
+                keywords="CBSE Disclosure, Mandatory Public Disclosure, School Affiliation, NOC, Recognition Certificate"
             />
             <PageHero
                 title="Approvals And Certifications"

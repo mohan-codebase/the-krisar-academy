@@ -83,6 +83,7 @@ const Facilities = () => {
             <SEO
                 title="Facilities"
                 description="Explore the world-class facilities at The Krisar Academy, including modern libraries, labs, and sports infrastructure."
+                keywords="School Infrastructure, Science Labs, Library, Computer Lab, Robotic Lab, School Transport"
             />
             <PageHero
                 title="Our Facilities"

@@ -12,7 +12,7 @@ const SEO = ({
     const siteTitle = 'The Krisar Academy';
     const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
     const metaDescription = description || 'The Krisar Academy - A visionary institution dedicated to nurturing young minds through holistic education.';
-    const metaImage = image || '/og-image.jpg'; // We should ensure this image exists or use a better default
+    const metaImage = image || '/og-image.avif'; // Default OG image
     const metaUrl = url || window.location.href;
 
     return (

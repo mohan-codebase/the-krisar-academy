@@ -18,6 +18,7 @@ const Home = () => {
       <SEO
         title="Welcome"
         description="The Krisar Academy is a visionary institution dedicated to nurturing young minds through holistic education, modern learning methods, and strong values."
+        keywords="Krisar Academy, CBSE School, Best School in Arani, Holistic Education, Top Schools Vellore, Ranipet Schools"
       />
       <Banner />
       <Strip />

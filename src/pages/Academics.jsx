@@ -115,6 +115,7 @@ const Academics = () => {
             <SEO
                 title="Academics"
                 description="Discover The Krisar Academy's academic approach, curriculum, and holistic learning framework."
+                keywords="CBSE Curriculum, Academic Excellence, Holistic Learning, Kindergarten to Grade 12, Life Skills Education"
             />
             <PageHero
                 title="Academic Excellence"

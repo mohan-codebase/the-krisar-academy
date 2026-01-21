@@ -126,6 +126,7 @@ const Admissions = () => {
             <SEO
                 title="Admissions"
                 description="Apply for admission to The Krisar Academy. Fill out the online application form for Pre-KG to Grade 12."
+                keywords="School Admissions, Online Application, Pre-KG Admission, Grade 11 Admission, School Enrollment"
             />
             <PageHero
                 title="Admissions"
