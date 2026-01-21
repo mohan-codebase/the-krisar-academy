@@ -125,7 +125,7 @@ const Admissions = () => {
         <div className="min-h-screen bg-[#0B1221] text-white pb-20">
             <SEO
                 title="Admissions"
-                description="Apply for admission to The Krisar Academy. Fill out the online application form for Pre-KG to Grade 12."
+                description="Admission Registration FORM NAME *AGE *DATE OF BIRTH *GENDERMOTHER TONGUE *NATIONALITY *RELIGION *COMMUNITY *CASTE *SUB CASTE *NAME & ADDRESS OF THE CURRENT SCHOOL *CLASS STUDYING *ADMISSION REQUIRED FOR CLASS *FATHER NAME *FATHER QUALIFICATION *FATHER OCCUPATION *FATHER CONTACT NUMBER *FATHER ANNUA..."
                 keywords="School Admissions, Online Application, Pre-KG Admission, Grade 11 Admission, School Enrollment"
             />
             <PageHero

@@ -82,7 +82,7 @@ const Facilities = () => {
         <div className="bg-brand-primary min-h-screen">
             <SEO
                 title="Facilities"
-                description="Explore the world-class facilities at The Krisar Academy, including modern libraries, labs, and sports infrastructure."
+                description="Facilities Resource Centre – LibraryThe hub of peaceful learning and exploration, research and application well stocked with books old and new. The Resource Centre, comprising the Library and the Teacher’s Resource Centre, has become a unique repository of books, CDs, audio as well as video titl..."
                 keywords="School Infrastructure, Science Labs, Library, Computer Lab, Robotic Lab, School Transport"
             />
             <PageHero

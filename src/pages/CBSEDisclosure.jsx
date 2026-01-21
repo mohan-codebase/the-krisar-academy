@@ -49,7 +49,7 @@ const CBSEDisclosure = () => {
         <div className="min-h-screen bg-[#0B1221] text-white pb-20">
             <SEO
                 title="CBSE Disclosure"
-                description="Access mandatory public disclosures and compliance documents of The Krisar Academy as per CBSE norms."
+                description="CBSE Disclosure CBSE DISCLOSURE Extension Letter NOC Recognition Building Safety Certificate Fire Safety Certificate Sanitation Certificate Trust Deed Self Certification Parents Teachers Committee Academic Calender SMC Mandatory Disclosure D Form"
                 keywords="CBSE Disclosure, Mandatory Public Disclosure, School Affiliation, NOC, Recognition Certificate"
             />
             <PageHero

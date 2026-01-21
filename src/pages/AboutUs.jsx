@@ -37,7 +37,7 @@ const AboutUs = () => {
         <div className="bg-brand-primary min-h-screen text-white">
             <SEO
                 title="About Us"
-                description="Learn about The Krisar Academy, a visionary institution providing world-class education near Arani, Timiri, Arcot, Vellore, Ranipet & Walajapet."
+                description="About us Who We AreThe Krisar Academy is the advanced visionary step towards the future of Education. It is instituted in the year 2018 with an aim to offer holistic education to the children in the villages around the major towns i.e., Arani, Timiri, Arcot, Vellore, Ranipet & Walajapet. The school..."
                 keywords="About Krisar Academy, School History, Educational Vision, Best Faclities Arani, School Mission"
             />
             {/* 1. Hero Section */}

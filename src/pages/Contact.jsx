@@ -11,7 +11,7 @@ const Contact = () => {
         <div className="min-h-screen bg-[#0B1221] text-white">
             <SEO
                 title="Contact"
-                description="Contact The Krisar Academy for admissions, transport, or general enquiries. We are here to help."
+                description="Contact Us Reach Us #136/6, Arcot to Arani Main Road, Paradarami Village,Arcot Taluk, Ranipet District, Pin – 632512, Tamil Nadu, India Call Us Office: +91 7540096387Admission : +91 7540088387Transport: +91 7540098387 Email Us info.thekrisaracademy@gmail.com Follow Us Facebook-f Youtube Instagram ..."
                 keywords="Contact School, Admissions Enquiry, School Transport, School Address, Phone Number"
             />
             {/* Hero Section */}

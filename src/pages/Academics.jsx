@@ -114,7 +114,7 @@ const Academics = () => {
         <div className="bg-brand-primary min-h-screen">
             <SEO
                 title="Academics"
-                description="Discover The Krisar Academy's academic approach, curriculum, and holistic learning framework."
+                description="Academics Academic Approach We have been moving in recent years towards an education system that is more flexible and diverse. The aim is to provide students with greater choice to meet their different interests and ways of learning. Being able to choose what and how they learn will encourage them t..."
                 keywords="CBSE Curriculum, Academic Excellence, Holistic Learning, Kindergarten to Grade 12, Life Skills Education"
             />
             <PageHero
