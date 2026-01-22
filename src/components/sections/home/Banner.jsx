@@ -123,7 +123,7 @@ const Banner = () => {
                                     // Standard Layout (Centered Title, Split Content)
                                     <div className="flex flex-col items-center w-full pt-28  pb-8 md:py-1 h-full justify-center">
                                         {/* Main Heading */}
-                                        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-center mb-4 md:mb-0 leading-tight mt-48">
+                                        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-center mb-4 md:mb-0 leading-tight md:mt-48">
                                             {slide.title}
                                         </h1>
 
