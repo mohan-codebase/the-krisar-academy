@@ -26,56 +26,109 @@ export default async function handler(req, res) {
 
     let subject = '';
     let htmlContent = '';
-    const receiverEmail = process.env.RECEIVER_EMAIL || 'info.thekrisaracademy@gmail.com';  // Fallback if env not set
+    const receiverEmail = process.env.RECEIVER_EMAIL || 'info.thekrisaracademy@gmail.com';
+
+    const styles = {
+        container: `font-family: 'Arial', sans-serif; max-width: 600px; margin: 0 auto; background-color: #EEEEEE; border-radius: 8px; overflow: hidden;`,
+        header: `background-color: #061E3F; padding: 20px; text-align: center; border-bottom: 4px solid #FFC107;`,
+        headerTitle: `color: #FFFFFF; margin: 0; font-size: 24px; text-transform: uppercase; letter-spacing: 1px;`,
+        content: `padding: 30px; background-color: #FFFFFF; margin: 20px; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);`,
+        sectionTitle: `color: #061E3F; border-bottom: 2px solid #FFC107; padding-bottom: 8px; margin-top: 25px; margin-bottom: 15px; font-size: 18px;`,
+        fieldLabel: `color: #666666; font-size: 12px; text-transform: uppercase; margin-bottom: 4px; display: block; font-weight: bold;`,
+        fieldValue: `color: #000000; font-size: 16px; margin-bottom: 15px; line-height: 1.5;`,
+        footer: `background-color: #061E3F; padding: 15px; text-align: center; color: #AAAAAA; font-size: 12px;`,
+        accentText: `color: #FFC107; font-weight: bold;`
+    };
+
+    const getFieldHtml = (label, value) => `
+        <div style="margin-bottom: 16px;">
+            <span style="${styles.fieldLabel}">${label}</span>
+            <div style="${styles.fieldValue}">${value || 'N/A'}</div>
+        </div>
+    `;
 
     try {
         if (type === 'contact') {
             subject = `New Contact Inquiry from ${data.name}`;
             htmlContent = `
-        <h2>New Contact Inquiry</h2>
-        <p><strong>Name:</strong> ${data.name}</p>
-        <p><strong>Phone:</strong> ${data.phone}</p>
-        <p><strong>Email:</strong> ${data.email}</p>
-        <p><strong>Message:</strong></p>
-        <p>${data.message}</p>
-      `;
+                <div style="${styles.container}">
+                    <div style="${styles.header}">
+                        <h1 style="${styles.headerTitle}">Contact <span style="color: #FFC107;">Inquiry</span></h1>
+                    </div>
+                    <div style="${styles.content}">
+                        ${getFieldHtml('Name', data.name)}
+                        ${getFieldHtml('Phone', `<a href="tel:${data.phone}" style="color: #061E3F; text-decoration: none;">${data.phone}</a>`)}
+                        ${getFieldHtml('Email', `<a href="mailto:${data.email}" style="color: #061E3F; text-decoration: none;">${data.email}</a>`)}
+                        
+                        <h2 style="${styles.sectionTitle}">Message</h2>
+                        <div style="${styles.fieldValue}; background-color: #f8f9fa; padding: 15px; border-left: 4px solid #FFC107; border-radius: 4px;">
+                            ${data.message.replace(/\n/g, '<br>')}
+                        </div>
+                    </div>
+                    <div style="${styles.footer}">
+                        &copy; ${new Date().getFullYear()} The Krisar Academy. All rights reserved.
+                    </div>
+                </div>
+            `;
         } else if (type === 'admissions') {
             subject = `New Admission Application: ${data.firstName} ${data.lastName}`;
-            // Format complex admission data
             htmlContent = `
-        <h2>New Admission Application</h2>
-        <h3>Student Information</h3>
-        <p><strong>Name:</strong> ${data.firstName} ${data.lastName}</p>
-        <p><strong>DOB:</strong> ${data.dob} (Age: ${data.age})</p>
-        <p><strong>Gender:</strong> ${data.gender}</p>
-        <p><strong>Blood Group:</strong> ${data.bloodGroup || 'N/A'}</p>
-        <p><strong>Grade Seeking:</strong> ${data.grade}</p>
-        <p><strong>Previous School:</strong> ${data.previousSchool || 'N/A'}</p>
-        <p><strong>Place:</strong> ${data.place}</p>
+                <div style="${styles.container}">
+                    <div style="${styles.header}">
+                        <h1 style="${styles.headerTitle}">Admission <span style="color: #FFC107;">Application</span></h1>
+                    </div>
+                    
+                    <div style="${styles.content}">
+                        <h2 style="${styles.sectionTitle}">Student Information</h2>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                            ${getFieldHtml('Full Name', `${data.firstName} ${data.lastName}`)}
+                            ${getFieldHtml('Date of Birth', `${data.dob} (Age: ${data.age})`)}
+                            ${getFieldHtml('Gender', data.gender)}
+                            ${getFieldHtml('Blood Group', data.bloodGroup)}
+                            ${getFieldHtml('Grade Seeking', `<span style="${styles.accentText}; color: #061E3F; background-color: #FFC107; padding: 2px 6px; border-radius: 3px;">${data.grade}</span>`)}
+                            ${getFieldHtml('Place', data.place)}
+                        </div>
+                        ${getFieldHtml('Previous School', data.previousSchool)}
 
-        <h3>Parent Information</h3>
-        <h4>Father</h4>
-        <p><strong>Name:</strong> ${data.fatherName}</p>
-        <p><strong>Qualification:</strong> ${data.fatherQual || 'N/A'}</p>
-        <p><strong>Occupation:</strong> ${data.fatherOccup || 'N/A'}</p>
-        <p><strong>Income:</strong> ${data.fatherIncome || 'N/A'}</p>
-        <p><strong>Contact:</strong> ${data.fatherContact}</p>
-        <p><strong>Email:</strong> ${data.fatherEmail || 'N/A'}</p>
+                        <h2 style="${styles.sectionTitle}">Parent Information</h2>
+                        
+                        <div style="background-color: #f8f9fa; padding: 15px; border-radius: 4px; margin-bottom: 20px;">
+                            <h3 style="color: #061E3F; margin-top: 0;">Father's Details</h3>
+                            ${getFieldHtml('Name', data.fatherName)}
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                                ${getFieldHtml('Qualification', data.fatherQual)}
+                                ${getFieldHtml('Occupation', data.fatherOccup)}
+                                ${getFieldHtml('Mobile', data.fatherContact)}
+                                ${getFieldHtml('Email', data.fatherEmail)}
+                            </div>
+                        </div>
 
-        <h4>Mother</h4>
-        <p><strong>Name:</strong> ${data.motherName}</p>
-        <p><strong>Qualification:</strong> ${data.motherQual || 'N/A'}</p>
-        <p><strong>Occupation:</strong> ${data.motherOccup || 'N/A'}</p>
-        <p><strong>Income:</strong> ${data.motherIncome || 'N/A'}</p>
-        <p><strong>Contact:</strong> ${data.motherContact}</p>
-        <p><strong>Email:</strong> ${data.motherEmail || 'N/A'}</p>
+                        <div style="background-color: #f8f9fa; padding: 15px; border-radius: 4px;">
+                            <h3 style="color: #061E3F; margin-top: 0;">Mother's Details</h3>
+                            ${getFieldHtml('Name', data.motherName)}
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                                ${getFieldHtml('Qualification', data.motherQual)}
+                                ${getFieldHtml('Occupation', data.motherOccup)}
+                                ${getFieldHtml('Mobile', data.motherContact)}
+                                ${getFieldHtml('Email', data.motherEmail)}
+                            </div>
+                        </div>
 
-        <h3>Final Details</h3>
-        <p><strong>Residential Address:</strong> ${data.address}</p>
-        <p><strong>Primary Contact:</strong> ${data.contactNo}</p>
-        <p><strong>Primary Email:</strong> ${data.emailId}</p>
-        <p><strong>Declaration Accepted:</strong> ${data.declaration ? 'Yes' : 'No'}</p>
-      `;
+                        <h2 style="${styles.sectionTitle}">Final Details</h2>
+                        ${getFieldHtml('Residential Address', data.address)}
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                            ${getFieldHtml('Primary Contact', data.contactNo)}
+                            ${getFieldHtml('Primary Email', data.emailId)}
+                        </div>
+                        <div style="margin-top: 20px; padding: 10px; background-color: #e3f2fd; border-radius: 4px; color: #0d47a1; font-size: 12px;">
+                            <strong>Declaration Accepted:</strong> ${data.declaration ? 'Yes' : 'No'}
+                        </div>
+                    </div>
+                     <div style="${styles.footer}">
+                        &copy; ${new Date().getFullYear()} The Krisar Academy. All rights reserved.
+                    </div>
+                </div>
+            `;
         } else {
             return res.status(400).json({ message: 'Invalid form type' });
         }
