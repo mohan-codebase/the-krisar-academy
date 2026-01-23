@@ -11,6 +11,10 @@ import banner2 from '../../../assets/images/home/banner/banner-2.avif'
 import banner3 from '../../../assets/images/home/banner/banner-3.avif'
 
 
+import banner4 from '../../../assets/images/home/banner/banner-4.avif'
+import banner5 from '../../../assets/images/home/banner/banner-5.avif'
+
+
 
 const slides = [
     {
@@ -21,7 +25,7 @@ const slides = [
         title: <>Shaping Future Leaders <span className="text-brand-secondary">Through Excellence</span></>,
         leftContent: {
             title: <>Visionary Education<br />Since 2018</>,
-            desc: "Krishar Academy Was Established With A Clear Mission To Deliver Holistic, Future-Ready Education, Nurturing Students To Grow As Confident Learners And Responsible Leaders."
+            desc: "Krisar Academy Was Established With A Clear Mission To Deliver Holistic, Future-Ready Education, Nurturing Students To Grow As Confident Learners And Responsible Leaders."
         },
         rightContent: {
             title: <>Learners Today,<br />Leaders Tomorrow</>,
@@ -45,6 +49,32 @@ const slides = [
         title: <>Proud Holders Of <span className="text-brand-secondary">National & Guinness</span> World Records</>,
         description: "Recognized For Outstanding Participation, Discipline, And Achievement That Sets Global Benchmarks.",
         isCertSlide: true
+    },
+    {
+        id: 4,
+        layout: 'standard',
+        image: banner5,
+        badge: "Fueling Passion, Building Champions",
+        title: <>Where <span className="text-brand-secondary">Dedication, Discipline,</span> And <span className="text-brand-secondary">Performance</span> Come Together</>,
+        leftContent: {
+            title: <>Where Passion Meets Performance</>,
+            desc: "Krisar Academy Was Established With A Clear Mission To Deliver Holistic, Performance Driven Sports Training, Nurturing Athletes To Grow As Confident Performers And Disciplined Team Players."
+        },
+        rightContent: {
+            title: <>Youth & Growth<br />Oriented</>,
+            desc: "By Emphasizing Foundational Skills, Teamwork, And Sportsmanship, Krisar Academy Nurtures Athletes In A Positive Environment That Supports Long-Term Growth."
+        },
+        buttonText: "ENROL NOW"
+    },
+    {
+        id: 5,
+        layout: 'left-aligned',
+        image: banner4,
+        badge: "From Basics To Brilliance",
+        title: <>Strong Foundations For <span className="text-brand-secondary">NEET & JEE Success</span></>,
+        description: "Concept-Focused Learning, Personal Attention, And Expert Support To Prepare Students Step By Step.",
+        buttonText: "CALL NOW",
+        buttonStyle: "secondary"
     }
 ]
 
@@ -117,7 +147,7 @@ const Banner = () => {
                                     }`}></div>
                             </div>
 
-                            <div className='max-w-[1440px] mx-auto px-4 h-full flex items-center justify-center relative z-10'>
+                            <div className='max-w-[1540px] mx-auto px-4 h-full flex items-center justify-center relative z-10'>
 
                                 {slide.layout === 'standard' ? (
                                     // Standard Layout (Centered Title, Split Content)
@@ -149,7 +179,7 @@ const Banner = () => {
                                                     href="tel:919585335552"
                                                     className="flex items-center gap-3 transition-colors cursor-pointer"
                                                 >
-                                                    CALL NOW <ArrowRight size={20} />
+                                                    {slide.buttonText || "CALL NOW"} <ArrowRight size={20} />
                                                 </Button>
                                             </div>
 
@@ -186,9 +216,9 @@ const Banner = () => {
                                             {/* CTA Button */}
                                             <Button
                                                 href="tel:919585335552"
-                                                className="inline-flex items-center gap-2 hover:bg-yellow-400 transition-colors cursor-pointer mt-4"
+                                                className={`inline-flex items-center gap-2 transition-colors cursor-pointer mt-4 ${slide.buttonStyle === 'secondary' ? 'hover:bg-yellow-400' : 'hover:bg-white/20'}`}
                                             >
-                                                CALL NOW <ArrowRight size={20} />
+                                                {slide.buttonText || "CALL NOW"} <ArrowRight size={20} />
                                             </Button>
                                         </div>
 
