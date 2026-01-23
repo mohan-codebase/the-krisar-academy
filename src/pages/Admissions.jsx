@@ -114,11 +114,39 @@ const Admissions = () => {
         setStep(prev => prev - 1);
     };
 
-    const handleSubmit = (e) => {
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitError, setSubmitError] = useState('');
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Here you would typically send data to backend
-        console.log("Form Submitted:", formData);
-        setIsSubmitted(true);
+        setIsSubmitting(true);
+        setSubmitError('');
+
+        try {
+            const response = await fetch('/api/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    type: 'admissions',
+                    data: formData
+                }),
+            });
+
+            if (response.ok) {
+                setIsSubmitted(true);
+            } else {
+                const data = await response.json().catch(() => ({}));
+                console.error('Submission failed:', response.status, response.statusText, data);
+                setSubmitError(data.message || 'Failed to submit application.');
+            }
+        } catch (error) {
+            console.error('Error submitting application:', error);
+            setSubmitError('An error occurred. Please try again.');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -253,8 +281,18 @@ const Admissions = () => {
                                 </button>
                             ) : <div></div>}
 
-                            <Button type="submit" className="min-w-[140px] inline-flex items-center justify-center gap-2 px-6 py-3 md:px-8 md:py-4 text-sm md:text-lg font-bold rounded-xl whitespace-nowrap transition-transform text-brand-primary">
-                                {step === 3 ? 'Submit Application' : 'Next Step'}
+                            {submitError && (
+                                <div className="w-full text-center text-red-500 mb-4">
+                                    {submitError}
+                                </div>
+                            )}
+
+                            <Button
+                                type="submit"
+                                disabled={isSubmitting}
+                                className="min-w-[140px] inline-flex items-center justify-center gap-2 px-6 py-3 md:px-8 md:py-4 text-sm md:text-lg font-bold rounded-xl whitespace-nowrap transition-transform text-brand-primary disabled:opacity-50 disabled:cursor-not-allowed"
+                            >
+                                {step === 3 ? (isSubmitting ? 'Submitting...' : 'Submit Application') : 'Next Step'}
                                 {step !== 3 && <ChevronRight className="w-5 h-5 md:w-6 md:h-6 ml-1" />}
                             </Button>
                         </div>

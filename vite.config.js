@@ -9,4 +9,12 @@ export default defineConfig({
   ssr: {
     noExternal: ['react-helmet-async'],
   },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:3001',
+        changeOrigin: true,
+      },
+    },
+  },
 })

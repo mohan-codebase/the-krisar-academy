@@ -8,6 +8,51 @@ import ScrollReveal from '../components/common/ScrollReveal';
 // import bgImage from '../assets/images/PageHero/PageHero.avif';
 
 const Contact = () => {
+    const [formData, setFormData] = React.useState({
+        name: '',
+        phone: '',
+        email: '',
+        message: ''
+    });
+    const [status, setStatus] = React.useState(''); // '', 'loading', 'success', 'error'
+
+    const handleChange = (e) => {
+        setFormData(prev => ({
+            ...prev,
+            [e.target.name]: e.target.value
+        }));
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setStatus('loading');
+        try {
+            const response = await fetch('/api/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    type: 'contact',
+                    data: formData
+                }),
+            });
+
+            if (response.ok) {
+                setStatus('success');
+                setFormData({ name: '', phone: '', email: '', message: '' });
+                setTimeout(() => setStatus(''), 5000);
+            } else {
+                const errorData = await response.json().catch(() => ({}));
+                console.error('Submission failed:', response.status, response.statusText, errorData);
+                setStatus('error');
+            }
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            setStatus('error');
+        }
+    };
+
     return (
         <div className="min-h-screen bg-[#0B1221] text-white">
             <SEO
@@ -101,13 +146,17 @@ const Contact = () => {
 
                         {/* Right Column: Form */}
                         <div className="bg-[#151E38]/50 p-8 rounded-2xl border border-white/5 backdrop-blur-sm">
-                            <form className="space-y-6">
+                            <form className="space-y-6" onSubmit={handleSubmit}>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div className="space-y-2">
                                         <label htmlFor="name" className="text-sm font-medium text-gray-300">Name</label>
                                         <input
                                             type="text"
                                             id="name"
+                                            name="name"
+                                            value={formData.name}
+                                            onChange={handleChange}
+                                            required
                                             placeholder="Your name"
                                             className="w-full bg-transparent border-b border-gray-700 focus:border-yellow-400 px-0 py-2.5 outline-none transition-colors text-white placeholder-gray-600"
                                         />
@@ -117,6 +166,10 @@ const Contact = () => {
                                         <input
                                             type="tel"
                                             id="phone"
+                                            name="phone"
+                                            value={formData.phone}
+                                            onChange={handleChange}
+                                            required
                                             placeholder="Your Phone Number"
                                             className="w-full bg-transparent border-b border-gray-700 focus:border-yellow-400 px-0 py-2.5 outline-none transition-colors text-white placeholder-gray-600"
                                         />
@@ -128,6 +181,10 @@ const Contact = () => {
                                     <input
                                         type="email"
                                         id="email"
+                                        name="email"
+                                        value={formData.email}
+                                        onChange={handleChange}
+                                        required
                                         placeholder="Your Email"
                                         className="w-full bg-transparent border-b border-gray-700 focus:border-yellow-400 px-0 py-2.5 outline-none transition-colors text-white placeholder-gray-600"
                                     />
@@ -137,6 +194,10 @@ const Contact = () => {
                                     <label htmlFor="message" className="text-sm font-medium text-gray-300">Message</label>
                                     <textarea
                                         id="message"
+                                        name="message"
+                                        value={formData.message}
+                                        onChange={handleChange}
+                                        required
                                         rows={4}
                                         placeholder="Type Message"
                                         className="w-full bg-transparent border-b border-gray-700 focus:border-yellow-400 px-0 py-2.5 outline-none transition-colors text-white placeholder-gray-600 resize-none"
@@ -144,9 +205,19 @@ const Contact = () => {
                                 </div>
 
                                 <div className="pt-4">
-                                    <Button className="w-auto px-8 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold rounded-lg btn-primary">
-                                        Send Message
+                                    <Button
+                                        type="submit"
+                                        disabled={status === 'loading'}
+                                        className="w-auto px-8 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold rounded-lg btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
+                                    >
+                                        {status === 'loading' ? 'Sending...' : 'Send Message'}
                                     </Button>
+                                    {status === 'success' && (
+                                        <p className="text-green-400 mt-2 text-sm">Message sent successfully!</p>
+                                    )}
+                                    {status === 'error' && (
+                                        <p className="text-red-400 mt-2 text-sm">Failed to send message. Please try again.</p>
+                                    )}
                                 </div>
 
                             </form>
