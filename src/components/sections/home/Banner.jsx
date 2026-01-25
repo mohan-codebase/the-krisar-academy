@@ -13,6 +13,20 @@ import banner3 from '../../../assets/images/home/banner/banner-3.avif'
 
 import banner4 from '../../../assets/images/home/banner/banner-4.avif'
 import banner5 from '../../../assets/images/home/banner/banner-5.avif'
+import banner6 from '../../../assets/images/home/banner/banner-6.avif'
+import wrImg1 from '../../../assets/images/home/banner/banner-6/bannertop-img-1.png'
+import wrImg2 from '../../../assets/images/home/banner/banner-6/bannertop-img-2.png'
+import wrImg3 from '../../../assets/images/home/banner/banner-6/bannertop-img-3.png'
+import wrImg4 from '../../../assets/images/home/banner/banner-6/bannertop-img-4.png'
+import wrLogo from '../../../assets/images/home/banner/banner-6/center-logo.webp'
+
+import banner7 from '../../../assets/images/home/banner/banner-7/banner-7.avif'
+import b7Img1 from '../../../assets/images/home/banner/banner-7/1.avif'
+import b7Img2 from '../../../assets/images/home/banner/banner-7/2.avif'
+import b7Img3 from '../../../assets/images/home/banner/banner-7/3.avif'
+import b7Img4 from '../../../assets/images/home/banner/banner-7/4.avif'
+
+import b8SideImg from '../../../assets/images/home/banner/banner-8/side-image.avif'
 
 
 
@@ -75,12 +89,43 @@ const slides = [
         description: "Concept-Focused Learning, Personal Attention, And Expert Support To Prepare Students Step By Step.",
         buttonText: "CALL NOW",
         buttonStyle: "secondary"
+    },
+    {
+        id: 6,
+        layout: 'world-record',
+        image: banner6,
+        badge: "World Record Achievement",
+        title: <div className="text-[18px] md:text-[38px]">Our Students Created A <span className="text-brand-secondary">World Record</span></div>,
+        description: "A Historic Moment Of Creativity, Teamwork, And National Pride At The Krisar Academy.",
+        images: [wrImg1, wrImg2, wrImg3, wrImg4],
+        centerLogo: wrLogo,
+        buttonText: "CALL NOW"
+    },
+    {
+        id: 7,
+        layout: 'bottom-grid',
+        image: banner7,
+        badge: "World Record Achievement",
+        title: <>Our Students Created A <span className="text-brand-secondary">World Record</span></>,
+        description: "A Historic Moment Of Creativity, Teamwork, And National Pride At The Krisar Academy.",
+        images: [b7Img1, b7Img2, b7Img3, b7Img4],
+        buttonText: "CALL NOW"
+    },
+    {
+        id: 8,
+        layout: 'collage-right',
+        image: banner7, // Reuse background from slide 7
+        badge: "World Record Achievement",
+        title: <>Our Students Created A <span className="text-brand-secondary">World Record</span></>,
+        description: "A Historic Moment Of Creativity, Teamwork, And National Pride At The Krisar Academy.",
+        sideImage: b8SideImg,
+        buttonText: "CALL NOW"
     }
 ]
 
 const Banner = () => {
     // Memoize plugins to prevent re-initialization on every render
-    const plugins = React.useMemo(() => [Autoplay({ delay: 10000 })], [])
+    const plugins = React.useMemo(() => [Autoplay({ delay: 10000000 })], [])
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, plugins)
 
     const scrollPrev = useCallback(() => {
@@ -141,15 +186,162 @@ const Banner = () => {
                                 style={{ backgroundImage: `url(${slide.image})` }}
                             >
                                 {/* Gradient Overlay based on layout */}
-                                <div className={`absolute inset-0 ${slide.layout === 'left-aligned'
-                                    ? 'bg-gradient-to-r from-brand-primary via-brand-primary/80 md:via-brand-primary/60 to-brand-primary/40 md:to-transparent'
-                                    : 'bg-brand-primary/40 md:bg-brand-primary/0'
+                                <div className={`absolute inset-0 ${slide.layout === 'image-only' ? 'hidden' :
+                                    slide.layout === 'world-record' || slide.layout === 'bottom-grid' || slide.layout === 'collage-right'
+                                        ? 'bg-brand-primary/0' // Keep transparent for these custom graphical slides if bg is already dark/styled
+                                        : slide.layout === 'left-aligned'
+                                            ? 'bg-gradient-to-r from-brand-primary via-brand-primary/80 md:via-brand-primary/10 to-brand-primary/40 md:to-transparent'
+                                            : 'bg-brand-primary/40 md:bg-brand-primary/0'
                                     }`}></div>
                             </div>
 
                             <div className='max-w-[1540px] mx-auto px-4 h-full flex items-center justify-center relative z-10'>
 
-                                {slide.layout === 'standard' ? (
+                                {slide.layout === 'collage-right' ? (
+                                    <div className="flex flex-col md:flex-row items-center w-full h-full relative pt-24 md:pt-0 pb-8 md:pb-0">
+
+                                        {/* Left: Text Content */}
+                                        <div className="flex flex-col items-center md:items-start text-center md:text-left z-10 w-full md:w-1/2 px-4 md:pl-16 lg:pl-24">
+                                            {/* Badge */}
+                                            <div className="bg-[#2A3C55]/20 backdrop-blur-md rounded px-4 py-2 border border-white/20 text-xs md:text-sm mb-6 inline-flex items-center gap-2 shadow-lg">
+                                                <span className="text-brand-secondary">●</span>
+                                                {slide.badge}
+                                            </div>
+
+                                            {/* Main Heading */}
+                                            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+                                                {slide.title}
+                                            </h1>
+
+                                            {/* Description */}
+                                            <p className="text-gray-200 text-sm md:text-xl mb-8 leading-relaxed max-w-xl font-medium">
+                                                {slide.description}
+                                            </p>
+
+                                            {/* CTA Button */}
+                                            <Button
+                                                href="tel:919585335552"
+                                                className="flex items-center gap-3 transition-colors cursor-pointer bg-brand-secondary text-brand-primary hover:bg-white border-none font-bold px-8 py-3 md:py-4 text-base md:text-lg"
+                                            >
+                                                {slide.buttonText} <ArrowRight size={24} />
+                                            </Button>
+                                        </div>
+
+                                        {/* Right: Side Image */}
+                                        <div className="w-full md:w-1/2 h-full flex items-center justify-center md:justify-end md:pr-12 relative z-10 mt-8 md:mt-0">
+                                            <img
+                                                src={slide.sideImage}
+                                                alt="Collage"
+                                                className="w-full max-w-[500px] md:max-w-none md:w-auto md:h-[70%] object-contain drop-shadow-2xl"
+                                            />
+                                        </div>
+                                    </div>
+                                ) : slide.layout === 'bottom-grid' ? (
+                                    <div className="flex flex-col items-center w-full h-full relative justify-center pt-0 pb-8 md:pt-40 md:pb-12">
+
+                                        {/* Center Content */}
+                                        <div className="flex flex-col items-center text-center z-10 max-w-4xl mx-auto px-4 md:px-0">
+                                            {/* Badge */}
+                                            <div className="bg-[#2A3C55]/60 backdrop-blur-md rounded px-4 py-2 border border-white/20 text-xs md:text-sm mb-4 md:mb-6 inline-flex items-center gap-2 shadow-lg">
+                                                <span className="text-brand-secondary">●</span>
+                                                {slide.badge}
+                                            </div>
+
+                                            {/* Main Heading */}
+                                            <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold mb-3 md:mb-4 leading-tight">
+                                                {slide.title}
+                                            </h1>
+
+                                            {/* Description */}
+                                            <p className="text-gray-200 text-sm md:text-xl mb-6 md:mb-8 leading-relaxed max-w-2xl font-medium">
+                                                {slide.description}
+                                            </p>
+
+                                            {/* CTA Button */}
+                                            <div className="hidden md:block">
+                                                <Button
+                                                    href="tel:919585335552"
+                                                    className="flex items-center gap-3 transition-colors cursor-pointer bg-brand-secondary text-brand-primary hover:bg-white border-none font-bold px-8 py-3 md:py-4 text-base md:text-lg"
+                                                >
+                                                    {slide.buttonText} <ArrowRight size={24} />
+                                                </Button>
+                                            </div>
+                                        </div>
+
+                                        {/* Bottom Images Grid */}
+                                        <div className="w-full z-20 px-4 md:px-12 max-w-[1600px] mx-auto mt-4 md:mt-auto">
+                                            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-8">
+                                                {slide.images.map((img, idx) => (
+                                                    <div key={idx} className="transform transition-transform hover:-translate-y-1 duration-300">
+                                                        <img src={img} alt="" className="w-full h-28 md:h-64 object-cover rounded-sm border-2 border-white/50 shadow-lg" />
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+                                ) : slide.layout === 'world-record' ? (
+                                    <div className="flex flex-col items-center w-full h-full relative justify-center pt-0 pb-8 md:pb-0">
+
+                                        {/* Center Content */}
+                                        <div className="flex flex-col items-center text-center z-10 max-w-4xl mx-auto px-4 md:px-0">
+                                            {/* Logo */}
+                                            <div className="mb-3 md:mb-6 relative">
+                                                <img src={slide.centerLogo} alt="Kingdom World Records" className="w-24 md:w-44 h-auto drop-shadow-2xl" />
+                                            </div>
+
+                                            {/* Badge */}
+                                            <div className="bg-[#2A3C55]/80 backdrop-blur-md rounded px-3 py-1.5 md:px-6 md:py-2 border border-white/10 text-[10px] md:text-sm mb-3 md:mb-6 inline-flex items-center gap-2 shadow-lg">
+                                                <span className="text-[#FFD700] text-lg leading-none">•</span>
+                                                {slide.badge}
+                                            </div>
+
+                                            {/* Main Heading */}
+                                            <h1 className="text-xl md:text-5xl lg:text-6xl font-bold mb-2 md:mb-4 leading-tight">
+                                                {slide.title}
+                                            </h1>
+
+                                            {/* Description */}
+                                            <p className="text-gray-200 text-[10px] md:text-xl mb-0 md:mb-8 leading-relaxed max-w-2xl font-medium px-2">
+                                                {slide.description}
+                                            </p>
+
+                                            {/* CTA Button - Desktop Only */}
+                                            <div className="hidden md:block">
+                                                <Button
+                                                    href="tel:919585335552"
+                                                    className="flex items-center gap-3 transition-colors cursor-pointer bg-brand-secondary text-brand-primary hover:bg-white border-none font-bold px-8 py-4 text-lg"
+                                                >
+                                                    {slide.buttonText} <ArrowRight size={24} />
+                                                </Button>
+                                            </div>
+                                        </div>
+
+                                        {/* Images Container */}
+                                        <div className="w-full md:absolute md:inset-0 md:pointer-events-none md:mt-0 z-20 mt-6">
+                                            {/* Mobile Grid View */}
+                                            <div className="grid grid-cols-2 gap-2 px-3 md:hidden">
+                                                {slide.images.map((img, idx) => (
+                                                    <img key={idx} src={img} alt="" className="w-full h-24 object-cover" />
+                                                ))}
+                                            </div>
+
+                                            {/* Desktop Floating View */}
+                                            <div className="hidden md:block relative w-full h-full max-w-[1700px] mx-auto">
+                                                {/* Top Left */}
+                                                <img src={slide.images[2]} alt="" className="absolute top-[40%] left-4 lg:left-12 w-92 h-44 object-contain rounded" />
+
+                                                {/* Bottom Left */}
+                                                <img src={slide.images[1]} alt="" className="absolute bottom-[15%] left-4 lg:left-12 w-92 h-44 object-contain rounded" />
+
+                                                {/* Top Right */}
+                                                <img src={slide.images[0]} alt="" className="absolute top-[40%] right-4 lg:right-12 w-92 h-44 object-contain rounded" />
+
+                                                {/* Bottom Right */}
+                                                <img src={slide.images[3]} alt="" className="absolute bottom-[15%] right-4 lg:right-12 w-92 h-44 object-contain rounded" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                ) : slide.layout === 'standard' ? (
                                     // Standard Layout (Centered Title, Split Content)
                                     <div className="flex flex-col items-center w-full pt-28  pb-8 md:py-1 h-full justify-center">
                                         {/* Main Heading */}
