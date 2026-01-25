@@ -14,6 +14,7 @@ import Gallery from './pages/Gallery'
 import Admissions from './pages/Admissions'
 import CBSEDisclosure from './pages/CBSEDisclosure'
 import ERPAndPayment from './pages/ERPAndPayment'
+import NotFound from './pages/NotFound'
 import Navbar from './components/layout/Navbar'
 import NavbarTop from './components/layout/NavbarTop'
 import Footer from './components/layout/Footer'
@@ -43,6 +44,7 @@ function App() {
           <Route path="/admission-form2" element={<PageTransition><Admissions /></PageTransition>} />
           <Route path="/cbse-disclosure" element={<PageTransition><CBSEDisclosure /></PageTransition>} />
           <Route path="/erp-and-payment" element={<PageTransition><ERPAndPayment /></PageTransition>} />
+          <Route path="*" element={<PageTransition><NotFound /></PageTransition>} />
         </Routes>
       </AnimatePresence>
       <Footer />
