@@ -3,17 +3,17 @@ import { AnimatePresence } from 'framer-motion'
 import './App.css'
 import './assets/styles/fonts.css'
 import Home from './pages/Home'
-import AboutUs from './pages/AboutUs'
+import Projects from './pages/Projects'
 import Facilities from './pages/Facilities'
-import Academics from './pages/Academics'
-import BeyondAcademics from './pages/BeyondAcademics'
+import UatAcademics from './pages/UatAcademics'
+import UatBeyondAcademics from './pages/UatBeyondAcademics'
 import Blog from './pages/Blog'
 import BlogDetail from './pages/BlogDetail'
 import Contact from './pages/Contact'
 import Gallery from './pages/Gallery'
 import Admissions from './pages/Admissions'
 import CBSEDisclosure from './pages/CBSEDisclosure'
-import MakePayment from './pages/MakePayment'
+import ERPAndPayment from './pages/ERPAndPayment'
 import Navbar from './components/layout/Navbar'
 import NavbarTop from './components/layout/NavbarTop'
 import Footer from './components/layout/Footer'
@@ -32,17 +32,17 @@ function App() {
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<PageTransition><Home /></PageTransition>} />
-          <Route path="/about" element={<PageTransition><AboutUs /></PageTransition>} />
+          <Route path="/projects" element={<PageTransition><Projects /></PageTransition>} />
           <Route path="/facilities" element={<PageTransition><Facilities /></PageTransition>} />
-          <Route path="/academics" element={<PageTransition><Academics /></PageTransition>} />
-          <Route path="/beyond-academics" element={<PageTransition><BeyondAcademics /></PageTransition>} />
+          <Route path="/uat-academics" element={<PageTransition><UatAcademics /></PageTransition>} />
+          <Route path="/uat-beyond-academics" element={<PageTransition><UatBeyondAcademics /></PageTransition>} />
           <Route path="/blog" element={<PageTransition><Blog /></PageTransition>} />
           <Route path="/blog/:slug" element={<PageTransition><BlogDetail /></PageTransition>} />
           <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
           <Route path="/gallery" element={<PageTransition><Gallery /></PageTransition>} />
-          <Route path="/admission" element={<PageTransition><Admissions /></PageTransition>} />
+          <Route path="/admission-form2" element={<PageTransition><Admissions /></PageTransition>} />
           <Route path="/cbse-disclosure" element={<PageTransition><CBSEDisclosure /></PageTransition>} />
-          <Route path="/payment" element={<PageTransition><MakePayment /></PageTransition>} />
+          <Route path="/erp-and-payment" element={<PageTransition><ERPAndPayment /></PageTransition>} />
         </Routes>
       </AnimatePresence>
       <Footer />

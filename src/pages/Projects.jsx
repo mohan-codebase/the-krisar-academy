@@ -33,7 +33,7 @@ const valuesData = [
     { icon: Compass, title: "Exploring" },
 ]
 
-const AboutUs = () => {
+const Projects = () => {
     return (
         <div className="bg-brand-primary min-h-screen text-white">
             <SEO
@@ -196,4 +196,4 @@ const AboutUs = () => {
     )
 }
 
-export default AboutUs
+export default Projects

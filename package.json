@@ -10,7 +10,8 @@
     "build": "vite build && vite build --ssr src/entry-server.jsx --outDir dist/server && npm run prerender",
     "lint": "eslint .",
     "preview": "vite preview",
-    "prerender": "node scripts/prerender.js"
+    "prerender": "node scripts/prerender.js",
+    "sitemap": "node scripts/generate-sitemap.js"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",

@@ -29,7 +29,7 @@ import counsel2 from '../assets/images/beyond-academics/Rectangle 4541.avif'
 import counsel3 from '../assets/images/beyond-academics/Rectangle 4542.avif'
 
 
-const BeyondAcademics = () => {
+const UatBeyondAcademics = () => {
     return (
         <div className="bg-[url('./assets/images/home/NewsUpdates/bg.avif')] bg-cover bg-center min-h-screen">
             <SEO
@@ -139,4 +139,4 @@ const BeyondAcademics = () => {
     )
 }
 
-export default BeyondAcademics;
+export default UatBeyondAcademics;

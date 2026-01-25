@@ -9,11 +9,11 @@ const NavbarTop = () => {
                     <Link to="/" className="hover:underline">Learners Today, Leaders Tomorrow.</Link>
                 </div>
                 <div className="text-[10px] sm:text-xs md:text-base font-medium flex flex-wrap justify-center gap-2 md:gap-0">
-                    <Link to="/payment" className="hover:underline whitespace-nowrap">ERP & Payment</Link>
+                    <Link to="/erp-and-payment" className="hover:underline whitespace-nowrap">ERP & Payment</Link>
                     <span className="hidden sm:inline mx-1 md:mx-2 text-gray-600">|</span>
                     <Link to="/cbse-disclosure" className="hover:underline whitespace-nowrap">CBSE Disclosure</Link>
                     <span className="hidden sm:inline mx-1 md:mx-2 text-gray-600">|</span>
-                    <Link to="/admission" className="hover:underline text-center">Admission Registration Form</Link>
+                    <Link to="/admission-form2" className="hover:underline text-center">Admission Registration Form</Link>
                 </div>
             </div>
         </>
