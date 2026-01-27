@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Star, ChevronLeft, ChevronRight, User } from 'lucide-react';
 
-import img1 from '../../../assets/images/home/SuccessStories/Ellipse 12.svg';
-import img2 from '../../../assets/images/home/SuccessStories/Ellipse 13.svg';
-import img3 from '../../../assets/images/home/SuccessStories/Ellipse 14.svg';
-import img4 from '../../../assets/images/home/SuccessStories/Ellipse 15.svg';
+import img1 from '../../../assets/images/home/SuccessStories/revathi.png';
+import img2 from '../../../assets/images/home/SuccessStories/vijaya.png';
+import img3 from '../../../assets/images/home/SuccessStories/sarika.png';
+import img4 from '../../../assets/images/home/SuccessStories/lakshmi.png';
 import img5 from '../../../assets/images/home/SuccessStories/Ellipse 16.svg';
 
 import img6 from '../../../assets/images/home/SuccessStories/Ellipse 17.svg';
@@ -23,7 +23,7 @@ const stories = [
         id: 2,
         name: "vijaya kumar",
         role: "Parent",
-        image: img1,
+        image: img2,
         rating: 3.0,
         review: "Good experience overall."
     },
@@ -31,7 +31,7 @@ const stories = [
         id: 3,
         name: "SARIKA SABAPATHY",
         role: "Parent",
-        image: img1,
+        image: img3,
         rating: 5.0,
         review: "The students are excellent The performance were too good ❤️❤️"
     },
@@ -39,7 +39,7 @@ const stories = [
         id: 4,
         name: "Lakshmi Lak",
         role: "Parent",
-        image: img1,
+        image: img4,
         rating: 5.0,
         review: "It was a truly mesmerizing and incredible job by our krisarites"
     }

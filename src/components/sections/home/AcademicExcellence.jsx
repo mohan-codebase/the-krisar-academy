@@ -14,32 +14,32 @@ const academics = [
     {
         title: "Academic Approach",
         image: img1,
-        link: "/academics"
+        link: "/uat-academics"
     },
     {
         title: "Academic Curriculum",
         image: img2,
-        link: "/academics"
+        link: "/uat-academics"
     },
     {
         title: "Beyond Academics",
         image: img3,
-        link: "/beyond-academics"
+        link: "/uat-beyond-academics"
     },
     {
         title: "Kindergarten",
         image: img4,
-        link: "/academics"
+        link: "/uat-academics"
     },
     {
         title: "The Primary School",
         image: img5,
-        link: "/academics"
+        link: "/uat-academics"
     },
     {
         title: "Life Skills Teaching",
         image: img6,
-        link: "/beyond-academics"
+        link: "/uat-beyond-academics"
     }
 ];
 

@@ -345,12 +345,12 @@ const Banner = () => {
                                     // Standard Layout (Centered Title, Split Content)
                                     <div className="flex flex-col items-center w-full pt-28  pb-8 md:py-1 h-full justify-center">
                                         {/* Main Heading */}
-                                        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-center mb-4 md:mb-0 leading-tight md:mt-48">
+                                        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-center mb-4 md:mb-0 leading-tight md:mt-38">
                                             {slide.title}
                                         </h1>
 
                                         {/* Admissions Badge */}
-                                        <div className="bg-white/10 backdrop-blur-md rounded px-4 py-2 md:px-6 md:py-2 mb-8 md:mb-32 border border-white/20 text-sm md:text-base">
+                                        <div className="bg-white/10 backdrop-blur-md rounded px-4 py-2 md:px-6 md:py-2 mb-8 md:mb-32 md:mt-12 border border-white/20 text-sm md:text-base">
                                             <span className="text-brand-secondary">● </span>
                                             {slide.badge}
                                         </div>

@@ -62,8 +62,7 @@ const ERPAndPayment = () => {
                                     Securely pay school fees using Credit Card, Debit Card, Net Banking, or UPI.
                                 </p>
                                 <a
-                                    href="https://smartschool-erp.com/v2/app/"
-                                    target="_blank"
+                                    href="#"
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center gap-2 bg-brand-secondary text-white px-8 py-4 rounded-xl font-bold hover:bg-brand-secondary/90 transition-all transform hover:-translate-y-1 shadow-lg shadow-brand-secondary/20 w-full md:w-auto justify-center"
                                 >

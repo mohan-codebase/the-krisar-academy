@@ -91,9 +91,11 @@ const Facilities = () => {
                         We provide state-of-the-art infrastructure to ensure holistic development.
                     </p>
 
-                    <Button className="!px-8">
-                        View All
-                    </Button>
+                    <a href="/facilities">
+                        <Button className="!px-8">
+                            View All
+                        </Button>
+                    </a>
                 </div>
 
                 {/* Right Content - Horizontal Accordion */}

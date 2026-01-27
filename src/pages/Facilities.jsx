@@ -134,9 +134,9 @@ const Facilities = () => {
                                             {facility.description}
                                         </p>
 
-                                        <span className="text-brand-secondary text-xs font-bold cursor-pointer hover:underline tracking-wider">
+                                        {/* <span className="text-brand-secondary text-xs font-bold cursor-pointer hover:underline tracking-wider">
                                             See more..
-                                        </span>
+                                        </span> */}
                                     </div>
                                 </div>
                             </ScrollReveal>
