@@ -8,7 +8,7 @@ const PageHero = (props) => {
   return (
     <div>
       <section
-        className="relative min-h-[600px] md:min-h-[500px] px-4 flex flex-col items-center justify-center text-center bg-cover bg-center bg-no-repeat"
+        className="relative max-md:py-20 max-md:pb-8 md:min-h-[500px] px-4 flex flex-col items-center justify-center text-center bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url(${bgImage || defaultBg})`,
           backgroundColor: !bgImage ? '#0B1221' : 'transparent'
