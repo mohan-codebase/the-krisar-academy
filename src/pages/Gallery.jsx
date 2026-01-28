@@ -49,7 +49,7 @@ const Gallery = () => {
                 h1={<span>Memories <span className="text-yellow-400">That Matter</span></span>}
                 description="Videos And Photographs Capturing Life, Learning, And Celebrations At Krisar Academy."
             >
-                <Button href="tel:919585335552">
+                <Button href="tel:+917540088387">
                     CALL NOW <ArrowRight className="w-5 h-5 md:w-6 md:h-5 ml-2" />
                 </Button>
             </PageHero>

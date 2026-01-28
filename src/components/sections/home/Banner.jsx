@@ -220,7 +220,7 @@ const Banner = () => {
 
                                             {/* CTA Button */}
                                             <Button
-                                                href="tel:919585335552"
+                                                href="tel:+917540088387"
                                                 className="flex items-center gap-3 transition-colors cursor-pointer bg-brand-secondary text-brand-primary hover:bg-white border-none font-bold px-8 py-3 md:py-4 text-base md:text-lg"
                                             >
                                                 {slide.buttonText} <ArrowRight size={24} />
@@ -260,7 +260,7 @@ const Banner = () => {
                                             {/* CTA Button */}
                                             <div className="hidden md:block">
                                                 <Button
-                                                    href="tel:919585335552"
+                                                    href="tel:+917540088387"
                                                     className="flex items-center gap-3 transition-colors cursor-pointer bg-brand-secondary text-brand-primary hover:bg-white border-none font-bold px-8 py-3 md:py-4 text-base md:text-lg"
                                                 >
                                                     {slide.buttonText} <ArrowRight size={24} />
@@ -308,7 +308,7 @@ const Banner = () => {
                                             {/* CTA Button - Desktop Only */}
                                             <div className="hidden md:block">
                                                 <Button
-                                                    href="tel:919585335552"
+                                                    href="tel:+917540088387"
                                                     className="flex items-center gap-3 transition-colors cursor-pointer bg-brand-secondary text-brand-primary hover:bg-white border-none font-bold px-8 py-4 text-lg"
                                                 >
                                                     {slide.buttonText} <ArrowRight size={24} />
@@ -368,7 +368,7 @@ const Banner = () => {
                                             {/* Center Spacer */}
                                             <div className="flex justify-center mb-5 md:mt-98">
                                                 <Button
-                                                    href="tel:919585335552"
+                                                    href="tel:+917540088387"
                                                     className="flex items-center gap-3 transition-colors cursor-pointer"
                                                 >
                                                     {slide.buttonText || "CALL NOW"} <ArrowRight size={20} />
@@ -407,7 +407,7 @@ const Banner = () => {
 
                                             {/* CTA Button */}
                                             <Button
-                                                href="tel:919585335552"
+                                                href="tel:+917540088387"
                                                 className={`inline-flex items-center gap-2 transition-colors cursor-pointer mt-4 ${slide.buttonStyle === 'secondary' ? 'hover:bg-yellow-400' : 'hover:bg-white/20'}`}
                                             >
                                                 {slide.buttonText || "CALL NOW"} <ArrowRight size={20} />

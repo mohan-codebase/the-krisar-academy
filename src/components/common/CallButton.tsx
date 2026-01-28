@@ -4,7 +4,7 @@ import { Phone } from "lucide-react";
 
 const CallButton = () => {
     const [isVisible, setIsVisible] = useState(false);
-    const phoneNumber = '919585335552';
+    const phoneNumber = '+917540088387';
 
     useEffect(() => {
         const toggleVisibility = () => {

@@ -96,7 +96,7 @@ const Footer = () => {
                         Copyright © 2026 All Rights Reserved by The Krisar Academy.
                     </p>
                     <div className="flex items-center gap-6">
-                        <a href="https://www.instagram.com/thekrisaracademycbse/" className="hover:text-brand-secondary transition-colors" aria-label="Instagram">
+                        <a href="https://www.instagram.com/thekrisaracademy_cbse/?hl=en" className="hover:text-brand-secondary transition-colors" aria-label="Instagram">
                             <Instagram size={24} />
                         </a>
                         <a href="https://www.facebook.com/thekrisaracademycbse" className="hover:text-brand-secondary transition-colors" aria-label="Facebook">

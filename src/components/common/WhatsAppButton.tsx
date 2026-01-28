@@ -4,8 +4,8 @@ import React, { useState, useEffect } from 'react';
 
 const WhatsAppButton = () => {
     const [isVisible, setIsVisible] = useState(false);
-    const phoneNumber = '919585335552'; // International format without +
-    const message = 'Hi! I would like to know more about VJ Scans & Labs services.';
+    const phoneNumber = '917540088387'; // International format without +
+    const message = 'Hi! I would like to know more about The Krisar Academy services.';
 
     useEffect(() => {
         const toggleVisibility = () => {
