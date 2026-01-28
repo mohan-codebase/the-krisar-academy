@@ -3,7 +3,7 @@ import { Trophy } from 'lucide-react';
 // Optimized Blog Images
 import blog1 from '../assets/images/blog/blog-sports-2025.jpg';
 import blog2 from '../assets/images/blog/blog-world-record.jpg';
-import blog3 from '../assets/images/blog/blog-minister.jpg';
+import blog3 from '../assets/images/blog/anbil-banner.jpeg';
 import blog4 from '../assets/images/blog/blog-nsa-2024.jpg';
 import blog5 from '../assets/images/blog/blog-chef.jpg';
 import blog6 from '../assets/images/blog/blog-collector.jpg';

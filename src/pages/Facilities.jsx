@@ -7,7 +7,7 @@ import { BookOpen, Bot, FlaskConical, Monitor, Calculator, Bus, Droplets, Stetho
 
 // Images
 import imgLibrary from '../assets/images/facilities/modern-library.png'
-import imgRobotic from '../assets/images/facilities/robotic-lab.png'
+import imgRobotic from '../assets/images/facilities/winners-img.jpeg'
 import imgLab from '../assets/images/facilities/lab-facilities.png'
 import imgComputer from '../assets/images/facilities/computer-lab.png'
 import imgVedic from '../assets/images/facilities/vedic-maths-lab.png'
@@ -36,8 +36,8 @@ const facilitiesData = [
     },
     {
         icon: iconRobotic,
-        title: "Robotic Lab",
-        description: "Robotic Lab is an Activity Based Learning (ABL) laboratory comprising of advanced Robots, which can be utilized in experiments.",
+        title: "Sports Achievements",
+        description: "Students are honored for outstanding performance in school sports competitions.The school promotes teamwork, discipline, and excellence through active participation.",
         image: imgRobotic
     },
     {

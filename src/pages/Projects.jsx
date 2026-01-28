@@ -69,7 +69,7 @@ const Projects = () => {
 
                             <div className="flex gap-12">
                                 <div>
-                                    <h4 className="text-4xl font-bold text-brand-secondary mb-2">95%</h4>
+                                    <h4 className="text-4xl font-bold text-brand-secondary mb-2">100%</h4>
                                     <p className="text-gray-400 text-sm">Student Success Rate</p>
                                 </div>
                                 <div>

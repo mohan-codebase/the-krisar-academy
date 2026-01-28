@@ -8,11 +8,13 @@ import bgImage from '../../../assets/images/home/about/bg-img.avif'
 import imgLeft from '../../../assets/images/home/about/about-1.avif'
 import imgCenter from '../../../assets/images/home/about/about-2.avif'
 import imgRight from '../../../assets/images/home/about/about-3.avif'
+import imgRight2 from '../../../assets/images/about-us/gallery-3.avif'
+import imgRight3 from '../../../assets/images/about-us/vivega-image.jpeg'
 
 const AboutUs = () => {
   // Embla setup for mobile slider
   const plugins = React.useMemo(() => [Autoplay({ delay: 3000 })], [])
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, plugins)
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, startIndex: 1 }, plugins)
   const [selectedIndex, setSelectedIndex] = React.useState(0)
   const [scrollSnaps, setScrollSnaps] = React.useState([])
 
@@ -90,6 +92,12 @@ const AboutUs = () => {
                 </div>
                 <div className="flex-[0_0_100%] min-w-0 flex justify-center px-2">
                   <img src={imgRight} alt="Awards" className="w-full h-64 object-cover rounded-xl shadow-lg border border-white/100" />
+                </div>
+                <div className="flex-[0_0_100%] min-w-0 flex justify-center px-2">
+                  <img src={imgRight2} alt="Awards" className="w-full h-64 object-cover rounded-xl shadow-lg border border-white/100" />
+                </div>
+                <div className="flex-[0_0_100%] min-w-0 flex justify-center px-2">
+                  <img src={imgRight3} alt="Awards" className="w-full h-64 object-cover rounded-xl shadow-lg border border-white/100" />
                 </div>
               </div>
             </div>

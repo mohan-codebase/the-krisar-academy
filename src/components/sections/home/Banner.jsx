@@ -7,7 +7,7 @@ import inactiveDot from '../../../assets/images/home/banner/not-active.svg'
 import Button from '../../ui/Button'
 
 import banner1 from '../../../assets/images/home/banner/banner-1.avif'
-import banner2 from '../../../assets/images/home/banner/banner-2.avif'
+import banner2 from '../../../assets/images/home/banner/newbanner2.png'
 import banner3 from '../../../assets/images/home/banner/banner-3.avif'
 
 
@@ -48,22 +48,34 @@ const slides = [
     },
     {
         id: 2,
+        layout: 'world-record',
+        image: banner6,
+        badge: "World Record Achievement",
+        title: <div className="text-[18px] md:text-[38px]">Our Students Created A <span className="text-brand-secondary">World Record</span></div>,
+        description: "A Historic Moment Of Creativity, Teamwork, And National Pride At The Krisar Academy.",
+        images: [wrImg1, wrImg2, wrImg3, wrImg4],
+        centerLogo: wrLogo,
+        buttonText: "Enquire Now"
+    },
+    
+    {
+        id: 3,
         layout: 'left-aligned', // Left aligned title, content on left, certificates on right
         image: banner2,
         badge: "National & Guinness World Record Recognized",
-        title: <>Proud Holders Of <span className="text-brand-secondary">National & Guinness</span> World Records</>,
+        title: <>Proud Holders Of <span className="text-brand-secondary">Educational Excellence Award </span>& <span className="text-brand-secondary">World Book of Records</span></>,
         description: "Recognized For Outstanding Participation, Discipline, And Achievement That Sets Global Benchmarks.",
         isCertSlide: true
     },
-    {
-        id: 3,
-        layout: 'left-aligned',
-        image: banner3,
-        badge: "Visionary Education Since 2018",
-        title: <>Proud Holders Of <span className="text-brand-secondary">National & Guinness</span> World Records</>,
-        description: "Recognized For Outstanding Participation, Discipline, And Achievement That Sets Global Benchmarks.",
-        isCertSlide: true
-    },
+    // {
+    //     id: 3,
+    //     layout: 'left-aligned',
+    //     image: banner3,
+    //     badge: "Visionary Education Since 2018",
+    //     title: <>Proud Holders Of <span className="text-brand-secondary">National & Guinness</span> World Records</>,
+    //     description: "Recognized For Outstanding Participation, Discipline, And Achievement That Sets Global Benchmarks.",
+    //     isCertSlide: true
+    // },
     {
         id: 4,
         layout: 'standard',
@@ -87,40 +99,31 @@ const slides = [
         badge: "From Basics To Brilliance",
         title: <>Strong Foundations For <span className="text-brand-secondary">NEET & JEE Success</span></>,
         description: "Concept-Focused Learning, Personal Attention, And Expert Support To Prepare Students Step By Step.",
-        buttonText: "CALL NOW",
+        buttonText: "Enquire Now",
         buttonStyle: "secondary"
     },
-    {
-        id: 6,
-        layout: 'world-record',
-        image: banner6,
-        badge: "World Record Achievement",
-        title: <div className="text-[18px] md:text-[38px]">Our Students Created A <span className="text-brand-secondary">World Record</span></div>,
-        description: "A Historic Moment Of Creativity, Teamwork, And National Pride At The Krisar Academy.",
-        images: [wrImg1, wrImg2, wrImg3, wrImg4],
-        centerLogo: wrLogo,
-        buttonText: "CALL NOW"
-    },
-    {
-        id: 7,
-        layout: 'bottom-grid',
-        image: banner7,
-        badge: "World Record Achievement",
-        title: <>Our Students Created A <span className="text-brand-secondary">World Record</span></>,
-        description: "A Historic Moment Of Creativity, Teamwork, And National Pride At The Krisar Academy.",
-        images: [b7Img1, b7Img2, b7Img3, b7Img4],
-        buttonText: "CALL NOW"
-    },
-    {
-        id: 8,
-        layout: 'collage-right',
-        image: banner7, // Reuse background from slide 7
-        badge: "World Record Achievement",
-        title: <>Our Students Created A <span className="text-brand-secondary">World Record</span></>,
-        description: "A Historic Moment Of Creativity, Teamwork, And National Pride At The Krisar Academy.",
-        sideImage: b8SideImg,
-        buttonText: "CALL NOW"
-    }
+    
+    // {
+    //     id: 7,
+    //     layout: 'bottom-grid',
+    //     image: banner7,
+    //     badge: "World Record Achievement",
+    //     title: <>Our Students Created A <span className="text-brand-secondary">World Record</span></>,
+    //     description: "A Historic Moment Of Creativity, Teamwork, And National Pride At The Krisar Academy.",
+    //     images: [b7Img1, b7Img2, b7Img3, b7Img4],
+    //     buttonText: "CALL NOW"
+    // },
+    // {
+    //     id: 2,
+    //     layout: 'collage-right',
+    //     image: banner7, // Reuse background from slide 7
+    //     badge: "World Record Achievement",
+    //     title: <>Our Students Created A <span className="text-brand-secondary">World Record</span></>,
+    //     description: "A Historic Moment Of Creativity, Teamwork, And National Pride At The Krisar Academy.",
+    //     sideImage: b8SideImg,
+    //     buttonText: "Enquire Now"
+    // },
+    
 ]
 
 const Banner = () => {
@@ -159,7 +162,7 @@ const Banner = () => {
     }, [emblaApi, onInit, onSelect])
 
     return (
-        <section className="bg-brand-primary h-[calc(100vh-80px)] md:h-[calc(100vh-100px)] lg:h-[calc(110vh-140px)] min-h-[500px] text-white overflow-hidden relative group">
+        <section className="bg-brand-primary h-[calc(100vh-80px)] md:h-[calc(100vh-100px)] lg:h-[calc(130vh-140px)] min-h-[500px] text-white overflow-hidden relative group">
             {/* Navigation Arrows */}
             <button
                 type="button"
@@ -345,7 +348,7 @@ const Banner = () => {
                                     // Standard Layout (Centered Title, Split Content)
                                     <div className="flex flex-col items-center w-full pt-28  pb-8 md:py-1 h-full justify-center">
                                         {/* Main Heading */}
-                                        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-center mb-4 md:mb-0 leading-tight md:mt-38">
+                                        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-center mb-4 md:mb-0 leading-tight md:mt-42">
                                             {slide.title}
                                         </h1>
 
@@ -366,12 +369,12 @@ const Banner = () => {
                                             </div>
 
                                             {/* Center Spacer */}
-                                            <div className="flex justify-center mb-5 md:mt-98">
+                                            <div className="flex justify-center mb-20 md:mt-98">
                                                 <Button
                                                     href="tel:+917540088387"
                                                     className="flex items-center gap-3 transition-colors cursor-pointer"
                                                 >
-                                                    {slide.buttonText || "CALL NOW"} <ArrowRight size={20} />
+                                                    {slide.buttonText || "Enquire Now"} <ArrowRight size={20} />
                                                 </Button>
                                             </div>
 
@@ -410,7 +413,7 @@ const Banner = () => {
                                                 href="tel:+917540088387"
                                                 className={`inline-flex items-center gap-2 transition-colors cursor-pointer mt-4 ${slide.buttonStyle === 'secondary' ? 'hover:bg-yellow-400' : 'hover:bg-white/20'}`}
                                             >
-                                                {slide.buttonText || "CALL NOW"} <ArrowRight size={20} />
+                                                {slide.buttonText || "Enquire Now"} <ArrowRight size={20} />
                                             </Button>
                                         </div>
 
@@ -427,7 +430,7 @@ const Banner = () => {
             </div>
 
             {/* Pagination Dots */}
-            <div className="flex justify-center gap-4 absolute bottom-4 md:bottom-8 left-0 right-0 z-30">
+            {/* <div className="flex justify-center gap-4 absolute bottom-4 md:bottom-8 left-0 right-0 z-30">
                 {scrollSnaps.map((_, index) => (
                     <button
                         key={index}
@@ -442,7 +445,7 @@ const Banner = () => {
                         />
                     </button>
                 ))}
-            </div>
+            </div> */}
         </section>
     )
 }

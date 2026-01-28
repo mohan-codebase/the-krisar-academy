@@ -1,5 +1,5 @@
 import React from 'react';
-import defaultBg from '../../assets/images/PageHero/PageHero.avif';
+import defaultBg from '../../assets/images/PageHero/student-bg.png';
 
 const PageHero = (props) => {
 
@@ -29,7 +29,7 @@ const PageHero = (props) => {
 
           {/* Dynamic Description */}
           {props.description ? (
-            <p className="text-gray-400 max-w-2xl text-lg mb-8">
+            <p className="text-gray-200 max-w-2xl text-lg mb-8">
               {props.description}
             </p>
           ) : (

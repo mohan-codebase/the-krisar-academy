@@ -123,7 +123,7 @@ const Admissions = () => {
         setSubmitError('');
 
         try {
-            const response = await fetch('/api/send-email', {
+            const response = await fetch('https://thekrisaracademy.com/api/send-email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

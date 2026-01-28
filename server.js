@@ -163,6 +163,6 @@ app.post('/api/send-email', async (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Local API Server running on http://localhost:${PORT}`);
-    console.log(`API endpoint: http://localhost:${PORT}/api/send-email`);
+    console.log(`Server running on port ${PORT}`);
+    console.log(`API endpoint: https://thekrisaracademy.com/api/send-email`);
 });

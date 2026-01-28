@@ -81,7 +81,7 @@ const WhyChooseUs = () => {
                 </div>
 
                 {/* Curved Carousel Container */}
-                <div className="relative w-full md:h-[400px] h-[300px] flex justify-center mt-10">
+                <div className="relative w-full md:h-[400px] h-[300px] flex justify-center md:mt-8 mt-0">
                     {/* The "Wheel" */}
                     <div
                         className="relative w-full h-full flex justify-center transition-transform duration-500 ease-out"
