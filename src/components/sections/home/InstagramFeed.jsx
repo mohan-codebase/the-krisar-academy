@@ -44,7 +44,7 @@ const InstagramFeed = () => {
     };
 
     return (
-        <section className="bg-[url('./assets/images/home/NewsUpdates/bg.avif')] bg-cover bg-center py-20 relative overflow-hidden text-center text-white">
+        <section className="bg-[url('./assets/images/home/NewsUpdates/bg.avif')] bg-cover bg-center md:py-20 relative overflow-hidden text-center text-white">
             <div className="max-w-[1440px] mx-auto px-4 md:px-8 flex flex-col items-center">
 
                 {/* Header */}
@@ -63,7 +63,7 @@ const InstagramFeed = () => {
                 </div>
 
                 {/* Carousel */}
-                <div className="relative w-full max-w-6xl mx-auto h-[300px] md:h-[400px] flex items-center justify-center mb-12">
+                <div className="relative w-full max-w-6xl mx-auto h-[400px] md:h-[550px] flex items-center justify-center mb-12">
 
                     {/* Navigation Buttons (Desktop: Absolute sides, Mobile: Below?) - Design has them on sides */}
                     <button
@@ -108,11 +108,11 @@ const InstagramFeed = () => {
                             zIndexClass = 'z-20';
                             borderClass = 'border-brand-secondary';
                         } else if (isPrev) {
-                            transformClass = 'scale-90 -translate-x-full md:-translate-x-[70%] blur-[1px]';
+                            transformClass = 'scale-90 -translate-x-full md:-translate-x-[80%] blur-[1px]';
                             opacityClass = 'opacity-40';
                             zIndexClass = 'z-10';
                         } else if (isNext) {
-                            transformClass = 'scale-90 translate-x-full md:translate-x-[70%] blur-[1px]';
+                            transformClass = 'scale-90 translate-x-full md:translate-x-[80%] blur-[1px]';
                             opacityClass = 'opacity-40';
                             zIndexClass = 'z-10';
                         }
@@ -123,7 +123,7 @@ const InstagramFeed = () => {
                                 href={post.link}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className={`absolute w-64 md:w-80 aspect-[4/5] rounded-2xl overflow-hidden transition-all duration-500 ease-out border-2 ${borderClass} ${transformClass} ${opacityClass} ${zIndexClass}`}
+                                className={`absolute w-72 md:w-96 aspect-[4/5] rounded-2xl overflow-hidden transition-all duration-500 ease-out border-2 ${borderClass} ${transformClass} ${opacityClass} ${zIndexClass}`}
                             >
                                 <img src={post.image} alt="Instagram Post" className="w-full h-full object-cover" />
 

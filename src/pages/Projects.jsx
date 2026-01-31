@@ -162,10 +162,10 @@ const Projects = () => {
                                     <h3 className="text-2xl font-bold uppercase tracking-wider">Our Vision</h3>
                                 </div>
                                 <p className="text-gray-300 leading-loose">
-                                    Our vision is to be a Modern School with Indian Culture, Driving our Creative Thinking, using Scientific Technologies - to build leaders of tomorrow who are Energetic, Global citizens, Patriotic Nationals and the World.
+                                    Our vision is to be a Modern School with Indian Culture, Driving our Creative Thinking, using Scientific Technologies - to build leaders of tomorrow through **Discipline**, **Values**, and **Building Character**, preparing them to be Energetic, Global citizens and Patriotic Nationals.
                                 </p>
                                 <p className="text-gray-300 leading-loose mt-4">
-                                    We provide positive communication and problem-solving skills for all our students with a nurtured attitude towards lessons, and to take responsibility for their actions.
+                                    We provide **Strong Communication** and problem-solving skills for all our students with a nurtured attitude towards lessons, and to take responsibility for their actions.
                                 </p>
                             </div>
                         </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import defaultBg from '../../assets/images/PageHero/student-bg.png';
+import defaultBg from '../../assets/images/home/banner/banner-3.avif';
 
 const PageHero = (props) => {
 
@@ -15,12 +15,12 @@ const PageHero = (props) => {
         }}
       >
         {/* Overlay for better text readability if image exists */}
-        {bgImage && <div className="absolute inset-0 bg-black/10 z-0"></div>}
+        {bgImage && <div className="absolute inset-0 bg-black/40 z-0"></div>}
 
-        <div className="relative z-10 w-full flex flex-col items-center">
+        <div className="relative z-10 w-full flex flex-col items-center mt-24">
           <div className="inline-block px-4 py-1.5 rounded border border-white/20 bg-white/5 backdrop-blur-sm mb-6 md:mb-8">
             <span className="text-gray-300 text-sm uppercase tracking-wider flex items-center gap-2">
-              <span className="w-2 h-2 rounded bg-yellow-400 "></span>{title}</span>
+              <span className="w-2 h-2 rounded bg-yellow-400"></span>{title}</span>
           </div>
 
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">{h1}</h1>

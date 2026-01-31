@@ -1,12 +1,12 @@
 import React from 'react';
 import { Anchor, Trophy, ArrowRight } from 'lucide-react';
-import PageHero from '../components/common/PageHero';
-import SEO from '../components/common/SEO';
-import Button from '../components/ui/Button';
+import PageHero from '../components/common/PageHero.jsx';
+import SEO from '../components/common/SEO.jsx';
+import Button from '../components/ui/Button.jsx';
 import { Link } from 'react-router-dom';
 import { blogData } from '../data/blogData.jsx';
 
-const Blog = () => {
+const Blogs = () => {
     return (
         <div className="min-h-screen bg-[#0B1221] text-white">
             <SEO
@@ -83,4 +83,4 @@ const Blog = () => {
     );
 };
 
-export default Blog;
+export default Blogs;

@@ -57,11 +57,11 @@ const SuccessStories = () => {
     };
 
     return (
-        <section className="bg-[url('./assets/images/home/NewsUpdates/bg.avif')] bg-cover bg-center md:py-20 py-16 relative overflow-hidden text-center text-white">
+        <section className="bg-[url('./assets/images/home/NewsUpdates/bg.avif')] bg-cover bg-center md:py-20 py-10 relative overflow-hidden text-center text-white">
             <div className="max-w-[1440px] mx-auto px-4 md:px-8 flex flex-col items-center">
 
                 {/* Header */}
-                <div className="mb-12">
+                <div className="mb-8">
                     <div className="inline-flex items-center gap-2 border border-white/20 rounded px-4 py-1.5 bg-white/5 backdrop-blur-sm mb-6">
                         <User size={16} className="text-gray-300" />
                         <span className="uppercase tracking-wider text-sm text-gray-300">Our Parents Say</span>
@@ -78,7 +78,7 @@ const SuccessStories = () => {
                 </div>
 
                 {/* Avatar Row */}
-                <div className="flex justify-center items-center gap-4 mb-16 flex-wrap">
+                <div className="flex justify-center items-center gap-4 mb-0 flex-wrap">
                     {stories.map((story, index) => (
                         <div
                             key={story.id}
@@ -96,7 +96,7 @@ const SuccessStories = () => {
                 </div>
 
                 {/* Testimonial Cards Carousel */}
-                <div className="relative w-full max-w-6xl mx-auto h-[400px] md:h-[320px] flex items-center justify-center perspective-1000">
+                <div className="relative w-full max-w-6xl mx-auto h-[350px] md:h-[320px] flex items-center justify-center perspective-1000">
                     {stories.map((story, index) => {
                         // Calculate offset from active index
                         let offset = index - activeIndex;
@@ -177,7 +177,7 @@ const SuccessStories = () => {
                 </div>
 
                 {/* Navigation Buttons */}
-                <div className="flex gap-4 mt-8">
+                <div className="flex gap-4 mt-0">
                     <button
                         onClick={handlePrev}
                         className="p-3 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 hover:border-brand-secondary transition-colors"

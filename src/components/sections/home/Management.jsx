@@ -53,7 +53,7 @@ const Management = () => {
                     {managementTeam.map((member, index) => (
                         <div key={index} className="flex flex-col items-center">
                             {/* Card with Yellow Background */}
-                            <div className="w-full aspect-square bg-brand-secondary rounded-2xl overflow-hidden relative mb-6">
+                            <div className="w-56 md:w-full aspect-square bg-brand-secondary rounded-2xl overflow-hidden relative mb-6 mx-auto">
                                 {/* Image */}
                                 <img
                                     src={member.image}

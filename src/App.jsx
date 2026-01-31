@@ -7,7 +7,7 @@ import Projects from './pages/Projects'
 import Facilities from './pages/Facilities'
 import UatAcademics from './pages/UatAcademics'
 import UatBeyondAcademics from './pages/UatBeyondAcademics'
-import Blog from './pages/Blog'
+import Blogs from './pages/Blogs'
 import BlogDetail from './pages/BlogDetail'
 import Contact from './pages/Contact'
 import Gallery from './pages/Gallery'
@@ -37,8 +37,8 @@ function App() {
           <Route path="/facilities" element={<PageTransition><Facilities /></PageTransition>} />
           <Route path="/uat-academics" element={<PageTransition><UatAcademics /></PageTransition>} />
           <Route path="/uat-beyond-academics" element={<PageTransition><UatBeyondAcademics /></PageTransition>} />
-          <Route path="/blog" element={<PageTransition><Blog /></PageTransition>} />
-          <Route path="/blog/:slug" element={<PageTransition><BlogDetail /></PageTransition>} />
+          <Route path="/blogs" element={<PageTransition><Blogs /></PageTransition>} />
+          <Route path="/blogs/:slug" element={<PageTransition><BlogDetail /></PageTransition>} />
           <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
           <Route path="/gallery" element={<PageTransition><Gallery /></PageTransition>} />
           <Route path="/admission-form2" element={<PageTransition><Admissions /></PageTransition>} />

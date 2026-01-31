@@ -30,12 +30,12 @@ const Navbar = () => {
               <li><Link to="/uat-academics" className="hover:text-brand-secondary transition-colors">ACADEMICS</Link></li>
               <li><Link to="/uat-beyond-academics" className="hover:text-brand-secondary transition-colors">BEYOND ACADEMICS</Link></li>
               <li><Link to="/gallery" className="hover:text-brand-secondary transition-colors">GALLERY</Link></li>
-              <li><Link to="/blog" className="hover:text-brand-secondary transition-colors">BLOG</Link></li>
+              <li><Link to="/blogs" className="hover:text-brand-secondary transition-colors">BLOGS</Link></li>
             </ul>
           </div>
 
           {/* Desktop Button */}
-          <div className="hidden md:block">
+          <div className="hidden md:block ">
             <Button to="/contact">CONTACT US</Button>
           </div>
 
@@ -59,7 +59,7 @@ const Navbar = () => {
               <li><Link to="/uat-academics" onClick={() => setIsMenuOpen(false)}>ACADEMICS</Link></li>
               <li><Link to="/uat-beyond-academics" onClick={() => setIsMenuOpen(false)}>BEYOND ACADEMICS</Link></li>
               <li><Link to="/gallery" onClick={() => setIsMenuOpen(false)}>GALLERY</Link></li>
-              <li><Link to="/blog" onClick={() => setIsMenuOpen(false)}>BLOG</Link></li>
+              <li><Link to="/blogs" onClick={() => setIsMenuOpen(false)}>BLOGS</Link></li>
 
               <div className="w-full h-[1px] bg-white/10 my-2"></div>
 

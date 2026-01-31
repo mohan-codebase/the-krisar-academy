@@ -12,7 +12,7 @@ const NewsUpdates = () => {
 
     return (
         <section
-            className="bg-cover bg-center py-20 relative overflow-hidden text-center text-white"
+            className="bg-cover bg-center md:py-20 relative overflow-hidden text-center text-white"
             style={{ backgroundImage: `url(${bgImage})` }}
         >
             <div className="max-w-[1440px] mx-auto px-4 md:px-8 flex flex-col items-center">

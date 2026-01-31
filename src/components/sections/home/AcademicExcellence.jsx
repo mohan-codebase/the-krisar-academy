@@ -3,12 +3,12 @@ import { ArrowRight, BookOpen } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 // Local images
-import img1 from '../../../assets/images/home/AcademicExcellence/Academic Approach.png'
-import img2 from '../../../assets/images/home/AcademicExcellence/Academic Curriculum.png'
-import img3 from '../../../assets/images/home/AcademicExcellence/Beyond Academics.png'
-import img4 from '../../../assets/images/home/AcademicExcellence/Kindergarten.png'
-import img5 from '../../../assets/images/home/AcademicExcellence/The Primary School.png'
-import img6 from '../../../assets/images/home/AcademicExcellence/Life Skills Teaching.png'
+import img1 from '../../../assets/images/home/AcademicExcellence/68209124de66dcbcf4a3b32734ee40051197b4d2.png'
+import img2 from '../../../assets/images/home/AcademicExcellence/f583c67342e8778ae0ecedd4ca91d2565cbb1840.png'
+import img3 from '../../../assets/images/home/AcademicExcellence/26bef2949edf83ca4ebf20cc5a7e0f2ce4a70527.png'
+import img4 from '../../../assets/images/home/AcademicExcellence/885ad5dfb38b0f999a4efedfc97a23ef89791f1d.png'
+import img5 from '../../../assets/images/home/AcademicExcellence/105700e68f1ed99bda141dfff4979d7562c32ce4.png'
+import img6 from '../../../assets/images/home/AcademicExcellence/71db062cadeb11633aa912795a5bf02e8007b43d.png'
 
 const academics = [
     {
@@ -66,7 +66,7 @@ const AcademicExcellence = () => {
                 </div>
 
                 {/* Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
                     {academics.map((item, index) => (
                         <Link
                             to={item.link}
@@ -81,7 +81,7 @@ const AcademicExcellence = () => {
                                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                 />
                                 {/* Overlay gradient */}
-                                <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#151E38]" />
+                                <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#151E38]/30" />
                             </div>
 
                             {/* Content - Right Side */}

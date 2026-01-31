@@ -5,9 +5,12 @@ import '../assets/styles/fonts.css'
 import ScrollReveal from '../components/common/ScrollReveal'
 import { BookOpen, Bot, FlaskConical, Monitor, Calculator, Bus, Droplets, Stethoscope } from 'lucide-react'
 
+import { useState } from 'react'
+
 // Images
 import imgLibrary from '../assets/images/facilities/modern-library.png'
-import imgRobotic from '../assets/images/facilities/winners-img.jpeg'
+import imgWinners from '../assets/images/facilities/winners-img.jpeg'
+
 import imgLab from '../assets/images/facilities/lab-facilities.png'
 import imgComputer from '../assets/images/facilities/computer-lab.png'
 import imgVedic from '../assets/images/facilities/vedic-maths-lab.png'
@@ -25,9 +28,16 @@ import iconVedic from '../assets/images/facilities/vedic-maths-lab.svg'
 import iconTransport from '../assets/images/facilities/transport.svg'
 import iconSanitation from '../assets/images/facilities/sanitation.svg'
 import iconMedical from '../assets/images/facilities/medical-facilities.svg'
+import imgRoboticLab from '../assets/images/home/banner/ai-robotics-lab.png'
 
 
 const facilitiesData = [
+    {
+        icon: iconRobotic,
+        title: "AI Robotics Lab",
+        description: "Equipped with the latest technology, our AI & Robotics lab allows students to explore coding, automation, and engineering through hands-on projects and innovative learning.",
+        image: imgRoboticLab
+    },
     {
         icon: iconLibrary,
         title: "Modern Library",
@@ -35,10 +45,10 @@ const facilitiesData = [
         image: imgLibrary
     },
     {
-        icon: iconRobotic,
+        icon: iconRobotic, // Placeholder: should ideally be a sports icon
         title: "Sports Achievements",
-        description: "Students are honored for outstanding performance in school sports competitions.The school promotes teamwork, discipline, and excellence through active participation.",
-        image: imgRobotic
+        description: "Students are honored for outstanding performance in school sports competitions. The school promotes teamwork, discipline, and excellence through active participation.",
+        image: imgWinners
     },
     {
         icon: iconLab,
@@ -79,6 +89,8 @@ const facilitiesData = [
 ]
 
 const Facilities = () => {
+    // View state removed - forcing grid view
+
     return (
         <div className="bg-brand-primary min-h-screen">
             <SEO
@@ -92,27 +104,27 @@ const Facilities = () => {
                 description="A Safe, Engaging, And Well-Equipped Environment For Holistic Education."
             />
 
-            <div className="bg-cover bg-center relative" style={{ backgroundImage: `url(${bgImage})` }}>
+            <div className="bg-cover bg-center relative min-h-[800px]" style={{ backgroundImage: `url(${bgImage})` }}>
                 <section className="max-w-[1440px] mx-auto px-4 md:px-8 py-10 pb-20">
                     <ScrollReveal>
-                        <div className="text-center mb-16">
+                        <div className="text-center mb-0">
                             <div className="inline-block px-4 py-1.5 rounded border border-white/20 bg-white/5 backdrop-blur-sm mb-4">
                                 <span className="text-gray-300 text-sm uppercase tracking-wider">Our Facilities</span>
                             </div>
                             <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">World-Class <span className="text-brand-secondary">Facilities</span></h2>
-                            <p className="text-gray-400 max-w-2xl mx-auto">
+                            <p className="text-gray-400 max-w-2xl mx-auto mb-12">
                                 Modern amenities and resources created to enhance every student's learning experience.
                             </p>
                         </div>
                     </ScrollReveal>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 animate-in fade-in slide-in-from-bottom-5 duration-500">
                         {facilitiesData.map((facility, index) => (
                             <ScrollReveal key={index} delay={index * 0.1}>
-                                <div className="bg-transparent border border-white/10 rounded-2xl overflow-hidden group hover:border-brand-secondary/50 transition-all duration-300 hover:shadow-xl hover:shadow-brand-secondary/10 flex flex-col">
-                                    {/* Image Area */}
+                                <div className="bg-[#151E38]/40 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden group hover:border-brand-secondary/50 transition-all duration-300 hover:shadow-xl hover:shadow-brand-secondary/10 flex flex-col h-full">
                                     <div className="p-2">
-                                        <div className="h-50 relative overflow-hidden rounded-xl">
+                                        <div className="h-48 relative overflow-hidden rounded-xl">
                                             <img
                                                 src={facility.image}
                                                 alt={facility.title}
@@ -120,11 +132,11 @@ const Facilities = () => {
                                             />
                                         </div>
                                     </div>
-
-                                    {/* Content Area */}
                                     <div className="p-6 flex-1 flex flex-col pt-2">
                                         <div className="flex items-center gap-4 mb-3">
-                                            <img src={facility.icon} alt={facility.title} className="w-12 h-12 shrink-0" />
+                                            <div className="p-2 bg-brand-secondary/10 rounded-lg">
+                                                <img src={facility.icon} alt={facility.title} className="w-12 h-12 shrink-0" />
+                                            </div>
                                             <h3 className="text-xl font-bold text-white group-hover:text-brand-secondary transition-colors">
                                                 {facility.title}
                                             </h3>
@@ -133,16 +145,11 @@ const Facilities = () => {
                                         <p className="text-gray-400 text-sm leading-relaxed mb-4 flex-1">
                                             {facility.description}
                                         </p>
-
-                                        {/* <span className="text-brand-secondary text-xs font-bold cursor-pointer hover:underline tracking-wider">
-                                            See more..
-                                        </span> */}
                                     </div>
                                 </div>
                             </ScrollReveal>
                         ))}
                     </div>
-
                 </section>
             </div>
         </div>

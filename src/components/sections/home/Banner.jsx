@@ -27,10 +27,30 @@ import b7Img3 from '../../../assets/images/home/banner/banner-7/3.avif'
 import b7Img4 from '../../../assets/images/home/banner/banner-7/4.avif'
 
 import b8SideImg from '../../../assets/images/home/banner/banner-8/side-image.avif'
+import bannerRobotics from '../../../assets/images/home/banner/banner-8-robotics.png'
+import bannerRoboticsNew from '../../../assets/images/home/banner/ai-robotics-lab.png'
 
 
 
 const slides = [
+
+    {
+        id: 6,
+        layout: 'standard',
+        image: bannerRoboticsNew,
+        badge: "Innovative Learning Spaces | Ai & Robotics Lab",
+        title: <>Advancing Education with <span className="text-brand-secondary">AI & Robotics</span></>,
+        leftContent: {
+            title: <></>,
+            desc: ""
+        },
+        rightContent: {
+            title: <></>,
+            desc: ""
+        },
+        buttonText: "Enquiry Now",
+        buttonStyle: "secondary"
+    },
     {
         id: 1,
         layout: 'standard', // Centered title, split content at bottom
@@ -46,18 +66,25 @@ const slides = [
             desc: "With A Strong Focus On Academics, Life Skills, And Values, Krishar Academy Creates A Supportive Environment That Prepares Students To Excel In Both Education And Life."
         },
     },
+
     {
-        id: 2,
-        layout: 'world-record',
-        image: banner6,
-        badge: "World Record Achievement",
-        title: <div className="text-[18px] md:text-[38px]">Our Students Created A <span className="text-brand-secondary">World Record</span></div>,
-        description: "A Historic Moment Of Creativity, Teamwork, And National Pride At The Krisar Academy.",
-        images: [wrImg1, wrImg2, wrImg3, wrImg4],
-        centerLogo: wrLogo,
-        buttonText: "Enquire Now"
+        id: 4,
+        layout: 'standard',
+        image: banner5,
+        badge: "Fueling Passion, Building Champions",
+        title: <>Where <span className="text-brand-secondary">Dedication, Discipline,</span> And <span className="text-brand-secondary">Performance</span> Come Together</>,
+        leftContent: {
+            title: <>Where Passion Meets Performance</>,
+            desc: "Krisar Academy Was Established With A Clear Mission To Deliver Holistic, Performance Driven Sports Training, Nurturing Athletes To Grow As Confident Performers And Disciplined Team Players."
+        },
+        rightContent: {
+            title: <>Youth & Growth<br />Oriented</>,
+            desc: "By Emphasizing Foundational Skills, Teamwork, And Sportsmanship, Krisar Academy Nurtures Athletes In A Positive Environment That Supports Long-Term Growth."
+        },
+        buttonText: "ENROL NOW"
     },
-    
+
+
     {
         id: 3,
         layout: 'left-aligned', // Left aligned title, content on left, certificates on right
@@ -76,22 +103,7 @@ const slides = [
     //     description: "Recognized For Outstanding Participation, Discipline, And Achievement That Sets Global Benchmarks.",
     //     isCertSlide: true
     // },
-    {
-        id: 4,
-        layout: 'standard',
-        image: banner5,
-        badge: "Fueling Passion, Building Champions",
-        title: <>Where <span className="text-brand-secondary">Dedication, Discipline,</span> And <span className="text-brand-secondary">Performance</span> Come Together</>,
-        leftContent: {
-            title: <>Where Passion Meets Performance</>,
-            desc: "Krisar Academy Was Established With A Clear Mission To Deliver Holistic, Performance Driven Sports Training, Nurturing Athletes To Grow As Confident Performers And Disciplined Team Players."
-        },
-        rightContent: {
-            title: <>Youth & Growth<br />Oriented</>,
-            desc: "By Emphasizing Foundational Skills, Teamwork, And Sportsmanship, Krisar Academy Nurtures Athletes In A Positive Environment That Supports Long-Term Growth."
-        },
-        buttonText: "ENROL NOW"
-    },
+    ,
     {
         id: 5,
         layout: 'left-aligned',
@@ -102,7 +114,18 @@ const slides = [
         buttonText: "Enquire Now",
         buttonStyle: "secondary"
     },
-    
+    {
+        id: 2,
+        layout: 'world-record',
+        image: banner6,
+        badge: "World Record Achievement",
+        title: <div className="text-[18px] md:text-[38px]">Our Students Created A <span className="text-brand-secondary">World Record</span></div>,
+        description: "A Historic Moment Of Creativity, Teamwork, And National Pride At The Krisar Academy.",
+        images: [wrImg1, wrImg2, wrImg3, wrImg4],
+        centerLogo: wrLogo,
+        buttonText: "Enquire Now"
+    },
+
     // {
     //     id: 7,
     //     layout: 'bottom-grid',
@@ -123,7 +146,7 @@ const slides = [
     //     sideImage: b8SideImg,
     //     buttonText: "Enquire Now"
     // },
-    
+
 ]
 
 const Banner = () => {
@@ -371,7 +394,7 @@ const Banner = () => {
                                             {/* Center Spacer */}
                                             <div className="flex justify-center mb-20 md:mt-98">
                                                 <Button
-                                                    href="tel:+917540088387"
+                                                    href="/contact"
                                                     className="flex items-center gap-3 transition-colors cursor-pointer"
                                                 >
                                                     {slide.buttonText || "Enquire Now"} <ArrowRight size={20} />
