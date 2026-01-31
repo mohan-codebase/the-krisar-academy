@@ -6,12 +6,17 @@ import { ArrowRight } from 'lucide-react';
 
 // Gallery Images
 // Gallery Images
-import gallery1 from '../assets/images/gallery/gallery-1.avif'
-import gallery2 from '../assets/images/gallery/gallery-2.avif'
-import gallery3 from '../assets/images/gallery/gallery-3.avif'
-import gallery4 from '../assets/images/gallery/gallery-4.avif'
-import gallery5 from '../assets/images/gallery/gallery-5.avif'
-import gallery6 from '../assets/images/gallery/gallery-6.avif'
+import gallery1 from '../assets/images/gallery/gal1.jpeg'
+import gallery2 from '../assets/images/gallery/gal2.jpeg'
+import gallery3 from '../assets/images/gallery/gal3.jpeg'
+import gallery4 from '../assets/images/gallery/gal4.jpeg'
+import gallery5 from '../assets/images/gallery/gal5.jpeg'
+import gallery6 from '../assets/images/gallery/gal6.jpeg'
+import gallery7 from '../assets/images/gallery/gal10.jpeg'
+import gallery8 from '../assets/images/gallery/gal8.jpeg'
+import gallery9 from '../assets/images/gallery/gal9.jpeg'
+import gallery10 from '../assets/images/gallery/gal11.jpeg'
+import gallery11 from '../assets/images/gallery/gal12.jpeg'
 
 // Placeholder images since specific assets weren't provided or found
 // In a real scenario, these would be imports or API data
@@ -21,7 +26,12 @@ const photoItems = [
     gallery3,
     gallery4,
     gallery5,
-    gallery6
+    gallery6,
+    gallery7,
+    gallery8,
+    gallery9,
+    gallery10,
+    gallery11
 ];
 
 const videoData = [
@@ -36,6 +46,7 @@ const videoData = [
 const Gallery = () => {
     const [activeTab, setActiveTab] = useState('photos'); // 'photos' | 'videos'
     const [selectedVideo, setSelectedVideo] = useState(null);
+    const [selectedImage, setSelectedImage] = useState(null);
 
     return (
         <div className="min-h-screen bg-[#0B1221] text-white">
@@ -85,12 +96,23 @@ const Gallery = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                     {activeTab === 'photos' ? (
                         photoItems.map((src, index) => (
-                            <div key={index} className="relative aspect-video overflow-hidden rounded border border-white/10 bg-[#151E38]">
+                            <div
+                                key={index}
+                                className="relative aspect-video overflow-hidden rounded border border-white/10 bg-[#151E38] cursor-pointer group"
+                                onClick={() => setSelectedImage(src)}
+                            >
                                 <img
                                     src={src}
                                     alt={`Gallery Image ${index + 1}`}
                                     className="w-full h-[300px] object-cover hover:scale-105 transition-transform duration-500"
                                 />
+                                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                                    <div className="bg-black/50 p-3 rounded-full backdrop-blur-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                                            <path d="M15 3h6v6M14 10l6.1-6.1M9 21H3v-6M10 14l-6.1 6.1" />
+                                        </svg>
+                                    </div>
+                                </div>
                             </div>
                         ))
                     ) : (
@@ -147,6 +169,34 @@ const Gallery = () => {
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowFullScreen
                         ></iframe>
+                    </div>
+                </div>
+            )}
+
+            {/* Image Modal */}
+            {selectedImage && (
+                <div
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 p-4 backdrop-blur-sm"
+                    onClick={() => setSelectedImage(null)}
+                >
+                    <div
+                        className="relative max-w-7xl max-h-[90vh] w-full flex items-center justify-center outline-none"
+                        onClick={e => e.stopPropagation()}
+                    >
+                        <button
+                            className="absolute -top-12 right-0 z-10 p-2 bg-white/10 hover:bg-red-500 text-white rounded-full transition-colors backdrop-blur-md"
+                            onClick={() => setSelectedImage(null)}
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                            </svg>
+                        </button>
+                        <img
+                            src={selectedImage}
+                            alt="Gallery Fullscreen"
+                            className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl border border-white/10"
+                        />
                     </div>
                 </div>
             )}
