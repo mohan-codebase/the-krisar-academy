@@ -28,7 +28,7 @@ import b7Img4 from '../../../assets/images/home/banner/banner-7/4.avif'
 
 import b8SideImg from '../../../assets/images/home/banner/banner-8/side-image.avif'
 import bannerRobotics from '../../../assets/images/home/banner/banner-8-robotics.png'
-import bannerRoboticsNew from '../../../assets/images/home/banner/ai-robotics-lab.png'
+import bannerRoboticsNew from '../../../assets/images/home/banner/ai-robotics-lab-v2.png'
 
 
 
@@ -38,7 +38,8 @@ const slides = [
         id: 6,
         layout: 'standard',
         image: bannerRoboticsNew,
-        badge: "Innovative Learning Spaces | Ai & Robotics Lab",
+        bgPosition: 'bg-center',
+        badge: <span className="inline-block align-top">Empowering young minds with cutting-edge technology, coding,<br className="hidden md:block" /> and hands-on robotics to master the skills of tomorrow.</span>,
         title: <>Advancing Education with <span className="text-brand-secondary">AI & Robotics</span></>,
         leftContent: {
             title: <></>,
@@ -89,6 +90,7 @@ const slides = [
         id: 3,
         layout: 'left-aligned', // Left aligned title, content on left, certificates on right
         image: banner2,
+        bgPosition: 'bg-[70%_center]',
         badge: "National & Guinness World Record Recognized",
         title: <>Proud Holders Of <span className="text-brand-secondary">Educational Excellence Award </span>& <span className="text-brand-secondary">World Book of Records</span></>,
         description: "Recognized For Outstanding Participation, Discipline, And Achievement That Sets Global Benchmarks.",
@@ -208,7 +210,7 @@ const Banner = () => {
                         <div key={index} className="embla__slide flex-[0_0_100%] min-w-0 relative h-full">
                             {/* Background Image */}
                             <div
-                                className="absolute inset-0 bg-cover bg-center z-0"
+                                className={`absolute inset-0 bg-cover z-0 ${slide.bgPosition || 'bg-center'}`}
                                 style={{ backgroundImage: `url(${slide.image})` }}
                             >
                                 {/* Gradient Overlay based on layout */}
@@ -376,7 +378,7 @@ const Banner = () => {
                                         </h1>
 
                                         {/* Admissions Badge */}
-                                        <div className="bg-white/10 backdrop-blur-md rounded px-4 py-2 md:px-6 md:py-2 mb-8 md:mb-32 md:mt-12 border border-white/20 text-sm md:text-base">
+                                        <div className="bg-white/10 backdrop-blur-md rounded px-4 py-2 md:px-6 md:py-2 mb-8 md:mb-32 md:mt-12 border border-white/20 text-sm md:text-base text-center">
                                             <span className="text-brand-secondary">● </span>
                                             {slide.badge}
                                         </div>

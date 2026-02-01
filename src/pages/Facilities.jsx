@@ -28,7 +28,7 @@ import iconVedic from '../assets/images/facilities/vedic-maths-lab.svg'
 import iconTransport from '../assets/images/facilities/transport.svg'
 import iconSanitation from '../assets/images/facilities/sanitation.svg'
 import iconMedical from '../assets/images/facilities/medical-facilities.svg'
-import imgRoboticLab from '../assets/images/home/banner/ai-robotics-lab.png'
+import imgRoboticLab from '../assets/images/home/banner/ai-robotics-lab-v2.png'
 
 
 const facilitiesData = [

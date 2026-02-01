@@ -3,7 +3,7 @@ import PageHero from '../components/common/PageHero';
 import SEO from '../components/common/SEO';
 import ScrollReveal from '../components/common/ScrollReveal';
 import { CreditCard, ExternalLink } from 'lucide-react';
-import paymentImg from '../assets/images/home/banner/banner-1.avif'; // Placeholder
+import paymentImg from '../assets/images/home/banner/banner-2.avif'; // Placeholder
 
 const ERPAndPayment = () => {
     return (
