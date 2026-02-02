@@ -8,19 +8,9 @@ const toAbsolute = (p) => path.resolve(__dirname, '..', p);
 const template = fs.readFileSync(toAbsolute('dist/index.html'), 'utf-8');
 const { render } = await import(toAbsolute('dist/server/entry-server.js'));
 
-const routes = [
-    '/',
-    '/projects',
-    '/facilities',
-    '/uat-academics',
-    '/uat-beyond-academics',
-    '/blogs',
-    '/contact',
-    '/gallery',
-    '/admission-form2',
-    '/cbse-disclosure',
-    '/erp-and-payment'
-];
+import { routes as staticRoutes } from '../src/data/routes.js';
+
+const routes = staticRoutes.map(r => r.path);
 
 const BLOG_DATA_PATH = toAbsolute('src/data/blogData.jsx');
 

@@ -259,7 +259,7 @@ const Banner = () => {
                                         <div className="w-full md:w-1/2 h-full flex items-center justify-center md:justify-end md:pr-12 relative z-10 mt-8 md:mt-0">
                                             <img
                                                 src={slide.sideImage}
-                                                alt="Collage"
+                                                alt="Krisar Academy Collage"
                                                 className="w-full max-w-[500px] md:max-w-none md:w-auto md:h-[70%] object-contain drop-shadow-2xl"
                                             />
                                         </div>
@@ -301,7 +301,7 @@ const Banner = () => {
                                             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-8">
                                                 {slide.images.map((img, idx) => (
                                                     <div key={idx} className="transform transition-transform hover:-translate-y-1 duration-300">
-                                                        <img src={img} alt="Banner Grid Image" className="w-full h-28 md:h-64 object-cover rounded-sm border-2 border-white/50 shadow-lg" />
+                                                        <img src={img} alt={`${slide.title} highlight`} className="w-full h-28 md:h-64 object-cover rounded-sm border-2 border-white/50 shadow-lg" />
                                                     </div>
                                                 ))}
                                             </div>

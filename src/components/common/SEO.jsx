@@ -1,5 +1,5 @@
-
 import { Helmet } from 'react-helmet-async';
+import { useLocation } from 'react-router-dom';
 
 const SEO = ({
     title,
@@ -9,17 +9,26 @@ const SEO = ({
     url,
     type = 'website'
 }) => {
+    const location = useLocation();
     const siteTitle = 'The Krisar Academy';
     const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
     const metaDescription = description || 'The Krisar Academy - A visionary institution dedicated to nurturing young minds through holistic education.';
     const metaImage = image || '/og-image.png'; // Default OG image
-    const metaUrl = url || (typeof window !== 'undefined' ? window.location.href : '');
+
+    // Robust URL generation for SSR and Client
+    // If 'url' prop is provided, use it.
+    // Otherwise, construct it from the current location.
+    const metaUrl = url || `https://thekrisaracademy.com${location.pathname}`;
+    if (typeof window === 'undefined') {
+        console.log('SEO Debug:', { pathname: location.pathname, urlProp: url, metaUrl });
+    }
 
     return (
         <Helmet>
             <title>{fullTitle}</title>
             <meta name="description" content={metaDescription} />
             {keywords && <meta name="keywords" content={keywords} />}
+            <link rel="canonical" href={metaUrl} />
 
             {/* Open Graph / Facebook */}
             <meta property="og:type" content={type} />

@@ -9,19 +9,7 @@ const BASE_URL = 'https://thekrisaracademy.com';
 const BLOG_DATA_PATH = path.join(__dirname, '../src/data/blogData.jsx');
 const PUBLIC_DIR = path.join(__dirname, '../public');
 
-const staticRoutes = [
-    { loc: '/', changefreq: 'daily', priority: '1.0' },
-    { loc: '/projects', changefreq: 'monthly', priority: '0.8' },
-    { loc: '/facilities', changefreq: 'monthly', priority: '0.8' },
-    { loc: '/uat-academics', changefreq: 'monthly', priority: '0.8' },
-    { loc: '/uat-beyond-academics', changefreq: 'monthly', priority: '0.8' },
-    { loc: '/blogs', changefreq: 'weekly', priority: '0.8' },
-    { loc: '/contact', changefreq: 'monthly', priority: '0.8' },
-    { loc: '/gallery', changefreq: 'monthly', priority: '0.8' },
-    { loc: '/admission-form2', changefreq: 'monthly', priority: '0.9' },
-    { loc: '/cbse-disclosure', changefreq: 'monthly', priority: '0.6' },
-    { loc: '/erp-and-payment', changefreq: 'monthly', priority: '0.5' }
-];
+import { routes as staticRoutes } from '../src/data/routes.js';
 
 function getBlogSlugs() {
     try {
@@ -63,7 +51,7 @@ function generateSitemaps() {
 
     // 1. Generate sitemap-pages.xml
     const pageUrls = staticRoutes.map(route => ({
-        loc: `${BASE_URL}${route.loc === '/' ? '' : route.loc}`,
+        loc: `${BASE_URL}${route.path === '/' ? '' : route.path}`,
         lastmod: today,
         changefreq: route.changefreq,
         priority: route.priority

@@ -28,7 +28,7 @@ const BlogDetail = () => {
         <div className="min-h-screen bg-[#0B1221] text-white">
             <SEO
                 title={blog.title}
-                description={`Read ${blog.title} - The Krisar Academy Blog`}
+                description={blog.description}
                 image={blog.image}
             />
             {/* Using Page Header style but maybe simpler or same */}

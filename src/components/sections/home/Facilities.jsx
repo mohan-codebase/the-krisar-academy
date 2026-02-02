@@ -115,7 +115,7 @@ const Facilities = () => {
                             {/* Background Image */}
                             <img
                                 src={facility.image}
-                                alt={facility.title}
+                                alt={`Krisar Academy ${facility.title}`}
                                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-110 "
                             />
 
