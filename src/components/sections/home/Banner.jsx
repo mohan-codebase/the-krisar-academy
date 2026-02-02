@@ -301,7 +301,7 @@ const Banner = () => {
                                             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-8">
                                                 {slide.images.map((img, idx) => (
                                                     <div key={idx} className="transform transition-transform hover:-translate-y-1 duration-300">
-                                                        <img src={img} alt="" className="w-full h-28 md:h-64 object-cover rounded-sm border-2 border-white/50 shadow-lg" />
+                                                        <img src={img} alt="Banner Grid Image" className="w-full h-28 md:h-64 object-cover rounded-sm border-2 border-white/50 shadow-lg" />
                                                     </div>
                                                 ))}
                                             </div>
@@ -349,23 +349,23 @@ const Banner = () => {
                                             {/* Mobile Grid View */}
                                             <div className="grid grid-cols-2 gap-2 px-3 md:hidden">
                                                 {slide.images.map((img, idx) => (
-                                                    <img key={idx} src={img} alt="" className="w-full h-24 object-cover" />
+                                                    <img key={idx} src={img} alt="World Record Event" className="w-full h-24 object-cover" />
                                                 ))}
                                             </div>
 
                                             {/* Desktop Floating View */}
                                             <div className="hidden md:block relative w-full h-full max-w-[1700px] mx-auto">
                                                 {/* Top Left */}
-                                                <img src={slide.images[2]} alt="" className="absolute top-[40%] left-4 lg:left-12 w-92 h-44 object-contain rounded" />
+                                                <img src={slide.images[2]} alt="World Record Celebration 1" className="absolute top-[40%] left-4 lg:left-12 w-92 h-44 object-contain rounded" />
 
                                                 {/* Bottom Left */}
-                                                <img src={slide.images[1]} alt="" className="absolute bottom-[15%] left-4 lg:left-12 w-92 h-44 object-contain rounded" />
+                                                <img src={slide.images[1]} alt="World Record Celebration 2" className="absolute bottom-[15%] left-4 lg:left-12 w-92 h-44 object-contain rounded" />
 
                                                 {/* Top Right */}
-                                                <img src={slide.images[0]} alt="" className="absolute top-[40%] right-4 lg:right-12 w-92 h-44 object-contain rounded" />
+                                                <img src={slide.images[0]} alt="World Record Celebration 3" className="absolute top-[40%] right-4 lg:right-12 w-92 h-44 object-contain rounded" />
 
                                                 {/* Bottom Right */}
-                                                <img src={slide.images[3]} alt="" className="absolute bottom-[15%] right-4 lg:right-12 w-92 h-44 object-contain rounded" />
+                                                <img src={slide.images[3]} alt="World Record Celebration 4" className="absolute bottom-[15%] right-4 lg:right-12 w-92 h-44 object-contain rounded" />
                                             </div>
                                         </div>
                                     </div>

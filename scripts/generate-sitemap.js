@@ -15,7 +15,7 @@ const staticRoutes = [
     { loc: '/facilities', changefreq: 'monthly', priority: '0.8' },
     { loc: '/uat-academics', changefreq: 'monthly', priority: '0.8' },
     { loc: '/uat-beyond-academics', changefreq: 'monthly', priority: '0.8' },
-    { loc: '/blog', changefreq: 'weekly', priority: '0.8' },
+    { loc: '/blogs', changefreq: 'weekly', priority: '0.8' },
     { loc: '/contact', changefreq: 'monthly', priority: '0.8' },
     { loc: '/gallery', changefreq: 'monthly', priority: '0.8' },
     { loc: '/admission-form2', changefreq: 'monthly', priority: '0.9' },
@@ -41,6 +41,7 @@ function getBlogSlugs() {
 
 function generateXML(urls) {
     let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
+    xml += '<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>\n';
     xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
 
     urls.forEach(urlObj => {
@@ -76,7 +77,7 @@ function generateSitemaps() {
 
     // 2. Generate sitemap-posts.xml
     const postUrls = blogSlugs.map(slug => ({
-        loc: `${BASE_URL}/blog/${slug}`,
+        loc: `${BASE_URL}/blogs/${slug}`,
         lastmod: today,
         changefreq: 'monthly',
         priority: '0.7'
@@ -90,6 +91,7 @@ function generateSitemaps() {
 
     // 3. Generate sitemap.xml (Index)
     let indexXml = '<?xml version="1.0" encoding="UTF-8"?>\n';
+    indexXml += '<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>\n';
     indexXml += '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
 
     indexXml += '  <sitemap>\n';

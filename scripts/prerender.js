@@ -10,32 +10,38 @@ const { render } = await import(toAbsolute('dist/server/entry-server.js'));
 
 const routes = [
     '/',
-    '/about',
+    '/projects',
     '/facilities',
-    '/academics',
-    '/beyond-academics',
-    '/blog',
+    '/uat-academics',
+    '/uat-beyond-academics',
+    '/blogs',
     '/contact',
     '/gallery',
-    '/admission',
+    '/admission-form2',
     '/cbse-disclosure',
-    '/payment'
+    '/erp-and-payment'
 ];
 
-// Add blog routes (manually for now, ideally fetched from data source)
-const blogSlugs = [
-    'grand-celebration-sports-spirit-krisars-sports-fiesta-2024-2025',
-    'krisar-academy-students-create-history-world-record-proverbs-recitation',
-    'school-receives-national-recognition-bengaluru-ceremony',
-    'school-honoured-prestigious-nsa-award-excellence-education-2024',
-    'memorable-day-celebrity-chef-madhambatti-rangaraj-school-function-2023',
-    'proud-moment-2023-school-honoured-best-school-district-collector',
-    'walking-green-ramp-fashion-show-nature-heart',
-    'summer-water-awareness-drive-2019',
-    'millet-road-show'
-];
+const BLOG_DATA_PATH = toAbsolute('src/data/blogData.jsx');
 
-blogSlugs.forEach(slug => routes.push(`/blog/${slug}`));
+function getBlogSlugs() {
+    try {
+        const content = fs.readFileSync(BLOG_DATA_PATH, 'utf8');
+        const regex = /slug:\s*["']([^"']+)["']/g;
+        const slugs = [];
+        let match;
+        while ((match = regex.exec(content)) !== null) {
+            slugs.push(match[1]);
+        }
+        return slugs;
+    } catch (error) {
+        console.error('Error reading blog data:', error);
+        return [];
+    }
+}
+
+const blogSlugs = getBlogSlugs();
+blogSlugs.forEach(slug => routes.push(`/blogs/${slug}`));
 
 (async () => {
     // pre-render each route...

@@ -122,7 +122,7 @@ const ModernCarousel = ({ items = [], onItemClick, showContent = true }) => {
                                         <div className="flex-1 p-6 md:p-8 flex flex-col">
                                             <div className="flex items-start gap-4 mb-4">
                                                 <div className="p-3 bg-brand-secondary/10 rounded-xl group-hover/card:bg-brand-secondary/20 transition-colors">
-                                                    <img src={item.icon} alt="" className="w-8 h-8 md:w-10 md:h-10" />
+                                                    <img src={item.icon} alt="Icon" className="w-8 h-8 md:w-10 md:h-10" />
                                                 </div>
                                                 <h3 className="text-xl md:text-2xl font-bold text-white group-hover/card:text-brand-secondary transition-colors">
                                                     {item.title}
