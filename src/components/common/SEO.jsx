@@ -19,9 +19,6 @@ const SEO = ({
     // If 'url' prop is provided, use it.
     // Otherwise, construct it from the current location.
     const metaUrl = url || `https://thekrisaracademy.com${location.pathname}`;
-    if (typeof window === 'undefined') {
-        console.log('SEO Debug:', { pathname: location.pathname, urlProp: url, metaUrl });
-    }
 
     return (
         <Helmet>
