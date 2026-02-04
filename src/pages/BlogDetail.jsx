@@ -15,7 +15,7 @@ const BlogDetail = () => {
             <div className="min-h-screen bg-[#0B1221] text-white flex items-center justify-center">
                 <div className="text-center">
                     <h2 className="text-3xl font-bold mb-4">Post Not Found</h2>
-                    <Link to="/blog" className="text-brand-secondary hover:underline">Back to Blogs</Link>
+                    <Link to="/blogs" className="text-brand-secondary hover:underline">Back to Blogs</Link>
                 </div>
             </div>
         );
@@ -73,7 +73,7 @@ const BlogDetail = () => {
                             <h3 className="text-xl font-bold mb-6 text-yellow-400 border-b border-white/10 pb-2">Recent Articles</h3>
                             <div className="space-y-4">
                                 {recentArticles.map(article => (
-                                    <Link to={`/blog/${article.slug}`} key={article.id} className="flex gap-4 group">
+                                    <Link to={`/blogs/${article.slug}`} key={article.id} className="flex gap-4 group">
                                         <div className="w-20 h-20 flex-shrink-0 rounded-lg overflow-hidden">
                                             <img src={article.image} alt={article.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
                                         </div>

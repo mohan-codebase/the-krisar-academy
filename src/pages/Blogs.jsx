@@ -72,7 +72,7 @@ const Blogs = () => {
                                     <p className="text-gray-400 text-sm mb-4">{item.date}</p>
                                 </div>
 
-                                <Button to={`/blog/${item.slug}`} className="w-full">Know more</Button>
+                                <Button to={`/blogs/${item.slug}`} className="w-full">Know more</Button>
                             </div>
                         </div>
                     ))}
