@@ -6,12 +6,13 @@ import ScrollReveal from '../components/common/ScrollReveal'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 // Images
+import imgLibrary from '../assets/images/facilities/modern-library.png'
+import imgLab from '../assets/images/facilities/lab-facilities.png'
+import imgRobotics from '../assets/images/facilities/robotic-lab.png'
+import imgComputer from '../assets/images/facilities/computer-lab.png'
+import imgMaths from '../assets/images/facilities/vedic-maths-lab.png'
+import imgWinners from '../assets/images/facilities/winners-img.jpeg'
 import imgApproach from '../assets/images/academics/Academic Approach.avif'
-import imgCurriculum from '../assets/images/academics/Academic Curriculum.avif'
-import imgBeyond from '../assets/images/academics/Beyond Academicss.avif'
-import imgKindergarten from '../assets/images/academics/Kindergarten.avif'
-import imgPrimary from '../assets/images/academics/The Primary & The Secondary Schooling Years.avif'
-import imgLifeSkills from '../assets/images/academics/Life Skills Teaching.avif'
 
 const sections = [
     {
@@ -26,7 +27,7 @@ const sections = [
                 </p>
             </>
         ),
-        image: imgApproach
+        image: imgLibrary
     },
     {
         title: "Academic Curriculum",
@@ -40,7 +41,7 @@ const sections = [
                 </p>
             </>
         ),
-        image: imgCurriculum
+        image: imgLab
     },
     {
         title: "Beyond Academics",
@@ -54,7 +55,7 @@ const sections = [
                 </p>
             </>
         ),
-        image: imgBeyond
+        image: imgRobotics
     },
     {
         title: "Kindergarten",
@@ -68,7 +69,7 @@ const sections = [
                 </p>
             </>
         ),
-        image: imgKindergarten
+        image: imgComputer
     },
     {
         title: "The Primary & The Secondary Schooling Years",
@@ -82,7 +83,7 @@ const sections = [
                 </p>
             </>
         ),
-        image: imgPrimary
+        image: imgMaths
     },
     {
         title: "Life Skills Teaching",
@@ -96,21 +97,11 @@ const sections = [
                 </p>
             </>
         ),
-        image: imgLifeSkills
+        image: imgWinners
     }
 ];
 
 const Academics = () => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-
-    const nextSlide = () => {
-        setCurrentIndex((prev) => (prev + 1) % sections.length);
-    };
-
-    const prevSlide = () => {
-        setCurrentIndex((prev) => (prev - 1 + sections.length) % sections.length);
-    };
-
     return (
         <div className="bg-brand-primary min-h-screen">
             <SEO
@@ -139,86 +130,55 @@ const Academics = () => {
                     </div>
                 </ScrollReveal>
 
-                {/* Carousel Container */}
-                <ScrollReveal delay={0.2}>
-                    <div className="relative max-w-7xl mx-auto">
-                        {/* Navigation Buttons - Absolute on desktop */}
-                        <button
-                            onClick={prevSlide}
-                            className="curso-pointer absolute left-4 2xl:-left-12 top-1/2 -translate-y-1/2 z-10 p-3 rounded-xl bg-white/10 hover:bg-white/20 border border-white/10 backdrop-blur-sm transition-all text-white hidden md:block"
-                        >
-                            <ChevronLeft size={24} />
-                        </button>
-
-                        <button
-                            onClick={nextSlide}
-                            className="curso-pointer absolute right-4 2xl:-right-12 top-1/2 -translate-y-1/2 z-10 p-3 rounded-xl bg-white/10 hover:bg-white/20 border border-white/10 backdrop-blur-sm transition-all text-white hidden md:block"
-                        >
-                            <ChevronRight size={24} />
-                        </button>
-
-                        {/* Main Slide Card */}
-                        <div className="bg-white/5 backdrop-blur-lg rounded-3xl border border-white/10 overflow-hidden shadow-2xl">
-                            <div className="flex flex-col md:flex-row min-h-[500px]">
-                                {/* Left Content */}
-                                <div className="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center relative">
-                                    {/* Decorative Gradient */}
-                                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-secondary to-transparent opacity-50"></div>
-
-                                    <h3 className="text-3xl md:text-4xl font-bold text-brand-secondary mb-2 inline-block relative">
-                                        {sections[currentIndex].title}
-                                        <span className="absolute -bottom-2 left-0 w-24 h-1 bg-brand-secondary rounded-full"></span>
-                                    </h3>
-
-                                    <div className="mt-8 text-gray-300 leading-relaxed text-base md:text-lg">
-                                        {sections[currentIndex].description}
+                {/* Static Layout */}
+                <div className="relative max-w-7xl mx-auto">
+                    <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
+                        {/* Right Image - Prominent & Sticky on Desktop */}
+                        <div className="w-full lg:w-5/12 order-1 lg:order-2">
+                            <ScrollReveal delay={0.2} className="lg:sticky lg:top-32 h-fit">
+                                <div className="rounded-3xl overflow-hidden border border-white/10 shadow-2xl relative group">
+                                    <div className="absolute inset-0 bg-brand-primary/20 group-hover:bg-brand-primary/0 transition-colors z-10"></div>
+                                    <img
+                                        src={imgApproach}
+                                        alt="Academic Excellence at Krisar"
+                                        className="w-full h-[300px] lg:h-[600px] object-cover transform transition-transform duration-700 group-hover:scale-105"
+                                    />
+                                    {/* Decorative Overlay */}
+                                    <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-brand-primary/80 to-transparent z-10"></div>
+                                    <div className="absolute bottom-6 left-6 z-20">
+                                        <h3 className="text-2xl font-bold text-white mb-2">World-Class Facilities</h3>
+                                        <p className="text-gray-300 text-sm max-w-xs">Creating an environment that inspires learning and innovation.</p>
                                     </div>
                                 </div>
-
-                                {/* Right Image */}
-                                <div className="w-full md:w-1/2 relative h-[300px] md:h-auto">
-                                    <img
-                                        src={sections[currentIndex].image}
-                                        alt={sections[currentIndex].title}
-                                        className="w-full h-full object-cover"
-                                    />
-                                    {/* Overlay for smooth transition if needed */}
-                                    <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-l from-brand-primary/20 to-transparent"></div>
-                                </div>
-                            </div>
+                            </ScrollReveal>
                         </div>
 
-                        {/* Mobile Navigation & Pagination */}
-                        <div className="flex items-center justify-center gap-6 mt-8">
-                            <button
-                                onClick={prevSlide}
-                                className="p-3 rounded-xl bg-white/10 border border-white/10 text-white md:hidden"
-                            >
-                                <ChevronLeft size={20} />
-                            </button>
+                        {/* Left Content List */}
+                        <div className="w-full lg:w-7/12 order-2 lg:order-1 space-y-6">
+                            {sections.map((section, index) => (
+                                <ScrollReveal key={index} delay={index * 0.1}>
+                                    <div className="bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 p-6 md:p-8 hover:bg-white/10 transition-colors group">
+                                        <div className="flex flex-col md:flex-row gap-4 items-start">
+                                            {/* Number/Icon Placeholder */}
+                                            <div className="flex-shrink-0 w-12 h-12 rounded-full bg-brand-secondary/20 flex items-center justify-center border border-brand-secondary/30 text-brand-secondary font-bold text-xl group-hover:bg-brand-secondary group-hover:text-brand-primary transition-colors">
+                                                {index + 1}
+                                            </div>
 
-                            <div className="flex items-center gap-2">
-                                {sections.map((_, idx) => (
-                                    <button
-                                        key={idx}
-                                        onClick={() => setCurrentIndex(idx)}
-                                        className={`h-2.5 rounded-full transition-all duration-300 ${idx === currentIndex
-                                            ? 'w-8 bg-brand-secondary'
-                                            : 'w-2.5 bg-white/20 hover:bg-white/40'
-                                            }`}
-                                    />
-                                ))}
-                            </div>
-
-                            <button
-                                onClick={nextSlide}
-                                className="p-3 rounded-xl bg-white/10 border border-white/10 text-white md:hidden"
-                            >
-                                <ChevronRight size={20} />
-                            </button>
+                                            <div className="flex-grow">
+                                                <h3 className="text-xl md:text-2xl font-bold text-brand-secondary mb-3">
+                                                    {section.title}
+                                                </h3>
+                                                <div className="text-gray-300 leading-relaxed text-base">
+                                                    {section.description}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </ScrollReveal>
+                            ))}
                         </div>
                     </div>
-                </ScrollReveal>
+                </div>
 
             </section>
         </div>

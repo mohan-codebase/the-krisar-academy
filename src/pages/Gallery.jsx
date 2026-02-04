@@ -9,44 +9,16 @@ import ScrollReveal from '../components/common/ScrollReveal';
 // Generic icon for gallery items
 import iconGallery from '../assets/images/facilities/modern-library.svg';
 
-// Gallery Images
-// Gallery Images
-import gallery1 from '../assets/images/gallery/gal1.jpeg'
-import gallery2 from '../assets/images/gallery/gal2.jpeg'
-import gallery3 from '../assets/images/gallery/gal3.jpeg'
-import gallery4 from '../assets/images/gallery/gal4.jpeg'
-import gallery5 from '../assets/images/gallery/gal5.jpeg'
-import gallery6 from '../assets/images/gallery/gal6.jpeg'
-import gallery7 from '../assets/images/gallery/gal10.jpeg'
-import gallery8 from '../assets/images/gallery/gal8.jpeg'
-import gallery9 from '../assets/images/gallery/gal9.jpeg'
-import gallery10 from '../assets/images/gallery/gal11.jpeg'
-import gallery11 from '../assets/images/gallery/gal8.jpeg'
 
-// Load all images from allImages directory
-const allImagesModules = import.meta.glob('../assets/images/allImages/*.{png,jpg,jpeg,webp}', { eager: true });
+
+// Load all images from gallery directory
+const allImagesModules = import.meta.glob('../assets/images/gallery/*.{png,jpg,jpeg,webp}', { eager: true });
 const allImages = Object.values(allImagesModules).map(mod => mod.default);
 
-// Select 20 random images
-const randomImages = allImages
-    .sort(() => Math.random() - 0.5)
-    .slice(0, 20);
 
-// Placeholder images since specific assets weren't provided or found
-// In a real scenario, these would be imports or API data
+
 const photoItems = [
-    gallery1,
-    gallery2,
-    gallery3,
-    gallery4,
-    gallery5,
-    gallery6,
-    gallery7,
-    gallery8,
-    gallery9,
-    gallery10,
-    gallery11,
-    ...randomImages
+    ...allImages
 ];
 
 const videoData = [

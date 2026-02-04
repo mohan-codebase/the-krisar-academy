@@ -153,7 +153,7 @@ const slides = [
 
 const Banner = () => {
     // Memoize plugins to prevent re-initialization on every render
-    const plugins = React.useMemo(() => [Autoplay({ delay: 10000000 })], [])
+    const plugins = React.useMemo(() => [Autoplay({ delay: 4000 })], [])
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, plugins)
 
     const scrollPrev = useCallback(() => {
@@ -191,14 +191,14 @@ const Banner = () => {
             {/* Navigation Arrows */}
             <button
                 type="button"
-                className="absolute top-1/2 left-4 md:left-8 -translate-y-1/2 bg-white/10 hover:bg-white/20 backdrop-blur-sm p-2 md:p-3 rounded-xl border border-white/20 transition-colors z-30 cursor-pointer hidden md:block"
+                className="absolute top-1/2 left-4 md:left-8 -translate-y-1/2 bg-white/10 hover:bg-white/20 backdrop-blur-sm p-2 md:p-3 rounded-xl border border-white/20 transition-colors z-30 cursor-pointer"
                 onClick={scrollPrev}
             >
                 <ArrowLeft size={24} />
             </button>
             <button
                 type="button"
-                className="absolute top-1/2 right-4 md:right-8 -translate-y-1/2 bg-white/10 hover:bg-white/20 backdrop-blur-sm p-2 md:p-3 rounded-xl border border-white/20 transition-colors z-30 cursor-pointer hidden md:block"
+                className="absolute top-1/2 right-4 md:right-8 -translate-y-1/2 bg-white/10 hover:bg-white/20 backdrop-blur-sm p-2 md:p-3 rounded-xl border border-white/20 transition-colors z-30 cursor-pointer"
                 onClick={scrollNext}
             >
                 <ArrowRight size={24} />
@@ -455,7 +455,7 @@ const Banner = () => {
             </div>
 
             {/* Pagination Dots */}
-            {/* <div className="flex justify-center gap-4 absolute bottom-4 md:bottom-8 left-0 right-0 z-30">
+            <div className="flex justify-center gap-4 absolute bottom-4 md:bottom-8 left-0 right-0 z-30">
                 {scrollSnaps.map((_, index) => (
                     <button
                         key={index}
@@ -470,7 +470,7 @@ const Banner = () => {
                         />
                     </button>
                 ))}
-            </div> */}
+            </div>
         </section>
     )
 }

@@ -18,7 +18,7 @@ const managementTeam = [
         image: img2
     },
     {
-        name: "Mr.K.K.Rajan",
+        name: "Dr.K.K.Rajan",
         title: "Founder & Chairman",
         image: img3
     },
