@@ -164,64 +164,90 @@ const Gallery = () => {
                         </div>
                     </ScrollReveal>
                 ) : (
-                    <div className="flex flex-col lg:flex-row gap-8">
-                        {/* Featured Portrait Video (First Item) */}
-                        {videoData.length > 0 && (
-                            <div className="w-full lg:w-1/3">
-                                <ScrollReveal delay={0}>
+                    activeTab === 'photos' ? (
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                            {displayPhotos.map((src, index) => (
+                                <ScrollReveal key={index} delay={index * 0.05}>
                                     <div
-                                        onClick={() => setSelectedVideo(videoData[0])}
-                                        className="group relative h-full w-full bg-[#151E38] rounded-2xl overflow-hidden border border-white/10 hover:border-yellow-400/50 transition-all cursor-pointer shadow-lg hover:shadow-yellow-400/10 aspect-[9/16]"
+                                        className="relative aspect-video overflow-hidden rounded border border-white/10 bg-[#151E38] cursor-pointer group"
+                                        onClick={() => setSelectedImage(src)}
                                     >
                                         <img
-                                            src={videoData[0].type === 'local' ? videoData[0].thumbnail : `https://img.youtube.com/vi/${videoData[0].id}/maxresdefault.jpg`}
-                                            alt={videoData[0].title}
-                                            className="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 transition-all duration-500"
+                                            src={src}
+                                            alt={`Gallery Image ${index + 1}`}
+                                            className="w-full h-[300px] object-cover hover:scale-105 transition-transform duration-500"
                                         />
-                                        <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all" />
-                                        <div className="absolute inset-0 flex items-center justify-center">
-                                            <div className="w-20 h-20 rounded-full bg-yellow-400 flex items-center justify-center group-hover:scale-110 transition-transform shadow-xl">
-                                                <div className="w-0 h-0 border-t-[12px] border-t-transparent border-l-[22px] border-l-black border-b-[12px] border-b-transparent ml-1"></div>
+                                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                                            <div className="bg-black/50 p-3 rounded-full backdrop-blur-sm">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                                                    <path d="M15 3h6v6M14 10l6.1-6.1M9 21H3v-6M10 14l-6.1 6.1" />
+                                                </svg>
                                             </div>
-                                        </div>
-                                        <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
-                                            <h3 className="text-xl font-bold text-white mb-2 leading-tight">{videoData[0].title}</h3>
-                                            <p className="text-gray-300 text-sm line-clamp-2">Experience the campus tour.</p>
                                         </div>
                                     </div>
                                 </ScrollReveal>
-                            </div>
-                        )}
-
-                        {/* Remaining Videos Grid */}
-                        <div className="w-full lg:w-2/3">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                {videoData.slice(1).map((video, index) => (
-                                    <ScrollReveal key={video.id} delay={(index + 1) * 0.05}>
+                            ))}
+                        </div>
+                    ) : (
+                        <div className="flex flex-col lg:flex-row gap-8">
+                            {/* Featured Portrait Video (First Item) */}
+                            {videoData.length > 0 && (
+                                <div className="w-full lg:w-1/3">
+                                    <ScrollReveal delay={0}>
                                         <div
-                                            onClick={() => setSelectedVideo(video)}
-                                            className="group relative aspect-video bg-[#151E38] rounded-xl overflow-hidden border border-white/10 hover:border-yellow-400/50 transition-all cursor-pointer shadow-lg hover:shadow-yellow-400/10"
+                                            onClick={() => setSelectedVideo(videoData[0])}
+                                            className="group relative h-full w-full bg-[#151E38] rounded-2xl overflow-hidden border border-white/10 hover:border-yellow-400/50 transition-all cursor-pointer shadow-lg hover:shadow-yellow-400/10 aspect-[9/16]"
                                         >
                                             <img
-                                                src={video.type === 'local' ? video.thumbnail : `https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
-                                                alt={video.title}
-                                                className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-500"
+                                                src={videoData[0].type === 'local' ? videoData[0].thumbnail : `https://img.youtube.com/vi/${videoData[0].id}/maxresdefault.jpg`}
+                                                alt={videoData[0].title}
+                                                className="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 transition-all duration-500"
                                             />
                                             <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all" />
                                             <div className="absolute inset-0 flex items-center justify-center">
-                                                <div className="w-14 h-14 rounded-full bg-yellow-400 flex items-center justify-center group-hover:scale-110 transition-transform shadow-xl">
-                                                    <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[14px] border-l-black border-b-[8px] border-b-transparent ml-1"></div>
+                                                <div className="w-20 h-20 rounded-full bg-yellow-400 flex items-center justify-center group-hover:scale-110 transition-transform shadow-xl">
+                                                    <div className="w-0 h-0 border-t-[12px] border-t-transparent border-l-[22px] border-l-black border-b-[12px] border-b-transparent ml-1"></div>
                                                 </div>
                                             </div>
-                                            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/90 to-transparent">
-                                                <p className="text-sm font-medium text-white line-clamp-2">{video.title}</p>
+                                            <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
+                                                <h3 className="text-xl font-bold text-white mb-2 leading-tight">{videoData[0].title}</h3>
+                                                <p className="text-gray-300 text-sm line-clamp-2">Experience the campus tour.</p>
                                             </div>
                                         </div>
                                     </ScrollReveal>
-                                ))}
+                                </div>
+                            )}
+
+                            {/* Remaining Videos Grid */}
+                            <div className="w-full lg:w-2/3">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    {videoData.slice(1).map((video, index) => (
+                                        <ScrollReveal key={video.id} delay={(index + 1) * 0.05}>
+                                            <div
+                                                onClick={() => setSelectedVideo(video)}
+                                                className="group relative aspect-video bg-[#151E38] rounded-xl overflow-hidden border border-white/10 hover:border-yellow-400/50 transition-all cursor-pointer shadow-lg hover:shadow-yellow-400/10"
+                                            >
+                                                <img
+                                                    src={video.type === 'local' ? video.thumbnail : `https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
+                                                    alt={video.title}
+                                                    className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-500"
+                                                />
+                                                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all" />
+                                                <div className="absolute inset-0 flex items-center justify-center">
+                                                    <div className="w-14 h-14 rounded-full bg-yellow-400 flex items-center justify-center group-hover:scale-110 transition-transform shadow-xl">
+                                                        <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[14px] border-l-black border-b-[8px] border-b-transparent ml-1"></div>
+                                                    </div>
+                                                </div>
+                                                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/90 to-transparent">
+                                                    <p className="text-sm font-medium text-white line-clamp-2">{video.title}</p>
+                                                </div>
+                                            </div>
+                                        </ScrollReveal>
+                                    ))}
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    )
                 )}
 
                 {/* More Videos Button */}
