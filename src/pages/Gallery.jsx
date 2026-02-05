@@ -16,24 +16,34 @@ const allImagesModules = import.meta.glob('../assets/images/gallery/*.{png,jpg,j
 const allImages = Object.values(allImagesModules).map(mod => mod.default);
 
 
+// Local Video
+import localVideo from '../assets/videos/compressed-video-1.mp4';
+import localVideoThumb from '../assets/videos/video-1-thumb.jpg';
 
 const photoItems = [
     ...allImages
 ];
 
 const videoData = [
-    { id: "zezZZcPvGR0", title: "Airport Role Play by Students | World Tourism Day celebration" },
-    { id: "XMa8mmQgMrU", title: "Family Sports Day Celebration | The Krisar Academy" },
-    { id: "betuccsEZO4", title: "Annual State Level Sports & Games Tournament 2024" },
-    { id: "vaU0HOkq2DI", title: "#pongal Thiruvizha 2024 | The Krisar Academy" },
-    { id: "Ct9dGimM8zw", title: "Equinox | Annual Science Expo | The Krisar Academy" },
-    { id: "HkAxVbH3EVk", title: "National Mathematics Day | #maths | The Krisar Academy" },
-    { id: "5wnYzv-D__s", title: "Revised Inspection Video | The Krisar Academy" },
-    { id: "SqSBvaFQQTk", title: "GEC Award for Best Skills Development Initiative | The Krisar Academy" },
-    { id: "uEYhrmXQpuo", title: "Hayagreevar Pooja | The Krisar Academy" },
-    { id: "cIS69WivOaA", title: "The Adventures of Lord Krishna | The Krisar Academy" },
-    { id: "5psVuPs8nDg", title: "The Adventures Of Lord Krishna Promo | The Krisar Academy" },
-    { id: "zBFRefKwjzU", title: "CBSE INSPECTION FOR UPGRADATION | THE KRISAR ACADEMY" }
+    {
+        type: 'local',
+        id: 'local-video-1',
+        title: 'Campus Tour | The Krisar Academy',
+        src: localVideo,
+        thumbnail: localVideoThumb
+    },
+    { type: 'youtube', id: "zezZZcPvGR0", title: "Airport Role Play by Students | World Tourism Day celebration" },
+    { type: 'youtube', id: "XMa8mmQgMrU", title: "Family Sports Day Celebration | The Krisar Academy" },
+    { type: 'youtube', id: "betuccsEZO4", title: "Annual State Level Sports & Games Tournament 2024" },
+    { type: 'youtube', id: "vaU0HOkq2DI", title: "#pongal Thiruvizha 2024 | The Krisar Academy" },
+    { type: 'youtube', id: "Ct9dGimM8zw", title: "Equinox | Annual Science Expo | The Krisar Academy" },
+    { type: 'youtube', id: "HkAxVbH3EVk", title: "National Mathematics Day | #maths | The Krisar Academy" },
+    { type: 'youtube', id: "5wnYzv-D__s", title: "Revised Inspection Video | The Krisar Academy" },
+    { type: 'youtube', id: "SqSBvaFQQTk", title: "GEC Award for Best Skills Development Initiative | The Krisar Academy" },
+    { type: 'youtube', id: "uEYhrmXQpuo", title: "Hayagreevar Pooja | The Krisar Academy" },
+    { type: 'youtube', id: "cIS69WivOaA", title: "The Adventures of Lord Krishna | The Krisar Academy" },
+    { type: 'youtube', id: "5psVuPs8nDg", title: "The Adventures Of Lord Krishna Promo | The Krisar Academy" },
+    { type: 'youtube', id: "zBFRefKwjzU", title: "CBSE INSPECTION FOR UPGRADATION | THE KRISAR ACADEMY" }
 ];
 
 const Gallery = () => {
@@ -64,8 +74,10 @@ const Gallery = () => {
         icon: iconGallery,
         title: video.title,
         description: "Experience our vibrant school culture and student performances through these videos.",
-        image: `https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`,
-        id: video.id
+        image: video.type === 'local' ? video.thumbnail : `https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`,
+        id: video.id,
+        type: video.type,
+        src: video.src
     }));
 
     return (
@@ -143,7 +155,9 @@ const Gallery = () => {
                                     if (activeTab === 'photos') {
                                         setSelectedImage(item.image);
                                     } else {
-                                        setSelectedVideo(item.id);
+                                        // Find original video object for details
+                                        const original = videoData.find(v => v.id === item.id);
+                                        setSelectedVideo(original);
                                     }
                                 }}
                             />
@@ -177,11 +191,11 @@ const Gallery = () => {
                             videoData.map((video, index) => (
                                 <ScrollReveal key={video.id} delay={index * 0.05}>
                                     <div
-                                        onClick={() => setSelectedVideo(video.id)}
-                                        className="group relative aspect-video bg-[#151E38] rounded overflow-hidden border border-white/10 hover:border-yellow-400/50 transition-all cursor-pointer shadow-lg hover:shadow-yellow-400/10"
+                                        onClick={() => setSelectedVideo(video)}
+                                        className={`group relative bg-[#151E38] rounded overflow-hidden border border-white/10 hover:border-yellow-400/50 transition-all cursor-pointer shadow-lg hover:shadow-yellow-400/10 ${video.type === 'local' ? 'aspect-[9/16]' : 'aspect-video'}`}
                                     >
                                         <img
-                                            src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
+                                            src={video.type === 'local' ? video.thumbnail : `https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
                                             alt={video.title}
                                             className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-500"
                                         />
@@ -207,6 +221,7 @@ const Gallery = () => {
                         <a href="https://www.youtube.com/@thekrisaracademycbse" target="_blank" rel="noopener noreferrer">
                             <Button className="bg-[#FF0000] hover:bg-[#CC0000] text-white border-none flex items-center gap-2 px-8 py-3">
                                 <Youtube size={20} />
+                                <Youtube size={20} />
                                 WATCH MORE VIDEOS
                             </Button>
                         </a>
@@ -222,7 +237,7 @@ const Gallery = () => {
                     onClick={() => setSelectedVideo(null)}
                 >
                     <div
-                        className="relative w-full max-w-5xl aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl border border-white/10"
+                        className={`relative max-w-5xl bg-black rounded-2xl overflow-hidden shadow-2xl border border-white/10 ${selectedVideo.type === 'local' ? 'h-auto max-h-[90vh] w-auto' : 'w-full aspect-video'}`}
                         onClick={e => e.stopPropagation()}
                     >
                         <button
@@ -234,13 +249,23 @@ const Gallery = () => {
                                 <line x1="6" y1="6" x2="18" y2="18"></line>
                             </svg>
                         </button>
-                        <iframe
-                            src={`https://www.youtube.com/embed/${selectedVideo}?autoplay=1`}
-                            title="YouTube video player"
-                            className="w-full h-full"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                        ></iframe>
+
+                        {selectedVideo.type === 'local' ? (
+                            <video
+                                src={selectedVideo.src}
+                                controls
+                                autoPlay
+                                className="max-h-[85vh] w-auto mx-auto"
+                            />
+                        ) : (
+                            <iframe
+                                src={`https://www.youtube.com/embed/${selectedVideo.id}?autoplay=1`}
+                                title="YouTube video player"
+                                className="w-full h-full"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            ></iframe>
+                        )}
                     </div>
                 </div>
             )}
