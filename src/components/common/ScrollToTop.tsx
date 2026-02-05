@@ -1,16 +1,67 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigationType } from "react-router-dom";
 import { ArrowUp } from "lucide-react";
 
 export const ScrollToTop = () => {
     const { pathname } = useLocation();
+    const navType = useNavigationType();
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [pathname]);
+        if ('scrollRestoration' in window.history) {
+            window.history.scrollRestoration = 'manual';
+        }
+
+        const handleScrollRestoration = () => {
+            if (navType === "POP") {
+                const savedPosition = sessionStorage.getItem(`scrollPos:${pathname}`);
+                if (savedPosition) {
+                    const targetY = parseInt(savedPosition, 10);
+                    let attempts = 0;
+
+                    const attemptScroll = () => {
+                        // If document is tall enough, scroll to it
+                        if (document.documentElement.scrollHeight >= targetY) {
+                            window.scrollTo(0, targetY);
+                            // If we landed roughly where we wanted (allow small epsilon), we're good
+                            if (Math.abs(window.scrollY - targetY) < 50) {
+                                return true;
+                            }
+                        }
+                        return false;
+                    };
+
+                    // Initial attempt
+                    if (!attemptScroll()) {
+                        const interval = setInterval(() => {
+                            attempts++;
+                            if (attemptScroll() || attempts > 10) {
+                                clearInterval(interval);
+                            }
+                        }, 50);
+                    }
+                }
+            } else {
+                window.scrollTo(0, 0);
+            }
+        };
+
+        handleScrollRestoration();
+
+        const saveScrollPosition = () => {
+            sessionStorage.setItem(`scrollPos:${pathname}`, window.scrollY.toString());
+        };
+
+        window.addEventListener('beforeunload', saveScrollPosition);
+
+        // Also save on route change (cleanup)
+        return () => {
+            saveScrollPosition();
+            window.removeEventListener('beforeunload', saveScrollPosition);
+        };
+    }, [pathname, navType]);
 
     useEffect(() => {
         const toggleVisibility = () => {

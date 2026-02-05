@@ -27,7 +27,7 @@ const Home = () => {
       <ScrollReveal><WhyChooseUs /></ScrollReveal>
       <ScrollReveal><Facilities /></ScrollReveal>
       <ScrollReveal><VirtualTourSection /></ScrollReveal>
-      <ScrollReveal><AcademicExcellence /></ScrollReveal>
+      <AcademicExcellence />
       <ScrollReveal><Management /></ScrollReveal>
       <ScrollReveal><SuccessStories /></ScrollReveal>
       <ScrollReveal><InstagramFeed /></ScrollReveal>

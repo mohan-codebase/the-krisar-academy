@@ -6,46 +6,46 @@ import { Link } from 'react-router-dom';
 import img1 from '../../../assets/images/home/AcademicExcellence/68209124de66dcbcf4a3b32734ee40051197b4d2.png'
 import img2 from '../../../assets/images/home/AcademicExcellence/f583c67342e8778ae0ecedd4ca91d2565cbb1840.png'
 import img3 from '../../../assets/images/home/AcademicExcellence/26bef2949edf83ca4ebf20cc5a7e0f2ce4a70527.png'
-import img4 from '../../../assets/images/home/AcademicExcellence/885ad5dfb38b0f999a4efedfc97a23ef89791f1d.png'
+import img4 from '../../../assets/images/home/AcademicExcellence/kindergarten-new.png'
 import img5 from '../../../assets/images/home/AcademicExcellence/105700e68f1ed99bda141dfff4979d7562c32ce4.png'
-import img6 from '../../../assets/images/home/AcademicExcellence/71db062cadeb11633aa912795a5bf02e8007b43d.png'
+import img6 from '../../../assets/images/home/AcademicExcellence/life-skills-new.png'
 
 const academics = [
     {
         title: "Academic Approach",
         image: img1,
-        link: "/uat-academics"
+        link: "/uat-academics#academic-approach"
     },
     {
         title: "Academic Curriculum",
         image: img2,
-        link: "/uat-academics"
+        link: "/uat-academics#academic-curriculum"
     },
     {
         title: "Beyond Academics",
         image: img3,
-        link: "/uat-beyond-academics"
+        link: "/uat-academics#beyond-academics"
     },
     {
         title: "Kindergarten",
         image: img4,
-        link: "/uat-academics"
+        link: "/uat-academics#kindergarten"
     },
     {
         title: "The Primary School",
         image: img5,
-        link: "/uat-academics"
+        link: "/uat-academics#primary-secondary"
     },
     {
         title: "Life Skills Teaching",
         image: img6,
-        link: "/uat-beyond-academics"
+        link: "/uat-academics#life-skills"
     }
 ];
 
 const AcademicExcellence = () => {
     return (
-        <section className="bg-[#0B132B] py-20 relative overflow-hidden">
+        <section id="academics" className="bg-[#0B132B] py-20 relative overflow-hidden">
             <div className="max-w-[1440px] mx-auto px-4 md:px-8">
 
                 {/* Header */}

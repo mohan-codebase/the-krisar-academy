@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import PageHero from '../components/common/PageHero'
 import SEO from '../components/common/SEO'
 import '../assets/styles/fonts.css'
@@ -27,7 +28,8 @@ const sections = [
                 </p>
             </>
         ),
-        image: imgLibrary
+        image: imgLibrary,
+        id: "academic-approach"
     },
     {
         title: "Academic Curriculum",
@@ -41,7 +43,8 @@ const sections = [
                 </p>
             </>
         ),
-        image: imgLab
+        image: imgLab,
+        id: "academic-curriculum"
     },
     {
         title: "Beyond Academics",
@@ -55,7 +58,8 @@ const sections = [
                 </p>
             </>
         ),
-        image: imgRobotics
+        image: imgRobotics,
+        id: "beyond-academics"
     },
     {
         title: "Kindergarten",
@@ -69,7 +73,8 @@ const sections = [
                 </p>
             </>
         ),
-        image: imgComputer
+        image: imgComputer,
+        id: "kindergarten"
     },
     {
         title: "The Primary & The Secondary Schooling Years",
@@ -83,9 +88,11 @@ const sections = [
                 </p>
             </>
         ),
-        image: imgMaths
+        image: imgMaths,
+        id: "primary-secondary"
     },
     {
+        id: "life-skills",
         title: "Life Skills Teaching",
         description: (
             <>
@@ -102,6 +109,51 @@ const sections = [
 ];
 
 const Academics = () => {
+    const location = useLocation();
+
+    useEffect(() => {
+        // Handle hash navigation manually
+        if (location.hash) {
+            // Disable browser's default scroll restoration to avoid conflicts
+            if ('scrollRestoration' in window.history) {
+                window.history.scrollRestoration = 'manual';
+            }
+
+            const scrollToElement = () => {
+                const id = location.hash.slice(1);
+                const element = document.getElementById(id);
+
+                if (element) {
+                    // Check if element has height (meaning it's rendered and not hidden)
+                    const rect = element.getBoundingClientRect();
+                    if (rect.height > 0) {
+                        element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        return true;
+                    }
+                }
+                return false;
+            };
+
+            // Initial attempt
+            if (!scrollToElement()) {
+                // Retry loop - keeps trying until successful or timeout
+                const intervalId = setInterval(() => {
+                    if (scrollToElement()) {
+                        clearInterval(intervalId);
+                    }
+                }, 100);
+
+                // Stop giving up after 3 seconds
+                setTimeout(() => {
+                    clearInterval(intervalId);
+                }, 3000);
+            }
+        } else {
+            // For non-hash pages, ensure we start at top, unless POP handled by ScrollToTop
+            // We leave scrollRestoration as manual since ScrollToTop handles it.
+        }
+    }, [location]);
+
     return (
         <div className="bg-brand-primary min-h-screen">
             <SEO
@@ -156,25 +208,27 @@ const Academics = () => {
                         {/* Left Content List */}
                         <div className="w-full lg:w-7/12 order-2 lg:order-1 space-y-6">
                             {sections.map((section, index) => (
-                                <ScrollReveal key={index} delay={index * 0.1}>
-                                    <div className="bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 p-6 md:p-8 hover:bg-white/10 transition-colors group">
-                                        <div className="flex flex-col md:flex-row gap-4 items-start">
-                                            {/* Number/Icon Placeholder */}
-                                            <div className="flex-shrink-0 w-12 h-12 rounded-full bg-brand-secondary/20 flex items-center justify-center border border-brand-secondary/30 text-brand-secondary font-bold text-xl group-hover:bg-brand-secondary group-hover:text-brand-primary transition-colors">
-                                                {index + 1}
-                                            </div>
+                                <div key={index} id={section.id} className="scroll-mt-32">
+                                    <ScrollReveal delay={index * 0.1}>
+                                        <div className="bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 p-6 md:p-8 hover:bg-white/10 transition-all duration-500 group">
+                                            <div className="flex flex-col md:flex-row gap-4 items-start">
+                                                {/* Number/Icon Placeholder */}
+                                                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-brand-secondary/20 flex items-center justify-center border border-brand-secondary/30 text-brand-secondary font-bold text-xl group-hover:bg-brand-secondary group-hover:text-brand-primary transition-colors">
+                                                    {index + 1}
+                                                </div>
 
-                                            <div className="flex-grow">
-                                                <h3 className="text-xl md:text-2xl font-bold text-brand-secondary mb-3">
-                                                    {section.title}
-                                                </h3>
-                                                <div className="text-gray-300 leading-relaxed text-base">
-                                                    {section.description}
+                                                <div className="flex-grow">
+                                                    <h3 className="text-xl md:text-2xl font-bold text-brand-secondary mb-3">
+                                                        {section.title}
+                                                    </h3>
+                                                    <div className="text-gray-300 leading-relaxed text-base">
+                                                        {section.description}
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </ScrollReveal>
+                                    </ScrollReveal>
+                                </div>
                             ))}
                         </div>
                     </div>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PageHero from '../components/common/PageHero';
 import SEO from '../components/common/SEO';
 import Button from '../components/ui/Button';
@@ -41,8 +41,19 @@ const Gallery = () => {
     const [viewMode, setViewMode] = useState('grid'); // 'carousel' | 'grid'
     const [selectedVideo, setSelectedVideo] = useState(null);
     const [selectedImage, setSelectedImage] = useState(null);
+    const [displayPhotos, setDisplayPhotos] = useState(photoItems);
 
-    const formattedPhotoData = photoItems.map((src, index) => ({
+    useEffect(() => {
+        // Shuffle photos on mount
+        const shuffled = [...photoItems];
+        for (let i = shuffled.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+        }
+        setDisplayPhotos(shuffled);
+    }, []);
+
+    const formattedPhotoData = displayPhotos.map((src, index) => ({
         icon: iconGallery,
         title: `Campus Memory ${index + 1}`,
         description: "Capturing the essence of learning, friendship, and success at The Krisar Academy.",
@@ -141,7 +152,7 @@ const Gallery = () => {
                 ) : (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                         {activeTab === 'photos' ? (
-                            photoItems.map((src, index) => (
+                            displayPhotos.map((src, index) => (
                                 <ScrollReveal key={index} delay={index * 0.05}>
                                     <div
                                         className="relative aspect-video overflow-hidden rounded border border-white/10 bg-[#151E38] cursor-pointer group"
