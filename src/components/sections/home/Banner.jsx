@@ -34,7 +34,23 @@ import bannerRoboticsNew from '../../../assets/images/home/banner/upscale-banner
 
 const slides = [
 
+  
     {
+        id: 1,
+        layout: 'standard', // Centered title, split content at bottom
+        image: banner1,
+        badge: "Admissions Going On – Pre-KG To Grade 11",
+        title: <>Shaping Future Leaders <span className="text-brand-secondary">Through Excellence</span></>,
+        leftContent: {
+            title: <>Visionary Education<br />Since 2018</>,
+            desc: "Krisar Academy Was Established With A Clear Mission To Deliver Holistic, Future-Ready Education, Nurturing Students To Grow As Confident Learners And Responsible Leaders."
+        },
+        rightContent: {
+            title: <>Learners Today,<br />Leaders Tomorrow</>,
+            desc: "With A Strong Focus On Academics, Life Skills, And Values, Krishar Academy Creates A Supportive Environment That Prepares Students To Excel In Both Education And Life."
+        },
+    },
+      {
         id: 6,
         layout: 'standard',
         image: bannerRoboticsNew,
@@ -51,21 +67,6 @@ const slides = [
         },
         buttonText: "Enquiry Now",
         buttonStyle: "secondary"
-    },
-    {
-        id: 1,
-        layout: 'standard', // Centered title, split content at bottom
-        image: banner1,
-        badge: "Admissions Going On – Pre-KG To Grade 11",
-        title: <>Shaping Future Leaders <span className="text-brand-secondary">Through Excellence</span></>,
-        leftContent: {
-            title: <>Visionary Education<br />Since 2018</>,
-            desc: "Krisar Academy Was Established With A Clear Mission To Deliver Holistic, Future-Ready Education, Nurturing Students To Grow As Confident Learners And Responsible Leaders."
-        },
-        rightContent: {
-            title: <>Learners Today,<br />Leaders Tomorrow</>,
-            desc: "With A Strong Focus On Academics, Life Skills, And Values, Krishar Academy Creates A Supportive Environment That Prepares Students To Excel In Both Education And Life."
-        },
     },
 
     {
