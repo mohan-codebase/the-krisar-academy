@@ -28,7 +28,7 @@ import b7Img4 from '../../../assets/images/home/banner/banner-7/4.avif'
 
 import b8SideImg from '../../../assets/images/home/banner/banner-8/side-image.avif'
 import bannerRobotics from '../../../assets/images/home/banner/banner-8-robotics.png'
-import bannerRoboticsNew from '../../../assets/images/home/banner/ai-robotics-lab-v2.png'
+import bannerRoboticsNew from '../../../assets/images/home/banner/upscale-banner.jpg'
 
 
 
