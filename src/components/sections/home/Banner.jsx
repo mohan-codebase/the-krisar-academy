@@ -8,7 +8,6 @@ import Button from '../../ui/Button'
 
 import banner1 from '../../../assets/images/home/banner/banner-1.avif'
 import banner2 from '../../../assets/images/home/banner/newbanner2.png'
-import banner3 from '../../../assets/images/home/banner/banner-3.avif'
 
 
 import banner4 from '../../../assets/images/home/banner/banner-4.avif'
@@ -20,14 +19,6 @@ import wrImg3 from '../../../assets/images/home/banner/banner-6/bannertop-img-3.
 import wrImg4 from '../../../assets/images/home/banner/banner-6/bannertop-img-4.png'
 import wrLogo from '../../../assets/images/home/banner/banner-6/center-logo.webp'
 
-import banner7 from '../../../assets/images/home/banner/banner-7/banner-7.avif'
-import b7Img1 from '../../../assets/images/home/banner/banner-7/1.avif'
-import b7Img2 from '../../../assets/images/home/banner/banner-7/2.avif'
-import b7Img3 from '../../../assets/images/home/banner/banner-7/3.avif'
-import b7Img4 from '../../../assets/images/home/banner/banner-7/4.avif'
-
-import b8SideImg from '../../../assets/images/home/banner/banner-8/side-image.avif'
-import bannerRobotics from '../../../assets/images/home/banner/banner-8-robotics.png'
 import bannerRoboticsNew from '../../../assets/images/home/banner/upscale-banner.jpg'
 
 

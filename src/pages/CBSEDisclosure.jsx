@@ -6,7 +6,7 @@ import { FileText, Shield, Flame, Droplets, Users, Calendar, Award, CheckCircle 
 import { Download } from 'lucide-react';
 
 import recognitionPdf from '../assets/pdf/recognition.pdf';
-import nocPdf from '../assets/pdf/noc.pdf';
+import nocPdf from '../assets/pdf/noc-2.pdf';
 import extensionLetterPdf from '../assets/pdf/extension-letter.pdf';
 import mandatoryDisclosurePdf from '../assets/pdf/mandatory-disclosure.pdf';
 import selfCertificationPdf from '../assets/pdf/self-certification.pdf';
