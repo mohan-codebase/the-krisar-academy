@@ -37,8 +37,8 @@ const Projects = () => {
     return (
         <div className="bg-brand-primary min-h-screen text-white">
             <SEO
-                title="About Us"
-                description="About us Who We AreThe Krisar Academy is the advanced visionary step towards the future of Education. It is instituted in the year 2018 with an aim to offer holistic education to the children in the villages around the major towns i.e., Arani, Timiri, Arcot, Vellore, Ranipet & Walajapet. The school..."
+                title="School Projects & Achievements | Krisar Academy Vellore"
+                description="Explore projects and achievements of Krisar Academy, one of the emerging CBSE schools in Vellore and Ranipet focused on innovation and student growth."
                 keywords="About Krisar Academy, School History, Educational Vision, Best Faclities Arani, School Mission"
             />
             {/* 1. Hero Section */}

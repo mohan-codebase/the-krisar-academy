@@ -18,12 +18,12 @@ export const blogData = [
     {
         id: 1,
         slug: "grand-celebration-sports-spirit-krisars-sports-fiesta-2024-2025",
-        title: "A Grand Celebration of Sports and Spirit: Krisar’s Sports Fiesta 2024-2025",
+        title: "Sports Fiesta Celebration | CBSE Schools in Vellore | Krisar",
         date: "January 11, 2025",
         image: blog1,
         category: "Celebration",
         icon: "Trophy",
-        description: "The campus of The Krisar Academy came alive with energy, excitement, and enthusiasm on January 11, 2025, as students, staff, and guests gathered for the much-awaited Krisar’s Sports Fiesta 2024-2025.",
+        description: "Krisar Academy, one of the leading CBSE schools in Vellore and Ranipet, celebrates sports spirit through its Sports Fiesta event encouraging teamwork and talent.",
         content: (
             <>
                 <p className="mb-6 text-lg leading-relaxed text-gray-700">
@@ -74,12 +74,12 @@ export const blogData = [
     {
         id: 2,
         slug: "krisar-academy-students-create-history-world-record-proverbs-recitation",
-        title: "Krisar Academy Students Create History with a World Record in Proverbs Recitation",
+        title: "World Record Proverbs Recitation | Krisar Academy Blog",
         date: "March 16, 2025",
         image: blog2,
         category: "Achievement",
         icon: "Trophy",
-        description: "In a truly awe-inspiring display of creativity and linguistic brilliance, over 400 students from The Krisar Academy have etched their names in history by creating a world record in Proverbs Recitation.",
+        description: "Students of Krisar Academy set a world record by creating and reciting 2000 original proverbs. Discover this inspiring achievement from a leading CBSE school.",
         content: (
             <>
                 <p className="mb-6 text-lg leading-relaxed text-gray-700">
@@ -125,12 +125,12 @@ export const blogData = [
     {
         id: 3,
         slug: "school-receives-national-recognition-bengaluru-ceremony",
-        title: "Our School Receives National Recognition at Bengaluru Ceremony",
+        title: "National Recognition Award | Krisar Academy Bengaluru",
         date: "April 15, 2025",
         image: blog3,
         category: "Celebration",
         icon: "Trophy",
-        description: "We are proud to share a moment of great pride and honor for our school! The prestigious national recognition was awarded in Bengaluru.",
+        description: "Krisar Academy received national recognition at a Bengaluru ceremony for excellence in education, celebrating student achievements and dedicated teaching.",
         content: (
             <>
                 <img src={blog3Inner1} alt="National Recognition Ceremony" className="w-full h-auto rounded-xl mb-8 shadow-lg hover:shadow-xl transition-shadow duration-300" />
@@ -172,12 +172,12 @@ export const blogData = [
     {
         id: 4,
         slug: "school-honoured-prestigious-nsa-award-excellence-education-2024",
-        title: "Our School Honoured with the Prestigious NSA Award for Excellence in Education – 2024",
+        title: "NSA Excellence Award 2024 Recognition | Krisar Academy",
         date: "April 15, 2025",
         image: blog4,
         category: "Celebration",
         icon: "Trophy",
-        description: "Excellence is never an accident—it is the result of dedication, hard work, and a commitment to providing the best education.",
+        description: "Krisar Academy received the prestigious NSA Award for excellence in education, celebrating outstanding academic achievements.",
         content: (
             <>
                 <p className="mb-6 text-lg leading-relaxed text-gray-700">
@@ -219,12 +219,12 @@ export const blogData = [
     {
         id: 5,
         slug: "memorable-day-celebrity-chef-madhambatti-rangaraj-school-function-2023",
-        title: "A Memorable Day with Celebrity Chef Mr. Madhambatti Rangaraj – School Function 2023",
+        title: "Celebrity Chef Rangaraj School Event | Krisar Academy",
         date: "April 15, 2025",
         image: blog5,
         category: "Celebration",
         icon: "Trophy",
-        description: "In our grand School Function of 2023, we were truly honored to have Celebrity Chef Mr. Madhambatti Rangaraj as our guest.",
+        description: "Krisar Academy hosted celebrity chef Madhampatty Rangaraj during a special school function, celebrating creativity and student engagement.",
         content: (
             <>
                 <p className="mb-6 text-lg leading-relaxed text-gray-700">
@@ -262,12 +262,12 @@ export const blogData = [
     {
         id: 6,
         slug: "proud-moment-2023-school-honoured-best-school-district-collector",
-        title: "A Proud Moment in 2023: Our School Honoured as the Best School by the District Collector",
+        title: "Best School Award 2023 Honour | Krisar Academy Vellore",
         date: "April 15, 2025",
         image: blog6,
         category: "Celebration",
         icon: "Trophy",
-        description: "In 2023, our school reached a remarkable milestone that we will cherish forever - being honoured as the Best School by the District Collector.",
+        description: "Krisar Academy received the Best School Award from the District Collector, marking a proud achievement for students and staff.",
         content: (
             <>
                 <p className="mb-6 text-lg leading-relaxed text-gray-700">
@@ -317,12 +317,12 @@ export const blogData = [
     {
         id: 7,
         slug: "walking-green-ramp-fashion-show-nature-heart",
-        title: "Walking the Green Ramp: A Fashion Show with Nature at Heart",
+        title: "Green Ramp Fashion Show Event | Krisar Academy Vellore",
         date: "April 15, 2025",
         image: blog7,
         category: "Competition",
         icon: "Trophy",
-        description: "Can Fashion and Nature walk hand in hand? At our school, the answer is a resounding YES! Our students walked the 'Green Ramp'.",
+        description: "Krisar Academy organized the Green Ramp Fashion Show promoting environmental awareness and creativity among students.",
         content: (
             <>
                 <p className="mb-6 text-lg leading-relaxed text-gray-700">
@@ -375,12 +375,12 @@ export const blogData = [
     {
         id: 8,
         slug: "summer-water-awareness-drive-2019",
-        title: "Summer Water Awareness Drive 2019",
+        title: "Summer Water Awareness Drive Campaign | Krisar Academy",
         date: "April 15, 2025",
         image: blog8,
         category: "Celebration",
         icon: "Trophy",
-        description: "In the scorching summer of 2019, our school took a thoughtful initiative to highlight the importance of water conservation.",
+        description: "Students of Krisar Academy conducted a summer water awareness drive promoting water conservation and environmental responsibility.",
         content: (
             <>
                 <p className="mb-6 text-lg leading-relaxed text-gray-700">
@@ -424,12 +424,12 @@ export const blogData = [
     {
         id: 9,
         slug: "millet-road-show",
-        title: "Millet Road show",
+        title: "Millet Awareness Road Show | Krisar Academy Event",
         date: "April 10, 2025",
         image: blog9,
         category: "Celebration",
         icon: "Trophy",
-        description: "In 2018, our school took a bold step to promote healthy eating habits by organizing a Road Show on Millets & Organic Food Awareness.",
+        description: "Students of Krisar Academy participated in a millet awareness road show promoting healthy food habits and community awareness.",
         content: (
             <>
                 <p className="mb-6 text-lg leading-relaxed text-gray-700">

@@ -11,7 +11,7 @@ const SEO = ({
 }) => {
     const location = useLocation();
     const siteTitle = 'The Krisar Academy';
-    const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
+    const fullTitle = title && title.includes('|') ? title : (title ? `${title} | ${siteTitle}` : siteTitle);
     const metaDescription = description || 'The Krisar Academy - A visionary institution dedicated to nurturing young minds through holistic education.';
     const metaImage = image || '/og-image.png'; // Default OG image
 

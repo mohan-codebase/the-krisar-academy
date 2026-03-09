@@ -10,9 +10,9 @@ const Blogs = () => {
     return (
         <div className="min-h-screen bg-[#0B1221] text-white">
             <SEO
-                title="Blog"
-                description="BLOG A Grand Celebration of Sports and Spirit: Krisar’s Sports Fiesta 2024-2025 April 15, 2025 Celebration A Grand Celebration of Sports and Spirit: Krisar’s Sports Fiesta 2024-2025 The campus of The Krisar Academy came alive with energy, excitement, and enthusiasm onJanuary… Read More » Kris..."
-                keywords="School Blog, Education News, Student Achievements, Educational Insights, School Events"
+                title="School Blogs & Updates | CBSE Schools in Vellore | Krisar"
+                description="Read blogs, achievements, and updates from Krisar Academy, one of the trusted CBSE schools in Vellore and Ranipet sharing student success stories and events."
+                keywords="School Blogs, Educational Updates, Student Achievements, School News Vellore, Krisar Academy News"
             />
             <PageHero
                 title="Blogs & Updates"

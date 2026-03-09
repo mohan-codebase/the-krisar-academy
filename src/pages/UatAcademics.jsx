@@ -157,9 +157,9 @@ const Academics = () => {
     return (
         <div className="bg-brand-primary min-h-screen">
             <SEO
-                title="Academics"
-                description="Academics Academic Approach We have been moving in recent years towards an education system that is more flexible and diverse. The aim is to provide students with greater choice to meet their different interests and ways of learning. Being able to choose what and how they learn will encourage them t..."
-                keywords="CBSE Curriculum, Academic Excellence, Holistic Learning, Kindergarten to Grade 12, Life Skills Education"
+                title="Academics | CBSE Schools in Vellore & Ranipet | Krisar Academy"
+                description="Explore academics at Krisar Academy, one of the leading CBSE schools in Vellore and Ranipet offering a strong curriculum, modern learning and holistic development."
+                keywords="CBSE Curriculum, Primary Education, Middle School, Senior Secondary, Holistic Learning"
             />
             <PageHero
                 title="Academic Excellence"

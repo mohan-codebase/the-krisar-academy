@@ -94,8 +94,8 @@ const Facilities = () => {
     return (
         <div className="bg-brand-primary min-h-screen">
             <SEO
-                title="Facilities"
-                description="Facilities Resource Centre – LibraryThe hub of peaceful learning and exploration, research and application well stocked with books old and new. The Resource Centre, comprising the Library and the Teacher’s Resource Centre, has become a unique repository of books, CDs, audio as well as video titl..."
+                title="School Facilities | CBSE Schools in Vellore | Krisar"
+                description="Explore modern facilities at Krisar Academy, one of the leading CBSE schools in Vellore and Ranipet, offering robotics labs, science labs, sports and safe transport."
                 keywords="School Infrastructure, Science Labs, Library, Computer Lab, Robotic Lab, School Transport"
             />
             <PageHero

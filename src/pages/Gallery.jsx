@@ -83,8 +83,8 @@ const Gallery = () => {
     return (
         <div className="min-h-screen bg-[#0B1221] text-white">
             <SEO
-                title="Gallery"
-                description="View photos and videos of life at The Krisar Academy, including events, celebrations, and academic activities."
+                title="School Photo Gallery | CBSE Schools in Vellore | Krisar"
+                description="View the gallery of Krisar Academy, one of the leading CBSE schools in Vellore and Ranipet showcasing campus life, events and student achievements."
                 keywords="School Photos, School Events, Photo Gallery, Video Gallery, Student Activities"
             />
             <PageHero

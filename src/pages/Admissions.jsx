@@ -152,8 +152,8 @@ const Admissions = () => {
     return (
         <div className="min-h-screen bg-[#0B1221] text-white pb-20">
             <SEO
-                title="Admissions"
-                description="Admission Registration FORM NAME *AGE *DATE OF BIRTH *GENDERMOTHER TONGUE *NATIONALITY *RELIGION *COMMUNITY *CASTE *SUB CASTE *NAME & ADDRESS OF THE CURRENT SCHOOL *CLASS STUDYING *ADMISSION REQUIRED FOR CLASS *FATHER NAME *FATHER QUALIFICATION *FATHER OCCUPATION *FATHER CONTACT NUMBER *FATHER ANNUA..."
+                title="School Admissions | CBSE Schools in Vellore | Krisar"
+                description="Apply for admission at Krisar Academy, one of the trusted CBSE schools in Vellore and Ranipet offering quality education from Pre-KG to Grade 11."
                 keywords="School Admissions, Online Application, Pre-KG Admission, Grade 11 Admission, School Enrollment"
             />
             <PageHero

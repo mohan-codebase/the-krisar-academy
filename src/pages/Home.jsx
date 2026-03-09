@@ -17,8 +17,8 @@ const Home = () => {
   return (
     <div>
       <SEO
-        title="Welcome"
-        description="World book of recordsNSA 2024 Sports day 2025TOEFLSchool Facilities Website Banner NEET-JEESchool Facilities Website Banner Multipurpose IndoorSchool Facilities Website Banner Learn ArtificialSchool Facilities Website Banner Free LunchGEC AwardAC Smart Class Admissions Going On From Pre-Kg to Grade 1..."
+        title="Best CBSE Schools in Vellore & Ranipet | Krisar Academy"
+        description="Krisar Academy is among the leading CBSE schools in Vellore and Ranipet, offering quality education from Pre-KG to Grade 11 with modern learning and holistic growth."
         keywords="Krisar Academy, CBSE School, Best School in Arani, Holistic Education, Top Schools Vellore, Ranipet Schools"
       />
       <Banner />

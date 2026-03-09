@@ -48,8 +48,8 @@ const CBSEDisclosure = () => {
     return (
         <div className="min-h-screen bg-[#0B1221] text-white pb-20">
             <SEO
-                title="CBSE Disclosure"
-                description="CBSE Disclosure CBSE DISCLOSURE Extension Letter NOC Recognition Building Safety Certificate Fire Safety Certificate Sanitation Certificate Trust Deed Self Certification Parents Teachers Committee Academic Calender SMC Mandatory Disclosure D Form"
+                title="CBSE Disclosure Details | Krisar Academy Vellore"
+                description="View CBSE disclosure details of Krisar Academy, one of the trusted CBSE schools in Vellore and Ranipet providing transparent academic information."
                 keywords="CBSE Disclosure, Mandatory Public Disclosure, School Affiliation, NOC, Recognition Certificate"
             />
             <PageHero

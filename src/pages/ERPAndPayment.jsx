@@ -9,8 +9,8 @@ const ERPAndPayment = () => {
     return (
         <div className='bg-brand-primary min-h-screen text-white'>
             <SEO
-                title="ERP & Payment"
-                description="Secure and convenient ERP & Payment portal for The Krisar Academy. Manage fees, view academic progress, and stay connected with the school administration."
+                title="ERP & Online Payment Portal | Krisar Academy Vellore"
+                description="Access the ERP and online payment portal of Krisar Academy, one of the trusted CBSE schools in Vellore and Ranipet for fees, student records and updates."
                 keywords="School ERP, Online Payment, Fee Payment, Krisar Academy Portal, Student Login, Parent Portal"
             />
 
