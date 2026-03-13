@@ -15,8 +15,11 @@ import {
     Heart,
     Rocket,
     Landmark,
-    Sword
+    Sword,
+    ArrowRight
 } from 'lucide-react';
+import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
 import ScrollReveal from '../../common/ScrollReveal';
 
 const highlights = [
@@ -135,6 +138,31 @@ const highlights = [
 ];
 
 const SchoolHighlights = () => {
+    const [emblaRef, emblaApi] = useEmblaCarousel(
+        { 
+            loop: true, 
+            align: 'start',
+            breakpoints: {
+                '(min-width: 768px)': { active: false } // Disable carousel on desktop
+            }
+        }, 
+        [Autoplay({ delay: 4000, stopOnInteraction: false })]
+    );
+
+    const [selectedIndex, setSelectedIndex] = React.useState(0);
+
+    const onSelect = React.useCallback(() => {
+        if (!emblaApi) return;
+        setSelectedIndex(emblaApi.selectedScrollSnap());
+    }, [emblaApi]);
+
+    React.useEffect(() => {
+        if (!emblaApi) return;
+        onSelect();
+        emblaApi.on('select', onSelect);
+        emblaApi.on('reInit', onSelect);
+    }, [emblaApi, onSelect]);
+
     return (
         <section className="bg-[#0B132B] py-24 relative overflow-hidden">
             {/* Background Decorative Elements */}
@@ -147,45 +175,75 @@ const SchoolHighlights = () => {
                 <div className="text-center mb-20">
                     <ScrollReveal>
                         <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">
-                            Academic Excellence <span className="text-brand-secondary">and Discipline</span>                        </h2>
+                            Academic Excellence <span className="text-brand-secondary">and Discipline</span>
+                        </h2>
                         <div className="w-24 h-1.5 bg-brand-secondary mx-auto rounded-full mb-8"></div>
                         <p className="text-gray-400 max-w-3xl mx-auto text-lg md:text-xl leading-relaxed">
-                            Our structured academic environment encourages students to develop strong study habits, analytical thinking, and a deep understanding of subjects that support long-term academic success.                        </p>
+                            Our structured academic environment encourages students to develop strong study habits, analytical thinking, and a deep understanding of subjects that support long-term academic success.
+                        </p>
                     </ScrollReveal>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {highlights.map((item, index) => (
-                        <ScrollReveal key={index} delay={index * 0.05}>
-                            <div className="group h-full p-8 rounded-[2rem] bg-white/5 border border-white/10 hover:border-brand-secondary/40 hover:bg-white/10 transition-all duration-500 flex flex-col items-start backdrop-blur-sm">
-                                <div className={`w-14 h-14 rounded-2xl ${item.bg} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500`}>
-                                    <item.icon className={`${item.color}`} size={28} />
+                {/* Grid / Carousel Container */}
+                <div className="md:max-w-7xl mx-auto">
+                    <div className="overflow-hidden md:overflow-visible" ref={emblaRef}>
+                        <div className="flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            {highlights.map((item, index) => (
+                                <div key={index} className="flex-[0_0_85%] min-w-0 md:flex-none">
+                                    <ScrollReveal delay={index * 0.05} className="h-full">
+                                        <div className="group h-full p-8 rounded-[2rem] bg-white/5 border border-white/10 hover:border-brand-secondary/40 hover:bg-white/10 transition-all duration-500 flex flex-col items-start backdrop-blur-sm">
+                                            <div className={`w-14 h-14 rounded-2xl ${item.bg} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500`}>
+                                                <item.icon className={`${item.color}`} size={28} />
+                                            </div>
+                                            <h3 className="text-xl font-bold text-white mb-4 group-hover:text-brand-secondary transition-colors duration-300">
+                                                {item.title}
+                                            </h3>
+                                            <p className="text-gray-400 leading-relaxed font-light">
+                                                {item.description}
+                                            </p>
+                                        </div>
+                                    </ScrollReveal>
                                 </div>
-                                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-brand-secondary transition-colors duration-300">
-                                    {item.title}
-                                </h3>
-                                <p className="text-gray-400 leading-relaxed font-light">
-                                    {item.description}
-                                </p>
-                            </div>
-                        </ScrollReveal>
-                    ))}
-                </div>
-            </div>
+                            ))}
+                        </div>
+                    </div>
 
-                    {/* Integrated Courses Banner */}
-                <div className="mt-8 md:mt-12 max-w-6xl mx-auto rounded-2xl overflow-hidden relative border border-white/10 group cursor-pointer hover:border-brand-secondary/50 transition-all duration-300">
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#061E3F] to-[#FFC107] opacity-90"></div>
-
-                    <div className="relative z-10 p-10 md:p-14 text-center">
-                        <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 tracking-wide">
-                            Integrated IIT-JEE, NEET Courses, And Competitive Exams
-                        </h3>
-                        <p className="text-gray-100 max-w-2xl mx-auto text-base md:text-lg font-medium leading-relaxed">
-                            Our academy's specialised coaching and mentorship help students succeed in competitive examinations such as NEET and JEE, guiding learners toward careers in medicine and engineering. We elevate learners from passive users to active creators through a curriculum designed for the future of education.
-                        </p>
+                    {/* Pagination Dots (Mobile Only) */}
+                    <div className="flex justify-center gap-2 mt-10 md:hidden">
+                        {highlights.map((_, index) => (
+                            <button
+                                key={index}
+                                onClick={() => emblaApi && emblaApi.scrollTo(index)}
+                                className={`h-1.5 rounded-full transition-all duration-300 ${
+                                    selectedIndex === index ? 'w-8 bg-brand-secondary' : 'w-2 bg-white/20'
+                                }`}
+                                aria-label={`Go to slide ${index + 1}`}
+                            />
+                        ))}
                     </div>
                 </div>
+
+                {/* Integrated Courses Banner */}
+                <div className="mt-16 md:mt-24 max-w-6xl mx-auto rounded-3xl md:rounded-[2.5rem] overflow-hidden relative border border-white/10 group cursor-pointer hover:border-brand-secondary/40 transition-all duration-500 bg-[#151E38]">
+                    <div className="absolute inset-0 bg-gradient-to-r from-brand-secondary/20 to-transparent"></div>
+                    <div className="relative z-10 p-10 md:p-16 text-center md:text-left flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                        <div className="flex-1">
+                            <h3 className="text-2xl md:text-4xl font-extrabold text-white mb-6 md:mb-8 tracking-tight leading-tight">
+                                Integrated IIT-JEE, NEET Courses, And Competitive Exams
+                            </h3>
+                            <p className="text-gray-400 text-base md:text-lg leading-relaxed font-light">
+                                Our academy's specialised coaching and mentorship help students succeed in competitive examinations such as NEET and JEE, guiding learners toward careers in medicine and engineering. We elevate learners from passive users to active creators through a curriculum designed for the future of education.
+                            </p>
+                        </div>
+                        <div className="shrink-0">
+                            <div className="px-8 py-4 bg-brand-secondary text-brand-primary font-bold rounded-xl md:rounded-2xl hover:scale-105 transition-transform duration-300 shadow-xl shadow-brand-secondary/20 flex items-center gap-2">
+                                ENQUIRE NOW
+                                <ArrowRight size={20} />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     );
 };
