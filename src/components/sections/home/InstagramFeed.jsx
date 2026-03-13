@@ -55,11 +55,11 @@ const InstagramFeed = () => {
                     </div>
 
                     <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                        See More. <span className="text-brand-secondary">Know More.</span>
+                        Our Major  <span className="text-brand-secondary">Achievements.</span>
                     </h2>
 
                     <p className="text-gray-400 max-w-xl mx-auto text-lg leading-relaxed">
-                        Discover real stories of discipline, confidence, and success from our students and mentors. Experience how learning at Krisar shapes futures beyond the classroom. We emphasise the development of leadership skills, communication abilities, and confidence so that learners grow into capable future leaders.
+                      In 2025, more than 400 Krisar Academy students set a remarkable world record by creating and reciting over 2,000 original proverbs within two hours, showcasing creativity and collaboration.
                     </p>
                 </div>
 

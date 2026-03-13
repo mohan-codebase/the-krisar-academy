@@ -10,21 +10,25 @@ const managementTeam = [
     {
         name: "Mr.K.K.E.V.Krishnamoorthy",
         title: "Founder (1957 - 2021)",
+        description: "The founder of the Krisar Academy and its legacy of educational excellence.",
         image: img1
     },
     {
         name: "Mrs.K.Saroja",
         title: "Founder & Director",
+        description: "The founder and director who provides the leadership vision that maintains discipline, academic quality, and holistic development.",
         image: img2
     },
     {
         name: "Dr.K.K.Rajan",
         title: "Founder & Chairman",
+        description: "The founder and chairman, oversees the strategic development and world-class infrastructure.",
         image: img3
     },
     {
         name: "Ms. Sindhu Rajan",
         title: "Correspondent & Director",
+        description: "The correspondent and director, ensures that the academic curriculum and daily operations align with modern educational standards.",
         image: img4
     }
 ];
@@ -72,6 +76,9 @@ const Management = () => {
                             </h3>
                             <p className="text-brand-secondary text-sm font-medium tracking-wide uppercase text-center">
                                 {member.title}
+                            </p>
+                            <p className="text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed text-center">
+                                {member.description}
                             </p>
                         </div>
                     ))}

@@ -75,7 +75,7 @@ const WhyChooseUs = () => {
                     <h2 className="text-3xl md:text-5xl font-bold mb-6">
                         Building <span className="text-brand-secondary">Confident Learners</span>
                     </h2>
-                    <p className="text-gray-400 max-w-3xl mx-auto text-sm md:text-base leading-relaxed">
+                    <p className="text-gray-400 max-w-5xl mx-auto text-sm md:text-base leading-relaxed">
                         We focus on strengthening both knowledge and character. Students are encouraged to think independently, explore ideas, and develop the confidence required to succeed in an evolving world. Our supportive and well-maintained environment allows students to focus on learning without distractions.
                     </p>
                 </div>

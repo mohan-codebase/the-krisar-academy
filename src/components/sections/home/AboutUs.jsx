@@ -60,10 +60,6 @@ const AboutUs = () => {
             <strong className="block text-white text-lg mb-2">A School of Excellence for Your Child</strong>
             Our academy was instituted in the year 2018 with an aim to offer holistic education to children. We provide world-class infrastructure and comprehensive academic programs designed to nurture excellence in students and are recognised for our commitment to global-standard education.
           </p>
-          <p>
-            <strong className="block text-white mb-1 mt-4">Our Location</strong>
-            We are located in Paradarami Village, Arcot Taluk, along the Arani Main Road, making the campus easily accessible for families from Arani, Timiri, Arcot, Vellore, Ranipet, and Walajapet.
-          </p>
         </div>
 
         {/* Content Grid */}

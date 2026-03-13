@@ -12,6 +12,10 @@ import Management from '../components/sections/home/Management'
 import SuccessStories from '../components/sections/home/SuccessStories'
 import InstagramFeed from '../components/sections/home/InstagramFeed'
 import NewsUpdates from '../components/sections/home/NewsUpdates'
+import AdmissionInfo from '../components/sections/home/AdmissionInfo'
+import OperatingHours from '../components/sections/home/OperatingHours'
+import SchoolHighlights from '../components/sections/home/SchoolHighlights'
+import OurLocation from '../components/sections/home/OurLocation'
 
 const Home = () => {
   return (
@@ -27,9 +31,13 @@ const Home = () => {
       <ScrollReveal><WhyChooseUs /></ScrollReveal>
       <ScrollReveal><Facilities /></ScrollReveal>
       <ScrollReveal><VirtualTourSection /></ScrollReveal>
-      <AcademicExcellence />
+      {/* <AcademicExcellence /> */}
+      <SchoolHighlights />
       <ScrollReveal><Management /></ScrollReveal>
       <ScrollReveal><SuccessStories /></ScrollReveal>
+      <ScrollReveal><OurLocation /></ScrollReveal>
+      <ScrollReveal><AdmissionInfo /></ScrollReveal>
+      <ScrollReveal><OperatingHours /></ScrollReveal>
       <ScrollReveal><InstagramFeed /></ScrollReveal>
       <ScrollReveal><NewsUpdates /></ScrollReveal>
     </div>

@@ -24,123 +24,107 @@ import bannerRoboticsNew from '../../../assets/images/home/banner/upscale-banner
 
 
 const slides = [
-
-  
     {
         id: 1,
-        layout: 'standard', // Centered title, split content at bottom
+        layout: 'standard',
         image: banner1,
-        badge: "Admissions Going On – Pre-KG To Grade 12",
-        title: <>Shaping Future Leaders <span className="text-brand-secondary">Through Excellence</span></>,
+        badge: "Our School Takes Pride in Our Purpose",
+        title: <>Our School Takes Pride in <span className="text-brand-secondary">Our Purpose</span></>,
         leftContent: {
-            title: <>Visionary Education<br />Since 2018</>,
-            desc: "Our academy was instituted in the year 2018 with an aim to offer holistic education to children. We provide world-class infrastructure and comprehensive academic programs."
+            title: <>Academic<br />Excellence</>,
+            desc: "By combining academic excellence, innovative learning, and cultural values."
         },
         rightContent: {
-            title: <>Learners Today,<br />Leaders Tomorrow</>,
-            desc: "We aim to transform young learners into confident leaders equipped with knowledge, discipline, and strong values."
+            title: <>Future<br />Preparation</>,
+            desc: "The school prepares students for the future through leadership and growth."
         },
-    },
-      {
-        id: 6,
-        layout: 'standard',
-        image: bannerRoboticsNew,
-        bgPosition: 'bg-center',
-        badge: <span className="inline-block align-top">Empowering young minds with cutting-edge technology, coding,<br className="hidden md:block" /> and hands-on robotics to master the skills of tomorrow.</span>,
-        title: <>Advancing Education with <span className="text-brand-secondary">AI & Robotics</span></>,
-        leftContent: {
-            title: <></>,
-            desc: ""
-        },
-        rightContent: {
-            title: <></>,
-            desc: ""
-        },
-        buttonText: "Enquiry Now",
-        buttonStyle: "secondary"
-    },
-
-    {
-        id: 4,
-        layout: 'standard',
-        image: banner5,
-        badge: "Fueling Passion, Building Champions",
-        title: <>Where <span className="text-brand-secondary">Dedication, Discipline,</span> And <span className="text-brand-secondary">Performance</span> Come Together</>,
-        leftContent: {
-            title: <>Where Passion Meets Performance</>,
-            desc: "Krisar Academy Was Established With A Clear Mission To Deliver Holistic, Performance Driven Sports Training, Nurturing Athletes To Grow As Confident Performers And Disciplined Team Players."
-        },
-        rightContent: {
-            title: <>Youth & Growth<br />Oriented</>,
-            desc: "By Emphasizing Foundational Skills, Teamwork, And Sportsmanship, Krisar Academy Nurtures Athletes In A Positive Environment That Supports Long-Term Growth."
-        },
-        buttonText: "ENROL NOW"
-    },
-
-
-    {
-        id: 3,
-        layout: 'left-aligned', // Left aligned title, content on left, certificates on right
-        image: banner2,
-        bgPosition: 'bg-[70%_center]',
-        badge: "National & Guinness World Record Recognized",
-        title: <>Proud Holders Of <span className="text-brand-secondary">Educational Excellence Award </span>& <span className="text-brand-secondary">World Book of Records</span></>,
-        description: "Recognized For Outstanding Participation, Discipline, And Achievement That Sets Global Benchmarks.",
-        isCertSlide: true
-    },
-    // {
-    //     id: 3,
-    //     layout: 'left-aligned',
-    //     image: banner3,
-    //     badge: "Visionary Education Since 2018",
-    //     title: <>Proud Holders Of <span className="text-brand-secondary">National & Guinness</span> World Records</>,
-    //     description: "Recognized For Outstanding Participation, Discipline, And Achievement That Sets Global Benchmarks.",
-    //     isCertSlide: true
-    // },
-    ,
-    {
-        id: 5,
-        layout: 'left-aligned',
-        image: banner4,
-        badge: "From Basics To Brilliance",
-        title: <>Strong Foundations For <span className="text-brand-secondary">NEET & JEE Success</span></>,
-        description: "Concept-Focused Learning, Personal Attention, And Expert Support To Prepare Students Step By Step.",
-        buttonText: "Enquire Now",
-        buttonStyle: "secondary"
+        buttonText: "Learn More"
     },
     {
         id: 2,
-        layout: 'world-record',
-        image: banner6,
-        badge: "World Record Achievement",
-        title: <div className="text-[18px] md:text-[38px]">Our Students Created A <span className="text-brand-secondary">World Record</span></div>,
-        description: "In 2025, more than 400 Krisar Academy students set a remarkable world record by creating and reciting over 2,000 original proverbs within two hours.",
-        images: [wrImg1, wrImg2, wrImg3, wrImg4],
-        centerLogo: wrLogo,
+        layout: 'left-aligned',
+        image: banner2,
+        bgPosition: 'bg-[10%_center]',
+        badge: "CBSE Academic Affiliation",
+        title: <>CBSE Academic <span className="text-brand-secondary">Affiliation</span></>,
+        description: "Our academy is proudly affiliated with the CBSE board, ensuring that the school provides nationally recognised education with intellectual depth and academic standards.",
+        buttonText: "View Curriculum"
+    },
+    {
+        id: 3,
+        layout: 'standard',
+        image: banner1,
+        badge: "Building Confident Learners",
+        title: <>Building <span className="text-brand-secondary">Confident Learners</span></>,
+        leftContent: {
+            title: <>Think<br />Independently</>,
+            desc: "Students are encouraged to think independently and explore new ideas."
+        },
+        rightContent: {
+            title: <>Succeed in<br />the World</>,
+            desc: "We focus on strengthening both knowledge and character for success."
+        },
+        buttonText: "Our Approach"
+    },
+    {
+        id: 4,
+        layout: 'left-aligned',
+        image: bannerRoboticsNew,
+        badge: "Engineering the Future",
+        title: <>Engineering <span className="text-brand-secondary">the Future</span></>,
+        description: "Our advanced visionary steps ensure students move beyond traditional classroom experiences. We elevate learners from passive users to active creators through a curriculum designed for the future.",
+        buttonText: "Explore More"
+    },
+    {
+        id: 5,
+        layout: 'left-aligned',
+        image: banner5,
+        badge: "Learning Beyond the Traditional Classroom",
+        title: <>Beyond the <span className="text-brand-secondary">Traditional Classroom</span></>,
+        description: "Practical exposure, project-based learning, and technology-driven instruction help students connect academic knowledge with real-world applications.",
+        buttonText: "See More"
+    },
+    {
+        id: 6,
+        layout: 'standard',
+        image: bannerRoboticsNew,
+        badge: "AI & Robotics",
+        title: <><span className="text-brand-secondary">AI & Robotics</span> Laboratory</>,
+        leftContent: {
+            title: <>Artificial<br />Intelligence</>,
+            desc: "Gain hands-on experience in AI and building skills for the future."
+        },
+        rightContent: {
+            title: <>Advanced<br />Robotics</>,
+            desc: "World-class facilities for students to master modern technology."
+        },
         buttonText: "Enquire Now"
     },
-
-    // {
-    //     id: 7,
-    //     layout: 'bottom-grid',
-    //     image: banner7,
-    //     badge: "World Record Achievement",
-    //     title: <>Our Students Created A <span className="text-brand-secondary">World Record</span></>,
-    //     description: "A Historic Moment Of Creativity, Teamwork, And National Pride At The Krisar Academy.",
-    //     images: [b7Img1, b7Img2, b7Img3, b7Img4],
-    //     buttonText: "CALL NOW"
-    // },
-    // {
-    //     id: 2,
-    //     layout: 'collage-right',
-    //     image: banner7, // Reuse background from slide 7
-    //     badge: "World Record Achievement",
-    //     title: <>Our Students Created A <span className="text-brand-secondary">World Record</span></>,
-    //     description: "A Historic Moment Of Creativity, Teamwork, And National Pride At The Krisar Academy.",
-    //     sideImage: b8SideImg,
-    //     buttonText: "Enquire Now"
-    // },
-
+    {
+        id: 7,
+        layout: 'left-aligned',
+        image: banner4,
+        badge: "NEET & JEE Coaching",
+        title: <><span className="text-brand-secondary">NEET & JEE</span> Coaching Success</>,
+        description: "Our academy's specialised coaching and mentorship help students succeed in competitive examinations, guiding learners toward careers in medicine and engineering.",
+        buttonText: "Admission Now"
+    },
+    {
+        id: 8,
+        layout: 'standard',
+        image: banner1,
+        badge: "Montessori Kindergarten",
+        title: <>Montessori <span className="text-brand-secondary">Kindergarten</span></>,
+        leftContent: {
+            title: <>Independence &<br />Creativity</>,
+            desc: "Focusing on building a strong foundation of learning for young children."
+        },
+        rightContent: {
+            title: <>Curiosity &<br />Foundation</>,
+            desc: "Our program nurtures independent thinkers from early childhood."
+        },
+        buttonText: "Join Us"
+    },
 ]
 
 const Banner = () => {

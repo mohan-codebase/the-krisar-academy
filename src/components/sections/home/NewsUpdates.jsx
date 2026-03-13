@@ -28,7 +28,7 @@ const NewsUpdates = () => {
                         News & <span className="text-brand-secondary">Updates</span>
                     </h2>
 
-                    <p className="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
+                    <p className="text-white max-w-2xl mx-auto text-lg leading-relaxed">
                         Stay updated with the latest achievements and events at The Krisar Academy. Parents receive real-time performance reports and academic updates, enabling them to stay actively involved in their children's education.
                     </p>
                 </div>
@@ -56,9 +56,10 @@ const NewsUpdates = () => {
 
                             {/* Content */}
                             <div className="p-6 flex-grow text-left flex flex-col justify-between">
-                                <h3 className="text-xl font-medium leading-snug mb-6 text-white group-hover:text-brand-secondary transition-colors line-clamp-3">
+                                <h3 className="text-xl font-medium leading-snug mb-3 text-white group-hover:text-brand-secondary transition-colors line-clamp-2">
                                     {item.title}
                                 </h3>
+                                <p className="text-white/80 text-sm mb-6 line-clamp-2">{item.description}</p>
 
                                 <Button to={`/blogs/${item.slug}`} className="w-full">Know More</Button>
                             </div>
