@@ -44,8 +44,7 @@ const VirtualTourSection = () => {
 
                     {/* Description */}
                     <p className="text-gray-300 text-base md:text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
-                        Take an immersive virtual tour of our state-of-the-art campus. Explore classrooms,
-                        laboratories, sports facilities, and more—all from the comfort of your home.
+                        Our green campus environment offers a calm learning space away from city pollution. A clean, safe, and secure campus provides parents with complete peace of mind while their children learn and grow. Take an immersive virtual tour today.
                     </p>
 
                     {/* CTA Button */}

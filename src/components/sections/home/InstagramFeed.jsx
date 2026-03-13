@@ -59,7 +59,8 @@ const InstagramFeed = () => {
                     </h2>
 
                     <p className="text-gray-400 max-w-xl mx-auto text-lg leading-relaxed">
-                        Discover real stories of discipline, confidence, and success from our students and mentors. Experience how learning at Krisar shapes futures beyond the classroom.                    </p>
+                        Discover real stories of discipline, confidence, and success from our students and mentors. Experience how learning at Krisar shapes futures beyond the classroom. We emphasise the development of leadership skills, communication abilities, and confidence so that learners grow into capable future leaders.
+                    </p>
                 </div>
 
                 {/* Carousel */}

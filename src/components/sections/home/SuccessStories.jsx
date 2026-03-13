@@ -68,12 +68,11 @@ const SuccessStories = () => {
                     </div>
 
                     <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                        Our Success Stories
+                        Parent's <span className="text-brand-secondary">Feedback</span> & Alumni Impact
                     </h2>
 
-                    <p className="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
-                        Our alumni reflect the learning, values, and confidence built here,
-                        inspiring future generations to dream bigger and achieve more.
+                    <p className="text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed">
+                        Parents consistently praise our academy's innovative teaching methods and learning experiences that inspire curiosity and confidence among students. The alumni of Krisar Academy reflect the learning, values, and confidence gained during their years at the school.
                     </p>
                 </div>
 

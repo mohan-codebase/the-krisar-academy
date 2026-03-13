@@ -32,7 +32,6 @@ const Home = () => {
       <ScrollReveal><SuccessStories /></ScrollReveal>
       <ScrollReveal><InstagramFeed /></ScrollReveal>
       <ScrollReveal><NewsUpdates /></ScrollReveal>
-
     </div>
   )
 }

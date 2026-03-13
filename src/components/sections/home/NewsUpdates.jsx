@@ -29,7 +29,7 @@ const NewsUpdates = () => {
                     </h2>
 
                     <p className="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
-                        Stay updated with the latest achievements and events at The Krisar Academy
+                        Stay updated with the latest achievements and events at The Krisar Academy. Parents receive real-time performance reports and academic updates, enabling them to stay actively involved in their children's education.
                     </p>
                 </div>
 

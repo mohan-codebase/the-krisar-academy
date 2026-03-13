@@ -55,11 +55,16 @@ const AboutUs = () => {
         </h2>
 
         {/* Description */}
-        <p className="text-gray-300 text-center max-w-4xl mx-auto mb-16 leading-relaxed text-sm md:text-base">
-          The Krisar Academy is the advanced visionary step towards the future of Education. It is instituted in the year 2018
-          with an aim to offer holistic education to the children in the villages around the major towns i.e., Arani, Timiri, Arcot,
-          Vellore, Ranipet & Walajapet.
-        </p>
+        <div className="text-gray-300 text-center max-w-4xl mx-auto mb-16 leading-relaxed text-sm md:text-base space-y-4">
+          <p>
+            <strong className="block text-white text-lg mb-2">A School of Excellence for Your Child</strong>
+            Our academy was instituted in the year 2018 with an aim to offer holistic education to children. We provide world-class infrastructure and comprehensive academic programs designed to nurture excellence in students and are recognised for our commitment to global-standard education.
+          </p>
+          <p>
+            <strong className="block text-white mb-1 mt-4">Our Location</strong>
+            We are located in Paradarami Village, Arcot Taluk, along the Arani Main Road, making the campus easily accessible for families from Arani, Timiri, Arcot, Vellore, Ranipet, and Walajapet.
+          </p>
+        </div>
 
         {/* Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 md:gap-40 items-stretch">

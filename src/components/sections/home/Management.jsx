@@ -41,10 +41,10 @@ const Management = () => {
                         <span className="uppercase tracking-wider text-sm text-gray-300">Our Founders</span>
                     </div>
                     <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                        Management
+                        Our <span className="text-brand-secondary">Leaders</span>
                     </h2>
-                    <p className="text-gray-400 text-lg">
-                        Visionary leaders dedicated to shaping the future of education
+                    <p className="text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed">
+                        The school is managed by the esteemed Sri Krisar Trust, an organisation committed to maintaining the highest standards of education, integrity, and institutional excellence.
                     </p>
                 </div>
 

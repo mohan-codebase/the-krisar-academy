@@ -30,15 +30,15 @@ const slides = [
         id: 1,
         layout: 'standard', // Centered title, split content at bottom
         image: banner1,
-        badge: "Admissions Going On – Pre-KG To Grade 11",
+        badge: "Admissions Going On – Pre-KG To Grade 12",
         title: <>Shaping Future Leaders <span className="text-brand-secondary">Through Excellence</span></>,
         leftContent: {
             title: <>Visionary Education<br />Since 2018</>,
-            desc: "Krisar Academy Was Established With A Clear Mission To Deliver Holistic, Future-Ready Education, Nurturing Students To Grow As Confident Learners And Responsible Leaders."
+            desc: "Our academy was instituted in the year 2018 with an aim to offer holistic education to children. We provide world-class infrastructure and comprehensive academic programs."
         },
         rightContent: {
             title: <>Learners Today,<br />Leaders Tomorrow</>,
-            desc: "With A Strong Focus On Academics, Life Skills, And Values, Krishar Academy Creates A Supportive Environment That Prepares Students To Excel In Both Education And Life."
+            desc: "We aim to transform young learners into confident leaders equipped with knowledge, discipline, and strong values."
         },
     },
       {
@@ -114,7 +114,7 @@ const slides = [
         image: banner6,
         badge: "World Record Achievement",
         title: <div className="text-[18px] md:text-[38px]">Our Students Created A <span className="text-brand-secondary">World Record</span></div>,
-        description: "A Historic Moment Of Creativity, Teamwork, And National Pride At The Krisar Academy.",
+        description: "In 2025, more than 400 Krisar Academy students set a remarkable world record by creating and reciting over 2,000 original proverbs within two hours.",
         images: [wrImg1, wrImg2, wrImg3, wrImg4],
         centerLogo: wrLogo,
         buttonText: "Enquire Now"

@@ -83,12 +83,11 @@ const Facilities = () => {
                     </div>
 
                     <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                        More <span className="text-yellow-400">Facilities</span>
+                        Smart <span className="text-yellow-400">Facilities</span>
                     </h2>
 
-                    <p className="text-gray-400 mb-8 leading-relaxed max-w-md">
-                        Modern facilities for every aspect of learning and growth.
-                        We provide state-of-the-art infrastructure to ensure holistic development.
+                    <p className="text-gray-400 mb-8 leading-relaxed max-w-md xl:max-w-lg">
+                        Our classrooms are fully air-conditioned smart classrooms, equipped with modern teaching technology that enhances student engagement and learning outcomes. We provide advanced science and technology laboratories, offering practical exposure that exceeds standard school learning environments. Professional training in sports such as Skating and Archery helps improve physical agility. Students explore creativity through Music and Dance.
                     </p>
 
                     <a href="/facilities">

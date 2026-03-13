@@ -56,12 +56,11 @@ const AcademicExcellence = () => {
                     </div>
 
                     <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                        Academics
+                        Academic Excellence <span className="text-brand-secondary">and Discipline</span>
                     </h2>
 
-                    <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-                        Comprehensive academic programs designed to nurture intellectual growth
-                        and character development
+                    <p className="text-gray-400 max-w-4xl mx-auto text-lg">
+                        Our structured academic environment encourages students to develop strong study habits, analytical thinking, and a deep understanding of subjects that support long-term academic success. Proudly affiliated with the CBSE board, ensuring nationally recognised education.
                     </p>
                 </div>
 
@@ -107,8 +106,7 @@ const AcademicExcellence = () => {
                             Integrated IIT-JEE, NEET Courses, And Competitive Exams
                         </h3>
                         <p className="text-gray-100 max-w-2xl mx-auto text-base md:text-lg font-medium leading-relaxed">
-                            Specialized coaching and mentorship programs to prepare students for competitive
-                            examinations and higher education opportunities
+                            Our academy's specialised coaching and mentorship help students succeed in competitive examinations such as NEET and JEE, guiding learners toward careers in medicine and engineering. We elevate learners from passive users to active creators through a curriculum designed for the future of education.
                         </p>
                     </div>
                 </div>

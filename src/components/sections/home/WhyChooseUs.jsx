@@ -73,10 +73,10 @@ const WhyChooseUs = () => {
                         <span className="uppercase tracking-wider text-sm text-gray-300">Why Choose Us</span>
                     </div>
                     <h2 className="text-3xl md:text-5xl font-bold mb-6">
-                        Why Choose <span className="text-brand-secondary">Krisar Academy</span>
+                        Building <span className="text-brand-secondary">Confident Learners</span>
                     </h2>
-                    <p className="text-gray-400 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
-                        World-class facilities and comprehensive educational programs designed to nurture excellence in every student
+                    <p className="text-gray-400 max-w-3xl mx-auto text-sm md:text-base leading-relaxed">
+                        We focus on strengthening both knowledge and character. Students are encouraged to think independently, explore ideas, and develop the confidence required to succeed in an evolving world. Our supportive and well-maintained environment allows students to focus on learning without distractions.
                     </p>
                 </div>
 
