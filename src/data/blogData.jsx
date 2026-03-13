@@ -40,7 +40,7 @@ export const blogData = [
                     From the moment the day began, the air was thick with anticipation. Students, clad in their house colors, geared up for a variety of competitions and spirited performances. The event commenced with a grand opening ceremony, featuring a march past that showcased the impeccable discipline and coordination of our students. The rhythmic beat of the drums and the synchronized footsteps set a tone of excellence for the day.
                 </p>
                 <div className="bg-blue-50 p-6 rounded-lg mb-8 border-l-4 border-brand-primary">
-                    <p className="text-lg italic text-white">
+                    <p className="text-lg italic text-[#0B1221]">
                         "Sports do not build character. They reveal it." – This sentiment resonated throughout the event as students displayed not just skill, but integrity and respect for their peers.
                     </p>
                 </div>
@@ -152,7 +152,7 @@ export const blogData = [
                     The competition was fierce, with schools from various states showcasing their achievements. However, representing the rich educational heritage of Tamil Nadu, The Krisar Academy stood tall. We were honored with this esteemed award, distinguishing us as a leader in providing quality, holistic education.
                 </p>
                 <div className="bg-yellow-50 p-6 rounded-lg mb-8 border-l-4 border-yellow-500">
-                    <p className="text-lg text-white">
+                    <p className="text-lg text-[#0B1221]">
                         This award is not just a trophy; it is a true reflection of our students’ hard work, our teachers’ tireless dedication, and the robust support system provided by our school management and parents.
                     </p>
                 </div>
@@ -246,7 +246,7 @@ export const blogData = [
                     During the event, Mr. Rangaraj captivated the audience with his humble demeanor. He shared anecdotes from his journey—from humble beginnings to achieving fame and success. He spoke passionately about the importance of following one's dreams, no matter how unconventional they may seem.
                 </p>
                 <div className="bg-green-50 p-6 rounded-lg mb-8 border-l-4 border-green-500">
-                    <p className="text-lg italic text-white">
+                    <p className="text-lg italic text-[#0B1221]">
                         "Hard work, creativity, and dedication are the real ingredients of success. Don't be afraid to experiment in life, just as you would in a kitchen!"
                     </p>
                 </div>
@@ -283,7 +283,7 @@ export const blogData = [
                 <p className="mb-6 text-lg leading-relaxed text-white">
                     This prestigious recognition was not awarded solely for academic results. It was a holistic acknowledgment of our school’s excellence across multiple domains. The selection committee looked at a comprehensive set of criteria, and we excelled in:
                 </p>
-                <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 text-[#0B1221]">
                     <li className="bg-white p-4 rounded shadow-sm border border-gray-100 flex items-start">
                         <span className="text-brand-primary mr-2">✓</span> Providing consistent high-quality education
                     </li>
@@ -360,7 +360,7 @@ export const blogData = [
                     Through this event, our students learned invaluable lessons that go beyond the classroom:
                 </p>
                 <div className="bg-green-50 p-6 rounded-lg mb-8">
-                    <ul className="space-y-3 text-lg text-white">
+                    <ul className="space-y-3 text-lg text-[#0B1221]">
                         <li className="flex items-center">🌱 <strong>Sustainable Living:</strong> Understanding that our choices impact the planet.</li>
                         <li className="flex items-center">♻️ <strong>Reuse & Repurpose:</strong> Seeing value in materials often discarded.</li>
                         <li className="flex items-center">🎨 <strong>Eco-Creativity:</strong> Expressing artistic vision without harming nature.</li>
@@ -456,7 +456,7 @@ export const blogData = [
                 <p className="mb-6 text-lg leading-relaxed text-white">
                     Through colorful placards and interactions, students highlighted the key benefits of millets:
                 </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 text-lg">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 text-lg text-[#0B1221]">
                     <div className="bg-orange-50 p-4 rounded-lg flex items-center">
                         <span className="text-2xl mr-3">🌾</span>
                         <span><strong>Rich in Nutrients:</strong> Packed with fiber, iron, and calcium.</span>
