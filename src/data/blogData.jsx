@@ -762,5 +762,363 @@ export const blogData = [
                 </div>
             </>
         )
+    },
+    {
+        id: 11,
+        slug: "best-cbse-schools-in-arcot-parents-guide",
+        title: "What Parents Should Actually Look for While Searching Best CBSE Schools in Arcot?",
+        date: "March 17, 2026",
+        image: blog4,
+        category: "Education",
+        icon: "Trophy",
+        description: "A comprehensive guide for parents searching for the best CBSE schools in Arcot, focusing on academic foundations and holistic development.",
+        content: (
+            <>
+                <p className="mb-6 text-xl font-medium leading-relaxed text-brand-secondary">
+                    Parents searching for the best CBSE schools in Arcot often begin with the same question: Which school will best support my child’s long-term academic development?
+                </p>
+
+                <p className="mb-6 text-lg leading-relaxed text-white">
+                    Arcot in the Vellore district of Tamil Nadu already has several CBSE institutions serving families across nearby towns and villages. The real challenge for parents is not finding a school but understanding which schools in Arcot consistently build strong academic foundations for students.
+                </p>
+
+                <p className="mb-10 text-lg leading-relaxed text-white">
+                    Krisar Academy was established with the purpose of focusing on holistic education for students across Arcot and the surrounding regions of the Vellore district, combining disciplined academics with an environment that allows students to grow with confidence.
+                </p>
+
+                <div className="space-y-12">
+                    <section>
+                        <h3 className="text-2xl font-bold mb-6 text-brand-secondary border-l-4 border-brand-secondary pl-4">The Growing Education Landscape Around Arcot</h3>
+                        <p className="text-lg leading-relaxed text-white mb-6">
+                            Education across the Vellore district has expanded steadily as families increasingly prefer CBSE schools for structured academic learning. Arcot now serves as an educational hub for several nearby villages and towns across Tamil Nadu, which reflects a larger trend across the state.
+                        </p>
+                        <p className="text-lg leading-relaxed text-white">
+                            Families seek Krisar Academy, which provides both conceptual learning and preparation for competitive examinations while also supporting overall student development.
+                        </p>
+                    </section>
+
+                    <section className="bg-white/5 p-8 rounded-3xl border border-white/10">
+                        <h3 className="text-2xl font-bold mb-6 text-brand-secondary">What Parents Usually Miss When Evaluating a School?</h3>
+                        <p className="text-lg leading-relaxed text-white mb-8">
+                            Many parents visiting schools in Arcot first notice infrastructure such as buildings, transport systems, and campus size. These factors naturally create strong first impressions. However, the real quality of education becomes visible only when parents understand how classrooms function every day.
+                        </p>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            {[
+                                "Structured lesson delivery that supports consistent learning progress",
+                                "Teachers who guide students through concept clarity rather than memorisation",
+                                "Balanced classroom interaction where students actively participate",
+                                "Continuous academic monitoring that helps teachers identify learning gaps"
+                            ].map((item, index) => (
+                                <div key={index} className="flex gap-4 p-4 rounded-xl bg-brand-primary/20 border border-white/10">
+                                    <div className="w-8 h-8 rounded-full bg-brand-secondary/20 flex items-center justify-center flex-shrink-0 text-brand-secondary text-sm font-bold">{index + 1}</div>
+                                    <p className="text-sm text-white/80">{item}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+
+                    <section>
+                        <h3 className="text-2xl font-bold mb-6 text-brand-secondary border-l-4 border-brand-secondary pl-4">Why Parents Should Know About Classroom Environment?</h3>
+                        <p className="text-lg leading-relaxed text-white mb-10">
+                            Infrastructure can support education, yet classroom interaction determines how effectively students understand academic subjects. Krisar Academy in Arcot provides modern classrooms supported by digital learning tools that allow teachers to explain complex concepts visually and encourage discussion among students.
+                        </p>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                            {[
+                                { title: "Smart classrooms that support interactive teaching", icon: "💻" },
+                                { title: "Science laboratories for practical learning", icon: "🔬" },
+                                { title: "Computer labs that introduce digital education tools", icon: "🖥️" },
+                                { title: "Libraries that encourage independent reading habits", icon: "📚" },
+                                { title: "AI labs and simulation tools that help students gain real-world knowledge", icon: "🤖" }
+                            ].map((facility, idx) => (
+                                <div key={idx} className="p-6 bg-white/5 rounded-2xl border border-white/10 text-center hover:bg-white/10 transition-colors">
+                                    <div className="text-3xl mb-4">{facility.icon}</div>
+                                    <h5 className="font-bold text-white leading-tight">{facility.title}</h5>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+
+                    <section className="bg-brand-primary p-10 rounded-[3rem] border border-white/10 relative overflow-hidden">
+                        <div className="relative z-10">
+                            <h3 className="text-2xl font-bold mb-6 text-brand-secondary">Student Teacher Ratio Changes How Students Learn</h3>
+                            <p className="text-lg leading-relaxed text-white mb-6">
+                                Classroom size plays a significant role in shaping academic outcomes. Many CBSE schools in Tamil Nadu aim to maintain a balanced student-teacher ratio so teachers can observe each student more closely and provide individual academic support when required.
+                            </p>
+                            <p className="text-lg leading-relaxed text-white">
+                                Students who receive personalised attention at Krisar Academy develop stronger conceptual clarity and greater confidence during classroom discussions. Balanced classrooms also encourage collaborative learning, where students build teamwork and communication skills.
+                            </p>
+                        </div>
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-brand-secondary/5 blur-[100px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
+                    </section>
+
+                    <section>
+                        <h3 className="text-2xl font-bold mb-6 text-brand-secondary border-l-4 border-brand-secondary pl-4">Holistic Education Builds Stronger Academic Confidence</h3>
+                        <p className="text-lg leading-relaxed text-white mb-10">
+                            Education today extends beyond textbooks and examinations. Many CBSE schools across Tamil Nadu recognise that students benefit from exposure to sports, arts, and leadership activities. Krisar Academy encourages balanced development so students can participate in multiple areas of interest and develop confidence along with academic knowledge.
+                        </p>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            {[
+                                { title: "Sports programs that strengthen physical development", icon: "🏆" },
+                                { title: "Music and arts activities that encourage creativity", icon: "🎨" },
+                                { title: "Cultural programs that build communication skills", icon: "🎭" },
+                                { title: "Leadership opportunities that develop teamwork", icon: "🤝" }
+                            ].map((item, idx) => (
+                                <div key={idx} className="p-8 bg-white/5 rounded-3xl border border-white/10 flex gap-6 items-center">
+                                    <span className="text-3xl">{item.icon}</span>
+                                    <h4 className="text-xl font-bold text-white">{item.title}</h4>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+
+                    <section>
+                        <h3 className="text-2xl font-bold mb-6 text-brand-secondary border-l-4 border-brand-secondary pl-4">Safety and Campus Environment</h3>
+                        <p className="text-lg leading-relaxed text-white mb-8">
+                            Parents selecting schools in Arcot increasingly examine safety systems before making admission decisions. Krisar Academy implements structured safety measures to protect students and maintain a secure learning environment.
+                        </p>
+                        <div className="space-y-4 mb-8">
+                            {[
+                                { title: "CCTV surveillance across school premises", icon: "🛡️" },
+                                { title: "Secure entry and exit systems for controlled campus access", icon: "🔒" },
+                                { title: "Verified transportation staff for school bus operations", icon: "🚌" },
+                                { title: "Emergency medical support through on-campus infirmaries", icon: "🏥" }
+                            ].map((safety, idx) => (
+                                <div key={idx} className="flex gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-brand-secondary/50 transition-all">
+                                    <div className="w-10 h-10 rounded-full bg-brand-secondary/20 flex items-center justify-center flex-shrink-0 text-brand-secondary">{safety.icon}</div>
+                                    <div className="flex items-center">
+                                        <h5 className="font-bold text-white">{safety.title}</h5>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                        <p className="text-lg leading-relaxed text-white">
+                            Reliable transportation systems also allow students from nearby towns to access schools safely.
+                        </p>
+                    </section>
+
+                    <section className="bg-brand-secondary/10 p-10 rounded-[3rem] border border-brand-secondary/20">
+                        <h3 className="text-2xl font-bold mb-8 text-brand-secondary border-l-4 border-brand-secondary pl-4">Krisar Academy and Its Educational Approach</h3>
+                        <p className="text-lg leading-relaxed text-white mb-8">
+                            Krisar Academy was instituted in 2018 to serve families across Arcot and nearby villages in the Vellore district. The school aims to provide a balanced educational system where academic progress and character development evolve together to support both learning and student development.
+                        </p>
+                        <div className="space-y-4">
+                            {[
+                                "A Montessori kindergarten that supports early childhood education",
+                                "Modern classrooms designed for interactive lessons",
+                                "Preparation programs for competitive examinations such as IIT-JEE and NEET",
+                                "Science and computer laboratories with advanced AI technology that strengthen practical learning and exposure to real-world updates",
+                                "A clean and safe campus environment focused on student wellbeing"
+                            ].map((item, idx) => (
+                                <div key={idx} className="flex items-start gap-3 p-4 bg-brand-primary/40 rounded-2xl border border-white/5">
+                                    <span className="text-brand-secondary mt-1">✓</span>
+                                    <span className="text-white/80">{item}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+
+                    <section className="text-center py-10 border-t border-white/10">
+                        <p className="text-lg leading-relaxed text-white/80 mb-8">
+                            For detailed information about admissions, academic programs, and campus facilities at Krisar Academy, parents can connect directly through the official contact page.
+                        </p>
+                    </section>
+                </div>
+            </>
+        )
+    },
+    {
+        id: 12,
+        slug: "cbse-vs-state-board-syllabus-guide",
+        title: "Which Syllabus is Best for Your Child? Difference Between CBSE and State Board",
+        date: "March 17, 2026",
+        image: blog2,
+        category: "Education",
+        icon: "BookOpen",
+        description: "A detailed comparison between CBSE and State Board curricula to help parents make an informed decision for their child's future.",
+        content: (
+            <>
+                <p className="mb-6 text-xl font-medium leading-relaxed text-brand-secondary">
+                    Choosing the right education board is one of the most significant decisions for parents and students in India. As secondary education evolves, the debate over CBSE vs. state board continues to be a central topic for families planning for higher education.
+                </p>
+
+                <p className="mb-6 text-lg leading-relaxed text-white">
+                    Whether you are looking for the best CBSE school or considering your own state board, understanding the nuances of each system is essential for student development.
+                </p>
+
+                <p className="mb-10 text-lg leading-relaxed text-white italic border-l-4 border-brand-secondary pl-6">
+                    Krisar Academy recognises that every learner is unique. Still, our experience as a leading CBSE school shows that a uniform curriculum often provides the strongest academic foundation for the modern world.
+                </p>
+
+                <div className="space-y-12">
+                    <section>
+                        <h3 className="text-2xl font-bold mb-6 text-brand-secondary">Understanding the Education Boards</h3>
+                        <p className="text-lg leading-relaxed text-white mb-6">
+                            The Indian education system is primarily governed by the Central Board of Secondary Education (CBSE Board) and various boards of secondary education bodies at the state level. While the central board offers a national curriculum, the state board provides a detailed syllabus tailored to regional needs.
+                        </p>
+                        
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div className="p-8 bg-white/5 rounded-3xl border border-white/10">
+                                <h4 className="text-xl font-bold text-brand-secondary mb-4">The CBSE Board</h4>
+                                <p className="text-white/80 leading-relaxed">
+                                    The CBSE board follows the NCERT (National Council of Educational Research and Training) framework. Known for its CBSE syllabus, this board is designed to provide a quality education that is recognised both nationally and internationally. CBSE students benefit from national education standards that prioritise critical thinking and practical knowledge.
+                                </p>
+                            </div>
+                            <div className="p-8 bg-white/5 rounded-3xl border border-white/10">
+                                <h4 className="text-xl font-bold text-brand-secondary mb-4">The State Board</h4>
+                                <p className="text-white/80 leading-relaxed">
+                                    In contrast, a state board focuses on the state board curriculum, which often emphasises regional languages and local culture. While state boards are highly relevant for students aiming for state-level careers, they may rely more on rote learning compared to the experiential learning models found in affiliated schools under the central system.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section className="overflow-x-auto">
+                        <h3 className="text-2xl font-bold mb-6 text-brand-secondary">Key Differences: CBSE vs State Board</h3>
+                        <table className="w-full text-left border-collapse bg-white/5 rounded-2xl overflow-hidden">
+                            <thead>
+                                <tr className="bg-brand-primary/50 text-brand-secondary">
+                                    <th className="p-4 border border-white/10">Feature</th>
+                                    <th className="p-4 border border-white/10">CBSE Board</th>
+                                    <th className="p-4 border border-white/10">State Board</th>
+                                </tr>
+                            </thead>
+                            <tbody className="text-white/80">
+                                <tr>
+                                    <td className="p-4 border border-white/10 font-bold">Curriculum</td>
+                                    <td className="p-4 border border-white/10">CBSE Curriculum (Uniform & National)</td>
+                                    <td className="p-4 border border-white/10">State board syllabus (Regional & Varied)</td>
+                                </tr>
+                                <tr className="bg-white/5">
+                                    <td className="p-4 border border-white/10 font-bold">Focus</td>
+                                    <td className="p-4 border border-white/10">Critical thinking & practical knowledge</td>
+                                    <td className="p-4 border border-white/10">Rote learning & Theoretical focus</td>
+                                </tr>
+                                <tr>
+                                    <td className="p-4 border border-white/10 font-bold">Competitive Exams</td>
+                                    <td className="p-4 border border-white/10">National-level competitive exams (JEE/NEET)</td>
+                                    <td className="p-4 border border-white/10">State-level competitive exams</td>
+                                </tr>
+                                <tr className="bg-white/5">
+                                    <td className="p-4 border border-white/10 font-bold">Recognition</td>
+                                    <td className="p-4 border border-white/10">International recognition</td>
+                                    <td className="p-4 border border-white/10">Primarily Regional</td>
+                                </tr>
+                                <tr>
+                                    <td className="p-4 border border-white/10 font-bold">Grading</td>
+                                    <td className="p-4 border border-white/10">Letter grade system (CBSE grades)</td>
+                                    <td className="p-4 border border-white/10">Percentage/Mark-based</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <section>
+                        <h3 className="text-2xl font-bold mb-6 text-brand-secondary">Secondary Education and Syllabus Depth</h3>
+                        <p className="text-lg leading-relaxed text-white mb-6">
+                            The CBSE syllabus is often more detailed and updated frequently to match global trends. At Krisar Academy, we utilise this detailed curriculum to ensure our students are not just passing CBSE board exams but are truly mastering the subjects. In contrast, the state board curriculum can sometimes be less rigorous, focusing more on memorisation than analytical excellence.
+                        </p>
+                    </section>
+
+                    <section className="bg-brand-primary p-10 rounded-[3rem] border border-white/10 relative overflow-hidden">
+                        <div className="relative z-10">
+                            <h3 className="text-2xl font-bold mb-6 text-brand-secondary text-center">Competitive Exam Readiness: The National Advantage</h3>
+                            <p className="text-lg leading-relaxed text-white mb-10 text-center max-w-3xl mx-auto">
+                                For students aiming for professional degrees, competitive exam preparation is a top priority. This is where the CBSE vs. state board debate often ends in favour of the former.
+                            </p>
+                            
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div className="space-y-4">
+                                    <h4 className="text-xl font-bold text-white mb-2 underline decoration-brand-secondary underline-offset-4">National Level Competitive Exams (JEE & NEET)</h4>
+                                    <p className="text-white/80 leading-relaxed font-light">
+                                        Most national exams like JEE and NEET are based strictly on the NCERT books used in CBSE students' daily lessons. Students preparing within a CBSE school environment find that their CBSE exams naturally align with these tests. Krisar Academy integrates competitive exam readiness into its core teaching, giving our students an edge in national-level hurdles.
+                                    </p>
+                                </div>
+                                <div className="space-y-4">
+                                    <h4 className="text-xl font-bold text-white mb-2 underline decoration-brand-secondary underline-offset-4">State Level and Regional Opportunities</h4>
+                                    <p className="text-white/80 leading-relaxed font-light">
+                                        While state board students may excel in state-level competitive exams, they often face a steeper learning curve when transitioning to national-level competitive exams. The CBSE education system provides a strong academic foundation that simplifies this transition.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="absolute bottom-0 right-0 w-64 h-64 bg-brand-secondary/5 blur-[100px] rounded-full translate-y-1/2 translate-x-1/2"></div>
+                    </section>
+
+                    <section>
+                        <h3 className="text-2xl font-bold mb-6 text-brand-secondary">Holistic Development and Teaching Methods</h3>
+                        <p className="text-lg leading-relaxed text-white mb-8">
+                            Modern parents look for more than just marks; they seek holistic development. Private schools like Krisar Academy go beyond the detailed syllabus to offer life skills programs and student development initiatives.
+                        </p>
+                        <div className="space-y-4 mb-8">
+                            <div className="flex gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-brand-secondary/50 transition-all">
+                                <div className="p-3 bg-brand-secondary/20 rounded-xl text-brand-secondary h-fit">
+                                    <span className="text-2xl">💡</span>
+                                </div>
+                                <div>
+                                    <h5 className="font-bold text-white mb-1">Teaching Methods</h5>
+                                    <p className="text-white/70">CBSE encourages experiential learning and internal assessments, moving away from a single high-pressure exam.</p>
+                                </div>
+                            </div>
+                            <div className="flex gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-brand-secondary/50 transition-all">
+                                <div className="p-3 bg-brand-secondary/20 rounded-xl text-brand-secondary h-fit">
+                                    <span className="text-2xl">📊</span>
+                                </div>
+                                <div>
+                                    <h5 className="font-bold text-white mb-1">Assessment CBSE</h5>
+                                    <p className="text-white/70">The assessment CBSE model evaluates student's academic performance alongside their creative and physical growth.</p>
+                                </div>
+                            </div>
+                            <div className="flex gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-brand-secondary/50 transition-all">
+                                <div className="p-3 bg-brand-secondary/20 rounded-xl text-brand-secondary h-fit">
+                                    <span className="text-2xl">🌐</span>
+                                </div>
+                                <div>
+                                    <h5 className="font-bold text-white mb-1">Medium of Instruction</h5>
+                                    <p className="text-white/70">While state boards often use the local language, CBSE offers instruction primarily in English and Hindi, which is widely accepted in global higher education.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h3 className="text-2xl font-bold mb-6 text-brand-secondary">International Recognition and Higher Education</h3>
+                        <p className="text-lg leading-relaxed text-white mb-10">
+                            If you pursue higher education abroad, the CBSE board offers a distinct advantage. International universities and international education bodies highly value the CBSE curriculum due to its consistency and national education standards.
+                        </p>
+                        
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                            {[
+                                { title: "International Recognition", desc: "CBSE students find it easier to secure admissions in international universities." },
+                                { title: "Global Mobility", desc: "For families that move across states, the uniform curriculum of cbse affiliated schools like Krisar Academy ensures a seamless transition without a change in the medium of instruction." }
+                            ].map((item, idx) => (
+                                <div key={idx} className="p-8 bg-brand-secondary/10 rounded-3xl border border-brand-secondary/20 flex flex-col justify-center">
+                                    <h5 className="text-xl font-bold text-white mb-3 text-center">{item.title}</h5>
+                                    <p className="text-white/70 text-center leading-relaxed font-light">{item.desc}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+
+                    <section className="bg-brand-secondary/20 p-12 rounded-[3rem] border border-brand-secondary/30 relative overflow-hidden group">
+                        <div className="relative z-10 text-center">
+                            <h3 className="text-3xl font-bold mb-6 text-brand-secondary">Why Krisar Academy is the Best Choice for Your Child?</h3>
+                            <div className="max-w-3xl mx-auto space-y-6 text-white text-lg leading-relaxed">
+                                <p>
+                                    When weighing the difference between CBSE and state board, the best syllabus is the one that aligns with your child's long-term aspirations. If you are looking for academic excellence, international recognition, and a strong academic foundation, the CBSE Board is the clear winner.
+                                </p>
+                                <p>
+                                    Krisar Academy is the best CBSE school for parents who want to see their children become global leaders. Our CBSE education model is designed for the future, combining critical thinking with holistic development. By adopting the latest national education standards, we prepare our students to excel in competitive exams like JEE and beyond.
+                                </p>
+                                <p className="font-bold text-xl text-brand-secondary pt-4">
+                                    Don't settle for rote learning when you can choose a path of quality education and experiential learning. Join the Krisar Academy today and give your child the CBSE Board advantage!
+                                </p>
+                            </div>
+                        </div>
+                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[200%] h-full bg-gradient-to-b from-brand-secondary/10 to-transparent -translate-y-1/2 blur-3xl pointer-events-none group-hover:opacity-100 opacity-0 transition-opacity"></div>
+                    </section>
+                </div>
+            </>
+        )
     }
 ];
