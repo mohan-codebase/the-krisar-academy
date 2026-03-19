@@ -16,7 +16,7 @@ app.use(cors());
 app.use(express.json());
 
 // Re-use logic from api/send-email.js
-app.post('/api/send-email', async (req, res) => {
+app.post('/send-email-secure', async (req, res) => {
     const { type, data } = req.body;
 
     if (!type || !data) {
@@ -164,5 +164,5 @@ app.post('/api/send-email', async (req, res) => {
 
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
-    console.log(`API endpoint: https://thekrisaracademy.com/api/send-email`);
+    console.log(`API endpoint: /send-email-secure`);
 });

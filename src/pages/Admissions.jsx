@@ -123,7 +123,7 @@ const Admissions = () => {
         setSubmitError('');
 
         try {
-            const response = await fetch('/api/send-email', {
+            const response = await fetch('/send-email-secure', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
