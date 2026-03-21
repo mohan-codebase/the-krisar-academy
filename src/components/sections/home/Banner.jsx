@@ -81,7 +81,7 @@ const slides = [
         image: banner5,
         badge: "Learning Beyond the Traditional Classroom",
         title: <>Beyond the <span className="text-brand-secondary">Traditional Classroom</span></>,
-        description: "Practical exposure, project-based learning, and technology-driven instruction help students connect academic knowledge with real-world applications.",
+        description: <span>Practical exposure, project-based learning,<br /> and technology-driven <br />instruction help students <br />  connect academicknowledge <br />with real-world applications.</span>,
         buttonText: "See More"
     },
     {
