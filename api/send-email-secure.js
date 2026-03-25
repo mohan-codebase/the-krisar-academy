@@ -1,28 +1,12 @@
 
-import express from 'express';
-import cors from 'cors';
-import dotenv from 'dotenv';
 import nodemailer from 'nodemailer';
-import { fileURLToPath } from 'url';
-import { dirname, join } from 'path';
 
-// Load environment variables
-dotenv.config();
+export default async function handler(req, res) {
+    // Only allow POST
+    if (req.method !== 'POST') {
+        return res.status(405).json({ message: 'Method not allowed' });
+    }
 
-const app = express();
-const PORT = process.env.PORT || 3001;
-
-app.use(cors());
-app.use(express.json());
-
-// Log all requests for debugging
-app.use((req, res, next) => {
-    console.log(`${new Date().toISOString()} - ${req.method} ${req.url}`);
-    next();
-});
-
-// Common logic for sending email
-const handleEmailRequest = async (req, res) => {
     const { type, data } = req.body;
 
     if (!type || !data) {
@@ -90,6 +74,9 @@ const handleEmailRequest = async (req, res) => {
                             ${safeMessage}
                         </div>
                     </div>
+                    <div style="${styles.footer}">
+                        &copy; ${new Date().getFullYear()} The Krisar Academy. All rights reserved.
+                    </div>
                 </div>
             `;
         } else if (type === 'admissions') {
@@ -99,42 +86,76 @@ const handleEmailRequest = async (req, res) => {
                     <div style="${styles.header}">
                         <h1 style="${styles.headerTitle}">Admission <span style="color: #FFC107;">Application</span></h1>
                     </div>
+                    
                     <div style="${styles.content}">
-                        ${getFieldHtml('Full Name', `${data.firstName || ''} ${data.lastName || ''}`)}
-                        ${getFieldHtml('Grade', data.grade)}
-                        ${getFieldHtml('Phone', data.contactNo)}
-                        ${getFieldHtml('Email', data.emailId)}
+                        <h2 style="${styles.sectionTitle}">Student Information</h2>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                            ${getFieldHtml('Full Name', `${data.firstName || ''} ${data.lastName || ''}`)}
+                            ${getFieldHtml('Date of Birth', `${data.dob || ''} (Age: ${data.age || ''})`)}
+                            ${getFieldHtml('Gender', data.gender)}
+                            ${getFieldHtml('Blood Group', data.bloodGroup)}
+                            ${getFieldHtml('Grade Seeking', data.grade)}
+                            ${getFieldHtml('Place', data.place)}
+                        </div>
+                        ${getFieldHtml('Previous School', data.previousSchool)}
+
+                        <h2 style="${styles.sectionTitle}">Parent Information</h2>
+                        
+                        <div style="background-color: #f8f9fa; padding: 15px; border-radius: 4px; margin-bottom: 20px;">
+                            <h3 style="color: #061E3F; margin-top: 0;">Father's Details</h3>
+                            ${getFieldHtml('Name', data.fatherName)}
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                                ${getFieldHtml('Qualification', data.fatherQual)}
+                                ${getFieldHtml('Occupation', data.fatherOccup)}
+                                ${getFieldHtml('Mobile', data.fatherContact)}
+                                ${getFieldHtml('Email', data.fatherEmail)}
+                            </div>
+                        </div>
+
+                        <div style="background-color: #f8f9fa; padding: 15px; border-radius: 4px;">
+                            <h3 style="color: #061E3F; margin-top: 0;">Mother's Details</h3>
+                            ${getFieldHtml('Name', data.motherName)}
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                                ${getFieldHtml('Qualification', data.motherQual)}
+                                ${getFieldHtml('Occupation', data.motherOccup)}
+                                ${getFieldHtml('Mobile', data.motherContact)}
+                                ${getFieldHtml('Email', data.motherEmail)}
+                            </div>
+                        </div>
+
+                        <h2 style="${styles.sectionTitle}">Final Details</h2>
+                        ${getFieldHtml('Residential Address', data.address)}
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                            ${getFieldHtml('Primary Contact', data.contactNo)}
+                            ${getFieldHtml('Primary Email', data.emailId)}
+                        </div>
+                        <div style="margin-top: 20px; padding: 10px; background-color: #e3f2fd; border-radius: 4px; color: #0d47a1; font-size: 12px;">
+                            <strong>Declaration Accepted:</strong> ${data.declaration ? 'Yes' : 'No'}
+                        </div>
+                    </div>
+                     <div style="${styles.footer}">
+                        &copy; ${new Date().getFullYear()} The Krisar Academy. All rights reserved.
                     </div>
                 </div>
             `;
+        } else {
+            console.warn(`Invalid form type: ${type}`);
+            return res.status(400).json({ message: 'Invalid form type' });
         }
 
-        await transporter.sendMail({
+        const mailOptions = {
             from: process.env.SMTP_USER,
             to: receiverEmail,
             subject: subject,
             html: htmlContent,
             replyTo: data.email || data.emailId
-        });
+        };
 
+        await transporter.sendMail(mailOptions);
         return res.status(200).json({ message: 'Email sent successfully' });
 
     } catch (error) {
         console.error('Error sending email:', error);
         return res.status(500).json({ message: 'Failed to send email', error: error.message });
     }
-};
-
-// Routes
-app.post('/send-email-secure', handleEmailRequest);
-app.post('/send-email', handleEmailRequest);
-
-// Serve Static Files
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-app.use(express.static(join(__dirname, 'dist')));
-
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-    console.log(`Email endpoints active: /send-email-secure, /send-email`);
-});
+}

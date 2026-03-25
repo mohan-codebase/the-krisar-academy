@@ -1,0 +1,3 @@
+
+/send-email-secure  /.netlify/functions/send-email-secure  200
+/send-email         /.netlify/functions/send-email-secure  200
