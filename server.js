@@ -12,30 +12,48 @@ dotenv.config();
 const app = express();
 const PORT = 3001;
 
+
 app.use(cors());
 app.use(express.json());
 
-// Re-use logic from api/send-email.js
-app.post('/send-email-secure', async (req, res) => {
+// Log all requests for debugging
+app.use((req, res, next) => {
+    console.log(`${new Date().toISOString()} - ${req.method} ${req.url}`);
+    next();
+});
+
+app.get('/', (req, res) => {
+    res.json({ status: 'Email server is running', endpoint: '/send-email-secure' });
+});
+
+// Common logic for sending email
+const handleEmailRequest = async (req, res) => {
     const { type, data } = req.body;
 
     if (!type || !data) {
+        console.error('Missing type or data in request body');
         return res.status(400).json({ message: 'Missing type or data' });
     }
 
-    console.log(`Received ${type} request for ${process.env.RECEIVER_EMAIL}`);
+    console.log(`Received ${type} request for ${process.env.RECEIVER_EMAIL || 'default email'}`);
 
     let subject = '';
     let htmlContent = '';
     const receiverEmail = process.env.RECEIVER_EMAIL || 'info.thekrisaracademy@gmail.com';
 
+    // Verify SMTP config exists
+    if (!process.env.SMTP_USER || !process.env.SMTP_PASS) {
+        console.error('SMTP configuration missing in .env');
+        return res.status(500).json({ message: 'Server configuration error' });
+    }
+
     const transporter = nodemailer.createTransport({
         host: process.env.SMTP_HOST || 'smtp.gmail.com',
-        port: parseInt(process.env.SMTP_PORT || '587'),
-        secure: process.env.SMTP_SECURE === 'true',
+        port: parseInt(process.env.SMTP_PORT || '465'),
+        secure: process.env.SMTP_SECURE === 'true' || process.env.SMTP_PORT === '465',
         auth: {
             user: process.env.SMTP_USER,
-            pass: process.env.SMTP_PASS ? process.env.SMTP_PASS.replace(/\s+/g, '') : undefined,
+            pass: process.env.SMTP_PASS.replace(/\s+/g, ''),
         },
     });
 
@@ -60,7 +78,8 @@ app.post('/send-email-secure', async (req, res) => {
 
     try {
         if (type === 'contact') {
-            subject = `New Contact Inquiry from ${data.name}`;
+            subject = `New Contact Inquiry from ${data.name || 'Unknown'}`;
+            const safeMessage = (data.message || '').replace(/\n/g, '<br>');
             htmlContent = `
                 <div style="${styles.container}">
                     <div style="${styles.header}">
@@ -73,7 +92,7 @@ app.post('/send-email-secure', async (req, res) => {
                         
                         <h2 style="${styles.sectionTitle}">Message</h2>
                         <div style="${styles.fieldValue}; background-color: #f8f9fa; padding: 15px; border-left: 4px solid #FFC107; border-radius: 4px;">
-                            ${data.message.replace(/\n/g, '<br>')}
+                            ${safeMessage}
                         </div>
                     </div>
                     <div style="${styles.footer}">
@@ -82,7 +101,7 @@ app.post('/send-email-secure', async (req, res) => {
                 </div>
             `;
         } else if (type === 'admissions') {
-            subject = `New Admission Application: ${data.firstName} ${data.lastName}`;
+            subject = `New Admission Application: ${data.firstName || ''} ${data.lastName || ''}`;
             htmlContent = `
                 <div style="${styles.container}">
                     <div style="${styles.header}">
@@ -92,8 +111,8 @@ app.post('/send-email-secure', async (req, res) => {
                     <div style="${styles.content}">
                         <h2 style="${styles.sectionTitle}">Student Information</h2>
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-                            ${getFieldHtml('Full Name', `${data.firstName} ${data.lastName}`)}
-                            ${getFieldHtml('Date of Birth', `${data.dob} (Age: ${data.age})`)}
+                            ${getFieldHtml('Full Name', `${data.firstName || ''} ${data.lastName || ''}`)}
+                            ${getFieldHtml('Date of Birth', `${data.dob || ''} (Age: ${data.age || ''})`)}
                             ${getFieldHtml('Gender', data.gender)}
                             ${getFieldHtml('Blood Group', data.bloodGroup)}
                             ${getFieldHtml('Grade Seeking', `<span style="${styles.accentText}; color: #061E3F; background-color: #FFC107; padding: 2px 6px; border-radius: 3px;">${data.grade}</span>`)}
@@ -141,6 +160,7 @@ app.post('/send-email-secure', async (req, res) => {
                 </div>
             `;
         } else {
+            console.warn(`Invalid form type: ${type}`);
             return res.status(400).json({ message: 'Invalid form type' });
         }
 
@@ -160,9 +180,24 @@ app.post('/send-email-secure', async (req, res) => {
         console.error('Error sending email:', error);
         return res.status(500).json({ message: 'Failed to send email', error: error.message });
     }
+};
+
+// Handle multiple endpoint variations to prevent 404s
+app.post('/send-email-secure', handleEmailRequest);
+app.post('/send-email', handleEmailRequest);
+app.post('/api/send-email-secure', handleEmailRequest);
+app.post('/api/send-email', handleEmailRequest);
+
+// Handle preflight for all routes handled by app.use(cors()) at the top
+
+// 404 handler for API
+app.use((req, res) => {
+    console.warn(`404 Not Found: ${req.method} ${req.url}`);
+    res.status(404).json({ message: `Route ${req.method} ${req.url} not found on this server` });
 });
 
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
-    console.log(`API endpoint: /send-email-secure`);
+    console.log(`Primary API endpoint: /send-email-secure`);
+    console.log(`Aliases: /send-email, /api/send-email-secure, /api/send-email`);
 });
