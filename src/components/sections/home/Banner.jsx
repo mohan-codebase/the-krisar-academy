@@ -50,22 +50,22 @@ const slides = [
         description: "Our academy is proudly affiliated with the CBSE board, ensuring that the school provides nationally recognised education with intellectual depth and academic standards.",
         buttonText: "View Curriculum"
     },
-    {
-        id: 3,
-        layout: 'standard',
-        image: banner1,
-        badge: "Building Confident Learners",
-        title: <>Building <span className="text-brand-secondary">Confident Learners</span></>,
-        leftContent: {
-            title: <>Think<br />Independently</>,
-            desc: "Students are encouraged to think independently and explore new ideas."
-        },
-        rightContent: {
-            title: <>Succeed in<br />the World</>,
-            desc: "We focus on strengthening both knowledge and character for success."
-        },
-        buttonText: "Our Approach"
-    },
+    // {
+    //     id: 3,
+    //     layout: 'standard',
+    //     image: banner1,
+    //     badge: "Building Confident Learners",
+    //     title: <>Building <span className="text-brand-secondary">Confident Learners</span></>,
+    //     leftContent: {
+    //         title: <>Think<br />Independently</>,
+    //         desc: "Students are encouraged to think independently and explore new ideas."
+    //     },
+    //     rightContent: {
+    //         title: <>Succeed in<br />the World</>,
+    //         desc: "We focus on strengthening both knowledge and character for success."
+    //     },
+    //     buttonText: "Our Approach"
+    // },
     {
         id: 4,
         layout: 'left-aligned',
@@ -109,22 +109,22 @@ const slides = [
         description: "Our academy's specialised coaching and mentorship help students succeed in competitive examinations, guiding learners toward careers in medicine and engineering.",
         buttonText: "Admission Now"
     },
-    {
-        id: 8,
-        layout: 'standard',
-        image: banner1,
-        badge: "Montessori Kindergarten",
-        title: <>Montessori <span className="text-brand-secondary">Kindergarten</span></>,
-        leftContent: {
-            title: <>Independence &<br />Creativity</>,
-            desc: "Focusing on building a strong foundation of learning for young children."
-        },
-        rightContent: {
-            title: <>Curiosity &<br />Foundation</>,
-            desc: "Our program nurtures independent thinkers from early childhood."
-        },
-        buttonText: "Join Us"
-    },
+    // {
+    //     id: 8,
+    //     layout: 'standard',
+    //     image: banner1,
+    //     badge: "Montessori Kindergarten",
+    //     title: <>Montessori <span className="text-brand-secondary">Kindergarten</span></>,
+    //     leftContent: {
+    //         title: <>Independence &<br />Creativity</>,
+    //         desc: "Focusing on building a strong foundation of learning for young children."
+    //     },
+    //     rightContent: {
+    //         title: <>Curiosity &<br />Foundation</>,
+    //         desc: "Our program nurtures independent thinkers from early childhood."
+    //     },
+    //     buttonText: "Join Us"
+    // },
 ]
 
 const Banner = () => {
