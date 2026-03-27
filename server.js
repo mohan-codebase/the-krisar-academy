@@ -127,6 +127,8 @@ const handleEmailRequest = async (req, res) => {
 
 // Routes
 app.get('/api/health', (req, res) => res.json({ status: 'ok', message: 'Backend is reachable' }));
+app.get('/health', (req, res) => res.json({ status: 'ok', message: 'Backend is reachable (no-api path)' }));
+
 app.post('/api/send-email-secure', handleEmailRequest);
 app.post('/api/send-email', handleEmailRequest);
 app.post('/send-email-secure', handleEmailRequest);
