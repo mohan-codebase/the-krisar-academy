@@ -126,6 +126,8 @@ const handleEmailRequest = async (req, res) => {
 };
 
 // Routes
+app.post('/api/send-email-secure', handleEmailRequest);
+app.post('/api/send-email', handleEmailRequest);
 app.post('/send-email-secure', handleEmailRequest);
 app.post('/send-email', handleEmailRequest);
 
@@ -136,5 +138,5 @@ app.use(express.static(join(__dirname, 'dist')));
 
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
-    console.log(`Email endpoints active: /send-email-secure, /send-email`);
+    console.log(`Email endpoints active: /api/send-email-secure, /send-email-secure`);
 });

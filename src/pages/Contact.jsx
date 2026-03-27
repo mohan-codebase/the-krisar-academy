@@ -27,7 +27,7 @@ const Contact = () => {
         e.preventDefault();
         setStatus('loading');
         try {
-            const response = await fetch('/send-email-secure', {
+            const response = await fetch('/api/send-email-secure', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
