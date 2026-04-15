@@ -1,4 +1,5 @@
-import { Trophy } from 'lucide-react';
+import { Trophy, BookOpen } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 // Optimized Blog Images
 import blog1 from '../assets/images/blog/blog-sports-2025.jpg';
@@ -13,6 +14,11 @@ import blog9 from '../assets/images/blog/blog-millet.jpg';
 // Inner Blog Images
 import blog3Inner1 from '../assets/images/blog/blog-minister-inner-1.jpg';
 import blog3Inner2 from '../assets/images/blog/blog-minister-inner-2.jpg';
+import blog13 from '../assets/images/blog/april2k26/April-1.png';
+import blog13Inner from '../assets/images/blog/april2k26/April-2.png';
+import blog14 from '../assets/images/blog/april2k26/April-3.png';
+import blog15 from '../assets/images/blog/april2k26/April-4.png';
+import blog15Inner from '../assets/images/blog/april2k26/April-5.png';
 
 // Gallery Images for Blog
 import gallery1 from '../assets/images/gallery/krisar_img_076.jpeg';
@@ -1116,6 +1122,624 @@ export const blogData = [
                             </div>
                         </div>
                         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[200%] h-full bg-gradient-to-b from-brand-secondary/10 to-transparent -translate-y-1/2 blur-3xl pointer-events-none group-hover:opacity-100 opacity-0 transition-opacity"></div>
+                    </section>
+                </div>
+            </>
+        )
+    },
+    {
+        id: 13,
+        slug: "how-to-select-the-right-school-for-your-child-guide",
+        title: "How to Select the Right School for Your Child: A Complete Guide for Parents",
+        date: "April 15, 2026",
+        image: blog13,
+        category: "Education",
+        icon: "BookOpen",
+        description: "Choosing a school for your child is one of the most consequential decisions you will make. This guide provides a structured framework to evaluate any school.",
+        content: (
+            <>
+                <p className="mb-6 text-xl font-medium leading-relaxed text-brand-secondary">
+                    Choosing a school for your child is one of the most consequential decisions you will make as a parent.
+                </p>
+
+                <p className="mb-6 text-lg leading-relaxed text-white">
+                    The school your child attends shapes not just their academic knowledge but their habits, values, confidence, and long-term career trajectory. Yet most parents make this decision based on word of mouth, proximity, or fee structure alone.
+                </p>
+
+                <p className="mb-10 text-lg leading-relaxed text-white">
+                    This guide gives you a structured framework to evaluate any school before you commit. Use it as a checklist when shortlisting, when visiting, and when making your final decision.
+                </p>
+
+                <div className="space-y-12">
+                    <section>
+                        <h3 className="text-2xl font-bold mb-6 text-brand-secondary border-l-4 border-brand-secondary pl-4">1. Start With the Board of Education</h3>
+                        <p className="text-lg leading-relaxed text-white mb-6">
+                            Before evaluating individual schools, decide which board of education is the right fit for your child's future. In Tamil Nadu, the primary choice is between <strong>CBSE (Central Board of Secondary Education)</strong> and the <strong>Tamil Nadu State Board</strong> (Matriculation or Samacheer Kalvi).
+                        </p>
+                        <p className="text-lg leading-relaxed text-white mb-6">
+                            CBSE follows the NCERT curriculum, which aligns directly with national competitive examinations like JEE and NEET. If your child has any possibility of pursuing engineering, medicine, or a nationally competitive career, a CBSE school gives a structural foundation from Class 1 itself.
+                        </p>
+                        <p className="text-lg leading-relaxed text-white mb-6">
+                            State Board education is more widespread in smaller towns and is reasonable for students focused on state-level careers or strong Tamil language education.
+                        </p>
+                        <div className="bg-white/5 p-6 rounded-2xl border border-white/10">
+                            <p className="text-white/80 italic">
+                                For a detailed comparison, read: <Link to="/blogs/cbse-vs-state-board-syllabus-guide" className="text-brand-secondary hover:underline">CBSE vs State Board Syllabus Guide</Link>
+                            </p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h3 className="text-2xl font-bold mb-6 text-brand-secondary border-l-4 border-brand-secondary pl-4">2. Verify CBSE Affiliation Before Anything Else</h3>
+                        <p className="text-lg leading-relaxed text-white mb-6">
+                            If you are considering a CBSE school, verifying its affiliation is not optional. A school calling itself CBSE without valid affiliation is misleading parents and students.
+                        </p>
+                        <p className="text-lg leading-relaxed text-white mb-6">
+                            <strong>CBSE affiliation</strong> is granted by the Central Board of Secondary Education after a school meets specific eligibility criteria covering infrastructure, staff qualifications, financial stability, and safety measures. There are two types of affiliation: provisional affiliation granted to newly established schools, and regular affiliation granted to well-established schools that have met all CBSE norms over time.
+                        </p>
+                        <p className="text-lg leading-relaxed text-white mb-6">
+                            To verify a school's affiliation, check the CBSE official portal at <a href="https://cbseaff.nic.in" target="_blank" rel="noopener noreferrer" className="text-brand-secondary hover:underline">cbseaff.nic.in</a>. Search by school name or affiliation number. The result will show the school's affiliation ID, the level of affiliation <strong>(secondary or senior secondary)</strong>, and the validity date.
+                        </p>
+                        <div className="bg-red-500/10 p-8 rounded-3xl border border-red-500/20 mb-8">
+                            <h4 className="text-xl font-bold text-white mb-4">Key things to check:</h4>
+                            <p className="text-white/80 mb-6">The affiliation should be currently valid, not lapsed. Some schools display an affiliation number from a previous period that was not renewed. Confirm the expiry date before proceeding.</p>
+                            <ul className="space-y-3">
+                                <li className="flex items-start gap-3 text-white/70">
+                                    <span className="text-brand-secondary">●</span>
+                                    <span><strong>Validity:</strong> The school should be affiliated at the senior secondary level if it offers Classes 11 and 12. A school with only secondary affiliation cannot legally run Classes 11 and 12 under CBSE.</span>
+                                </li>
+                                <li className="flex items-start gap-3 text-white/70">
+                                    <span className="text-brand-secondary">●</span>
+                                    <span><strong>Level:</strong> The affiliation bye-laws require schools to meet specific conditions including minimum land requirements, building safety standards, number of classrooms, science labs, a library, sports facilities, and sanitation. These are not aspirational guidelines. They are conditions a school must satisfy to receive and retain affiliation. A school that holds valid affiliation has been assessed against these criteria.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h3 className="text-2xl font-bold mb-6 text-brand-secondary border-l-4 border-brand-secondary pl-4">3. Evaluate the Infrastructure</h3>
+                        <p className="text-lg leading-relaxed text-white mb-8">
+                            Once affiliation is confirmed, visit the campus. Infrastructure tells you more about a school's commitment to quality education than any brochure or website.
+                        </p>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                            {[
+                                { title: "Classrooms", desc: "Are classrooms adequately sized for the number of students enrolled? CBSE norms specify minimum classroom dimensions. Overcrowded classrooms directly affect learning outcomes. Check whether classrooms have functional teaching technology, adequate lighting, and ventilation." },
+                                { title: "Science Labs", desc: "A CBSE school is required to have functional science laboratories. Visit the labs during school hours. Ask whether students conduct experiments regularly or whether the lab is maintained primarily for inspection purposes." },
+                                { title: "Library", desc: "A functional library with age-appropriate books, reference materials, and a reading culture is a strong indicator of a school's academic seriousness. A room with shelves of unused books is not a library." },
+                                { title: "Sports and physical education", desc: "Evaluate the sports facilities available, the ground area, and whether physical education is a structured programme with qualified instructors or a free period in disguise." },
+                                { title: "Sanitation and safety", desc: "Check the number and condition of toilets relative to student enrollment. CBSE norms specify minimum requirements. Clean, adequate sanitation reflects how a school manages daily operations." },
+                                { title: "Building safety", desc: "A CBSE-affiliated school must hold a valid building safety certificate and a no-objection certificate from the relevant state government authority. You can ask the school management to show these documents. A well-run school will have them readily available." }
+                            ].map((item, idx) => (
+                                <div key={idx} className="p-6 bg-white/5 rounded-2xl border border-white/10">
+                                    <h5 className="font-bold text-brand-secondary mb-2">{item.title}</h5>
+                                    <p className="text-sm text-white/60">{item.desc}</p>
+                                </div>
+                            ))}
+                        </div>
+                        
+                    </section>
+
+                    <section>
+                        <h3 className="text-2xl font-bold mb-6 text-brand-secondary border-l-4 border-brand-secondary pl-4">4. Assess Teaching Quality</h3>
+                        <p className="text-lg leading-relaxed text-white mb-6">
+                            Infrastructure is the foundation, but the quality of teaching determines what actually happens inside the classrooms. Evaluating teaching quality requires more than asking for the school's academic results.
+                        </p>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div className="p-8 bg-brand-primary/20 rounded-3xl border border-white/10">
+                                <h4 className="text-xl font-bold text-white mb-4">Teacher qualifications</h4>
+                                <p className="text-white/70 text-sm leading-relaxed mb-4">
+                                    CBSE norms require teachers to hold specific academic qualifications relevant to the subjects they teach. Ask the school what percentage of their faculty meets these requirements. A school seeking affiliation or recently affiliated may have a mix of fully qualified and provisionally appointed teachers.
+                                </p>
+                            </div>
+                            <div className="p-8 bg-brand-primary/20 rounded-3xl border border-white/10">
+                                <h4 className="text-xl font-bold text-white mb-4">Teacher training and development</h4>
+                                <p className="text-white/70 text-sm leading-relaxed mb-4">
+                                   Good schools invest in ongoing teacher training. Ask whether teachers attend workshops, CBSE training programmes, or subject-specific development sessions. A school where teaching philosophies and methodologies are actively updated produces better outcomes than one where teachers deliver the same lesson plans year after year.
+                                </p>
+                            </div>
+                            <div className="p-8 bg-brand-primary/20 rounded-3xl border border-white/10">
+                                <h4 className="text-xl font-bold text-white mb-4">Teacher-student ratio</h4>
+                                <p className="text-white/70 text-sm leading-relaxed mb-4">
+                                   CBSE guidelines recommend a ratio of approximately 30 students per teacher. Lower ratios mean more individual attention per student. Visit classrooms during regular hours, not during a scheduled inspection visit, to see the actual number of students per class.
+                                </p>
+                            </div>
+                            <div className="p-8 bg-brand-primary/20 rounded-3xl border border-white/10">
+                                <h4 className="text-xl font-bold text-white mb-4">Teaching approach</h4>
+                                <p className="text-white/70 text-sm leading-relaxed mb-4">
+                                   Talk to teachers during your school visit. Ask how they handle a student who is struggling. Ask what they do when a student finishes work early. The answers reveal whether the school's approach builds critical thinking and problem-solving skills or focuses primarily on examination performance.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h3 className="text-2xl font-bold mb-6 text-brand-secondary border-l-4 border-brand-secondary pl-4">5. Look at the Co-curricular and Extracurricular Programmes</h3>
+                        <p className="text-lg leading-relaxed text-white mb-8">
+                            A school that only runs academics is not a complete school. Children develop confidence and leadership through activities outside the formal classroom.
+                        </p>
+                        <h4 className="text-xl font-bold text-white mb-4">Ask specifically about the following::</h4>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div className="p-6 bg-white/5 rounded-2xl border border-white/10 text-center">
+                                <div className="text-3xl mb-4">🏆</div>
+                                <h5 className="font-bold text-white mb-2">Sports</h5>
+                                <p className="text-xs text-white/60">Is physical training structured with professional coaches, or is it a supervised play period? Schools that offer professional coaching in specific sports, including athletics, skating, or individual disciplines, are investing meaningfully in physical development.</p>
+                            </div>
+                            <div className="p-6 bg-white/5 rounded-2xl border border-white/10 text-center">
+                                <div className="text-3xl mb-4">🎨</div>
+                                <h5 className="font-bold text-white mb-2">Arts & Music</h5>
+                                <p className="text-xs text-white/60">Are these taught by qualified instructors? Are there dedicated practice spaces?</p>
+                            </div>
+                            <div className="p-6 bg-white/5 rounded-2xl border border-white/10 text-center">
+                                <div className="text-3xl mb-4">🗣️</div>
+                                <h5 className="font-bold text-white mb-2">Leadership</h5>
+                                <p className="text-xs text-white/60">Does the school have structured programmes for developing communication skills, public speaking, and leadership qualities in students? These skills matter as much as academics in higher education and professional life.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section className="bg-brand-primary/40 p-10 rounded-[3rem] border border-white/10">
+                        <h3 className="text-2xl font-bold mb-6 text-brand-secondary">6. Check Safety and the School Environment</h3>
+                        <p className="text-lg leading-relaxed text-white mb-6 font-light">
+                            A child spends six to eight hours daily in school. The safety and environment of that space directly affects both wellbeing and learning.
+                        </p>
+                        <p className="text-lg leading-relaxed text-white mb-6 font-light">
+                            Walk through the campus during school hours. Observe how students move between classes, how teachers interact with students in the corridors, and how the campus is maintained. A well-maintained green campus with clean facilities and orderly movement signals strong management. A noisy, disorganised environment during the school day signals otherwise.
+                        </p>
+                        <p className="text-lg leading-relaxed text-white mb-6 font-light">
+                            Ask the school management about safety measures in place, including how visitor access is managed, how student movements are monitored, and what the protocol is for emergencies.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h3 className="text-2xl font-bold mb-6 text-brand-secondary border-l-4 border-brand-secondary pl-4">7. Understand the Fee Structure Completely</h3>
+                        <p className="text-lg leading-relaxed text-white mb-6">
+                            School fees in Tamil Nadu vary significantly between <strong>CBSE</strong> and <strong>State Board</strong> institutions and across private schools within each board. Before finalising, ask for a complete written fee structure covering tuition fees, development fees, transport fees, uniform costs, examination fees, and any activity or laboratory charges.
+                        </p>
+                        <p className="text-lg leading-relaxed text-white mb-6">
+                            Compare the total annual cost, not just the advertised tuition figure. A school with a lower tuition fee but multiple additional charges may cost more annually than a school with a higher stated fee that includes most services.
+                        </p>
+                        <p className="text-lg leading-relaxed text-white mb-6">
+                            Ask whether the fee structure is stable year on year or subject to significant annual increases. A school with unpredictable fee escalation creates financial planning challenges for families.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h3 className="text-2xl font-bold mb-6 text-brand-secondary border-l-4 border-brand-secondary pl-4">8. Evaluate Academic Results and Student Outcomes</h3>
+                        <p className="text-lg leading-relaxed text-white mb-6">
+                            Ask the school for Class 10 and Class 12 board examination results over the past three years. Look at the percentage of students who passed, the distribution of grades or marks, and the number of students who secured distinctions.
+                        </p>
+                        <p className="text-lg leading-relaxed text-white mb-6">
+                            Beyond board results, ask how many students from the school have gained admission to competitive engineering or medical programmes. This gives a more meaningful measure of the school's academic quality than board pass percentages alone.
+                        </p>
+                        <p className="text-lg leading-relaxed text-white mb-6">
+                            Also ask about alumni outcomes if the school has been operating for more than five years. A school that produces confident, capable students who succeed in higher education has demonstrated what it promises.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h3 className="text-2xl font-bold mb-6 text-brand-secondary border-l-4 border-brand-secondary pl-4">9. Consider Proximity and Transport</h3>
+                        <p className="text-lg leading-relaxed text-white mb-6">
+                            Practical constraints matter. A school that requires a two-hour daily commute places significant stress on a young child, particularly in the lower classes. Evaluate travel time and transport availability before finalising.
+                        </p>
+                        <p className="text-lg leading-relaxed text-white mb-6">
+                            If the school offers transport, ask for specific route information and pick-up points. Confirm that the transport is managed by the school, not a third-party operator with no accountability to the institution.
+                        </p>
+                        <p className="text-lg leading-relaxed text-white mb-6">
+                            For families in Arani, Arcot, and the surrounding Ranipet District area, the availability of school transport covering your village or neighbourhood is often the deciding factor between otherwise comparable schools.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h3 className="text-2xl font-bold mb-6 text-brand-secondary border-l-4 border-brand-secondary pl-4">10. Visit the School and Trust What You Observe</h3>
+                        <h4 className="text-xl font-bold text-white mb-4">During your visit, observe:</h4>
+                        <p className="text-lg leading-relaxed text-white mb-6">
+                            No brochure, website, or third-party review substitutes for a campus visit during school hours. Schedule a visit when the school is fully operational, not during an admission open day designed specifically to impress prospective parents.
+                        </p>
+                        <p className="text-lg leading-relaxed text-white mb-6">
+                            Whether students appear engaged and active in classrooms or passive and disengaged. Whether teachers are managing classrooms with authority and warmth or struggling with discipline. Whether the campus feels alive with learning or is going through the motions.
+                        </p>
+                        <p className="text-lg leading-relaxed text-white mb-6">
+                            Trust what you see over what you are told. A school confident in its quality will welcome scrutiny. A school that restricts your access or gives heavily managed tours is concealing something.
+                        </p>
+                        <h3 className="text-2xl font-bold mb-6 text-brand-secondary">Making Your Final Decision</h3>
+                        <img src={blog13Inner} alt="School Infrastructure" className="w-full h-auto rounded-3xl mb-8 border border-white/10" />
+                        <p className="text-lg leading-relaxed text-white mb-6">
+                            After visiting and evaluating schools against these criteria, compare your shortlist on the factors that matter most for your child and family. The right school is not necessarily the most expensive or the most well-known. It is the one with the right board for your child's goals, genuinely qualified teachers, functional infrastructure, a safe and positive environment, and a proven track record.
+                        </p>
+                        <p className="text-lg leading-relaxed text-white mb-6">
+                           Give appropriate weight to each factor based on your child's age, learning style, and aspirations, and your family's practical constraints.
+                        </p>
+                    </section>
+
+                    <section className="bg-brand-secondary/10 p-12 rounded-[3.5rem] border border-brand-secondary/20 relative overflow-hidden group">
+                        <div className="relative z-10">
+                            <h3 className="text-3xl font-bold mb-8 text-brand-secondary text-center">CBSE Admission in the Arani-Arcot-Ranipet Area</h3>
+                            <div className="max-w-4xl mx-auto space-y-6 text-white/90 text-center">
+                                <p className="text-lg">
+                                    For families in this region, The Krisar Academy on the Arcot to Arani Main Road, Paradarami Village, Ranipet District offers CBSE education from Pre-KG to Grade 12. The school holds valid CBSE affiliation <strong> (No. 1931107, valid through 2027) </strong>, maintains a student-teacher ratio of 12:1, and offers integrated NEET and JEE coaching, fully air-conditioned smart classrooms, an AI and Robotics laboratory, a 1,000-seat auditorium, professional sports coaching, and transport covering Arani, Arcot, Ranipet, Walajapet, and Vellore.
+                                </p>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left mt-8">
+                                    <div className="flex items-center gap-3 bg-white/5 p-4 rounded-xl border border-white/10">
+                                        <span className="text-brand-secondary text-xl">✅</span>
+                                        <span className="text-sm">Valid Affiliation (No. 1931107)</span>
+                                    </div>
+                                    <div className="flex items-center gap-3 bg-white/5 p-4 rounded-xl border border-white/10">
+                                        <span className="text-brand-secondary text-xl">✅</span>
+                                        <span className="text-sm">12:1 Student-Teacher Ratio</span>
+                                    </div>
+                                    <div className="flex items-center gap-3 bg-white/5 p-4 rounded-xl border border-white/10">
+                                        <span className="text-brand-secondary text-xl">✅</span>
+                                        <span className="text-sm">Integrated NEET/JEE Coaching</span>
+                                    </div>
+                                    <div className="flex items-center gap-3 bg-white/5 p-4 rounded-xl border border-white/10">
+                                        <span className="text-brand-secondary text-xl">✅</span>
+                                        <span className="text-sm">AI and Robotics Laboratory</span>
+                                    </div>
+                                </div>
+                                <div className="mt-12">
+                                    <Link 
+                                        to="/contact" 
+                                        className="inline-flex items-center gap-2 bg-brand-secondary text-brand-primary px-8 py-4 rounded-full font-bold text-lg hover:bg-yellow-400 transition-colors"
+                                    >
+                                        Inquire for Admissions 2025-26
+                                    </Link>
+                                    <p className="mt-4 text-sm text-white/50">Contact: +91 75400 88387</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section className="pt-12 border-t border-white/10">
+                        <h3 className="text-3xl font-bold mb-10 text-white text-center">Frequently Asked Questions</h3>
+                        <div className="space-y-6 max-w-4xl mx-auto">
+                            {[
+                                { q: "1. How do I verify if a CBSE school is genuinely affiliated?", a: "Visit the CBSE official affiliation portal at cbseaff.nic.in and search by school name or affiliation number. The result will show whether the affiliation is currently valid, at which level (secondary or senior secondary), and the expiry date. Always verify directly on the CBSE portal rather than relying on information provided by the school." },
+                                { q: "2. What is the difference between provisional and regular CBSE affiliation?", a: "Provisional affiliation is granted to newly established schools that meet the basic eligibility criteria to begin operations. Regular affiliation is granted to well-established schools that have operated under provisional affiliation, met all CBSE norms consistently, and demonstrated quality across academics, infrastructure, and management. A school with regular affiliation has a longer track record of meeting CBSE standards." },
+                                { q: "3. What documents should I ask a school to provide before admission?", a: "Ask for the CBSE affiliation certificate with current validity, mandatory public disclosure documents (which all CBSE schools are required to publish), building safety certificate, no-objection certificate from the state government, and a complete written fee structure for the year. A well-run school will have all of these readily available." },
+                                { q: "4. How important are extracurricular activities when selecting a school?", a: "Extracurricular activities are important indicators of a school's holistic development focus and should be given significant weight. A school that offers only academics without structured arts, sports, music, and cultural programmes is producing academically trained students who may lack the communication, leadership, and teamwork skills that higher education and employers expect." },
+                                { q: "5. What student-teacher ratio should I look for?", a: "CBSE guidelines recommend approximately 30 students per teacher. A ratio of 12:1 to 25:1 is generally considered good for meaningful individual attention. Ratios above 40:1 in a class significantly limit a teacher's ability to address individual learning needs." },
+                                { q: "6. Should I choose a new school or a well-established one?", a: "A well-established school with a track record of board results, alumni outcomes, and stable management offers more certainty. Newly established schools may have modern facilities and motivated management but lack the track record to assess outcomes. If considering a newer school, give greater weight to the qualifications of the management, the completeness of infrastructure, and the affiliation status." }
+                            ].map((faq, idx) => (
+                                <div key={idx} className="p-6 bg-white/5 rounded-2xl border border-white/10">
+                                    <h5 className="font-bold text-brand-secondary mb-3"> {faq.q}</h5>
+                                    <p className="text-white/70 leading-relaxed italic"> {faq.a}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+                </div>
+            </>
+        )
+    },
+    {
+        id: 14,
+        slug: "cbse-vs-matriculation-board-tamil-nadu-guide",
+        title: "CBSE vs Matriculation Board in Tamil Nadu: What Parents Need to Know Before Choosing a School",
+        date: "April 16, 2026",
+        image: blog14,
+        category: "Education",
+        icon: "BookOpen",
+        description: "A detailed breakdown of the differences between CBSE and the Tamil Nadu State Board (Matriculation) to help parents make the right educational choice.",
+        content: (
+            <>
+                <p className="mb-6 text-xl font-medium leading-relaxed text-brand-secondary">
+                    One of the most common questions parents in Tamil Nadu face before school admission is straightforward: CBSE or Matriculation?
+                </p>
+
+                <p className="mb-6 text-lg leading-relaxed text-white">
+                    Both are legitimate boards with established schools across the state. But they are built differently, they prepare students differently, and they lead to different outcomes depending on what your child wants to do after Class 12.
+                </p>
+
+                <p className="mb-10 text-lg leading-relaxed text-white">
+                    This guide breaks down the real differences across curriculum, grading, competitive exam alignment, and long-term outcomes so you can make the right decision for your child.
+                </p>
+
+                <div className="space-y-12">
+                    <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div className="p-8 bg-white/5 rounded-3xl border border-white/10">
+                            <h3 className="text-2xl font-bold mb-4 text-brand-secondary">What Is the CBSE Board?</h3>
+                            <p className="text-white/80 leading-relaxed font-light">
+                                CBSE stands for the Central Board of Secondary Education. Governed by the Government of India, it follows the <strong>NCERT curriculum</strong>—the same framework used in national competitive exams like JEE and NEET. It offers a standardised model across India, which is a major advantage for families who may relocate.
+                            </p>
+                        </div>
+                        <div className="p-8 bg-white/5 rounded-3xl border border-white/10">
+                            <h3 className="text-2xl font-bold mb-4 text-brand-secondary">What Is the Tamil Nadu State Board?</h3>
+                            <p className="text-white/80 leading-relaxed font-light">
+                                Covering both Matriculation and Samacheer Kalvi, this board is governed by the state government. It follows a curriculum designed specifically for Tamil Nadu students, integrating regional context, history, and language (Tamil) more deeply alongside core subjects.
+                            </p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h3 className="text-2xl font-bold mb-6 text-brand-secondary border-l-4 border-brand-secondary pl-4">The Core Differences</h3>
+                        
+                        <div className="space-y-8">
+                            <div>
+                                <h4 className="text-xl font-bold text-white mb-4">Curriculum and Syllabus Depth</h4>
+                                <p className="text-lg leading-relaxed text-white/80 mb-4">
+                                    The CBSE curriculum emphasises <strong>conceptual understanding</strong> over rote memorisation. Students develop analytical thinking by understanding the reasoning behind concepts.
+                                </p>
+                                <p className="text-lg leading-relaxed text-white/80">
+                                    The state board has historically placed greater emphasis on content coverage and rote learning. This works well for state-level exams but can create a gap during national competitive preparation, often requiring students to "re-learn" physics or chemistry in the NCERT framework.
+                                </p>
+                            </div>
+
+                            <div className="bg-brand-primary/30 p-8 rounded-3xl border border-white/10">
+                                <h4 className="text-xl font-bold text-white mb-4">Competitive Exam Alignment</h4>
+                                <p className="text-white/80 mb-4">
+                                    <strong>JEE and NEET</strong> are both designed around the CBSE-NCERT syllabus. The problem-solving approach maps directly to what CBSE students study from Class 9 onwards.
+                                </p>
+                                <p className="text-white/80">
+                                    While state board students can succeed, they often switch frameworks halfway through, adding significant time and cognitive load to their preparation.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section className="overflow-x-auto">
+                        <h3 className="text-2xl font-bold mb-6 text-brand-secondary text-center">CBSE vs State Board: A Direct Comparison</h3>
+                        <table className="w-full text-left border-collapse bg-white/5 rounded-2xl overflow-hidden">
+                            <thead>
+                                <tr className="bg-brand-primary/50 text-brand-secondary">
+                                    <th className="p-4 border border-white/10">Factor</th>
+                                    <th className="p-4 border border-white/10">CBSE</th>
+                                    <th className="p-4 border border-white/10">Tamil Nadu State Board</th>
+                                </tr>
+                            </thead>
+                            <tbody className="text-white/80">
+                                <tr>
+                                    <td className="p-4 border border-white/10 font-bold">Governing Body</td>
+                                    <td className="p-4 border border-white/10">Central Government</td>
+                                    <td className="p-4 border border-white/10">Tamil Nadu State Government</td>
+                                </tr>
+                                <tr className="bg-white/5">
+                                    <td className="p-4 border border-white/10 font-bold">Learning Approach</td>
+                                    <td className="p-4 border border-white/10">Conceptual, Application-based</td>
+                                    <td className="p-4 border border-white/10">Content coverage, Exam-focused</td>
+                                </tr>
+                                <tr>
+                                    <td className="p-4 border border-white/10 font-bold">JEE / NEET Alignment</td>
+                                    <td className="p-4 border border-white/10">Direct alignment</td>
+                                    <td className="p-4 border border-white/10">Requires additional bridging</td>
+                                </tr>
+                                <tr className="bg-white/5">
+                                    <td className="p-4 border border-white/10 font-bold">Grading</td>
+                                    <td className="p-4 border border-white/10">Continuous assessment + finals</td>
+                                    <td className="p-4 border border-white/10">Primarily final examinations</td>
+                                </tr>
+                                <tr>
+                                    <td className="p-4 border border-white/10 font-bold">Transferability</td>
+                                    <td className="p-4 border border-white/10">Across all states</td>
+                                    <td className="p-4 border border-white/10">Within Tamil Nadu</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div className="p-10 bg-brand-secondary/10 rounded-[3rem] border border-brand-secondary/20">
+                            <h3 className="text-2xl font-bold mb-6 text-brand-secondary">Who Should Choose CBSE?</h3>
+                            <ul className="space-y-4">
+                                <li className="flex items-start gap-3 text-white/90">
+                                    <span className="text-brand-secondary">●</span>
+                                    <span>Aspirants for engineering (JEE) or medicine (NEET).</span>
+                                </li>
+                                <li className="flex items-start gap-3 text-white/90">
+                                    <span className="text-brand-secondary">●</span>
+                                    <span>Families who may relocate within India.</span>
+                                </li>
+                                <li className="flex items-start gap-3 text-white/90">
+                                    <span className="text-brand-secondary">●</span>
+                                    <span>Parents seeking analytical and problem-solving focus.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="p-10 bg-white/5 rounded-[3rem] border border-white/10">
+                            <h3 className="text-2xl font-bold mb-6 text-white">Who Should Consider State Board?</h3>
+                            <ul className="space-y-4">
+                                <li className="flex items-start gap-3 text-white/70">
+                                    <span className="text-white/30">●</span>
+                                    <span>A focus on strong Tamil language and literature.</span>
+                                </li>
+                                <li className="flex items-start gap-3 text-white/70">
+                                    <span className="text-white/30">●</span>
+                                    <span>Students aiming for local state-level professional courses.</span>
+                                </li>
+                                <li className="flex items-start gap-3 text-white/70">
+                                    <span className="text-white/30">●</span>
+                                    <span>When a well-run state board school is the most practical choice locally.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section className="bg-brand-primary/60 p-12 rounded-[3.5rem] border border-white/10 text-center">
+                        <h3 className="text-3xl font-bold mb-6 text-brand-secondary">The Honest Assessment</h3>
+                        <p className="text-xl text-white max-w-4xl mx-auto leading-relaxed font-light italic">
+                            The Tamil Nadu State Board produces excellent students, but those aiming for the national competitive level often start with a gap they must bridge. A CBSE student starts with that gap already closed, receiving a structural advantage that compounds over 12 crucial years.
+                        </p>
+                    </section>
+
+                    <section className="bg-brand-secondary/10 p-12 rounded-[3.5rem] border border-brand-secondary/20 relative overflow-hidden group">
+                        <div className="relative z-10 text-center">
+                            <h3 className="text-3xl font-bold mb-8 text-brand-secondary">CBSE Admission in Arani-Arcot-Ranipet</h3>
+                            <p className="text-lg text-white/90 mb-8 max-w-3xl mx-auto">
+                                For families in this region, <strong>The Krisar Academy</strong> offers full CBSE education with integrated NEET/JEE coaching, smart classrooms, and AI laboratories.
+                            </p>
+                            <Link to="/contact" className="inline-block bg-brand-secondary text-brand-primary px-10 py-5 rounded-full font-bold text-xl hover:bg-yellow-400 transition-transform hover:scale-105">
+                                Visit Our Campus
+                            </Link>
+                            <p className="mt-4 text-sm text-white/50">Contact: +91 75400 88387</p>
+                        </div>
+                    </section>
+
+                    <section className="pt-12 border-t border-white/10">
+                        <h3 className="text-3xl font-bold mb-10 text-white text-center">Frequently Asked Questions</h3>
+                        <div className="space-y-6 max-w-4xl mx-auto">
+                            {[
+                                { q: "1. Is CBSE better than State Board in Tamil Nadu?", a: "For national competitive exams like JEE/NEET, CBSE is the stronger foundation as it aligns with the NCERT framework. For regional focus and language depth, the state board is a reasonable choice." },
+                                { q: "2. Can a State Board student crack JEE or NEET?", a: "Yes, but it often requires extra effort to bridge the conceptual gap between state content and the NCERT-based exams." },
+                                { q: "3. Does CBSE include Tamil language?", a: "Yes, CBSE schools in Tamil Nadu offer Tamil as a language subject, though literature depth may be less extensive than the state board." },
+                                { q: "4. Which board is better for higher education?", a: "CBSE preparation is more directly relevant for national institutions (IITs, NITs, AIIMS), while both are accepted for state universities." }
+                            ].map((faq, idx) => (
+                                <div key={idx} className="p-8 bg-white/5 rounded-3xl border border-white/10">
+                                    <h5 className="font-bold text-brand-secondary mb-3">{faq.q}</h5>
+                                    <p className="text-white/70 italic leading-relaxed">{faq.a}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+                </div>
+            </>
+        )
+    },
+    {
+        id: 15,
+        slug: "best-schools-in-arani-admissions-guide-2025-26",
+        title: "Schools in Arani: A Complete List for Parents (2025–26 Admissions)",
+        date: "April 17, 2026",
+        image: blog15,
+        category: "Education",
+        icon: "BookOpen",
+        description: "An essential guide for parents searching for the best schools in Arani for the 2025–26 academic year, covering CBSE and State Board options.",
+        content: (
+            <>
+                <p className="mb-6 text-xl font-medium leading-relaxed text-brand-secondary">
+                    Searching for the best schools in Arani for the 2025–26 academic year requires comparing curriculum, infrastructure, and long-term outcomes.
+                </p>
+
+                <p className="mb-6 text-lg leading-relaxed text-white">
+                    Within a 10–30 km radius of Arani, there are several high-quality options across CBSE and Tamil Nadu State Boards. This guide covers major school options in and around the town to help you shortlist the right one for your child.
+                </p>
+
+                <div className="bg-brand-secondary/10 p-8 rounded-3xl border border-brand-secondary/20 mb-10">
+                    <h3 className="text-2xl font-bold mb-4 text-brand-secondary">Quick Answer: Best Schools in Arani</h3>
+                    <p className="text-white/80 leading-relaxed font-light">
+                        Top schools in the region include CBSE institutions like <strong>The Krisar Academy</strong>, <strong>Dr. SRK Vidhyalaya</strong>, and <strong>Maharishi Vidya Mandir</strong>, along with well-known matriculation schools such as <strong>Orange International School</strong> and <strong>Pinkz Public School</strong>.
+                    </p>
+                </div>
+
+                <div className="space-y-12">
+                    <section>
+                        <h3 className="text-2xl font-bold mb-6 text-brand-secondary border-l-4 border-brand-secondary pl-4">How to Choose the Right School in Arani</h3>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {[
+                                { title: "Academic Goals", desc: "For national competitive exams (NEET/JEE), CBSE is generally preferred due to NCERT alignment." },
+                                { title: "Location & Transport", desc: "Evaluate daily travel time and confirm transport coverage for your specific neighbourhood." },
+                                { title: "Infrastructure", desc: "Visit campuses to check classrooms, science labs, and extracurricular facilities." },
+                                { title: "Level of Schooling", desc: "Schools offering Pre-KG to Grade 12 avoid academic disruption during crucial years." },
+                                { title: "Teacher-Student Ratio", desc: "Smaller class sizes ensure better individual attention and learning outcomes." }
+                            ].map((factor, idx) => (
+                                <div key={idx} className="p-6 bg-white/5 rounded-2xl border border-white/10 hover:border-brand-secondary/30 transition-colors">
+                                    <h5 className="font-bold text-white mb-2">{idx + 1}. {factor.title}</h5>
+                                    <p className="text-sm text-white/60">{factor.desc}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+
+                    <section className="bg-white/5 p-10 rounded-[3rem] border border-white/10 overflow-hidden relative">
+                        <div className="relative z-10">
+                            <h3 className="text-2xl font-bold mb-6 text-brand-secondary">CBSE vs Matriculation Schools in Arani</h3>
+                            <p className="text-lg leading-relaxed text-white mb-10">
+                                Parents searching for schools in Arani for <strong>NEET or JEE preparation</strong> often prefer CBSE schools because the curriculum is designed to support national-level competitive assessments.
+                            </p>
+                            <img src={blog15Inner} alt="Academic Excellence" className="w-full h-auto rounded-3xl mb-8 border border-white/10" />
+                        </div>
+                    </section>
+
+                    <section>
+                        <h3 className="text-3xl font-bold mb-10 text-brand-secondary text-center">List of Schools in Arani and Nearby Areas</h3>
+                        
+                        <div className="space-y-8">
+                            {[
+                                {
+                                    name: "1. The Krisar Academy – CBSE School Near Arani",
+                                    board: "CBSE",
+                                    location: "Arcot–Arani Main Road",
+                                    best: "NEET/JEE-focused students",
+                                    desc: "Among the top schools in Arani region, it is a preferred choice for parents looking for structured education aligned with national-level competitive exams.",
+                                    highlights: ["Integrated NEET & JEE coaching", "Smart classrooms & AI/Robotics lab", "1,000-seat auditorium", "Transport across Arani, Arcot, Ranipet"]
+                                },
+                                {
+                                    name: "2. Dr. SRK Vidhyalaya",
+                                    board: "CBSE",
+                                    location: "Arani to Arcot Road, Nangamangalam",
+                                    best: "Families along the Arpni-Arcot corridor",
+                                    desc: "Recognized school offering CBSE curriculum from primary to higher secondary levels.",
+                                    highlights: ["CBSE curriculum", "Accessible from nearby villages", "Managed by educational trust"]
+                                },
+                                {
+                                    name: "3. Maharishi Vidya Mandir (MVM Arcot)",
+                                    board: "CBSE",
+                                    location: "Poongodu, Arcot",
+                                    best: "Parents preferring established networks",
+                                    desc: "Part of a national chain offering standardised teaching methods and curriculum consistency.",
+                                    highlights: ["National school group reputation", "Valid CBSE affiliation through 2027", "Structured environment"]
+                                },
+                                {
+                                    name: "4. Global Public School",
+                                    board: "CBSE",
+                                    location: "Bengaluru-Chennai Highway, Veepur",
+                                    best: "Families needing high-way connectivity",
+                                    desc: "Located along a major highway, making it convenient for commuting families.",
+                                    highlights: ["Senior secondary classes", "Highway accessibility", "Managed by educational trust"]
+                                },
+                                {
+                                    name: "5. Orange International Matric Higher Secondary School",
+                                    board: "State Board (Matriculation)",
+                                    location: "Arani-Chetpet Road, Arani Town",
+                                    best: "Families looking for residential facilities",
+                                    desc: "Established school within Arani town offering matriculation curriculum and hostel facilities.",
+                                    highlights: ["Located within Arani town", "Residential facility available", "Established institution"]
+                                }
+                            ].map((school, sIdx) => (
+                                <div key={sIdx} className="p-8 bg-brand-primary/20 rounded-3xl border border-white/10 hover:border-brand-secondary/40 transition-all duration-300">
+                                    <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
+                                        <h4 className="text-2xl font-bold text-white">{school.name}</h4>
+                                        <span className="px-4 py-1.5 bg-brand-secondary text-brand-primary rounded-full text-xs font-bold uppercase tracking-wider">{school.board}</span>
+                                    </div>
+                                    <p className="text-white/80 mb-6 italic">{school.desc}</p>
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                                        <div className="text-sm text-white/60"><span className="text-brand-secondary mr-2">📍</span><strong>Location:</strong> {school.location}</div>
+                                        <div className="text-sm text-white/60"><span className="text-brand-secondary mr-2">🎯</span><strong>Best for:</strong> {school.best}</div>
+                                    </div>
+                                    <div className="flex flex-wrap gap-2">
+                                        {school.highlights.map((h, i) => (
+                                            <span key={i} className="text-xs px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-white/50">✓ {h}</span>
+                                        ))}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+
+                    <section className="bg-brand-secondary/20 p-12 rounded-[3.5rem] border border-brand-secondary/30 relative overflow-hidden text-center">
+                        <h3 className="text-3xl font-bold mb-6 text-brand-secondary">Admissions Open (2025–26)</h3>
+                        <p className="text-lg text-white mb-8 max-w-3xl mx-auto">
+                            Seats in popular CBSE schools near Arani fill quickly. Admissions are currently open at <strong>The Krisar Academy</strong> for Pre-KG to Grade 12. Early application is recommended.
+                        </p>
+                        <div className="flex flex-col sm:flex-row justify-center gap-4">
+                            <Link to="/contact" className="bg-brand-secondary text-brand-primary px-8 py-4 rounded-full font-bold hover:bg-yellow-400 transition-colors">Inquire Now</Link>
+                            <a href="tel:+917540088387" className="px-8 py-4 border border-brand-secondary text-brand-secondary rounded-full font-bold hover:bg-brand-secondary hover:text-brand-primary transition-all underline decoration-1 underline-offset-4">+91 75400 88387</a>
+                        </div>
+                    </section>
+
+                    <section className="pt-12 border-t border-white/10">
+                        <h3 className="text-3xl font-bold mb-10 text-white text-center">Frequently Asked Questions</h3>
+                        <div className="space-y-6 max-w-4xl mx-auto">
+                            {[
+                                { q: "1. Are there CBSE schools inside Arani town?", a: "Currently, there are no CBSE schools within Arani town limits. Reputed CBSE options like The Krisar Academy and Dr. SRK Vidhyalaya are located along the Arani–Arcot corridor." },
+                                { q: "2. Do schools in Arani provide transport facilities?", a: "Yes, many schools, including The Krisar Academy, offer transport across Arani town and surrounding villages." },
+                                { q: "3. When do admissions open for schools in Arani?", a: "Generally between January and April for the academic year starting in June. For 2025-26, admissions are already active at several institutions." },
+                                { q: "4. Which is the best school in Arani?", a: "The best school depends on your goals. For competitive exam prep (NEET/JEE), The Krisar Academy is often preferred for its facilities and integrated coaching." }
+                            ].map((faq, idx) => (
+                                <div key={idx} className="p-8 bg-white/5 rounded-3xl border border-white/10">
+                                    <h5 className="font-bold text-brand-secondary mb-3">{faq.q}</h5>
+                                    <p className="text-white/70 leading-relaxed font-light italic">A: {faq.a}</p>
+                                </div>
+                            ))}
+                        </div>
                     </section>
                 </div>
             </>
