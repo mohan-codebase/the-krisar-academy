@@ -1385,7 +1385,7 @@ export const blogData = [
                                         to="/contact" 
                                         className="inline-flex items-center gap-2 bg-brand-secondary text-brand-primary px-8 py-4 rounded-full font-bold text-lg hover:bg-yellow-400 transition-colors"
                                     >
-                                        Inquire for Admissions 2025-26
+                                        Inquire for Admissions 2026-27
                                     </Link>
                                     <p className="mt-4 text-sm text-white/50">Contact: +91 75400 88387</p>
                                     <Link to="/admission-details" className="mt-4 text-sm text-white/50">View admission details</Link>
