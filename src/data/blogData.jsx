@@ -1673,16 +1673,16 @@ export const blogData = [
     {
         id: 15,
         slug: "best-schools-in-arani-admissions-guide-2025-26",
-        title: "Schools in Arani: A Complete List for Parents (2025–26 Admissions)",
+        title: "Schools in Arani: A Complete List for Parents (2026–27 Admissions)",
         date: "April 17, 2026",
         image: blog15,
         category: "Education",
         icon: "BookOpen",
-        description: "If you are searching for the best schools in Arani for the 2025–26 academic year",
+        description: "If you are searching for the best schools in Arani for the 2026–27 academic year",
         content: (
             <>
                 <p className="mb-6 text-xl font-medium leading-relaxed text-brand-secondary">
-                    If you are searching for the best schools in Arani for the 2025–26 academic year, there are several good options available across CBSE and Tamil Nadu State Board within a 10–30 km radius of the town.
+                    If you are searching for the best schools in Arani for the 2026–27 academic year, there are several good options available across CBSE and Tamil Nadu State Board within a 10–30 km radius of the town.
                 </p>
 
                 <p className="mb-6 text-lg leading-relaxed text-white">
