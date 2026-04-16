@@ -1672,7 +1672,7 @@ export const blogData = [
     },
     {
         id: 15,
-        slug: "best-schools-in-arani-admissions-guide-2025-26",
+        slug: "best-schools-in-arani-admissions-guide-2026-27",
         title: "Schools in Arani: A Complete List for Parents (2026–27 Admissions)",
         date: "April 17, 2026",
         image: blog15,
