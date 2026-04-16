@@ -1438,14 +1438,20 @@ export const blogData = [
                     <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div className="p-8 bg-white/5 rounded-3xl border border-white/10">
                             <h3 className="text-2xl font-bold mb-4 text-brand-secondary">What Is the CBSE Board?</h3>
+                            <p className="text-white/80 leading-relaxed font-light mb-4">
+                                CBSE stands for the Central Board of Secondary Education. It is a national board governed by the Government of India, operating under the Ministry of Education. CBSE schools follow the <strong>NCERT curriculum</strong>, the same curriculum framework used across India's most competitive national examinations, including JEE for engineering and NEET for medicine.
+                            </p>
                             <p className="text-white/80 leading-relaxed font-light">
-                                CBSE stands for the Central Board of Secondary Education. Governed by the Government of India, it follows the <strong>NCERT curriculum</strong>—the same framework used in national competitive exams like JEE and NEET. It offers a standardised model across India, which is a major advantage for families who may relocate.
+                                CBSE schools operate under a standardised framework. Whether a school is in Tamil Nadu, Delhi, or Maharashtra, the CBSE curriculum, examination structure, and grading system remain consistent. This standardisation is a significant advantage for families who may relocate.
                             </p>
                         </div>
                         <div className="p-8 bg-white/5 rounded-3xl border border-white/10">
-                            <h3 className="text-2xl font-bold mb-4 text-brand-secondary">What Is the Tamil Nadu State Board?</h3>
+                            <h3 className="text-2xl font-bold mb-4 text-brand-secondary">What Is the Tamil Nadu State Board (Matriculation)?</h3>
+                            <p className="text-white/80 leading-relaxed font-light mb-4">
+                                The Tamil Nadu State Board, covering both the Matriculation and Samacheer Kalvi boards, is governed by the Tamil Nadu government. These schools follow a curriculum designed specifically for Tamil Nadu students, covering state-specific content in history, geography, and regional context alongside the core subjects.
+                            </p>
                             <p className="text-white/80 leading-relaxed font-light">
-                                Covering both Matriculation and Samacheer Kalvi, this board is governed by the state government. It follows a curriculum designed specifically for Tamil Nadu students, integrating regional context, history, and language (Tamil) more deeply alongside core subjects.
+                                State board schools are widespread across Tamil Nadu. They form the majority of private schools in smaller towns and villages, and all government schools operate under this board.
                             </p>
                         </div>
                     </section>
@@ -1457,20 +1463,69 @@ export const blogData = [
                             <div>
                                 <h4 className="text-xl font-bold text-white mb-4">Curriculum and Syllabus Depth</h4>
                                 <p className="text-lg leading-relaxed text-white/80 mb-4">
-                                    The CBSE curriculum emphasises <strong>conceptual understanding</strong> over rote memorisation. Students develop analytical thinking by understanding the reasoning behind concepts.
+                                    The CBSE curriculum, built on NCERT textbooks, emphasises <strong>conceptual understanding over rote memorisation</strong>. Students are expected to understand the reasoning behind a concept, apply it to different problem types, and develop analytical thinking alongside subject knowledge.
                                 </p>
-                                <p className="text-lg leading-relaxed text-white/80">
-                                    The state board has historically placed greater emphasis on content coverage and rote learning. This works well for state-level exams but can create a gap during national competitive preparation, often requiring students to "re-learn" physics or chemistry in the NCERT framework.
+                                <p className="text-lg leading-relaxed text-white/80 mb-4">
+                                    The Tamil Nadu State Board syllabus covers all core subjects but has historically placed greater emphasis on content coverage and rote learning. Students learn what is in the textbook and are examined on it. This works well for state-level examinations but creates a gap when students enter national competitive exam preparation.
+                                </p>
+                                 <p className="text-lg leading-relaxed text-white/80">
+                                    The practical consequence: a student who has studied CBSE from Class 6 onwards enters JEE or NEET coaching with a conceptual foundation already in place. A State Board student entering the same coaching often needs to relearn significant portions of Physics, Chemistry, and Biology from the NCERT framework, because the competitive exam questions are written around NCERT concepts, not state board content.
                                 </p>
                             </div>
 
                             <div className="bg-brand-primary/30 p-8 rounded-3xl border border-white/10">
                                 <h4 className="text-xl font-bold text-white mb-4">Competitive Exam Alignment</h4>
                                 <p className="text-white/80 mb-4">
-                                    <strong>JEE and NEET</strong> are both designed around the CBSE-NCERT syllabus. The problem-solving approach maps directly to what CBSE students study from Class 9 onwards.
+                                    This is the single most important difference for parents with aspirations toward engineering or medicine.
+                                </p>
+                                <p className="text-white/80 mb-4">
+                                    <strong>JEE (Joint Entrance Examination) and NEET (National Eligibility cum Entrance Test)</strong> are both designed around the CBSE-NCERT syllabus. The questions, the problem-solving approach, and the conceptual depth required all map directly to what CBSE students study from Class 9 onwards.
+                                </p>
+                                <p className="text-white/80 mb-4">
+                                    CBSE students preparing for JEE or NEET are deepening knowledge in subjects they have already studied in the right framework. State Board students are switching frameworks while simultaneously preparing for the exam, which adds time, cost, and cognitive load.
                                 </p>
                                 <p className="text-white/80">
-                                    While state board students can succeed, they often switch frameworks halfway through, adding significant time and cognitive load to their preparation.
+                                    Beyond JEE and NEET, national-level examinations like UPSC, NDA, and many central government recruitment tests are also structured around the NCERT framework. The CBSE advantage compounds across a student's entire career.
+                                </p>
+                            </div>
+
+                            <div className="bg-brand-primary/30 p-8 rounded-3xl border border-white/10">
+                                <h4 className="text-xl font-bold text-white mb-4">Grading System</h4>
+                                <p className="text-white/80 mb-4">
+                                    <strong>CBSE</strong> uses a grading system based on a 10-point scale with internal assessments contributing to the final grade. Continuous and Comprehensive Evaluation means students are assessed across the year, not just in final examinations. This reduces exam pressure and gives a more accurate picture of a student's learning.
+                                </p>
+                                <p className="text-white/80">
+                                    The <strong>Tamil Nadu State Board</strong> uses a mark-based system with greater weight on final examinations. Performance in two or three major examinations determines the bulk of a student's result. For students who perform consistently but struggle under high-stakes single-sitting exams, this is a structural disadvantage.
+                                </p>
+                            </div>
+
+                            <div className="bg-brand-primary/30 p-8 rounded-3xl border border-white/10">
+                                <h4 className="text-xl font-bold text-white mb-4">Application-Based vs Content-Based Learning</h4>
+                                <p className="text-white/80 mb-4">
+                                    <strong>CBSE's</strong> focus on application-based learning means students are regularly required to solve problems, analyse situations, and apply concepts to new scenarios. This builds problem-solving skills and analytical thinking that carry forward into higher education and professional life.
+                                </p>
+                                <p className="text-white/80">
+                                    State Board education, particularly in smaller schools, often defaults to content coverage, completing the syllabus and preparing students to reproduce that content in examinations. This is not ineffective for board examinations but leaves gaps in critical thinking and practical skills that universities and employers increasingly demand.
+                                </p>
+                            </div>
+
+                            <div className="bg-brand-primary/30 p-8 rounded-3xl border border-white/10">
+                                <h4 className="text-xl font-bold text-white mb-4">Transferability Across India</h4>
+                                <p className="text-white/80 mb-4">
+                                    A CBSE student can transfer to any CBSE school in India with minimal disruption. The curriculum, textbooks, and examination structure are uniform. For families in government employment, defence services, or corporate jobs where transfers are common, this is a significant practical advantage.
+                                </p>
+                                <p className="text-white/80">
+                                    State Board transfers are more complex. A student moving from Tamil Nadu to another state faces curriculum differences, language medium differences, and often a full-year disruption.
+                                </p>
+                            </div>
+
+                            <div className="bg-brand-primary/30 p-8 rounded-3xl border border-white/10">
+                                <h4 className="text-xl font-bold text-white mb-4">Regional Language and Local Context</h4>
+                                <p className="text-white/80 mb-4">
+                                    One genuine advantage of Tamil Nadu State Board schools is the integration of Tamil language, Tamil literature, and Tamil Nadu-specific content in history and geography. For families who want their children to maintain strong roots in Tamil language and regional identity, state board schools offer more structured exposure.
+                                </p>
+                                <p className="text-white/80">
+                                    CBSE schools do include Tamil as a language subject, but the depth of Tamil literature coverage is generally less than what state board schools offer.
                                 </p>
                             </div>
                         </div>
@@ -1489,28 +1544,48 @@ export const blogData = [
                             <tbody className="text-white/80">
                                 <tr>
                                     <td className="p-4 border border-white/10 font-bold">Governing Body</td>
-                                    <td className="p-4 border border-white/10">Central Government</td>
+                                    <td className="p-4 border border-white/10">Central Government (Ministry of Education)</td>
                                     <td className="p-4 border border-white/10">Tamil Nadu State Government</td>
                                 </tr>
                                 <tr className="bg-white/5">
+                                    <td className="p-4 border border-white/10 font-bold">Curriculum</td>
+                                    <td className="p-4 border border-white/10">NCERT, national framework</td>
+                                    <td className="p-4 border border-white/10">State-designed curriculum</td>
+                                </tr>
+                                <tr >
                                     <td className="p-4 border border-white/10 font-bold">Learning Approach</td>
                                     <td className="p-4 border border-white/10">Conceptual, Application-based</td>
                                     <td className="p-4 border border-white/10">Content coverage, Exam-focused</td>
                                 </tr>
-                                <tr>
+                                <tr className="bg-white/5">
                                     <td className="p-4 border border-white/10 font-bold">JEE / NEET Alignment</td>
                                     <td className="p-4 border border-white/10">Direct alignment</td>
                                     <td className="p-4 border border-white/10">Requires additional bridging</td>
                                 </tr>
-                                <tr className="bg-white/5">
+                                <tr >
                                     <td className="p-4 border border-white/10 font-bold">Grading</td>
                                     <td className="p-4 border border-white/10">Continuous assessment + finals</td>
                                     <td className="p-4 border border-white/10">Primarily final examinations</td>
                                 </tr>
-                                <tr>
+                                <tr className="bg-white/5">
                                     <td className="p-4 border border-white/10 font-bold">Transferability</td>
                                     <td className="p-4 border border-white/10">Across all states</td>
                                     <td className="p-4 border border-white/10">Within Tamil Nadu</td>
+                                </tr>
+                                <tr >
+                                    <td className="p-4 border border-white/10 font-bold">Tamil language depth</td>
+                                    <td className="p-4 border border-white/10">Moderate</td>
+                                    <td className="p-4 border border-white/10">Strong</td>
+                                </tr>
+                                <tr className="bg-white/5">
+                                    <td className="p-4 border border-white/10 font-bold">School availability</td>
+                                    <td className="p-4 border border-white/10">Selective, fewer schools</td>
+                                    <td className="p-4 border border-white/10">LWidespread across all areas</td>
+                                </tr>
+                                <tr>
+                                    <td className="p-4 border border-white/10 font-bold">Fee structure</td>
+                                    <td className="p-4 border border-white/10">Generally higher</td>
+                                    <td className="p-4 border border-white/10">Generally lower</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -1522,15 +1597,11 @@ export const blogData = [
                             <ul className="space-y-4">
                                 <li className="flex items-start gap-3 text-white/90">
                                     <span className="text-brand-secondary">●</span>
-                                    <span>Aspirants for engineering (JEE) or medicine (NEET).</span>
+                                    <span>CBSE is the stronger choice if your child has aspirations toward engineering (JEE), medicine (NEET), or any nationally competitive career path. The CBSE framework builds the right conceptual foundation from school itself, reducing the gap between school learning and competitive exam preparation.</span>
                                 </li>
                                 <li className="flex items-start gap-3 text-white/90">
                                     <span className="text-brand-secondary">●</span>
-                                    <span>Families who may relocate within India.</span>
-                                </li>
-                                <li className="flex items-start gap-3 text-white/90">
-                                    <span className="text-brand-secondary">●</span>
-                                    <span>Parents seeking analytical and problem-solving focus.</span>
+                                    <span>It is also the right choice if your family may relocate within India, since CBSE transfers are seamless across all states. And if you want your child to develop strong analytical thinking, problem-solving skills, and application-based learning habits from an early age, CBSE delivers that consistently.</span>
                                 </li>
                             </ul>
                         </div>
@@ -1539,15 +1610,7 @@ export const blogData = [
                             <ul className="space-y-4">
                                 <li className="flex items-start gap-3 text-white/70">
                                     <span className="text-white/30">●</span>
-                                    <span>A focus on strong Tamil language and literature.</span>
-                                </li>
-                                <li className="flex items-start gap-3 text-white/70">
-                                    <span className="text-white/30">●</span>
-                                    <span>Students aiming for local state-level professional courses.</span>
-                                </li>
-                                <li className="flex items-start gap-3 text-white/70">
-                                    <span className="text-white/30">●</span>
-                                    <span>When a well-run state board school is the most practical choice locally.</span>
+                                    <span>State Board is a reasonable choice if your priority is strong Tamil language and literature education alongside core academics. It also suits students who will pursue local professional courses or state-level competitive examinations where Tamil Nadu State Board marks are a primary criterion. If access to a quality CBSE school in your location is limited and a well-run State Board school is available, that can be a practical decision.</span>
                                 </li>
                             </ul>
                         </div>
@@ -1556,15 +1619,21 @@ export const blogData = [
                     <section className="bg-brand-primary/60 p-12 rounded-[3.5rem] border border-white/10 text-center">
                         <h3 className="text-3xl font-bold mb-6 text-brand-secondary">The Honest Assessment</h3>
                         <p className="text-xl text-white max-w-4xl mx-auto leading-relaxed font-light italic">
-                            The Tamil Nadu State Board produces excellent students, but those aiming for the national competitive level often start with a gap they must bridge. A CBSE student starts with that gap already closed, receiving a structural advantage that compounds over 12 crucial years.
+                            For parents in the Arani-Arcot-Ranipet area making this decision today, the answer is clear. If your child has any possibility of pursuing engineering, medicine, or a nationally competitive career, a CBSE school gives them a structural advantage from Class 1 that compounds over 12 years of schooling. Closing that gap later requires extra effort, extra coaching, and extra expense.
+                        </p>
+                        <p className="text-xl text-white max-w-4xl mx-auto leading-relaxed font-light italic">
+                            The Tamil Nadu State Board produces excellent students. But those students who reach the national competitive level do so despite their board preparation, not because of it. They invest significantly in NCERT-aligned coaching to bridge the gap. A CBSE student starts with that gap already closed.
                         </p>
                     </section>
 
                     <section className="bg-brand-secondary/10 p-12 rounded-[3.5rem] border border-brand-secondary/20 relative overflow-hidden group">
                         <div className="relative z-10 text-center">
-                            <h3 className="text-3xl font-bold mb-8 text-brand-secondary">CBSE Admission in Arani-Arcot-Ranipet</h3>
+                            <h3 className="text-3xl font-bold mb-8 text-brand-secondary">CBSE Admission in the Arani-Arcot-Ranipet Area</h3>
                             <p className="text-lg text-white/90 mb-8 max-w-3xl mx-auto">
-                                For families in this region, <strong>The Krisar Academy</strong> offers full CBSE education with integrated NEET/JEE coaching, smart classrooms, and AI laboratories.
+                                For families in this region looking for a full CBSE school from Pre-KG to Grade 12, <strong>The Krisar Academy</strong> is located on the Arcot to Arani Main Road, Paradarami Village, Ranipet District. The school offers integrated NEET and JEE coaching, smart classrooms, an AI and Robotics laboratory, and transport covering Arani, Arcot, Ranipet, Walajapet, and Vellore.
+                            </p>
+                            <p className="text-lg text-white/90 mb-8 max-w-3xl mx-auto">
+                                Admissions for 2025-26 are currently open.
                             </p>
                             <Link to="/contact" className="inline-block bg-brand-secondary text-brand-primary px-10 py-5 rounded-full font-bold text-xl hover:bg-yellow-400 transition-transform hover:scale-105">
                                 Visit Our Campus
@@ -1577,10 +1646,12 @@ export const blogData = [
                         <h3 className="text-3xl font-bold mb-10 text-white text-center">Frequently Asked Questions</h3>
                         <div className="space-y-6 max-w-4xl mx-auto">
                             {[
-                                { q: "1. Is CBSE better than State Board in Tamil Nadu?", a: "For national competitive exams like JEE/NEET, CBSE is the stronger foundation as it aligns with the NCERT framework. For regional focus and language depth, the state board is a reasonable choice." },
-                                { q: "2. Can a State Board student crack JEE or NEET?", a: "Yes, but it often requires extra effort to bridge the conceptual gap between state content and the NCERT-based exams." },
-                                { q: "3. Does CBSE include Tamil language?", a: "Yes, CBSE schools in Tamil Nadu offer Tamil as a language subject, though literature depth may be less extensive than the state board." },
-                                { q: "4. Which board is better for higher education?", a: "CBSE preparation is more directly relevant for national institutions (IITs, NITs, AIIMS), while both are accepted for state universities." }
+                                { q: "1. Is CBSE better than State Board in Tamil Nadu?", a: "For students aiming at national competitive examinations like JEE and NEET, CBSE is the stronger foundation. The CBSE curriculum directly aligns with NCERT, which is the basis for both exams. State Board students typically need additional coaching to bridge this gap. For students focused on state-level careers or strong Tamil language education, State Board is a reasonable choice." },
+                                { q: "2. Can a State Board student crack JEE or NEET?", a: "Yes, but it requires significant extra effort. State Board students entering JEE or NEET coaching need to first learn the NCERT framework, which CBSE students have already studied in school. Many students do crack these exams from State Board, but the preparation burden is higher and the time required is longer." },
+                                { q: "3. Is the CBSE grading system better than State Board?", a: "CBSE uses continuous assessment throughout the year, reducing dependence on a single final examination. This generally gives a more accurate picture of a student's ability. State Board relies more heavily on final exam performance, which can disadvantage consistent students who struggle under single high-stakes sittings." },
+                                { q: "4. Which board is better for higher education in Tamil Nadu?", a: "For admission to national institutions like IITs, NITs, AIIMS, and central universities, CBSE preparation is more directly relevant. For Tamil Nadu state universities and state engineering or medical colleges, both boards are accepted. However, competitive admission to state colleges also involves JEE and NEET, so the CBSE advantage applies there too." },
+                                { q: "5. Does CBSE include Tamil language?", a: "Yes. CBSE schools in Tamil Nadu offer Tamil as a language subject. However, the depth of Tamil literature coverage is generally more extensive in State Board schools." },
+                                { q: "6. Which board has more schools in Tamil Nadu?", a: "Tamil Nadu State Board schools significantly outnumber CBSE schools across the state, particularly in smaller towns and villages. CBSE schools are more concentrated in urban and semi-urban areas." }
                             ].map((faq, idx) => (
                                 <div key={idx} className="p-8 bg-white/5 rounded-3xl border border-white/10">
                                     <h5 className="font-bold text-brand-secondary mb-3">{faq.q}</h5>
@@ -1605,34 +1676,111 @@ export const blogData = [
         content: (
             <>
                 <p className="mb-6 text-xl font-medium leading-relaxed text-brand-secondary">
-                    Searching for the best schools in Arani for the 2025–26 academic year requires comparing curriculum, infrastructure, and long-term outcomes.
+                    If you are searching for the best schools in Arani for the 2025–26 academic year, there are several good options available across CBSE and Tamil Nadu State Board within a 10–30 km radius of the town.
                 </p>
 
                 <p className="mb-6 text-lg leading-relaxed text-white">
-                    Within a 10–30 km radius of Arani, there are several high-quality options across CBSE and Tamil Nadu State Boards. This guide covers major school options in and around the town to help you shortlist the right one for your child.
+                    Parents exploring schools in Arani often compare curriculum, location, infrastructure, and long-term academic outcomes before making a decision. This guide covers major school options in and around Arani to help you shortlist the right one.
                 </p>
 
                 <div className="bg-brand-secondary/10 p-8 rounded-3xl border border-brand-secondary/20 mb-10">
                     <h3 className="text-2xl font-bold mb-4 text-brand-secondary">Quick Answer: Best Schools in Arani</h3>
+                    <p className="text-white/80 leading-relaxed font-light mb-4">
+                        The best <strong>schools in Arani</strong> and nearby areas include CBSE institutions like The Krisar Academy, Dr. SRK Vidhyalaya, and Maharishi Vidya Mandir, along with well-known matriculation schools such as Orange International School and Pinkz Public School.
+                    </p>
                     <p className="text-white/80 leading-relaxed font-light">
-                        Top schools in the region include CBSE institutions like <strong>The Krisar Academy</strong>, <strong>Dr. SRK Vidhyalaya</strong>, and <strong>Maharishi Vidya Mandir</strong>, along with well-known matriculation schools such as <strong>Orange International School</strong> and <strong>Pinkz Public School</strong>.
+                        The right school depends on your child’s academic goals, preferred board, and daily travel feasibility.
                     </p>
                 </div>
 
                 <div className="space-y-12">
                     <section>
                         <h3 className="text-2xl font-bold mb-6 text-brand-secondary border-l-4 border-brand-secondary pl-4">How to Choose the Right School in Arani</h3>
+                        <p className="text-white/80 leading-relaxed font-light mb-4">
+                            Choosing between different schools in Arani involves more than just picking the nearest option. Parents should evaluate both academic quality and practical factors before making a decision.
+                        </p>
+                        <p className="text-white/80 leading-relaxed font-light mb-4">
+                            Here are five key factors to consider:
+                        </p>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                             {[
-                                { title: "Academic Goals", desc: "For national competitive exams (NEET/JEE), CBSE is generally preferred due to NCERT alignment." },
-                                { title: "Location & Transport", desc: "Evaluate daily travel time and confirm transport coverage for your specific neighbourhood." },
-                                { title: "Infrastructure", desc: "Visit campuses to check classrooms, science labs, and extracurricular facilities." },
-                                { title: "Level of Schooling", desc: "Schools offering Pre-KG to Grade 12 avoid academic disruption during crucial years." },
-                                { title: "Teacher-Student Ratio", desc: "Smaller class sizes ensure better individual attention and learning outcomes." }
+                                { 
+                                    title: "Academic Goals and Curriculum", 
+                                    desc: [
+                                        "Start by identifying your child’s long-term academic direction. If you are aiming for national-level competitive exams like NEET or JEE, CBSE schools in Arani are generally preferred due to their alignment with the NCERT curriculum.",
+                                        "For families comparing schools in Arani, choosing the right board—CBSE or State Board—plays a crucial role in future academic pathways." 
+                                    ]
+                                },
+                                { 
+                                    title: "Check Location and Transport Convenience", 
+                                    desc: "Many top schools in Arani are located along the Arani–Arcot corridor or nearby towns like Arcot and Ranipet. Before finalizing:",
+                                    points: [
+                                        "Evaluate daily travel time",
+                                        "Confirm transport availability",
+                                        "Ensure the commute is comfortable for the child"
+                                    ],
+                                    footer: "A well-located school ensures consistency and routine."
+                                },
+                                { 
+                                    title: "Evaluate Infrastructure and Learning Facilities", 
+                                    desc: "While shortlisting schools in Arani, visit the campus to assess facilities such as:",
+                                    points: [
+                                        "Classrooms and digital learning tools",
+                                        "Science and computer labs",
+                                        "Sports and extracurricular infrastructure"
+                                    ],
+                                    footer: "Good infrastructure supports both academic and overall development."
+                                },
+                                { 
+                                    title: "Look for Complete Schooling and Individual Attention", 
+                                    desc: [
+                                        "Parents often prefer schools that offer education from Pre-KG to Grade 12, as it avoids disruption during crucial academic years.",
+                                        "Also, check the student-teacher ratio, as smaller class sizes in schools in Arani can ensure better individual attention and improved learning outcomes."
+                                    ]
+                                },
+                                { 
+                                    title: "Focus on Overall Development and School Reputation", 
+                                    desc: "A good school should balance academics with extracurricular growth. While comparing schools in Arani, consider:",
+                                    points: [
+                                        "Sports, arts, and skill development programs",
+                                        "Teaching quality and faculty interaction",
+                                        "Parent reviews and overall reputation"
+                                    ],
+                                    footer: "Schools that combine strong academics, facilities, and consistent results are often the most preferred choices."
+                                }
                             ].map((factor, idx) => (
-                                <div key={idx} className="p-6 bg-white/5 rounded-2xl border border-white/10 hover:border-brand-secondary/30 transition-colors">
-                                    <h5 className="font-bold text-white mb-2">{idx + 1}. {factor.title}</h5>
-                                    <p className="text-sm text-white/60">{factor.desc}</p>
+                                <div key={idx} className="p-6 bg-white/5 rounded-2xl border border-white/10 hover:border-brand-secondary/30 transition-all hover:shadow-lg hover:shadow-brand-secondary/5 group flex flex-col h-full">
+                                    <h5 className="font-bold text-white mb-3 flex items-center gap-3">
+                                        <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-secondary/20 text-brand-secondary text-sm group-hover:bg-brand-secondary group-hover:text-brand-primary transition-colors">
+                                            {idx + 1}
+                                        </span>
+                                        {factor.title}
+                                    </h5>
+                                    
+                                    <div className="space-y-3 mb-3">
+                                        {Array.isArray(factor.desc) ? (
+                                            factor.desc.map((p, pIdx) => (
+                                                <p key={pIdx} className="text-sm text-white/70 leading-relaxed font-light">{p}</p>
+                                            ))
+                                        ) : (
+                                            <p className="text-sm text-white/70 leading-relaxed font-light">{factor.desc}</p>
+                                        )}
+                                    </div>
+                                    
+                                    {factor.points && (
+                                        <ul className="space-y-2 mb-4">
+                                            {factor.points.map((point, pIdx) => (
+                                                <li key={pIdx} className="text-xs text-white/50 flex items-start gap-2">
+                                                    <span className="text-brand-secondary mt-1 text-[8px]">●</span>
+                                                    {point}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    )}
+
+                                    {factor.footer && (
+                                        <p className="mt-auto text-xs text-white/40 italic pt-3 border-t border-white/5">{factor.footer}</p>
+                                    )}
                                 </div>
                             ))}
                         </div>
@@ -1646,6 +1794,12 @@ export const blogData = [
                             </p>
                             <img src={blog15Inner} alt="Academic Excellence" className="w-full h-auto rounded-3xl mb-8 border border-white/10" />
                         </div>
+                        
+                    </section>
+
+                    <section>
+                        <h3 className="text-2xl font-bold mb-6 text-brand-secondary">Insight:</h3>
+                        <p className="text-lg leading-relaxed text-white mb-10">Parents searching for schools in Arani for NEET or JEE preparation often prefer CBSE schools due to better alignment with national exams.</p>
                     </section>
 
                     <section>
@@ -1657,41 +1811,91 @@ export const blogData = [
                                     name: "1. The Krisar Academy – CBSE School Near Arani",
                                     board: "CBSE",
                                     location: "Arcot–Arani Main Road",
+                                    classes: "Pre-KG to Grade 12",
                                     best: "NEET/JEE-focused students",
-                                    desc: "Among the top schools in Arani region, it is a preferred choice for parents looking for structured education aligned with national-level competitive exams.",
-                                    highlights: ["Integrated NEET & JEE coaching", "Smart classrooms & AI/Robotics lab", "1,000-seat auditorium", "Transport across Arani, Arcot, Ranipet"]
+                                    desc: "Among the top schools in Arani region, The Krisar Academy is one of the closest CBSE schools offering a complete academic journey from Pre-KG to Grade 12. It is a preferred choice for parents looking for structured education aligned with national-level competitive exams.",
+                                    highlights: ["Integrated NEET & JEE coaching", "Smart classrooms & AI/Robotics lab", "1,000-seat auditorium", "Extracurricular activities", "Transport across Arani, Arcot, Ranipet & nearby areas"]
                                 },
                                 {
-                                    name: "2. Dr. SRK Vidhyalaya",
+                                    name: "2. Dr. SRK Vidhyalaya – CBSE School in Arani-Arcot Corridor",
                                     board: "CBSE",
                                     location: "Arani to Arcot Road, Nangamangalam",
-                                    best: "Families along the Arpni-Arcot corridor",
-                                    desc: "Recognized school offering CBSE curriculum from primary to higher secondary levels.",
-                                    highlights: ["CBSE curriculum", "Accessible from nearby villages", "Managed by educational trust"]
+                                    classes: "Primary to Senior Secondary",
+                                    best: "Families looking for CBSE schools in Arani-Arcot road area",
+                                    desc: "Dr. SRK Vidhyalaya is one of the recognized schools in Arani region offering CBSE curriculum from primary to higher secondary levels. It is suitable for families living along the Arani–Arcot corridor.",
+                                    highlights: ["CBSE curriculum aligned with national standards", "Accessible from Arani and nearby villages", "Managed by an educational trust","Day school facility"]
                                 },
                                 {
-                                    name: "3. Maharishi Vidya Mandir (MVM Arcot)",
+                                    name: "3. Maharishi Vidya Mandir (MVM Arcot) – CBSE School Near Arani",
                                     board: "CBSE",
                                     location: "Poongodu, Arcot",
-                                    best: "Parents preferring established networks",
-                                    desc: "Part of a national chain offering standardised teaching methods and curriculum consistency.",
-                                    highlights: ["National school group reputation", "Valid CBSE affiliation through 2027", "Structured environment"]
+                                    classes: "Primary to Senior Secondary",
+                                    best: "Parents preferring established CBSE school networks",
+                                    desc: "Maharishi Vidya Mandir is part of a national chain and is a reliable option among schools near Arani, offering standardized teaching methods and curriculum consistency.",
+                                    highlights: ["Part of a reputed national school group", "CBSE affiliation valid through 2027", "Structured academic environment","Accessible from Arcot and Arani"]
                                 },
                                 {
-                                    name: "4. Global Public School",
+                                    name: "4. Global Public School – CBSE School Near Arani",
                                     board: "CBSE",
                                     location: "Bengaluru-Chennai Highway, Veepur",
-                                    best: "Families needing high-way connectivity",
-                                    desc: "Located along a major highway, making it convenient for commuting families.",
-                                    highlights: ["Senior secondary classes", "Highway accessibility", "Managed by educational trust"]
+                                    classes: "Up to Senior Secondary",
+                                    best: "Families looking for schools near Arani with highway connectivity",
+                                    desc: "Global Public School is one of the CBSE schools near Arani located along a major highway, making it convenient for commuting families.",
+                                    highlights: ["CBSE curriculum", "Highway accessibility", "Senior secondary classes available","Managed by an educational trust"]
                                 },
                                 {
-                                    name: "5. Orange International Matric Higher Secondary School",
-                                    board: "State Board (Matriculation)",
-                                    location: "Arani-Chetpet Road, Arani Town",
-                                    best: "Families looking for residential facilities",
-                                    desc: "Established school within Arani town offering matriculation curriculum and hostel facilities.",
-                                    highlights: ["Located within Arani town", "Residential facility available", "Established institution"]
+                                    name: "5. RISHS International School – CBSE School in Arcot",
+                                    board: "CBSE",
+                                    location: "Arcot",
+                                    classes: "Not specified",
+                                    best: "Parents exploring additional CBSE schools near Arani",
+                                    desc: "RISHS International School is another option among schools in and around Arani, especially for families closer to Arcot town.",
+                                    highlights: ["CBSE curriculum", "Located in Arcot town", "Suitable for nearby residential communities"]
+                                },
+                                {
+                                    name: "6. Orange International Matric Higher Secondary School – School in Arani Town",
+                                    board: "Tamil Nadu State Board (Matriculation)",
+                                    location: "Arani-Chetpet Road, Arani",
+                                    classes: "Up to Higher Secondary",
+                                    best: "Families looking for schools in Arani town with residential facility",
+                                    desc: "Orange International School is one of the established schools in Arani town, offering matriculation curriculum along with hostel facilities for students from surrounding areas.",
+                                    highlights: ["State board curriculum", "Residential facility available", "Located within Arani town","Established institution"]
+                                },
+                                {
+                                    name: "7. Pinkz Public School – State Board School in Arani",
+                                    board: "Tamil Nadu State Board",
+                                    location: "Arani-Polur Road, Kasthambadi",
+                                    classes: "Not specified",
+                                    best: "Families looking for accessible day schools in Arani",
+                                    desc: "Pinkz Public School is one of the accessible schools in Arani providing state board education for students in and around Kasthambadi.",
+                                    highlights: ["Day school", "Located within Arani region", "Suitable for nearby families"]
+                                },
+                                {
+                                    name: "8. Government Higher Secondary School, Ranipet – Government School Near Arani",
+                                    board: "Tamil Nadu State Board",
+                                    location: "Ranipet",
+                                    classes: "Up to Higher Secondary",
+                                    best: "Families looking for affordable schools near Arani",
+                                    desc: "This government institution is a primary option among schools near Arani for families seeking free and accessible education.",
+                                    highlights: ["Government-funded education", "No tuition fees", "Accessible from Arani and nearby areas"]
+                                },
+                                {
+                                    name: "9. DAV BHEL School – Established CBSE School Near Arani",
+                                    board: "CBSE",
+                                    location: "BHEL Township, Ranipet",
+                                    classes: "Not specified",
+                                    best: "Parents looking for reputed and long-established schools near Arani",
+                                    desc: "DAV BHEL School is one of the oldest CBSE schools near Arani, known for its legacy and consistent academic standards.",
+                                    highlights: ["Established in 1982", "CBSE curriculum", "Located in BHEL township","Limited public admissions"]
+                                },
+                                {
+                                    name: "10. Vedavalli Vidyalaya – CBSE School in Ranipet",
+                                    board: "CBSE",
+                                    location: "Ranipet",
+                                    classes: "Not specified",
+                                    best: "Families exploring more CBSE schools near Arani",
+                                    desc: "Vedavalli Vidyalaya is another CBSE option among schools in Arani region, particularly for families closer to Ranipet.",
+                                    highlights: ["CBSE curriculum", "Located in Ranipet", "Accessible from surrounding areas"]
                                 }
                             ].map((school, sIdx) => (
                                 <div key={sIdx} className="p-8 bg-brand-primary/20 rounded-3xl border border-white/10 hover:border-brand-secondary/40 transition-all duration-300">
@@ -1699,25 +1903,54 @@ export const blogData = [
                                         <h4 className="text-2xl font-bold text-white">{school.name}</h4>
                                         <span className="px-4 py-1.5 bg-brand-secondary text-brand-primary rounded-full text-xs font-bold uppercase tracking-wider">{school.board}</span>
                                     </div>
-                                    <p className="text-white/80 mb-6 italic">{school.desc}</p>
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                                        <div className="text-sm text-white/60"><span className="text-brand-secondary mr-2">📍</span><strong>Location:</strong> {school.location}</div>
-                                        <div className="text-sm text-white/60"><span className="text-brand-secondary mr-2">🎯</span><strong>Best for:</strong> {school.best}</div>
+                                    <p className="text-white/80 mb-6 italic leading-relaxed">{school.desc}</p>
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8 mb-6">
+                                        <div className="text-sm text-white/60 flex items-center gap-3"><span className="text-brand-secondary text-lg">📍</span><strong>Location:</strong> {school.location}</div>
+                                        <div className="text-sm text-white/60 flex items-center gap-3"><span className="text-brand-secondary text-lg">🎓</span><strong>Classes:</strong> {school.classes}</div>
+                                        <div className="text-sm text-white/60 flex items-center gap-3"><span className="text-brand-secondary text-lg">🎯</span><strong>Best for:</strong> {school.best}</div>
                                     </div>
-                                    <div className="flex flex-wrap gap-2">
-                                        {school.highlights.map((h, i) => (
-                                            <span key={i} className="text-xs px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-white/50">✓ {h}</span>
-                                        ))}
+                                    <div className="pt-4 border-t border-white/5">
+                                        <h5 className="text-sm font-bold text-white mb-4">Key Highlights:</h5>
+                                        <div className="flex flex-wrap gap-2">
+                                            {school.highlights.map((h, i) => (
+                                                <span key={i} className="text-xs px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-white/50 flex items-center gap-2">
+                                                    <span className="text-brand-secondary">✓</span> {h}
+                                                </span>
+                                            ))}
+                                        </div>
                                     </div>
                                 </div>
                             ))}
                         </div>
                     </section>
 
+                    <section className="bg-white/5 p-12 rounded-[3.5rem] border border-white/10 relative overflow-hidden">
+                        <div className="relative z-10">
+                            <h3 className="text-3xl font-bold mb-8 text-brand-secondary text-center">Which is the Best School in Arani?</h3>
+                            <div className="max-w-4xl mx-auto space-y-6">
+                                <p className="text-lg leading-relaxed text-white/90">
+                                    There is no single “best” among all <strong>schools in Arani</strong>, as the right choice depends on factors like curriculum preference, distance, and long-term academic goals.
+                                </p>
+                                <p className="text-lg leading-relaxed text-white/90">
+                                    However, many parents today lean towards CBSE schools for their alignment with national-level competitive exams such as NEET and JEE. Among the available options near Arani, schools that offer a complete academic journey, strong infrastructure, and integrated academic support tend to stand out.
+                                </p>
+                                <p className="text-xl leading-relaxed text-white font-medium italic border-l-4 border-brand-secondary pl-6 py-4 bg-brand-secondary/5 rounded-r-2xl">
+                                    In this context, <strong>The Krisar Academy</strong> is often considered one of the more comprehensive choices for families around Arani, particularly for those looking for a CBSE school that combines academics, extracurricular development, and competitive exam preparation under one campus.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
                     <section className="bg-brand-secondary/20 p-12 rounded-[3.5rem] border border-brand-secondary/30 relative overflow-hidden text-center">
-                        <h3 className="text-3xl font-bold mb-6 text-brand-secondary">Admissions Open (2025–26)</h3>
+                        <h3 className="text-3xl font-bold mb-6 text-brand-secondary">Admissions Open for Schools in Arani (2025–26)</h3>
                         <p className="text-lg text-white mb-8 max-w-3xl mx-auto">
-                            Seats in popular CBSE schools near Arani fill quickly. Admissions are currently open at <strong>The Krisar Academy</strong> for Pre-KG to Grade 12. Early application is recommended.
+                            Admissions for most schools in Arani typically open between January and April for the academic year starting in June.
+                        </p>
+                        <p className="text-lg text-white mb-8 max-w-3xl mx-auto">
+                            In this context, <strong>The Krisar Academy</strong> is often considered one of the more comprehensive choices for families around Arani, particularly for those looking for a CBSE school that combines academics, extracurricular development, and competitive exam preparation under one campus.
+                        </p>
+                        <p className="text-xl leading-relaxed text-white font-medium italic border-l-4 border-brand-secondary pl-6 py-4 bg-brand-secondary/5 rounded-r-2xl">
+                            For the 2025–26 academic year, admissions are currently open at The Krisar Academy across grades from Pre-KG to Grade 12. With limited seats and growing demand from families in Arani and nearby areas, early application can help secure availability in the preferred grade.
                         </p>
                         <div className="flex flex-col sm:flex-row justify-center gap-4">
                             <Link to="/contact" className="bg-brand-secondary text-brand-primary px-8 py-4 rounded-full font-bold hover:bg-yellow-400 transition-colors">Inquire Now</Link>
@@ -1726,17 +1959,77 @@ export const blogData = [
                     </section>
 
                     <section className="pt-12 border-t border-white/10">
-                        <h3 className="text-3xl font-bold mb-10 text-white text-center">Frequently Asked Questions</h3>
+                        <h3 className="text-3xl font-bold mb-10 text-white text-center">Frequently Asked Questions About Schools in Arani</h3>
                         <div className="space-y-6 max-w-4xl mx-auto">
                             {[
-                                { q: "1. Are there CBSE schools inside Arani town?", a: "Currently, there are no CBSE schools within Arani town limits. Reputed CBSE options like The Krisar Academy and Dr. SRK Vidhyalaya are located along the Arani–Arcot corridor." },
-                                { q: "2. Do schools in Arani provide transport facilities?", a: "Yes, many schools, including The Krisar Academy, offer transport across Arani town and surrounding villages." },
-                                { q: "3. When do admissions open for schools in Arani?", a: "Generally between January and April for the academic year starting in June. For 2025-26, admissions are already active at several institutions." },
-                                { q: "4. Which is the best school in Arani?", a: "The best school depends on your goals. For competitive exam prep (NEET/JEE), The Krisar Academy is often preferred for its facilities and integrated coaching." }
+                                { 
+                                    q: "1. Are there CBSE schools inside Arani town?", 
+                                    a: [
+                                        "No, there are currently no CBSE schools within Arani town limits. However, several well-known CBSE schools near Arani are located along the Arani–Arcot road and nearby areas.",
+                                        "These include The Krisar Academy, Dr. SRK Vidhyalaya, and Maharishi Vidya Mandir, all within a practical commuting distance for students from Arani."
+                                    ]
+                                },
+                                { 
+                                    q: "2. What is the difference between CBSE and Matriculation schools in Arani?", 
+                                    a: "When comparing schools in Arani, the main difference lies in the curriculum:",
+                                    points: [
+                                        "CBSE schools follow the NCERT syllabus, aligned with national-level exams like NEET and JEE",
+                                        "Matriculation schools follow the Tamil Nadu State Board curriculum, which is more state-focused"
+                                    ],
+                                    footer: "For parents planning long-term academic goals, CBSE schools near Arani are often preferred."
+                                },
+                                { 
+                                    q: "3. Do schools in Arani provide transport facilities?", 
+                                    a: [
+                                        "Yes, many private schools in Arani and nearby areas provide transport services covering surrounding towns and villages.",
+                                        "For example, The Krisar Academy offers transport across Arani, Timiri, Arcot, Ranipet, Walajapet, and nearby regions. Transport routes may vary for other schools, so it is best to confirm directly."
+                                    ]
+                                },
+                                { 
+                                    q: "4. When do admissions open for schools in Arani?", 
+                                    a: [
+                                        "Admissions for most schools in Arani typically open between January and April for the academic year starting in June.",
+                                        "For the 2025–26 academic year, admissions are currently open at The Krisar Academy, and early application is recommended as seats fill quickly in popular CBSE schools near Arani."
+                                    ]
+                                },
+                                 { 
+                                    q: "5. How to choose the right school in Arani?", 
+                                    a: "To choose the right school in Arani, parents should consider:",
+                                    points: [
+                                        "Academic goals (CBSE vs State Board)",
+                                        "Distance and transport availability",
+                                        "Infrastructure and facilities",
+                                        "Availability of classes up to Grade 12",
+                                        "Overall reputation and student development"
+                                    ],
+                                    footer: "Selecting a school that balances academics, accessibility, and long-term growth is the best approach."
+                                },
                             ].map((faq, idx) => (
                                 <div key={idx} className="p-8 bg-white/5 rounded-3xl border border-white/10">
-                                    <h5 className="font-bold text-brand-secondary mb-3">{faq.q}</h5>
-                                    <p className="text-white/70 leading-relaxed font-light italic">A: {faq.a}</p>
+                                    <h5 className="font-bold text-brand-secondary mb-4">{faq.q}</h5>
+                                    <div className="text-white/70 leading-relaxed font-light italic flex gap-3">
+                                        <span className="shrink-0 font-bold text-brand-secondary"></span>
+                                        <div className="space-y-4">
+                                            {Array.isArray(faq.a) ? (
+                                                faq.a.map((p, pIdx) => <p key={pIdx}>{p}</p>)
+                                            ) : (
+                                                <p>{faq.a}</p>
+                                            )}
+                                            
+                                            {faq.points && (
+                                                <ul className="space-y-3 my-2">
+                                                    {faq.points.map((pt, ptIdx) => (
+                                                        <li key={ptIdx} className="flex items-start gap-2">
+                                                            <span className="text-brand-secondary mt-2 text-[6px]">●</span>
+                                                            <span>{pt}</span>
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            )}
+                                            
+                                            {faq.footer && <p>{faq.footer}</p>}
+                                        </div>
+                                    </div>
                                 </div>
                             ))}
                         </div>
