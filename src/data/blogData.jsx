@@ -1135,7 +1135,7 @@ export const blogData = [
         image: blog13,
         category: "Education",
         icon: "BookOpen",
-        description: "Choosing a school for your child is one of the most consequential decisions you will make. This guide provides a structured framework to evaluate any school.",
+        description: "Choosing a school for your child is one of the most consequential decisions you will make.",
         content: (
             <>
                 <p className="mb-6 text-xl font-medium leading-relaxed text-brand-secondary">
@@ -1257,6 +1257,9 @@ export const blogData = [
                         <p className="text-lg leading-relaxed text-white mb-8">
                             A school that only runs academics is not a complete school. Children develop confidence and leadership through activities outside the formal classroom.
                         </p>
+                        <p className="text-lg leading-relaxed text-white mb-8">
+                            Evaluate whether the school offers structured programmes in arts, music, dance, sports, and cultural activities, or whether it simply lists them on its website without delivering them. Visit during an event or activity period to see whether these programmes are active.
+                        </p>
                         <h4 className="text-xl font-bold text-white mb-4">Ask specifically about the following::</h4>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <div className="p-6 bg-white/5 rounded-2xl border border-white/10 text-center">
@@ -1331,10 +1334,10 @@ export const blogData = [
 
                     <section>
                         <h3 className="text-2xl font-bold mb-6 text-brand-secondary border-l-4 border-brand-secondary pl-4">10. Visit the School and Trust What You Observe</h3>
-                        <h4 className="text-xl font-bold text-white mb-4">During your visit, observe:</h4>
                         <p className="text-lg leading-relaxed text-white mb-6">
                             No brochure, website, or third-party review substitutes for a campus visit during school hours. Schedule a visit when the school is fully operational, not during an admission open day designed specifically to impress prospective parents.
                         </p>
+                        <h4 className="text-xl font-bold text-white mb-4">During your visit, observe:</h4>
                         <p className="text-lg leading-relaxed text-white mb-6">
                             Whether students appear engaged and active in classrooms or passive and disengaged. Whether teachers are managing classrooms with authority and warmth or struggling with discipline. Whether the campus feels alive with learning or is going through the motions.
                         </p>
@@ -1358,6 +1361,7 @@ export const blogData = [
                                 <p className="text-lg">
                                     For families in this region, The Krisar Academy on the Arcot to Arani Main Road, Paradarami Village, Ranipet District offers CBSE education from Pre-KG to Grade 12. The school holds valid CBSE affiliation <strong> (No. 1931107, valid through 2027) </strong>, maintains a student-teacher ratio of 12:1, and offers integrated NEET and JEE coaching, fully air-conditioned smart classrooms, an AI and Robotics laboratory, a 1,000-seat auditorium, professional sports coaching, and transport covering Arani, Arcot, Ranipet, Walajapet, and Vellore.
                                 </p>
+                                <h4 className="text-xl font-bold text-white mb-4">Admissions for 2025-26 are currently open.</h4>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left mt-8">
                                     <div className="flex items-center gap-3 bg-white/5 p-4 rounded-xl border border-white/10">
                                         <span className="text-brand-secondary text-xl">✅</span>
@@ -1384,6 +1388,7 @@ export const blogData = [
                                         Inquire for Admissions 2025-26
                                     </Link>
                                     <p className="mt-4 text-sm text-white/50">Contact: +91 75400 88387</p>
+                                    <Link to="/admission-details" className="mt-4 text-sm text-white/50">View admission details</Link>
                                 </div>
                             </div>
                         </div>
@@ -1419,7 +1424,7 @@ export const blogData = [
         image: blog14,
         category: "Education",
         icon: "BookOpen",
-        description: "A detailed breakdown of the differences between CBSE and the Tamil Nadu State Board (Matriculation) to help parents make the right educational choice.",
+        description: "One of the most common questions parents in Tamil Nadu face before school admission",
         content: (
             <>
                 <p className="mb-6 text-xl font-medium leading-relaxed text-brand-secondary">
@@ -1580,7 +1585,7 @@ export const blogData = [
                                 <tr className="bg-white/5">
                                     <td className="p-4 border border-white/10 font-bold">School availability</td>
                                     <td className="p-4 border border-white/10">Selective, fewer schools</td>
-                                    <td className="p-4 border border-white/10">LWidespread across all areas</td>
+                                    <td className="p-4 border border-white/10">Widespread across all areas</td>
                                 </tr>
                                 <tr>
                                     <td className="p-4 border border-white/10 font-bold">Fee structure</td>
@@ -1639,6 +1644,7 @@ export const blogData = [
                                 Visit Our Campus
                             </Link>
                             <p className="mt-4 text-sm text-white/50">Contact: +91 75400 88387</p>
+                            <Link to="/admission-details" className="mt-4 text-sm text-white/50">View admission details</Link>
                         </div>
                     </section>
 
@@ -1672,7 +1678,7 @@ export const blogData = [
         image: blog15,
         category: "Education",
         icon: "BookOpen",
-        description: "An essential guide for parents searching for the best schools in Arani for the 2025–26 academic year, covering CBSE and State Board options.",
+        description: "If you are searching for the best schools in Arani for the 2025–26 academic year",
         content: (
             <>
                 <p className="mb-6 text-xl font-medium leading-relaxed text-brand-secondary">
@@ -1705,7 +1711,7 @@ export const blogData = [
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                             {[
                                 { 
-                                    title: "Academic Goals and Curriculum", 
+                                    title: "Define Academic Goals and Curriculum", 
                                     desc: [
                                         "Start by identifying your child’s long-term academic direction. If you are aiming for national-level competitive exams like NEET or JEE, CBSE schools in Arani are generally preferred due to their alignment with the NCERT curriculum.",
                                         "For families comparing schools in Arani, choosing the right board—CBSE or State Board—plays a crucial role in future academic pathways." 
@@ -1713,7 +1719,10 @@ export const blogData = [
                                 },
                                 { 
                                     title: "Check Location and Transport Convenience", 
-                                    desc: "Many top schools in Arani are located along the Arani–Arcot corridor or nearby towns like Arcot and Ranipet. Before finalizing:",
+                                    desc: [
+                                        "Many top schools in Arani are located along the Arani–Arcot corridor or nearby towns like Arcot and Ranipet.",
+                                        "Before finalizing:"
+                                    ],
                                     points: [
                                         "Evaluate daily travel time",
                                         "Confirm transport availability",
@@ -1790,7 +1799,7 @@ export const blogData = [
                         <div className="relative z-10">
                             <h3 className="text-2xl font-bold mb-6 text-brand-secondary">CBSE vs Matriculation Schools in Arani</h3>
                             <p className="text-lg leading-relaxed text-white mb-10">
-                                Parents searching for schools in Arani for <strong>NEET or JEE preparation</strong> often prefer CBSE schools because the curriculum is designed to support national-level competitive assessments.
+                                When comparing schools in Arani, choosing the right board is an important decision.
                             </p>
                             <img src={blog15Inner} alt="Academic Excellence" className="w-full h-auto rounded-3xl mb-8 border border-white/10" />
                         </div>
@@ -1835,7 +1844,7 @@ export const blogData = [
                                     highlights: ["Part of a reputed national school group", "CBSE affiliation valid through 2027", "Structured academic environment","Accessible from Arcot and Arani"]
                                 },
                                 {
-                                    name: "4. Global Public School – CBSE School Near Arani",
+                                    name: "4. Global Public School – CBSE School Near Arani Highway",
                                     board: "CBSE",
                                     location: "Bengaluru-Chennai Highway, Veepur",
                                     classes: "Up to Senior Secondary",
@@ -1947,7 +1956,7 @@ export const blogData = [
                             Admissions for most schools in Arani typically open between January and April for the academic year starting in June.
                         </p>
                         <p className="text-lg text-white mb-8 max-w-3xl mx-auto">
-                            In this context, <strong>The Krisar Academy</strong> is often considered one of the more comprehensive choices for families around Arani, particularly for those looking for a CBSE school that combines academics, extracurricular development, and competitive exam preparation under one campus.
+                            Since seats in well-connected CBSE schools near Arani are usually filled early, parents are encouraged to begin shortlisting and visiting campuses in advance.
                         </p>
                         <p className="text-xl leading-relaxed text-white font-medium italic border-l-4 border-brand-secondary pl-6 py-4 bg-brand-secondary/5 rounded-r-2xl">
                             For the 2025–26 academic year, admissions are currently open at The Krisar Academy across grades from Pre-KG to Grade 12. With limited seats and growing demand from families in Arani and nearby areas, early application can help secure availability in the preferred grade.
