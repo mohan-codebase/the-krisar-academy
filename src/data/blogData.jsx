@@ -14,10 +14,12 @@ import blog9 from '../assets/images/blog/blog-millet.jpg';
 // Inner Blog Images
 import blog3Inner1 from '../assets/images/blog/blog-minister-inner-1.jpg';
 import blog3Inner2 from '../assets/images/blog/blog-minister-inner-2.jpg';
-import blog13 from '../assets/images/blog/april2k26/April-1.png';
+
+// April 2026 Blogs
+import blog13 from '../assets/images/gallery/krisar_img_184.jpeg';
 import blog13Inner from '../assets/images/blog/april2k26/April-2.png';
-import blog14 from '../assets/images/blog/april2k26/April-3.png';
-import blog15 from '../assets/images/blog/april2k26/April-4.png';
+import blog14 from '../assets/images/gallery/krisar_img_076.jpeg';
+import blog15 from '../assets/images/gallery/krisar_img_017.jpeg';
 import blog15Inner from '../assets/images/blog/april2k26/April-5.png';
 
 // Gallery Images for Blog
