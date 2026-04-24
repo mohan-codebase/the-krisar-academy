@@ -21,6 +21,8 @@ import blog13Inner from '../assets/images/blog/april2k26/April-2.png';
 import blog14 from '../assets/images/gallery/krisar_img_076.jpeg';
 import blog15 from '../assets/images/gallery/krisar_img_017.jpeg';
 import blog15Inner from '../assets/images/blog/april2k26/April-5.png';
+import blog16 from '../assets/images/gallery/krisar_img_200.jpeg';
+import independenceImg from '../assets/images/gallery/krisar_img_085.jpeg';
 
 // Gallery Images for Blog
 import gallery1 from '../assets/images/gallery/krisar_img_076.jpeg';
@@ -37,7 +39,7 @@ export const blogData = [
         image: blog1,
         category: "Celebration",
         icon: "Trophy",
-        description: "Krisar Academy, one of the leading CBSE schools in Vellore and Ranipet, celebrates sports spirit through its Sports Fiesta event encouraging teamwork and talent.",
+        description: "Weighing boarding school vs day school for your child? Compare academics, life skills, costs, and social development to find the right school for your family. URL Slug: /boarding-school-vs-day-school",
         content: (
             <>
                 <p className="mb-6 text-lg leading-relaxed text-white">
@@ -2040,6 +2042,416 @@ export const blogData = [
                                             
                                             {faq.footer && <p>{faq.footer}</p>}
                                         </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+                </div>
+            </>
+        )
+    },
+    {
+        id: 16,
+        slug: "boarding-school-vs-day-school",
+        title: "Boarding School vs Day School: A Guide for Parents | The Krisar Academy",
+        date: "April 24, 2026",
+        image: blog16,
+        category: "Education",
+        icon: "BookOpen",
+        description: "Weighing boarding school vs day school for your child? Compare academics, life skills, costs, and social development to find the right school for your family.",
+        content: (
+            <>
+                <p className="mb-6 text-xl font-medium leading-relaxed text-brand-secondary">
+                    Weighing boarding school vs day school for your child? Compare academics, life skills, costs, and social development to find the right school for your family. <a className="text-brand-secondary" href="/boarding-school-vs-day-school">URL Slug: /boarding-school-vs-day-school.</a>
+                </p>
+
+                <div className="bg-brand-secondary/10 p-8 rounded-3xl border border-brand-secondary/20 mb-12 relative overflow-hidden">
+                    <h3 className="text-2xl font-bold mb-6 text-brand-secondary">Key Takeaways</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
+                        {[
+                            "Boarding school and day school each offer distinct advantages. Neither is universally better. The right school depends on your child's personality, age, and your family's circumstances.",
+                            "Boarding school students develop self reliance, time management skills, and independence earlier, but face real emotional challenges, particularly during the first term.",
+                            "Day schools allow daily family bonding, lower costs, and greater parental involvement in home life and academic support.",
+                            "Boarding school education suits children who need structured routines and external accountability. Day school suits children who thrive with family support and local community ties.",
+                            "Most parents make the best decisions by visiting campuses, speaking to current families, and involving their child in the process."
+                        ].map((takeaway, i) => (
+                            <div key={i} className="flex gap-4">
+                                <span className="text-brand-secondary text-xl font-bold">0{i+1}</span>
+                                <p className="text-white/80 text-sm leading-relaxed">{takeaway}</p>
+                            </div>
+                        ))}
+                    </div>
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-brand-secondary/5 blur-3xl rounded-full"></div>
+                </div>
+
+                <div className="space-y-12">
+                    <section>
+                        <h3 className="text-2xl font-bold mb-6 text-brand-secondary border-l-4 border-brand-secondary pl-4">Introduction: A Decision That Deserves Careful Thought</h3>
+                        <p className="text-lg leading-relaxed text-white mb-6">
+                            Choosing between a boarding school and a day school is one of the most significant decisions a family makes.
+                        </p>
+                        <p className="text-lg leading-relaxed text-white mb-6">
+                            In 2026, this decision is more complex than it used to be. Dual-career households, frequent professional travel, and long urban commutes have changed what families need from a school. At the same time, both boarding and day school formats have evolved, with stronger pastoral care, wider extracurricular activities, and more flexible hybrid options than previous generations had available.
+                        </p>
+                        <p className="text-lg leading-relaxed text-white">
+                            At The Krisar Academy, we believe this decision should be made with clear information, not social pressure or assumptions about prestige. This guide walks through the practical differences between boarding and day school across academics, personal growth, costs, daily life, and long-term development, so you can find the right school for your specific child and family.
+                        </p>
+                    </section>
+                    <section>
+                        <h3 className="text-2xl font-bold mb-6 text-brand-secondary border-l-4 border-brand-secondary pl-4">What Is the Difference Between a Boarding School and a Day School?</h3>
+                        <p className="text-lg leading-relaxed text-white mb-6">
+                            A boarding school is an institution where students live on campus in dormitories or hostels throughout the academic term. They return home only during fixed holidays. A day school operates during set school hours. Students attend classes and activities, then commute home each day.
+                        </p>
+                        <p className="text-lg leading-relaxed text-white mb-6">The difference in daily experience is significant.</p>
+                        <div className="overflow-x-auto rounded-2xl border border-white/10 bg-white/5">
+                            <table className="w-full text-left border-collapse">
+                                <thead>
+                                    <tr className="bg-brand-secondary/10 text-brand-secondary">
+                                        <th className="p-4 border-b border-white/10">Feature</th>
+                                        <th className="p-4 border-b border-white/10">Boarding School</th>
+                                        <th className="p-4 border-b border-white/10">Day School</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="text-white/80">
+                                    <tr className="border-b border-white/5">
+                                        <td className="p-4 font-bold border-r border-white/10">Daily Schedule</td>
+                                        <td className="p-4 border-r border-white/10">6 AM to 9:30 PM on campus</td>
+                                        <td className="p-4">8 AM to 3:30 PM, then home</td>
+                                    </tr>
+                                    <tr className="bg-white/5 border-b border-white/5">
+                                        <td className="p-4 font-bold border-r border-white/10">Supervision</td>
+                                        <td className="p-4 border-r border-white/10">24-hour structured environment</td>
+                                        <td className="p-4">School hours only</td>
+                                    </tr>
+                                    <tr className="border-b border-white/5">
+                                        <td className="p-4 font-bold border-r border-white/10">Homework</td>
+                                        <td className="p-4 border-r border-white/10">Supervised evening prep sessions</td>
+                                        <td className="p-4">Home-based, parents or tutors</td>
+                                    </tr>
+                                    <tr className="bg-white/5">
+                                        <td className="p-4 font-bold border-r border-white/10">Cost</td>
+                                        <td className="p-4 border-r border-white/10">Tuition plus accommodation, meals, laundry</td>
+                                        <td className="p-4">Tuition, transport, optional coaching</td>
+                                    </tr>
+                                    <tr className="border-b border-white/5">
+                                        <td className="p-4 font-bold border-r border-white/10">Independence</td>
+                                        <td className="p-4 border-r border-white/10">Accelerated, by necessity</td>
+                                        <td className="p-4">Gradual, within family support</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p className="text-white leading-relaxed mb-4 mt-4">Hybrid options exist for families who want to test the waters. Weekly boarding allows students to stay on campus five days a week and return home on weekends. Day boarding schools offer extended hours with after-school supervision while children sleep at home. These models can work well for families building toward full boarding or wanting structured evenings without full separation.</p>
+                    </section>
+
+                    <section className="bg-white/5 p-8 rounded-[2rem] border border-white/10">
+                        <h3 className="text-2xl font-bold mb-6 text-brand-secondary">Academic Environment: How Each Model Supports Learning</h3>
+                        <p className="text-white leading-relaxed mb-4 mt-4">Both boarding and day schools can deliver strong academic results. The difference is in when and how learning support happens.</p>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 className="text-xl font-bold text-white mb-4">Boarding School Academic Structure</h4>
+                                <p className="text-white/70 leading-relaxed mb-4">
+                                    Most boarding schools build academic support directly into the school day. Mandatory evening prep sessions of one to two hours give students designated study hours in distraction-free settings. Teachers often live on campus or nearby, making themselves available for doubt-clearing after classes end.
+                                </p>
+                                <p className="text-white/70 leading-relaxed mb-4">
+                                    For a Grade 9 student approaching board exams, this structure means two hours of supervised prep daily, access to peer study groups, and immediate faculty support. The structured learning environment does a significant amount of the academic scaffolding that would otherwise fall to parents or private tutors.
+                                </p>
+                                <p className="text-white/70 leading-relaxed mb-4">
+                                    In contrast, a day school student in Grade 9 typically has This makes boarding school education particularly effective for children whose parents travel frequently or work demanding hours. Consistent academic monitoring does not depend on parents being home in the evenings.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 className="text-xl font-bold text-white mb-4">Day School Academic Structure</h4>
+                                <p className="text-white/70 leading-relaxed mb-4">
+                                    Day school academics concentrate high-quality instruction within school hours. Once classes end around 3 PM, homework and exam preparation shift to the home environment. Success here depends on the student's own discipline, parental involvement, or access to private coaching.
+                                </p>
+                                <p className="text-white/70 leading-relaxed mb-4">
+                                    High-performing day schools supplement with optional after-school programs for competitive exam preparation. These are valuable but require family coordination and additional cost.
+                                </p>
+                                <p className="text-white/70 leading-relaxed mb-4">
+                                    Self-driven, disciplined learners often thrive in this environment. The flexibility suits students who manage their own time well and actively seek out help when they need it. For students who need external structure and accountability, the academic rigor built into boarding institutions is genuinely difficult to replicate at home.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h3 className="text-2xl font-bold mb-6 text-brand-secondary border-l-4 border-brand-secondary pl-4">Independence, Life Skills, and Personal Development</h3>
+                        
+                        <div className="mb-10 text-center">
+                            <img 
+                                src={independenceImg} 
+                                alt="Independence, Life Skills, and Personal Development" 
+                                className="w-full max-w-4xl mx-auto rounded-[2.5rem] border border-white/10 shadow-2xl"
+                            />
+                            {/* <p className="mt-4 text-white/50 text-sm italic italic leading-relaxed">Independence, Life Skills, and Personal Development</p> */}
+                        </div>
+
+                        <p className="text-lg leading-relaxed text-white mb-10">
+                            The most significant non-academic difference between these models is how early and how quickly children develop self reliance.
+                        </p>
+
+                        <div className="bg-white/5 p-10 rounded-[3rem] border border-white/10 mb-12">
+                            <h4 className="text-2xl font-bold text-brand-secondary mb-6">What Boarding School Builds</h4>
+                            <div className="space-y-6">
+                                <p className="text-white/80 leading-relaxed">
+                                    Boarding school students manage daily routines without parental guidance from an early age. Organising their belongings, managing laundry, navigating roommate dynamics, and adapting to a community of children from different backgrounds, these are life skills that develop through daily necessity rather than instruction.
+                                </p>
+                                <p className="text-white/80 leading-relaxed">
+                                    Boarding graduates consistently report smoother transitions to university independence. The self sufficiency developed on campus mirrors what university dormitory life demands, and students arrive already practiced.
+                                </p>
+                                <p className="text-white/80 leading-relaxed">
+                                    Personal growth happens in other ways too. Leadership, conflict resolution, resilience after setbacks, and the ability to build close friendships outside the family are all accelerated in a 24-hour campus community.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="bg-brand-primary/50 p-10 rounded-[3rem] border border-white/10 mb-12">
+                            <h4 className="text-2xl font-bold text-brand-secondary mb-6">The Emotional Challenges of Boarding</h4>
+                            <div className="space-y-6">
+                                <p className="text-white/80 leading-relaxed">
+                                    These benefits come with real costs, particularly for younger students.
+                                </p>
+                                <p className="text-white/80 leading-relaxed">
+                                    Homesickness is common during the first academic term, especially for boarding school children between the ages of 10 and 13. Strong pastoral care, including house parents, counsellors, and structured mental health programs, has become an essential feature of responsible boarding institutions for this reason.
+                                </p>
+                                <p className="text-white/80 leading-relaxed italic border-l-4 border-brand-secondary pl-6 py-2">
+                                    Post-2020 research in child psychology recommends caution with full boarding for children under 9 to 10 years old. Gradual exposure, starting with weekly boarding or short residential programs, is widely preferred over immediate immersion for young age students. The term "boarding school syndrome", referring to lasting emotional impacts from early separation, has prompted many families and schools to reconsider the timing of enrollment.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="bg-white/5 p-10 rounded-[3rem] border border-white/10 mb-12">
+                            <h4 className="text-2xl font-bold text-brand-secondary mb-6">What Day School Preserves</h4>
+                            <div className="space-y-6">
+                                <p className="text-white/80 leading-relaxed">
+                                    Day school students process their school life with family every evening. They maintain close bonds with siblings, grandparents, and their local community. Parents can provide immediate emotional support when challenges arise.
+                                </p>
+                                <p className="text-white/80 leading-relaxed">
+                                    This daily home life connection supports gradual independence-building within a familiar structure. For children going through difficult phases academically or socially, that immediate parental availability matters.
+                                </p>
+                                <p className="text-white/80 leading-relaxed">
+                                    The limitation is that home environments vary. Family stress, distractions, and inconsistent routines can undermine the stability that a structured environment provides. Day school works best when home life is stable and parents are consistently present and engaged.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="bg-white/5 p-10 rounded-[3rem] border border-white/10 mb-12">
+                            <h4 className="text-2xl font-bold text-brand-secondary mb-6">Social Development: Two Different Paths</h4>
+                            <div className="space-y-6">
+                                <p className="text-white/80 leading-relaxed">
+                                    Boarding school fosters intense peer relationships. Housemates often become a second family, with bonds lasting well beyond school years. Living together through successes, failures, conflicts, and milestones builds a depth of connection that day school friendships rarely match in the same way.
+                                </p>
+                                <p className="text-white/80 leading-relaxed">
+                                   Day school students balance school friendships with neighborhood connections, family networks, and community ties. This preserves cultural roots and local relationships that boarding can interrupt.
+                                </p>
+                                <p className="text-white/80 leading-relaxed">
+                                    Neither path produces superior social development. Boarding builds resilience and adaptability through intensity. Day school builds social skills within a broader community context. The right model depends on your child's personality, existing friendships, and how they handle separation from familiar environments.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section className="bg-white/5 p-10 rounded-[3rem] border border-white/10">
+                        <h3 className="text-2xl font-bold mb-8 text-brand-secondary">Daily Life, Extracurricular Activities, and Routine</h3>
+                        <p className="text-white/80 leading-relaxed mb-8">
+                            A typical school day diverges sharply after 3:30 PM.
+                        </p>
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                            <div>
+                                <h4 className="text-xl font-bold text-white mb-6">Boarding School Daily Schedule</h4>
+                                <div className="space-y-4">
+                                    {[
+                                        { time: "6:00 AM", event: "Wake-up and physical training" },
+                                        { time: "7:00 AM", event: "Breakfast" },
+                                        { time: "8:00 AM", event: "Classes (until 1:00 PM)" },
+                                        { time: "1:00 PM", event: "Lunch" },
+                                        { time: "2:00 PM", event: "Sports, clubs, and extracurriculars(until 5:00 PM)" },
+                                        { time: "6:00 PM", event: "Supervised study and prep(until 8:00 PM)" },
+                                        { time: "8:00 PM", event: "Dinner" },
+                                        { time: "9:30 PM", event: "Lights-out" }
+                                    ].map((item, i) => (
+                                        <div key={i} className="flex gap-4 items-center">
+                                            <span className="text-brand-secondary font-mono w-24 shrink-0">{item.time}</span>
+                                            <div className="h-px bg-white/10 grow"></div>
+                                            <span className="text-white/70 text-sm">{item.event}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                            <div className="flex flex-col justify-center">
+                                {/* <h4 className="text-xl font-bold text-white mb-4">Extracurricular Advantage</h4> */}
+                                <p className="text-white/70 leading-relaxed">
+                                    Most boarding schools provide full-size sports facilities, music rooms, art studios, and debate or robotics clubs accessible into the evenings. Students who want to participate in extracurricular activities do not need to factor in commute time or parental pickup logistics. Participation is built into the structure of the day.
+                                </p>
+                            </div>
+                        </div>
+                        <p className="text-white/70 leading-relaxed mt-4">Most boarding schools provide full-size sports facilities, music rooms, art studios, and debate or robotics clubs accessible into the evenings. Students who want to participate in extracurricular activities do not need to factor in commute time or parental pickup logistics. Participation is built into the structure of the day.</p>
+                    </section>
+
+                    <section>
+                        <h3 className="text-2xl font-bold mb-6 text-brand-secondary text-start">Day School Daily Schedule</h3>
+                        <p className="text-white/70 leading-relaxed mt-4">Boarding school Classes typically run from 8:00 AM to 3:00 or 3:30 PM. After dismissal, students commute home. Evenings divide between homework, private coaching, hobbies, and family time.</p>
+                        <p className="text-white/70 leading-relaxed mt-4">Urban day school students often access specialized external programs, city cricket clubs, coding institutes, classical dance academies, that can match or exceed what any boarding campus offers. The difference is logistics. Participation requires family coordination, transport, and consistent scheduling.</p>
+                        <p className="text-white/70 leading-relaxed mt-4">Structured routines define boarding life. Students have limited unscheduled time, which reduces decision making pressure around leisure while building discipline and time management skills. Day school students have more flexibility, which works well for self-directed children and can become a challenge for those who struggle with unstructured evenings.</p>
+                    </section>
+
+                    <section className="bg-brand-secondary/5 p-8 rounded-[2rem] border border-brand-secondary/20">
+                        <h3 className="text-2xl font-bold mb-6 text-brand-secondary text-center">Cost: Understanding the Full Picture</h3>
+                        <p className="text-center text-white/70 mb-8">Cost is one of the most important factors in this decision and one of the most frequently underestimated.</p>
+                        <h3 className="text-2xl font-bold mb-6 text-brand-secondary text-start">Boarding School Costs</h3>
+                        <p className="text-white/70 leading-relaxed mt-4 mb-8">Boarding fees cover tuition, accommodation, three daily meals, laundry, health centre access, and 24-hour supervision. In India, annual boarding fees typically range as follows:</p>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div className="p-6 bg-white/5 rounded-xl border border-white/10 text-center">
+                                <h5 className="text-white/60 text-sm mb-2">Mid-tier boarding institutions:</h5>
+                                <p className="text-brand-secondary text-xl font-bold">Rs. 3 to 6 lakhs per year</p>
+                            </div>
+                            <div className="p-6 bg-white/5 rounded-xl border border-white/10 text-center">
+                                <h5 className="text-white/60 text-sm mb-2">Premium boarding schools:</h5>
+                                <p className="text-brand-secondary text-xl font-bold">Rs. 8 to 15 lakhs per year</p>
+                            </div>
+                            <div className="p-6 bg-white/5 rounded-xl border border-white/10 text-center">
+                                <h5 className="text-white/60 text-sm mb-2">Elite international boarding schools:</h5>
+                                <p className="text-brand-secondary text-xl font-bold">Rs. 15 to 30 lakhs and above</p>
+                            </div>
+                        </div>
+                         <h3 className="text-2xl font-bold mb-6 mt-8 text-brand-secondary text-start">Day School Costs</h3>
+                        <p className="text-white/70 leading-relaxed mt-4 mb-8">Day school expenses include tuition, transport, uniforms, books, and optional coaching or after-school programs. Annual costs are typically 40 to 60 percent lower than full boarding at schools of comparable quality.</p>
+                        <p className="text-white/70 leading-relaxed mt-4 mb-8">For families managing budgets carefully, this difference can redirect significant funds toward university savings, travel-based learning, or specialized skill development outside school.</p>
+                    </section>
+
+                    <section className="text-center">
+                        <h3 className="text-2xl font-bold mb-8 text-brand-secondary text-start ">Which Students Thrive in Each Setting?</h3>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+                            <div className="p-8 bg-white/5 rounded-[2.5rem] border border-white/10">
+                                <h4 className="text-xl font-bold text-white mb-4">Students Who Do Well in Boarding</h4>
+                                <ul className="space-y-3">
+                                    {["Reasonably independent and adaptable to new environments", "Comfortable sharing living space with peers", "Needing firm external structure and academic accountability", "From families where parents travel frequently or cannot consistently supervise evenings","Seeking specialized facilities or curricula unavailable locally"].map((item, i) => (
+                                        <li key={i} className="flex gap-2 text-white/70 text-sm">
+                                            <span className="text-brand-secondary">✓</span> {item}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                            <div className="p-8 bg-white/5 rounded-[2.5rem] border border-white/10">
+                                <h4 className="text-xl font-bold text-white mb-4">Students Better Suited to Day School</h4>
+                                <ul className="space-y-3">
+                                    {["Needing close daily emotional support, especially during challenging phases", "Younger students still building basic routines and habits", "Managing health conditions that benefit from consistent family care", "Deeply involved in local sports, arts, or community ecosystems that would be disrupted by campus life"].map((item, i) => (
+                                        <li key={i} className="flex gap-2 text-white/70 text-sm">
+                                            <span className="text-brand-secondary">✓</span> {item}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="p-8 bg-white/5 rounded-[2.5rem] border border-white/10 mt-8">
+                                <h4 className="text-xl font-bold text-white mb-4">Testing the Waters First</h4>
+                                <p className="text-white/70 leading-relaxed mt-4 mb-8">Many parents find success starting with weekly boarding or day boarding in Classes 6 to 8 before committing to full boarding in Classes 9 to 12. Short residential programs and summer camps offer a low-stakes way to assess whether your child finds the boarding school atmosphere exciting or anxiety-inducing before making a full-year commitment.</p>
+                            </div>
+                    </section>
+
+                    <section className="bg-white/5 p-10 rounded-[3rem] border border-white/10">
+                        <h3 className="text-2xl font-bold mb-8 text-brand-secondary text-start">How to Make the Right Decision for Your Family</h3>
+                        <p className="text-white/80 leading-relaxed mb-6">Work through these questions before finalizing your choice.</p>
+                        <ul className="space-y-4 mb-10 text-left">
+                            {[
+                                "How old is your child, and are they emotionally ready for separation from home?",
+                                "Does your child need external structure or do they manage academic work independently?",
+                                "Can you provide consistent evening support if your child attends day school?",
+                                "Can your family sustain boarding fees for multiple years without financial strain?",
+                                "Are strong day schools accessible within a reasonable commute from home?",
+                                "Does your child's long-term plan, university in India or abroad, favor one format over the other?"
+                            ].map((q, qIdx) => (
+                                <li key={qIdx} className="flex gap-4 text-white/70">
+                                    <span className="text-brand-secondary font-bold">•</span>
+                                    <span>{q}</span>
+                                </li>
+                            ))}
+                        </ul>
+                        <p className="text-white/80 leading-relaxed mb-6">Once you have answered these honestly, take these next steps:</p>
+                        <ul className="space-y-4 text-left">
+                            {[
+                                "Shortlist three to five schools of each type matching your criteria",
+                                "Visit campuses in person. Virtual tours miss atmosphere entirely",
+                                "Speak with house parents, current students, and recent alumni",
+                                "Ask schools directly about bullying prevention, communication policies, and mental health support",
+                                "Involve your child in the decision. Their comfort with the environment matters as much as your assessment"
+                            ].map((step, sIdx) => (
+                                <li key={sIdx} className="flex gap-4 text-white/70">
+                                    <span className="text-brand-secondary font-bold">•</span>
+                                    <span>{step}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </section>
+
+                    <section className="bg-brand-secondary p-12 rounded-[3.5rem] text-brand-primary text-center">
+                        <h3 className="text-3xl font-bold mb-8">Talk to The Krisar Academy About the Right Choice for Your Child</h3>
+                        <div className="max-w-3xl mx-auto space-y-6 mb-10">
+                            <p className="text-lg font-medium leading-relaxed">
+                                The boarding school vs day school decision does not have a universal answer. It has the right answer for your child, your family's circumstances, and your educational values.
+                            </p>
+                            <p className="text-lg font-medium leading-relaxed">
+                                At The Krisar Academy, we support families through this decision with honest information, campus access, and conversations with our teaching and pastoral care teams.
+                            </p>
+                            <p className="text-xl font-bold leading-relaxed">Contact
+                                <Link to="https://thekrisaracademy.com/admission-form2/" className="underline decoration-2 underline-offset-4 hover:text-white transition-colors"> The Krisar Academy today</Link> to discuss your child's education and find the right school environment for their development.
+                            </p>
+                        </div>
+                        <Link to="https://thekrisaracademy.com/admission-form2/" className="inline-block bg-brand-primary text-white px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-xl">
+                            Contact Our Experts
+                        </Link>
+                    </section>
+
+                    <section className="pt-12 border-t border-white/10">
+                        <h3 className="text-3xl font-bold mb-10 text-white text-center">Frequently Asked Questions</h3>
+                        <div className="space-y-6 max-w-4xl mx-auto">
+                            {[
+                                { 
+                                    q: "1. What is the main difference between a boarding school and a day school?", 
+                                    a: "Boarding school students live on campus throughout the academic term and return home only during holidays. Day school students attend classes during school hours and return home each day. The difference extends to academic support structure, extracurricular access, independence development, cost, and the role parents play in daily supervision and emotional support." 
+                                },
+                                { 
+                                    q: "2. At what age should a child start boarding school?", 
+                                    a: "Most child development experts recommend caution with full boarding for children under 9 to 10 years. Below Class 4, attachment and developmental needs are better supported through daily home life. Weekly boarding or day boarding programs are preferable starting points for young age students. Full boarding from Classes 6 to 9 onward is more widely appropriate." 
+                                },
+                                { 
+                                    q: "3. Do boarding school students perform better academically than day school students?", 
+                                    a: "Research suggests boarding students often perform well on standardized metrics due to structured routines, supervised study sessions, and minimized distractions. However, self-driven day school students with good home support achieve equally strong results. The academic environment matters less than the match between your child's learning style and the structure provided." 
+                                },
+                                { 
+                                    q: "4. Is boarding school worth the higher cost?", 
+                                    a: "It depends on what your family needs. For parents who travel frequently or cannot provide consistent academic supervision, boarding school's structured environment and pastoral care deliver real value. For families with stable home environments and engaged parental involvement, strong day schools deliver comparable outcomes at significantly lower cost." 
+                                },
+                                { 
+                                    q: "5. How do most boarding schools handle homesickness?", 
+                                    a: "Most boarding schools today have structured pastoral care systems including house parents, on-site counsellors, and regular check-ins designed specifically to support students through the adjustment period. Homesickness typically peaks in the first term and reduces significantly by the second. Schools with strong house systems and clear communication channels with parents manage this transition most effectively." 
+                                },
+                                { 
+                                    q: "6. Can a child switch from boarding school to day school mid-year", 
+                                    a: "Switches are possible but disruptive. Academic calendars, peer relationships, and curriculum alignment all create friction during mid-year transitions. Where possible, transitions between school types are better planned for the start of a new academic year. Speak directly with both schools about the process before making any decisions." 
+                                },
+                                { 
+                                    q: "7. What extracurricular activities do boarding schools offer compared to day schools?", 
+                                    a: [
+                                        "Boarding schools typically offer broader on-campus extracurricular access because students are present all day and into the evenings. Sports, arts, debate, robotics, and performing arts are usually integrated into the daily schedule. Day school students access these through school programs or external academies in their city.Urban day school students in major metros often access specialized external programs that rival or exceed what any single boarding campus provides.",
+                                        "The Krisar Academy / Supporting Every Student's Growth"
+                                    ]
+                                }
+                            ].map((faq, idx) => (
+                                <div key={idx} className="p-8 bg-white/5 rounded-3xl border border-white/10">
+                                    <h5 className="font-bold text-brand-secondary mb-3">{faq.q}</h5>
+                                    <div className="space-y-4">
+                                        {Array.isArray(faq.a) ? (
+                                            faq.a.map((p, pIdx) => (
+                                                <p key={pIdx} className={`text-white/70 leading-relaxed font-light ${pIdx === faq.a.length - 1 ? 'italic mt-4' : ''}`}>
+                                                    {p}
+                                                </p>
+                                            ))
+                                        ) : (
+                                            <p className="text-white/70 leading-relaxed font-light">{faq.a}</p>
+                                        )}
                                     </div>
                                 </div>
                             ))}
