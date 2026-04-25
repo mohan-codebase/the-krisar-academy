@@ -2321,6 +2321,36 @@ export const blogData = [
                         <p className="text-white/70 leading-relaxed mt-4 mb-8">For families managing budgets carefully, this difference can redirect significant funds toward university savings, travel-based learning, or specialized skill development outside school.</p>
                     </section>
 
+                    <section className="bg-white/5 p-10 rounded-[3rem] border border-white/10">
+                        <h3 className="text-2xl font-bold mb-8 text-brand-secondary text-start">Safety and Pastoral Care</h3>
+                        
+                        <div className="space-y-8">
+                            <div>
+                                <h4 className="text-xl font-bold text-white mb-4 underline decoration-brand-secondary decoration-2 underline-offset-4">Boarding School Safety Standards</h4>
+                                <p className="text-white/70 leading-relaxed">
+                                    Modern boarding institutions maintain 24-hour CCTV coverage in common areas, controlled entry and exit points, dedicated wardens and house parents in each dormitory, and documented child protection policies. The structured environment means student whereabouts are tracked and accounted for throughout the day and night.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h4 className="text-xl font-bold text-white mb-4 underline decoration-brand-secondary decoration-2 underline-offset-4">Day School Safety Standards</h4>
+                                <p className="text-white/70 leading-relaxed">
+                                    Day schools maintain on-campus security during school hours and increasingly offer bus tracking for parent visibility. Once students leave campus, responsibility shifts to parents.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h4 className="text-xl font-bold text-white mb-4 underline decoration-brand-secondary decoration-2 underline-offset-4">Pastoral Care</h4>
+                                <p className="text-white/70 leading-relaxed mb-6">
+                                    The evolution of pastoral care in boarding schools over the past decade has been significant. On-site counsellors, structured mentoring, house parent check-ins, and documented mental health programs are now expected features of responsible boarding institutions, not optional extras.
+                                </p>
+                                <p className="text-white/70 leading-relaxed font-light italic border-l-4 border-brand-secondary pl-6 py-2">
+                                    Day schools are expanding counselling and personal development programs, but daily emotional support remains primarily a parental responsibility. For families who are consistently present and engaged, this works well. For high-travel families, boarding's pastoral infrastructure provides genuine support that is difficult to replicate at home.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
                     <section className="text-center">
                         <h3 className="text-2xl font-bold mb-8 text-brand-secondary text-start ">Which Students Thrive in Each Setting?</h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
