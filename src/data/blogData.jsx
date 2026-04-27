@@ -2062,9 +2062,9 @@ export const blogData = [
         description: "Weighing boarding school vs day school for your child? Compare academics, life skills, costs, and social development to find the right school for your family.",
         content: (
             <>
-                <p className="mb-6 text-xl font-medium leading-relaxed text-brand-secondary">
+                {/* <p className="mb-6 text-xl font-medium leading-relaxed text-brand-secondary">
                     Weighing boarding school vs day school for your child? Compare academics, life skills, costs, and social development to find the right school for your family. <a className="text-brand-secondary" href="/boarding-school-vs-day-school">URL Slug: /boarding-school-vs-day-school.</a>
-                </p>
+                </p> */}
 
                 <div className="bg-brand-secondary/10 p-8 rounded-3xl border border-brand-secondary/20 mb-12 relative overflow-hidden">
                     <h3 className="text-2xl font-bold mb-6 text-brand-secondary">Key Takeaways</h3>
