@@ -28,7 +28,7 @@ import independenceImg from '../assets/images/gallery/krisar_img_085.jpeg';
 import gallery1 from '../assets/images/gallery/krisar_img_076.jpeg';
 import gallery2 from '../assets/images/gallery/krisar_img_120.jpeg';
 import gallery3 from '../assets/images/gallery/krisar_img_155.jpeg';
-import gallery4 from '../assets/images/gallery/krisar_img_104.jpeg';
+import gallery4 from '../assets/images/gallery/krisar_img_192.jpeg';
 
 export const blogData = [
     {
@@ -2487,6 +2487,305 @@ export const blogData = [
                             ))}
                         </div>
                     </section>
+                </div>
+            </>
+        )
+    },
+    {
+        id: 17,
+        slug: "why-are-extracurricular-activities-important",
+        title: "Why Are Extracurricular Activities Important? | The Krisar Academy",
+        date: "April 27, 2026",
+        image: gallery4,
+        category: "Education",
+        icon: "BookOpen",
+        description: "Extracurricular activities build leadership skills, improve academic performance, and support mental health. Discover why they are an essential part of every student's development at The Krisar Academy.",
+        content: (
+            <>
+                <div className="bg-brand-secondary/10 p-8 rounded-3xl border border-brand-secondary/20 mb-12 relative overflow-hidden">
+                    <h3 className="text-2xl font-bold mb-6 text-brand-secondary">Key Takeaways</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
+                        {[
+                            "Extracurricular activities improve academic performance, build leadership skills, and support mental health alongside regular academic work.",
+                            "Students involved in structured activities outside school develop time management, communication skills, and confidence that classrooms alone cannot teach.",
+                            "Co curricular activities and performing arts are as valuable as sports for well rounded development.",
+                            "College admissions officers look for sustained extracurricular involvement, not just exam scores.",
+                            "The goal is quality engagement in a few meaningful activities, not a packed schedule that burns students out."
+                        ].map((takeaway, i) => (
+                            <div key={i} className="flex gap-4">
+                                <span className="text-brand-secondary text-xl font-bold">0{i + 1}</span>
+                                <p className="text-white/80 text-sm leading-relaxed font-light">{takeaway}</p>
+                            </div>
+                        ))}
+                    </div>
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-brand-secondary/5 blur-3xl rounded-full"></div>
+                </div>
+
+                <div className="space-y-12">
+                    <section>
+                        <h3 className="text-2xl font-bold mb-6 text-brand-secondary border-l-4 border-brand-secondary pl-4">Introduction: What Happens After the Bell Rings Matters</h3>
+                        <p className="text-lg leading-relaxed text-white mb-6">
+                            At The Krisar Academy, we believe education does not stop when the school day ends.
+                        </p>
+                        <p className="text-lg leading-relaxed text-white mb-6">
+                            What a student does with their free time, whether that is joining a sports team, participating in student government, taking up performing arts, or volunteering with community organizations, shapes who they become just as much as what they study in class.
+                        </p>
+                        <p className="text-lg leading-relaxed text-white/80 mb-6 font-light">
+                            Extracurricular activities are not a reward for finishing academics. They are an essential part of the learning process. Research consistently shows that students involved in structured activities outside school perform better academically, report better mental health, and build the social skills and leadership development that carry them well into their professional life.
+                        </p>
+                        <p className="text-lg leading-relaxed text-white">
+                            This guide breaks down exactly why extracurricular involvement matters, what the academic and health benefits look like, and how students can choose the right activities without compromising their academic work.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h3 className="text-2xl font-bold mb-6 text-brand-secondary border-l-4 border-brand-secondary pl-4">What Are Extracurricular Activities?</h3>
+                        <p className="text-lg leading-relaxed text-white mb-4">
+                            Extracurricular activities are voluntary, organized pursuits that happen outside regular class time. 
+                        </p>
+                        <p className="text-lg leading-relaxed text-white mb-8">
+                            They are not graded like core subjects, but their impact on a student's overall development is well documented. The range is wide:
+                        </p>
+                        <div className="overflow-x-auto rounded-2xl border border-white/10 bg-white/5 mb-8">
+                            <table className="w-full text-left border-collapse">
+                                <thead>
+                                    <tr className="bg-brand-secondary/10 text-brand-secondary">
+                                        <th className="p-4 border-b border-white/10">Level</th>
+                                        <th className="p-4 border-b border-white/10">Examples</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="text-white/80">
+                                    <tr className="border-b border-white/5">
+                                        <td className="p-4 font-bold border-r border-white/10">Primary</td>
+                                        <td className="p-4 font-light italic">Choir, chess club, swimming, art class</td>
+                                    </tr>
+                                    <tr className="bg-white/5 border-b border-white/5">
+                                        <td className="p-4 font-bold border-r border-white/10">Secondary</td>
+                                        <td className="p-4 font-light italic">Basketball, debate, drama, student club, student government</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="p-4 font-bold border-r border-white/10">Senior Secondary</td>
+                                        <td className="p-4 font-light italic">Model UN, robotics, community service, research clubs</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p className="text-lg leading-relaxed text-white/80 font-light mb-4">
+                            Co curricular activities connect directly to the curriculum, such as science olympiads and math competitions. Extra curricular activities are broader, covering everything from performing arts and sports to coding and photography.
+                        </p>
+                        <p className="text-lg leading-relaxed text-white/80 font-light">
+                            Part-time work, self-directed projects, and online learning also count when they build real skills and demonstrate commitment.
+                        </p>
+                    </section>
+
+                    <section className="bg-white/5 p-8 rounded-[2rem] border border-white/10">
+                        <h3 className="text-2xl font-bold mb-6 text-brand-secondary">Academic Benefits: How Extracurricular Activities Improve Academic Performance</h3>
+                        <p className="text-white/80 leading-relaxed mb-6 font-light">
+                            The link between extracurricular involvement and academic performance is one of the most consistently supported findings in education research. 
+                        </p>
+                        <p className="text-white/80 leading-relaxed mb-6 font-light">
+                            Students who participate are significantly more likely to perform well academically than peers who do not. A University of California study found that students spending one to ten hours per week on activities outside school had higher GPAs than non-participating students.
+                        </p>
+                        {/* <div className="bg-brand-primary/50 p-6 rounded-2xl border border-white/5 mb-6">
+                            <p className="text-white italic leading-relaxed">
+                                "A University of California study found that students spending one to ten hours per week on activities outside school had higher GPAs than non-participating students."
+                            </p>
+                        </div> */}
+                        <p className="text-white/80 leading-relaxed mb-6 font-light">The reasons are straightforward.</p>
+                        <p className="text-white/80 leading-relaxed mb-6 font-light">
+                            Academic clubs like debate, robotics, and student government sharpen critical thinking and communication skills that transfer directly into the classroom. School newspaper members develop writing and research skills. Math club participants reinforce academic concepts through applied problem-solving. Debate team members build argumentation and public speaking abilities that improve performance across every subject.
+                        </p>
+                        <p className="text-white/80 leading-relaxed mb-6 font-light">
+                            Beyond skills, students involved in meaningful activities feel that school is more relevant to their lives. That connection reduces disengagement and dropout. Extracurricular involvement is one of the strongest predictors of sustained academic success across secondary and senior secondary years.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h3 className="text-2xl font-bold mb-6 text-brand-secondary border-l-4 border-brand-secondary pl-4">Leadership Skills and Personal Development</h3>
+                        <figure className="mb-8 rounded-2xl overflow-hidden border border-white/10">
+                            <img
+                                src={blog16}
+                                alt="Leadership Skills and Personal Development"
+                                className="w-full h-96 object-cover object-top"
+                            />
+                            <figcaption className="text-xs text-white/40 text-center py-2 bg-white/5">
+                                Leadership Skills and Personal Development
+                            </figcaption>
+                        </figure>
+                        <p className="text-lg leading-relaxed text-white mb-6">
+                            Leadership development rarely happens in a classroom. It happens when a student has to make a real decision under pressure.
+                        </p>
+                        <p className="text-white/80 leading-relaxed mb-6 font-light">
+                            Taking on leadership roles, whether as team captain, club president, or event organizer, builds confidence in decision-making, conflict resolution, and accountability. These are skills that define a student's professional future, and they only develop through practice.
+                        </p>
+                        <p className="text-white/80 leading-relaxed mb-6 font-light">
+                            Extracurricular activities also build resilience. Losing a match, missing a solo, falling short in a competition, these setbacks under the guidance of a good coach or mentor teach students how to reflect, adjust, and keep going. That capacity is essential in adult life and in any serious professional role.
+                        </p>
+                        <p className="text-white/80 leading-relaxed font-light">
+                            Creative growth follows the same pattern. A student who joins a performing arts group as a beginner and works up to performing on stage has developed discipline, self esteem, and a sense of identity that no syllabus can provide. Many students discover by their mid-secondary years that they are a musician, a scientist, a leader, or a community builder, and that self-knowledge shapes every decision they make afterward.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h3 className="text-2xl font-bold mb-6 text-brand-secondary border-l-4 border-brand-secondary pl-4">Social Skills, Teamwork, and Making New Friends</h3>
+                        <figure className="mb-8 rounded-2xl overflow-hidden border border-white/10">
+                            <img
+                                src={independenceImg}
+                                alt="Social Skills, Teamwork"
+                                className="w-full h-96 object-cover object-center"
+                            />
+                            <figcaption className="text-xs text-white/40 text-center py-2 bg-white/5">
+                                Social Skills, Teamwork
+                            </figcaption>
+                        </figure>
+                        <p className="text-white/80 leading-relaxed mb-6 font-light">
+                            Large schools can feel isolating. Extracurricular activities create smaller communities within them.
+                        </p>
+                        <p className="text-white/80 leading-relaxed mb-6 font-light">
+                            Sports teams, ensembles, academic clubs, and performing arts groups all require collaboration, listening, and constructive feedback. Students develop social skills through the regular work of practicing together, competing together, and handling the wins and losses of group effort.
+                        </p>
+                        <p className="text-white/80 leading-relaxed mb-6 font-light">
+                            Mixed-age clubs create informal mentoring relationships where older students support newer ones. For shy students or those new to a school, a shared interest provides a natural entry point for making new friends without the pressure of unstructured social situations.
+                        </p>
+                        <p className="text-white/80 leading-relaxed font-light">
+                            Community service activities are particularly effective here. Volunteering with community organizations builds social connections while contributing something real to the world outside school. Students learn that their efforts matter beyond their own academic performance, which builds both confidence and a broader sense of purpose.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h3 className="text-2xl font-bold mb-6 text-brand-secondary border-l-4 border-brand-secondary pl-4">Mental Health and Physical Health Benefits</h3>
+                        <figure className="mb-8 rounded-2xl overflow-hidden border border-white/10">
+                            <img
+                                src={gallery3}
+                                alt="Mental Health and Physical Health Benefits"
+                                className="w-full h-96 object-cover object-center"
+                            />
+                            <figcaption className="text-xs text-white/40 text-center py-2 bg-white/5">
+                                Mental Health and Physical Health Benefits
+                            </figcaption>
+                        </figure>
+                        <p className="text-white/80 leading-relaxed mb-6 font-light">
+                            The health benefits of extracurricular involvement are both physical and psychological.
+                        </p>
+                        <p className="text-white/80 leading-relaxed mb-6 font-light">
+                            Regular physical activity through sports or dance improves cardiovascular health, strength, coordination, and sleep quality. Students who participate in physical activity consistently report lower stress levels and better ability to manage academic pressure.
+                        </p>
+                        <p className="text-white/80 leading-relaxed mb-6 font-light">
+                            The mental health benefits extend well beyond sports. Creative and social activities like choir, theatre, and performing arts reduce feelings of loneliness and anxiety. Data from the Afterschool Alliance shows 89 percent of parents agree extracurriculars support their children's emotional and social well-being. Students participating at least two days per week are significantly less likely to miss school without reason.
+                        </p>
+                        <p className="text-white/80 leading-relaxed font-light">
+                            One important caveat: overcommitment reverses these benefits. A healthy balance between academic work, extracurricular activities, rest, and free time is essential. More activities do not mean more development. Depth and consistency in fewer pursuits delivers better outcomes than a packed schedule that leaves no room to breathe.
+                        </p>
+                    </section>
+
+                    <section className="bg-brand-primary/30 p-8 rounded-3xl border border-white/10">
+                        <h3 className="text-2xl font-bold mb-4 text-brand-secondary">Time Management and Discipline</h3>
+                        <p className="text-white/80 leading-relaxed font-light mb-6">
+                            Balancing academics and extracurricular commitments teaches time management through necessity.
+                        </p>
+                        <p className="text-white/80 leading-relaxed mb-6 font-light">
+                            A student managing homework, weekend matches, and weekly music rehearsals cannot avoid learning how to plan ahead, use their time intentionally, and follow through on commitments. These are the same skills demanded in university, in professional life, and in managing personal relationships.
+                        </p>
+                        <p className="text-white/80 leading-relaxed mb-6 font-light">
+                            Regular practice schedules build habits of punctuality and consistency. Showing up when it is hard, when you are tired, when other options feel more appealing, is where discipline actually forms. That habit connects directly to how students handle deadlines, exams, and eventually the demands of adult work.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h3 className="text-2xl font-bold mb-6 text-brand-secondary border-l-4 border-brand-secondary pl-4">College Admissions and Your Professional Future</h3>
+                        <p className="text-lg leading-relaxed text-white mb-8 font-light">
+                            By the mid-2020s, competitive universities assess extracurricular records as seriously as academic scores.
+                        </p>
+                        <p className="text-white/80 leading-relaxed mb-6 font-light">
+                            Admissions officers are not looking for a long list of activities. They are looking for sustained commitment, leadership development, measurable impact, and genuine passion. A student who spent three years in debate and became team captain tells a more compelling story than one who joined twelve clubs for a single term each.
+                        </p>
+                        <p className="text-white/80 leading-relaxed mb-6 font-light">
+                            Activities that strengthen college applications include Model UN, student council, performing arts at a competitive level, research internships, and long-term community service. These are not just resume items. They are evidence of the kind of person a student is becoming.
+                        </p>
+                        <p className="text-white/80 leading-relaxed mb-6 font-light">
+                            The professional future benefits are equally concrete. Debate builds skills for law and communications. Robotics and coding clubs create engineering foundations. Student media develops journalism and marketing competencies. Employers value documented teamwork and leadership development as much as grades, and extracurricular involvement is where that documentation begins.
+                        </p>
+                      
+                    </section>
+
+                    <section className="bg-brand-secondary/10 p-10 rounded-[3rem] border border-brand-secondary/20">
+                        <h3 className="text-2xl font-bold mb-6 text-brand-secondary">How to Choose the Right Extracurricular Activities</h3>
+                        <p className="text-white/80 leading-relaxed mb-8 font-light">Start with honest self-assessment. What do you genuinely enjoy? What skills do you want to develop? What kind of commitment can you sustain alongside your academic work?</p>
+                        <p className="text-white/80 leading-relaxed mb-8 font-light">A balanced approach works best:</p>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                            {[
+                                { icon: "🏃", label: "One physical activity", desc: "For health and teamwork." },
+                                { icon: "🎨", label: "One creative or intellectual pursuit", desc: " to explore interests and develop skills" },
+                                { icon: "🤝", label: "One community-oriented or leadership activity ", desc: "to build social skills and perspective" }
+                            ].map((item, i) => (
+                                <div key={i} className="p-6 bg-brand-primary/30 rounded-2xl border border-white/10 text-center">
+                                    <div className="text-3xl mb-3">{item.icon}</div>
+                                    <h5 className="font-bold text-white mb-1 text-sm">{item.label}</h5>
+                                    <p className="text-xs text-white/60">{item.desc}</p>
+                                </div>
+                            ))}
+                        </div>
+                        <p className="text-white/70 text-sm font-light italic mb-6">
+                            Attend taster sessions or club fairs before committing. Evaluate activities on coaching quality, time demands, safety, and whether they genuinely energize you. Revisit your choices each term. Keep activities that challenge and motivate you. Drop those that create consistent dread or compromise your academic performance.
+                        </p>
+                        <p className="text-white/70 text-sm font-light italic">
+                            During exam-heavy years, focusing on one or two core commitments with real depth is better than trying to maintain five activities at surface level.
+                        </p>
+                    </section>
+
+                    <section className="bg-brand-primary/40 p-8 rounded-3xl border border-white/10">
+                        <h3 className="text-2xl font-bold mb-4 text-brand-secondary">The Role of Schools, Families, and Mentors</h3>
+                        <p className="text-white/80 leading-relaxed font-light">
+                            Schools that offer diverse extracurricular options across sports, arts, STEM, and community service give students the best conditions for well rounded development.
+                        </p>
+                        <p className="text-white/80 leading-relaxed font-light mt-4">
+                            Teachers and coaches act as mentors. They help students set goals, reflect on setbacks, and develop the self awareness that makes both academic and personal growth possible.
+                        </p>
+                        <p className="text-white/80 leading-relaxed font-light mt-4">
+                            Parents support this process by encouraging realistic choices, providing transport and time, and celebrating consistent effort over trophies. The most important message a parent can give is that growth matters more than winning, and that depth of commitment reveals character in ways that results alone never can.
+                        </p>
+                        <p className="text-white/80 leading-relaxed font-light mt-4">
+                            At The Krisar Academy, we are committed to creating those conditions and supporting every student in finding their path both inside and outside the classroom.
+                        </p>
+                    </section>
+
+                    <section className="bg-brand-secondary p-12 rounded-[3.5rem] text-brand-primary text-center">
+                        <h3 className="text-3xl font-bold mb-6">Explore Extracurricular Opportunities at The Krisar Academy</h3>
+                        <p className="text-lg font-medium leading-relaxed mb-4 max-w-2xl mx-auto">
+                            Academics and extracurricular balance is not a trade-off. It is the foundation of well rounded education.
+                        </p>
+                        <p className="text-lg font-medium leading-relaxed mb-4 max-w-2xl mx-auto">
+                            At The Krisar Academy, we support students in finding the activities that challenge them, connect them to others, and prepare them for everything that comes after school.
+                        </p>
+                        <p className="text-xl font-bold leading-relaxed mb-4 max-w-2xl mx-auto">Contact
+                            <Link to="https://thekrisaracademy.com/admission-form2/" className="underline decoration-2 underline-offset-4 hover:text-white transition-colors"> The Krisar Academy today</Link> to discuss your child's education and find the right school environment for their development.
+                        </p>
+                        <Link to="https://thekrisaracademy.com/admission-form2/" className="inline-block bg-brand-primary text-white px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-xl">
+                            Contact Our Experts
+                        </Link>
+                    </section>
+
+                    <section className="pt-12 border-t border-white/10">
+                        <h3 className="text-3xl font-bold mb-10 text-white text-center">Frequently Asked Questions</h3>
+                        <div className="space-y-6 max-w-4xl mx-auto">
+                            {[
+                                { q: "1. How many extracurricular activities should a student do at once?", a: "For most students, one to three consistent activities is the right range, with at least one being a year-long commitment. During exam years, fewer activities with more focus prevents burnout while maintaining the academic and health benefits of participation. Review commitments at the start of each term." },
+                                { q: "2. Do extracurricular activities actually help with college admissions?", a: "Yes, significantly. Admissions officers at competitive universities look for sustained extracurricular involvement with increasing responsibility over time. Depth across a few activities is far more persuasive than a long, shallow list. Keep records of your roles, achievements, and hours to make writing college applications straightforward." },
+                                { q: "3. What if a student has no interest in sports or performing arts?", a: "Extracurricular activities cover far more than sports and arts. Academic clubs, robotics, debate, student government, community service, coding, photography, and student media all count. The key is finding something that connects to genuine interests, not fitting into a predefined category." },
+                                { q: "4. How do extracurricular activities affect mental health?", a: "Structured participation in activities students enjoy consistently reduces stress levels, builds self esteem, and creates a sense of belonging that protects against anxiety and academic pressure. The benefits are strongest when participation is consistent and the student has genuine interest in the activity rather than doing it purely for college applications." },
+                                { q: "5. Are extracurricular activities important for younger children too?", a: "Yes, though the approach differs. For primary-age children, one to two light, enjoyable activities per week support socialization and basic skill development. The emphasis should be on play, variety, and fun rather than performance or competition. Avoid overscheduling evenings and protect sleep and unstructured time." },
+                                { q: "6. How do students balance extracurriculars with academic work?", a: "Use a weekly timetable that protects study time, sleep, and at least one full rest day. Be honest about total commitments each term. Communicate early with teachers and coaches when conflicts arise. Saying no to an additional activity when it would compromise academic performance or mental health is a sign of maturity, not failure." },
+                                { q: "7. Can community service count as an extracurricular activity?", a: "Absolutely. Long-term volunteering with community organizations is one of the most valued forms of extracurricular involvement by both universities and employers. It builds social skills, develops leadership capabilities, and demonstrates genuine commitment to something beyond personal gain." }
+                            ].map((faq, idx) => (
+                                <div key={idx} className="p-8 bg-white/5 rounded-3xl border border-white/10">
+                                    <h5 className="font-bold text-brand-secondary mb-3">{faq.q}</h5>
+                                    <p className="text-white/70 italic leading-relaxed font-light">{faq.a}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+
+                    <p className="text-center text-white/30 text-sm mt-4 italic">The Krisar Academy | Developing Well Rounded Individuals</p>
                 </div>
             </>
         )
