@@ -39,7 +39,7 @@ export const blogData = [
         image: blog1,
         category: "Celebration",
         icon: "Trophy",
-        description: "Weighing boarding school vs day school for your child? Compare academics, life skills, costs, and social development to find the right school for your family. URL Slug: /boarding-school-vs-day-school",
+        description: "The campus of The Krisar Academy transformed into a vibrant arena of energy, excitement, and enthusiasm for Krisar's Sports Fiesta 2024-2025. Read more about the grand celebration of sports and spirit.",
         content: (
             <>
                 <p className="mb-6 text-lg leading-relaxed text-white">
@@ -1139,7 +1139,7 @@ export const blogData = [
         image: blog13,
         category: "Education",
         icon: "BookOpen",
-        description: "Choosing a school for your child is one of the most consequential decisions you will make.",
+        description: "Choosing a school for your child is one of the most consequential decisions you will make. Read our complete guide to selecting the right school for your child's future.",
         content: (
             <>
                 <p className="mb-6 text-xl font-medium leading-relaxed text-brand-secondary">
@@ -1428,7 +1428,7 @@ export const blogData = [
         image: blog14,
         category: "Education",
         icon: "BookOpen",
-        description: "One of the most common questions parents in Tamil Nadu face before school admission",
+        description: "One of the most common questions parents in Tamil Nadu face before school admission is whether to choose CBSE or Matriculation. Find out what you need to know.",
         content: (
             <>
                 <p className="mb-6 text-xl font-medium leading-relaxed text-brand-secondary">
@@ -1682,7 +1682,7 @@ export const blogData = [
         image: blog15,
         category: "Education",
         icon: "BookOpen",
-        description: "If you are searching for the best schools in Arani for the 2026–27 academic year",
+        description: "If you are searching for the best schools in Arani for the 2026–27 academic year, explore our complete list and guide to making the right choice for admissions.",
         content: (
             <>
                 <p className="mb-6 text-xl font-medium leading-relaxed text-brand-secondary">
@@ -2789,5 +2789,160 @@ export const blogData = [
                 </div>
             </>
         )
+    },
+    {
+        id: 18,
+        slug: "smart-classroom",
+        title: "Smart Classroom at The Krisar Academy | Modern Learning for Every Student",
+        date: "May 5, 2026",
+        image: gallery1,
+        category: "Education",
+        icon: "BookOpen",
+        description: "The Krisar Academy's smart classrooms combine interactive technology and advanced laboratories to create an engaging learning environment that prepares students for their future.",
+        content: (
+            <>
+                <p className="mb-6 text-xl font-medium leading-relaxed text-brand-secondary">
+                    Smart classroom technology moves learning beyond writing notes and passive listening, into interactive, visual, and collaborative learning that suits diverse learning needs.
+                </p>
+                <p className="mb-6 text-lg leading-relaxed text-white">
+                    The core purpose of smart classroom technology is not novelty. It is to create an engaging learning environment where students learn more effectively, participate more actively, and develop the digital literacy they need for higher education and professional life.
+                </p>
+                <p className="mb-6 text-lg leading-relaxed text-white">
+                    At the standard smart classroom level, this includes:
+                </p>
+                <ul className="list-disc pl-6 mb-6 text-lg text-white space-y-2">
+                    <li>Interactive whiteboards and interactive displays for dynamic, visual teaching</li>
+                    <li>Multimedia presentations that combine text, images, and audio</li>
+                    <li>Digital resources and educational apps that support diverse learning needs</li>
+                    <li>Tools that enable collaborative learning and student participation</li>
+                    <li>Facilities that support preparing lessons with rich, curriculum-aligned content</li>
+                </ul>
+
+                <h3 className="text-2xl font-bold mb-4 text-brand-secondary mt-10">How Smart Classrooms Work at The Krisar Academy</h3>
+                
+                <h4 className="text-xl font-bold text-white mb-4 mt-8">Interactive Lessons Instead of Passive Listening</h4>
+                <p className="mb-6 text-lg leading-relaxed text-white">
+                    Traditional classrooms depend heavily on a teacher speaking and students writing notes. Smart classroom technology shifts this.
+                </p>
+                <p className="mb-6 text-lg leading-relaxed text-white">
+                    Smart class technology enables teachers to address various learning styles within a single lesson. A topic can be introduced with a short visual explanation, reinforced with an interactive tool, and summarized with a digital resource that students can revisit. This approach serves diverse learning needs in a way that traditional teaching methods, built around a single delivery format, structurally cannot.
+                </p>
+                <p className="mb-6 text-lg leading-relaxed text-white">
+                    At Krisar, this means a student who struggles to grasp a concept through text alone has multiple ways to access the same understanding. That flexibility directly affects how students learn and how confident they become in the subject over time.
+                </p>
+
+                <h4 className="text-xl font-bold text-white mb-4 mt-8">Collaborative Learning and Student Participation</h4>
+                <p className="mb-6 text-lg leading-relaxed text-white">
+                    Smart classroom tools create conditions for collaborative learning that traditional classrooms make difficult.
+                </p>
+                <p className="mb-6 text-lg leading-relaxed text-white">
+                    When content is displayed on an interactive display rather than a static board, the entire class works from the same visual reference point. Students can share ideas, respond to questions, and participate in group problem-solving within the lesson itself. Student participation increases because the format invites it.
+                </p>
+                <p className="mb-6 text-lg leading-relaxed text-white">
+                    This also builds the communication skills and confidence to share ideas that schools are expected to develop, not just the academic content of the curriculum.
+                </p>
+
+                <h4 className="text-xl font-bold text-white mb-4 mt-8">The AI and Robotics Laboratory: Smart Learning Beyond the Classroom</h4>
+                <p className="mb-6 text-lg leading-relaxed text-white">
+                    Smart classroom technology at Krisar extends beyond the classroom walls into the AI and Robotics Laboratory.
+                </p>
+                <p className="mb-6 text-lg leading-relaxed text-white">
+                    This is a facility that most private engineering colleges in Tamil Nadu did not have a decade ago. Krisar's students access it at school level.
+                </p>
+                <p className="mb-6 text-lg leading-relaxed text-white">
+                    For students preparing for NEET and JEE, laboratory familiarity built during school years is a direct advantage. Understanding how to handle equipment, conduct experiments, and observe outcomes practically builds a deeper understanding of concepts that purely classroom-based learning leaves incomplete.
+                </p>
+                <p className="mb-6 text-lg leading-relaxed text-white">
+                    Krisar's advanced laboratories support the same principle that drives the smart class setup: students learn better when they engage directly with what they are studying rather than only reading or listening about it.
+                </p>
+
+                <h3 className="text-2xl font-bold mb-4 text-brand-secondary mt-12">Smart Classrooms and the CBSE Curriculum</h3>
+                <p className="mb-6 text-lg leading-relaxed text-white">
+                    Krisar Academy's smart classroom technology is implemented within a CBSE-affiliated framework, which means the digital tools and interactive lessons are aligned to the curriculum that governs JEE, NEET, and board examinations.
+                </p>
+                <p className="mb-6 text-lg leading-relaxed text-white">
+                    This is an important distinction. Smart classroom solutions are only as useful as their curriculum alignment. Technology that is not tied to what students are actually assessed on creates an engaging learning environment without academic outcomes.
+                </p>
+                <p className="mb-6 text-lg leading-relaxed text-white">
+                    At Krisar, the smart class technology enables teachers to cover the CBSE curriculum more effectively, not to replace it with a separate learning experience. The result is that students benefit from a modern classrooms environment while remaining fully prepared for the examinations that determine their academic future.
+                </p>
+                <p className="mb-6 text-lg leading-relaxed text-white">
+                    Smart classrooms aim to create well rounded students who are academically prepared, technologically capable, and ready to operate in environments that bear no resemblance to a blackboard-and-chalk classroom.
+                </p>
+
+                <h3 className="text-2xl font-bold mb-6 text-brand-secondary mt-12 border-l-4 border-brand-secondary pl-4">Smart Classroom vs Traditional Classroom: The Practical Difference</h3>
+                <div className="overflow-x-auto mb-10">
+                    <table className="w-full text-left border-collapse bg-white/5 rounded-xl overflow-hidden border border-white/10">
+                        <thead>
+                            <tr className="bg-brand-secondary text-[#0B1221]">
+                                <th className="p-4 font-bold border-b border-white/10">Feature</th>
+                                <th className="p-4 font-bold border-b border-white/10">Traditional Classrooms</th>
+                                <th className="p-4 font-bold border-b border-white/10">Smart Classroom at Krisar</th>
+                            </tr>
+                        </thead>
+                        <tbody className="text-white">
+                            <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                <td className="p-4 font-medium">Primary delivery</td>
+                                <td className="p-4 text-white/80">Teacher speaking, writing notes</td>
+                                <td className="p-4 text-white/80">Interactive displays, multimedia presentations</td>
+                            </tr>
+                            <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                <td className="p-4 font-medium">Learning styles served</td>
+                                <td className="p-4 text-white/80">Primarily auditory and text-based</td>
+                                <td className="p-4 text-white/80">Visual, auditory, interactive, collaborative</td>
+                            </tr>
+                            <tr className="hover:bg-white/5 transition-colors">
+                                <td className="p-4 font-medium">Student participation</td>
+                                <td className="p-4 text-white/80">Question and answer, limited</td>
+                                <td className="p-4 text-white/80">Active engagement through interactive tools</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p className="mb-10 text-lg leading-relaxed text-white">
+                    The difference between a standard classroom and a smart classroom becomes clear when you see it in operation. Every student at The Krisar Academy learns in a fully equipped smart class environment, supported by advanced laboratories and an AI and Robotics Laboratory that extends digital learning into practical application.
+                </p>
+
+                <div className="bg-brand-primary/20 p-8 rounded-3xl border border-brand-primary/30 my-10">
+                    <h4 className="text-xl font-bold text-white mb-6">Contact The Krisar Academy to arrange a campus visit and see the smart classroom setup in person.</h4>
+                    <div className="space-y-4">
+                        <div className="flex items-start gap-3">
+                            <span className="text-brand-secondary">📞</span>
+                            <span className="text-white/90"><strong>Call:</strong> +91 75400 88387</span>
+                        </div>
+                        <div className="flex items-start gap-3">
+                            <span className="text-brand-secondary">📍</span>
+                            <span className="text-white/90"><strong>Address:</strong> #136/6, Arcot to Arani Main Road, Paradarami Village, Arcot Taluk, Ranipet District, Tamil Nadu 632512</span>
+                        </div>
+                        <div className="flex items-start gap-3">
+                            <span className="text-brand-secondary">📧</span>
+                            <span className="text-white/90"><strong>Email:</strong> info.thekrisaracademy@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+
+                <section className="pt-12 border-t border-white/10 mt-12">
+                    <h3 className="text-3xl font-bold mb-10 text-white text-center">Frequently Asked Questions</h3>
+                    <div className="space-y-6 max-w-4xl mx-auto">
+                        {[
+                            { q: "1. What smart classroom technology does The Krisar Academy use?", a: "Every classroom at Krisar is equipped with smart class technology including interactive displays, interactive whiteboards, and multimedia presentation tools. The AI and Robotics Laboratory extends this into hands-on digital learning beyond standard classroom technology. All classrooms are fully air-conditioned." },
+                            { q: "2. How do smart classrooms benefit students with different learning styles?", a: "Smart class solutions allow teachers to deliver the same concept through multiple formats within a single lesson: visual demonstration, interactive tools, audio-visual content, and collaborative exercises. This addresses various learning styles in a way that traditional teaching methods built around a single delivery format cannot. Students who struggle with text-based learning gain access to visual and interactive routes to the same understanding." },
+                            { q: "3. Are smart classrooms available to all students at Krisar or only certain grades?", a: "All classrooms at The Krisar Academy are smart classrooms. The smart class setup is the standard across every grade from Pre-KG through Grade 12, not a facility reserved for senior grades or select subjects." },
+                            { q: "4. How does the AI and Robotics Laboratory connect to smart classroom learning?", a: "The AI and Robotics Laboratory extends the digital smart classroom experience into practical application. Where the smart class enables interactive lessons and visual learning within the curriculum, the laboratory gives students hands-on experience building, programming, and applying technology. Together they create a learning environment that develops both conceptual understanding and applied skills." },
+                            { q: "5. Do smart classrooms help with NEET and JEE preparation?", a: "Yes. Krisar's smart classroom technology is aligned to the CBSE curriculum, which directly maps to JEE and NEET syllabi. Interactive lessons and visual learning tools make complex concepts in physics, chemistry, mathematics, and biology clearer and easier to retain. Combined with Krisar's integrated NEET and JEE coaching programme, the smart classroom environment supports competitive exam preparation from the foundation level upward." },
+                            { q: "6. How do smart classrooms develop skills beyond academics?", a: "Regular engagement with smart classroom tools builds digital literacy, critical thinking through interactive problem-solving, communication skills through collaborative learning, and the confidence to share ideas and participate actively. These are the essential skills and future ready skills that universities and employers expect, developed naturally through daily classroom experience rather than as a separate programme." }
+                        ].map((faq, idx) => (
+                            <div key={idx} className="p-8 bg-white/5 rounded-3xl border border-white/10">
+                                <h5 className="font-bold text-brand-secondary mb-3">{faq.q}</h5>
+                                <p className="text-white/70 italic leading-relaxed font-light">{faq.a}</p>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+
+                <p className="text-center text-white/30 text-sm mt-10 italic">The Krisar Academy | CBSE Affiliated | Est. 2018 | Pre-KG to Grade 12</p>
+            </>
+        )
     }
 ];
+
