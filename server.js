@@ -6,7 +6,7 @@ import nodemailer from 'nodemailer';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 
-// Load environment variables
+// Load environment variable
 dotenv.config();
 
 const app = express();
