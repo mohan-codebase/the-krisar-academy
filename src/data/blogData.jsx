@@ -25,6 +25,7 @@ import blog16 from '../assets/images/gallery/krisar_img_200.jpeg';
 import independenceImg from '../assets/images/gallery/krisar_img_085.jpeg';
 import blog18 from '../assets/images/academics/Academic Approach.avif';
 import blog18Inner from '../assets/images/academics/Beyond Academicss.avif';
+import blog19 from '../assets/images/academics/Kindergarten.avif';
 
 // Gallery Images for Blog
 import gallery1 from '../assets/images/gallery/krisar_img_076.jpeg';
@@ -3061,6 +3062,364 @@ export const blogData = [
                                 { q: "4. How does the AI and Robotics Laboratory connect to smart classroom learning?", a: "The AI and Robotics Laboratory extends the digital smart classroom experience into practical application. Where the smart class enables interactive lessons and visual learning within the curriculum, the laboratory gives students hands-on experience building, programming, and applying technology. Together they create a learning environment that develops both conceptual understanding and applied skills." },
                                 { q: "5. Do smart classrooms help with NEET and JEE preparation?", a: "Yes. Krisar's smart classroom technology is aligned to the CBSE curriculum, which directly maps to JEE and NEET syllabi. Interactive lessons and visual learning tools make complex concepts in physics, chemistry, mathematics, and biology clearer and easier to retain. Combined with Krisar's integrated NEET and JEE coaching programme, the smart classroom environment supports competitive exam preparation from the foundation level upward." },
                                 { q: "6. How do smart classrooms develop skills beyond academics?", a: "Regular engagement with smart classroom tools builds digital literacy, critical thinking through interactive problem-solving, communication skills through collaborative learning, and the confidence to share ideas and participate actively. These are the essential skills and future ready skills that universities and employers expect, developed naturally through daily classroom experience rather than as a separate programme." }
+                            ].map((faq, idx) => (
+                                <div key={idx} className="p-8 bg-white/5 rounded-3xl border border-white/10">
+                                    <h5 className="font-bold text-brand-secondary mb-3">{faq.q}</h5>
+                                    <p className="text-white/70 italic leading-relaxed font-light">{faq.a}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+
+                    <p className="text-center text-white/30 text-sm mt-4 italic">The Krisar Academy | CBSE Affiliated | Est. 2018 | Pre-KG to Grade 12</p>
+                </div>
+            </>
+        )
+    },
+    {
+        id: 19,
+        slug: "holistic-learning",
+        title: "Holistic Learning at The Krisar Academy | Whole Child Education",
+        date: "May 7, 2026",
+        image: blog19,
+        category: "Education",
+        icon: "BookOpen",
+        description: "Holistic learning at The Krisar Academy develops every student intellectually, emotionally, physically, and socially. Discover how our holistic education approach prepares students for life beyond school.",
+        content: (
+            <>
+                <div className="bg-brand-secondary/10 p-8 rounded-3xl border border-brand-secondary/20 mb-12 relative overflow-hidden">
+                    <h3 className="text-2xl font-bold mb-6 text-brand-secondary">Key Takeaways</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
+                        {[
+                            "Holistic learning develops the whole child across intellectual, emotional, social, physical, and ethical dimensions, not just academic achievement.",
+                            "At The Krisar Academy, holistic education is built into daily school life through integrated programmes, hands-on learning, and structured co-curricular activities.",
+                            "Critical thinking, emotional intelligence, interpersonal skills, and practical skills are developed alongside academic skills from Pre-KG through Grade 12.",
+                            "Smart classrooms, an AI and Robotics Laboratory, advanced science labs, performing arts, and professional sports coaching together form Krisar's holistic curriculum.",
+                            "Holistic development prepares students for a world where adaptability, creativity, and self-awareness matter as much as academic excellence."
+                        ].map((takeaway, i) => (
+                            <div key={i} className="flex gap-4">
+                                <span className="text-brand-secondary text-xl font-bold">0{i + 1}</span>
+                                <p className="text-white/80 text-sm leading-relaxed font-light">{takeaway}</p>
+                            </div>
+                        ))}
+                    </div>
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-brand-secondary/5 blur-3xl rounded-full"></div>
+                </div>
+
+                <div className="space-y-12">
+                    <section>
+                        <h3 className="text-2xl font-bold mb-6 text-brand-secondary border-l-4 border-brand-secondary pl-4">Introduction: Education for the Whole Person</h3>
+                        <p className="text-lg leading-relaxed text-white mb-6">
+                            Schools that focus only on examinations produce students who are prepared for tests.
+                        </p>
+                        <p className="text-lg leading-relaxed text-white mb-6">
+                            The world beyond school demands considerably more. Careers shift. Interpersonal skills determine professional outcomes as much as qualifications do. Mental health, self confidence, decision making, and ethical development shape how young people live and contribute long after their last exam.
+                        </p>
+                        <p className="text-lg leading-relaxed text-white mb-6">
+                            Holistic learning addresses this gap by developing the whole child, mind, body, emotions, and values, through a comprehensive approach that treats academic learning and personal growth as inseparable rather than competing priorities.
+                        </p>
+                        <p className="text-lg leading-relaxed text-white">
+                            At The Krisar Academy, holistic education is not a philosophy applied selectively to one programme or one grade. It is embedded in the daily learning environment across every year from Pre-KG through Grade 12, visible in the classroom, the laboratory, the auditorium, the sports ground, and the arts studio.
+                        </p>
+                    </section>
+
+                    <section className="bg-white/5 p-8 rounded-[2rem] border border-white/10">
+                        <h3 className="text-2xl font-bold mb-6 text-brand-secondary">What Is Holistic Learning?</h3>
+                        <p className="text-lg leading-relaxed text-white mb-6">
+                            Holistic learning is a comprehensive approach to education that develops students across multiple dimensions simultaneously.
+                        </p>
+                        <p className="text-lg leading-relaxed text-white mb-6">
+                            Where traditional education narrows its focus to academic content and examination performance, holistic education addresses the full range of what a student needs to become a capable, well rounded, functioning adult.
+                        </p>
+                        <p className="text-lg leading-relaxed text-white mb-8">
+                            UNESCO defines holistic learning as an approach that activates the learner's intellect, emotions, imagination, and body for more effective and comprehensive learning. This is the opposite of rote memorisation. It is learning designed to produce understanding, not just recall.
+                        </p>
+
+                        <h4 className="text-xl font-bold text-white mb-4">The core dimensions of holistic development are:</h4>
+                        
+                        <div className="overflow-x-auto rounded-2xl border border-white/10 bg-white/5 mb-8">
+                            <table className="w-full text-left border-collapse">
+                                <thead>
+                                    <tr className="bg-brand-secondary/10 text-brand-secondary">
+                                        <th className="p-4 border-b border-white/10">Dimension</th>
+                                        <th className="p-4 border-b border-white/10">What It Develops</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="text-white/80">
+                                    <tr className="border-b border-white/5">
+                                        <td className="p-4 font-bold border-r border-white/10">Intellectual development</td>
+                                        <td className="p-4 font-light">Critical thinking, problem solving skills, academic skills, analytical depth</td>
+                                    </tr>
+                                    <tr className="bg-white/5 border-b border-white/5">
+                                        <td className="p-4 font-bold border-r border-white/10">Emotional development</td>
+                                        <td className="p-4 font-light">Self awareness, emotional intelligence, incorporating emotional reflection into daily learning</td>
+                                    </tr>
+                                    <tr className="border-b border-white/5">
+                                        <td className="p-4 font-bold border-r border-white/10">Social development</td>
+                                        <td className="p-4 font-light">Interpersonal skills, collaboration, positive relationships, social responsibility</td>
+                                    </tr>
+                                    <tr className="bg-white/5 border-b border-white/5">
+                                        <td className="p-4 font-bold border-r border-white/10">Physical development</td>
+                                        <td className="p-4 font-light">Physical fitness, bodily awareness, movement integrated into the school day</td>
+                                    </tr>
+                                    <tr className="border-b border-white/5">
+                                        <td className="p-4 font-bold border-r border-white/10">Ethical development</td>
+                                        <td className="p-4 font-light">Values, moral reasoning, realistic issues students will face in real life situations</td>
+                                    </tr>
+                                    <tr className="bg-white/5">
+                                        <td className="p-4 font-bold border-r border-white/10">Creative development</td>
+                                        <td className="p-4 font-light">Expression, imagination, different perspectives, confidence to share ideas</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <p className="text-lg leading-relaxed text-white/80 font-light mt-4">
+                            The key distinction between holistic and traditional education is relevance. Holistic learning connects academic content to students' identities, their local community, and their future pathways. Learning stops being abstract. It becomes meaningful.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h3 className="text-2xl font-bold mb-6 text-brand-secondary border-l-4 border-brand-secondary pl-4">Why Holistic Learning Matters Now</h3>
+                        <p className="text-lg leading-relaxed text-white mb-6 font-medium">Three forces make holistic education more important in 2026 than at any previous point.</p>
+                        
+                        <div className="space-y-6">
+                            <div className="p-6 bg-white/5 rounded-2xl border border-white/10">
+                                <p className="text-white/80 leading-relaxed font-light">
+                                    <strong>AI and automation</strong> are eliminating routine, repetitive work while amplifying demand for creativity, interpersonal skills, and problem solving. Students who have only developed academic skills through rote memorisation are underprepared for this shift. Students with holistic development are not.
+                                </p>
+                            </div>
+                            <div className="p-6 bg-white/5 rounded-2xl border border-white/10">
+                                <p className="text-white/80 leading-relaxed font-light">
+                                    <strong>Mental health</strong> among young people has become a genuine crisis in school systems worldwide. Holistic learning addresses this directly by building emotional well being, self confidence, and a sense of purpose into the educational experience rather than treating them as afterthoughts.
+                                </p>
+                            </div>
+                            <div className="p-6 bg-white/5 rounded-2xl border border-white/10">
+                                <p className="text-white/80 leading-relaxed font-light">
+                                    <strong>Career complexity</strong> means today's students will navigate multiple career changes across their working lives. That demands adaptability, lifelong learning capacity, and practical skills that no single exam can assess or a narrow curriculum develop.
+                                </p>
+                            </div>
+                        </div>
+
+                        <p className="text-lg leading-relaxed text-white mt-8">
+                            Holistic development prepares students to thrive in this environment. Academic excellence remains central. But it sits within a broader framework that develops the whole person.
+                        </p>
+                    </section>
+                    
+                    <section>
+                        <h3 className="text-2xl font-bold mb-8 text-brand-secondary border-l-4 border-brand-secondary pl-4">How The Krisar Academy Delivers Holistic Education</h3>
+
+                        <div className="space-y-10">
+                            <div className="p-8 bg-white/5 rounded-3xl border border-white/10">
+                                <h4 className="text-xl font-bold text-white mb-4">Smart Classrooms: Intellectual and Collaborative Development</h4>
+                                <p className="text-white/80 leading-relaxed font-light mb-4">
+                                    Every classroom at The Krisar Academy is a fully air-conditioned smart classroom equipped with modern teaching technology.
+                                </p>
+                                <p className="text-white/80 leading-relaxed font-light mb-4">
+                                    Smart classroom technology shifts learning away from passive note-taking toward interactive lessons, visual learning, and hands on learning with digital tools. Teachers deliver lessons using multimedia presentations and interactive displays that make complex concepts clearer and engage different perspectives simultaneously.
+                                </p>
+                                <p className="text-white/80 leading-relaxed font-light mb-4">
+                                    This environment naturally develops critical thinking. Students are not passive recipients of information. They engage with content, respond in real time, and work through problems collaboratively. The smart class setup enables collaborative learning, student participation, and the kind of active intellectual engagement that builds genuine academic skills rather than surface-level recall.
+                                </p>
+                                <p className="text-white/80 leading-relaxed font-light">
+                                    For diverse learners, smart classroom tools address various learning styles within a single lesson. A student who struggles with text-based explanation accesses the same concept through visual and interactive routes. This is holistic curriculum design in practice: reaching the whole child, not just the student who responds to one delivery format.
+                                </p>
+                            </div>
+
+                            <div className="p-8 bg-white/5 rounded-3xl border border-white/10">
+                                <h4 className="text-xl font-bold text-white mb-4">AI and Robotics Laboratory: Hands On Problem Solving</h4>
+                                <p className="text-white/80 leading-relaxed font-light mb-4">
+                                    The AI and Robotics Laboratory at Krisar takes intellectual development into applied territory.
+                                </p>
+                                <p className="text-white/80 leading-relaxed font-light mb-4">
+                                    Students do not only learn how technology works in theory. They build, programme, and experiment with it. This hands on approach develops problem solving skills, critical thinking, and the capacity to work through real world problems systematically, all of which are essential skills for every career path, not only technology-related ones.
+                                </p>
+                                <p className="text-white/80 leading-relaxed font-light">
+                                    The laboratory also develops growth mindset in a concrete way. Robotics and AI projects require iteration. Students encounter failure, adjust, and try again. That process, repeated across a school career, builds the resilience and adaptability that holistic education aims to develop.
+                                </p>
+                            </div>
+
+                            <div className="p-8 bg-white/5 rounded-3xl border border-white/10">
+                                <h4 className="text-xl font-bold text-white mb-4">Advanced Science and Technology Laboratories</h4>
+                                <p className="text-white/80 leading-relaxed font-light mb-4">
+                                    Krisar's advanced science and technology laboratories extend hands on learning into biology, chemistry, and physics.
+                                </p>
+                                <p className="text-white/80 leading-relaxed font-light mb-4">
+                                    Practical laboratory work builds a deeper understanding of concepts than classroom instruction alone can achieve. Students observe, test, and draw conclusions from direct experience. This is experiential learning applied to science: the difference between memorising what osmosis is and watching it happen.
+                                </p>
+                                <p className="text-white/80 leading-relaxed font-light">
+                                    For students preparing for NEET and JEE, laboratory experience built during school years is a direct academic advantage. But the development it produces goes beyond competitive exam preparation. Observation skills, methodical thinking, and the ability to move from hypothesis to evidence are holistic life skills that carry into every professional context.
+                                </p>
+                            </div>
+
+                            <div className="p-8 bg-white/5 rounded-3xl border border-white/10">
+                                <h4 className="text-xl font-bold text-white mb-4">Integrated NEET and JEE Coaching: Academic Excellence Within a Holistic Framework</h4>
+                                <p className="text-white/80 leading-relaxed font-light mb-4">
+                                    At Krisar, competitive exam coaching is integrated into the academic programme, not outsourced to an external institute after school hours.
+                                </p>
+                                <p className="text-white/80 leading-relaxed font-light mb-4">
+                                    This integration matters for holistic development. When exam preparation is separate from school life, it competes with the rest of a student's development. When it is embedded within a broader educational framework, academic excellence and personal growth reinforce each other.
+                                </p>
+                                <p className="text-white/80 leading-relaxed font-light">
+                                    Students develop the study habits, self directed learning capacity, and academic skills needed for JEE and NEET within the same environment where they also develop emotional intelligence, interpersonal skills, and physical fitness. Neither is sacrificed for the other.
+                                </p>
+                            </div>
+
+                            <div className="p-8 bg-white/5 rounded-3xl border border-white/10">
+                                <h4 className="text-xl font-bold text-white mb-4">Sports with Professional Coaching: Physical and Character Development</h4>
+                                <p className="text-white/80 leading-relaxed font-light mb-4">
+                                    Physical fitness is not a gap-filler at Krisar. It is a structured component of holistic development.
+                                </p>
+                                <p className="text-white/80 leading-relaxed font-light mb-4">
+                                    Sports at Krisar, including Skating, Archery, Silambam, and Yoga, are delivered by trained instructors as part of the school's programme. This is professional coaching, not supervised free time.
+                                </p>
+                                <p className="text-white/80 leading-relaxed font-light mb-4">
+                                    The holistic development that sports produce goes well beyond physical fitness. Team sports build interpersonal skills, discipline, the ability to manage setbacks, and the capacity to work toward collective goals. Individual sports like Archery and Skating develop focus, patience, and self confidence. Silambam and Yoga integrate physical development with awareness, balance, and discipline.
+                                </p>
+                                <p className="text-white/80 leading-relaxed font-light">
+                                    These are practical skills and life skills developed through consistent, structured physical practice across a student's school years.
+                                </p>
+                            </div>
+
+                            <div className="p-8 bg-white/5 rounded-3xl border border-white/10">
+                                <h4 className="text-xl font-bold text-white mb-4">Performing Arts: Creative and Emotional Development</h4>
+                                <p className="text-white/80 leading-relaxed font-light mb-4">
+                                    Krisar's performing arts programmes, including Music and Dance, provide the creative and emotional dimension of holistic education.
+                                </p>
+                                <p className="text-white/80 leading-relaxed font-light mb-4">
+                                    Performing arts develop emotional intelligence in a direct way. Learning to perform requires students to understand emotion, express it, regulate it under pressure, and communicate it to an audience. These capacities translate directly into self awareness, confidence, and the interpersonal skills that academic learning alone does not build.
+                                </p>
+                                <p className="text-white/80 leading-relaxed font-light mb-4">
+                                    The 1,000-seat indoor auditorium at Krisar means this development happens in front of real audiences. Students present, perform, and communicate at scale from an early age. The self confidence this builds is qualitatively different from classroom participation.
+                                </p>
+                                <p className="text-white/80 leading-relaxed font-light">
+                                    Creative development also supports academic learning. Students who engage regularly with performing arts develop different perspectives, attention to detail, and the capacity to approach problems imaginatively. These are not soft additions to education. They are core components of intellectual development.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section className="bg-brand-secondary/5 p-10 rounded-[3rem] border border-brand-secondary/20">
+                        <h3 className="text-2xl font-bold mb-8 text-brand-secondary text-center">Holistic Learning Across Age Groups at Krisar</h3>
+                        
+                        <div className="space-y-8">
+                            <div>
+                                <h4 className="text-xl font-bold text-white mb-4 underline decoration-brand-secondary decoration-2 underline-offset-4">Early Childhood and Primary Years (Pre-KG to Grade 5)</h4>
+                                <p className="text-white/80 leading-relaxed font-light mb-4">
+                                    In early childhood education, holistic development happens through structured play, storytelling, music, movement, and hands on exploration.
+                                </p>
+                                <p className="text-white/80 leading-relaxed font-light mb-4">
+                                    The priority at this stage is building the emotional and social foundations that all later learning depends on. Children who feel safe, valued, and connected to their teachers and peers develop the readiness for academic learning naturally. Children who do not carry that insecurity into every classroom interaction.
+                                </p>
+                                <p className="text-white/80 leading-relaxed font-light">
+                                    Krisar's approach to early childhood combines structured academic introduction with the creative, physical, and emotional development activities that whole child development requires. Smart classroom tools introduce digital literacy from the earliest years at an age-appropriate pace.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h4 className="text-xl font-bold text-white mb-4 underline decoration-brand-secondary decoration-2 underline-offset-4">Secondary Years (Grade 6 to Grade 10)</h4>
+                                <p className="text-white/80 leading-relaxed font-light mb-4">
+                                    Adolescence is the stage where critical thinking, identity formation, and real world engagement become central to holistic development.
+                                </p>
+                                <p className="text-white/80 leading-relaxed font-light mb-4">
+                                    Students at this stage benefit from learning that connects to real life situations, challenges their different perspectives, and gives them agency over how they demonstrate understanding. Project based learning, laboratory work, performing arts at a more advanced level, and competitive sports coaching all contribute to this developmental phase at Krisar.
+                                </p>
+                                <p className="text-white/80 leading-relaxed font-light">
+                                    Academic preparation for board examinations runs in parallel with personal development. The integrated coaching programme means students are academically supported while the co-curricular structure ensures they develop the emotional, social, and creative dimensions that board preparation alone would leave underdeveloped.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h4 className="text-xl font-bold text-white mb-4 underline decoration-brand-secondary decoration-2 underline-offset-4">Senior Secondary Years (Grade 11 and 12)</h4>
+                                <p className="text-white/80 leading-relaxed font-light mb-4">
+                                    At Grade 11 and 12, holistic education focuses on preparing students for higher education and the transition to adult life.
+                                </p>
+                                <p className="text-white/80 leading-relaxed font-light mb-4">
+                                    Academic rigor is highest at this stage. But so is the need for self directed learning capacity, emotional resilience under pressure, and the interpersonal skills that university and professional environments demand from day one.
+                                </p>
+                                <p className="text-white/80 leading-relaxed font-light">
+                                    Krisar's integrated NEET and JEE coaching, combined with the lifelong learning habits built across the previous years of holistic education, prepares students for competitive examinations without producing the narrowly trained, personally underdeveloped graduate that purely exam-focused schooling can produce.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section className="overflow-x-auto">
+                        <h3 className="text-2xl font-bold mb-6 text-brand-secondary border-l-4 border-brand-secondary pl-4">Holistic Learning vs Traditional Learning</h3>
+                        <table className="w-full text-left border-collapse bg-white/5 rounded-2xl overflow-hidden">
+                            <thead>
+                                <tr className="bg-brand-primary/50 text-brand-secondary">
+                                    <th className="p-4 border border-white/10"></th>
+                                    <th className="p-4 border border-white/10">Traditional Learning</th>
+                                    <th className="p-4 border border-white/10">Holistic Learning at Krisar</th>
+                                </tr>
+                            </thead>
+                            <tbody className="text-white/80">
+                                {[
+                                    ["Purpose", "Academic achievement and examination performance", "Whole person development with academic excellence"],
+                                    ["Curriculum", "Compartmentalised subjects", "Integrated across academic, practical, creative, physical programmes"],
+                                    ["Learning environment", "Passive, text-based", "Interactive smart classrooms, laboratories, sports, arts"],
+                                    ["Assessment focus", "High-stakes exams only", "Academic results plus personal development"],
+                                    ["Student role", "Recipient of instruction", "Active participant in their own learning"],
+                                    ["Skills developed", "Academic skills", "Academic, practical, interpersonal, life skills"],
+                                    ["Physical development", "Separate or minimal", "Structured sports with professional coaching"],
+                                    ["Creative development", "Optional or supplementary", "Integrated performing arts programme"]
+                                ].map((row, idx) => (
+                                    <tr key={idx} className={idx % 2 === 0 ? '' : 'bg-white/5'}>
+                                        <td className="p-4 border border-white/10 font-bold">{row[0]}</td>
+                                        <td className="p-4 border border-white/10">{row[1]}</td>
+                                        <td className="p-4 border border-white/10">{row[2]}</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                        <p className="text-white/80 leading-relaxed font-light mt-6">
+                            The difference is not that traditional learning is without value. Academic skills and examination preparation matter enormously. The difference is that holistic education develops everything a student needs to succeed, not only what their next exam will measure.
+                        </p>
+                    </section>
+
+                    <section className="bg-brand-secondary p-12 rounded-[3.5rem] text-brand-primary text-center">
+                        <h3 className="text-3xl font-bold mb-6">Experience Holistic Education at The Krisar Academy</h3>
+                        <p className="text-lg font-medium leading-relaxed mb-4 max-w-2xl mx-auto">
+                            Academic excellence and whole person development are not competing priorities. At The Krisar Academy, they are the same priority.
+                        </p>
+                        <p className="text-lg font-medium leading-relaxed mb-4 max-w-2xl mx-auto">
+                            Every classroom, every laboratory, every sports session, and every performance is part of a coherent holistic curriculum that prepares students for their academic future and for the full range of challenges that life beyond school presents.
+                        </p>
+                        <p className="text-xl font-bold leading-relaxed mb-4 max-w-3xl mx-auto">Contact
+                            <Link to="https://thekrisaracademy.com/admission-form2/" className="underline decoration-2 underline-offset-4 hover:text-white transition-colors"> The Krisar Academy</Link> to arrange a campus visit and see holistic learning in action.
+                        </p>
+                        <Link to="https://thekrisaracademy.com/admission-form2/" className="inline-block bg-brand-primary text-white px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-xl">
+                            Contact Our Experts
+                        </Link>
+                        
+                        <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 text-left max-w-3xl mx-auto">
+                            <div className="bg-brand-primary/20 p-4 rounded-2xl text-center">
+                                <span className="text-2xl block mb-2">📞</span>
+                                <p className="text-sm font-bold">+91 75400 88387</p>
+                            </div>
+                            <div className="bg-brand-primary/20 p-4 rounded-2xl text-center">
+                                <span className="text-2xl block mb-2">✉️</span>
+                                <p className="text-sm font-bold break-all">info.thekrisaracademy@gmail.com</p>
+                            </div>
+                            <div className="bg-brand-primary/20 p-4 rounded-2xl text-center">
+                                <span className="text-2xl block mb-2">📍</span>
+                                <p className="text-xs font-medium">#136/6, Arcot to Arani Main Road, Ranipet District, TN 632512</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section className="pt-12 border-t border-white/10">
+                        <h3 className="text-3xl font-bold mb-10 text-white text-center">Frequently Asked Questions</h3>
+                        <div className="space-y-6 max-w-4xl mx-auto">
+                            {[
+                                { q: "1. What is holistic learning and how is it different from traditional education?", a: "Holistic learning develops the whole child across intellectual, emotional, social, physical, and ethical dimensions simultaneously. Traditional education focuses primarily on academic content and examination outcomes. The difference is that holistic education treats personal growth, emotional development, physical fitness, and creative development as essential components of education rather than optional additions to academic learning." },
+                                { q: "2. How does The Krisar Academy implement holistic education?", a: "Krisar's holistic curriculum is delivered through fully equipped smart classrooms for intellectual and collaborative development, an AI and Robotics Laboratory for hands on problem solving, advanced science laboratories for experiential learning, integrated NEET and JEE coaching, professional sports coaching across Skating, Archery, Silambam, and Yoga, and performing arts programmes in Music and Dance. All classrooms are fully air-conditioned. These are not separate programmes. They are integrated components of daily school life from Pre-KG through Grade 12." },
+                                { q: "3. Does holistic learning compromise academic achievement or examination results?", a: "No. Holistic learning enhances critical thinking, deepens understanding, and builds the self directed learning capacity that academic achievement requires. At Krisar, integrated NEET and JEE coaching ensures academic preparation is structured and rigorous. Holistic development strengthens this preparation by building the study habits, resilience, and intellectual engagement that produce genuine academic skills rather than surface-level recall." },
+                                { q: "4. What life skills does holistic education develop?", a: "Holistic development at Krisar builds critical thinking and problem solving skills through smart classroom and laboratory learning, interpersonal skills and collaboration through team sports and performing arts, self confidence and self awareness through performance and competitive activity, physical fitness through structured sports coaching, emotional intelligence through creative and performing arts engagement, and practical skills through hands on science and technology work. These are the skills that determine outcomes in higher education and professional life." },
+                                { q: "5. How does holistic learning support students who struggle academically?", a: "Holistic education addresses diverse learning needs by offering multiple routes to understanding and multiple ways to demonstrate capability. A student who struggles with text-based examination formats may excel in laboratory work, robotics, performance, or sports. Recognising and developing these strengths builds the self confidence and growth mindset that positively affects academic performance over time. Holistic development also addresses the emotional well being concerns that frequently underlie academic difficulty." },
+                                { q: "6. Is holistic education appropriate for students preparing for competitive exams like NEET and JEE?", a: "Yes, and particularly so. NEET and JEE demand deep conceptual understanding, not rote memorisation. Holistic learning approaches that develop critical thinking, hands on laboratory experience, and genuine problem solving skills build exactly the intellectual foundation that competitive exam preparation requires. At Krisar, integrated coaching ensures exam preparation is structured and targeted while the holistic framework ensures students develop the resilience, focus, and learning capacity that determine performance under pressure." },
+                                { q: "7. How does early childhood education at Krisar reflect holistic principles?", a: "In the early years, Krisar's holistic education prioritises building the emotional and social foundations that all academic learning depends on. Structured activities across creative, physical, and academic domains develop the whole child from the earliest stage. Smart classroom tools introduce digital literacy at an age-appropriate pace. The emphasis at this stage is on children feeling safe, capable, and curious, because child's growth in every academic dimension depends on those foundations being secure." }
                             ].map((faq, idx) => (
                                 <div key={idx} className="p-8 bg-white/5 rounded-3xl border border-white/10">
                                     <h5 className="font-bold text-brand-secondary mb-3">{faq.q}</h5>
