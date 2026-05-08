@@ -13,7 +13,7 @@ const NavbarTop = () => {
                     <span className="sm:inline mx-1 md:mx-2 text-gray-600">|</span>
                     <Link to="/cbse-disclosure" className="hover:underline whitespace-nowrap">CBSE Disclosure</Link>
                     <span className="sm:inline mx-1 md:mx-2 text-gray-600">|</span>
-                    <Link to="/admission-form2" className="hover:underline text-center">Admission Registration Form</Link>
+                    <Link to="/admission" className="hover:underline text-center">Admission Registration Form</Link>
                 </div>
             </div>
         </>

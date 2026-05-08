@@ -7,7 +7,9 @@ export const routes = [
     { path: '/blogs', changefreq: 'weekly', priority: '0.8' },
     { path: '/contact', changefreq: 'monthly', priority: '0.8' },
     { path: '/gallery', changefreq: 'monthly', priority: '0.8' },
-    { path: '/admission-form2', changefreq: 'monthly', priority: '0.9' },
+    { path: '/admissions', changefreq: 'monthly', priority: '0.9' },
+    { path: '/admission', changefreq: 'monthly', priority: '0.9' },
+    { path: '/admission-enquiry', changefreq: 'monthly', priority: '0.8' },
     { path: '/cbse-disclosure', changefreq: 'monthly', priority: '0.6' },
     { path: '/erp-and-payment', changefreq: 'monthly', priority: '0.5' }
 ];

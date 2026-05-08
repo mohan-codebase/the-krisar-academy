@@ -2429,10 +2429,10 @@ export const blogData = [
                                 At The Krisar Academy, we support families through this decision with honest information, campus access, and conversations with our teaching and pastoral care teams.
                             </p>
                             <p className="text-xl font-bold leading-relaxed">Contact
-                                <Link to="https://thekrisaracademy.com/admission-form2/" className="underline decoration-2 underline-offset-4 hover:text-white transition-colors"> The Krisar Academy today</Link> to discuss your child's education and find the right school environment for their development.
+                                <Link to="https://thekrisaracademy.com/admission/" className="underline decoration-2 underline-offset-4 hover:text-white transition-colors"> The Krisar Academy today</Link> to discuss your child's education and find the right school environment for their development.
                             </p>
                         </div>
-                        <Link to="https://thekrisaracademy.com/admission-form2/" className="inline-block bg-brand-primary text-white px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-xl">
+                        <Link to="https://thekrisaracademy.com/admission/" className="inline-block bg-brand-primary text-white px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-xl">
                             Contact Our Experts
                         </Link>
                     </section>
@@ -2761,9 +2761,9 @@ export const blogData = [
                             At The Krisar Academy, we support students in finding the activities that challenge them, connect them to others, and prepare them for everything that comes after school.
                         </p>
                         <p className="text-xl font-bold leading-relaxed mb-4 max-w-2xl mx-auto">Contact
-                            <Link to="https://thekrisaracademy.com/admission-form2/" className="underline decoration-2 underline-offset-4 hover:text-white transition-colors"> The Krisar Academy today</Link> to discuss your child's education and find the right school environment for their development.
+                            <Link to="https://thekrisaracademy.com/admission/" className="underline decoration-2 underline-offset-4 hover:text-white transition-colors"> The Krisar Academy today</Link> to discuss your child's education and find the right school environment for their development.
                         </p>
-                        <Link to="https://thekrisaracademy.com/admission-form2/" className="inline-block bg-brand-primary text-white px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-xl">
+                        <Link to="https://thekrisaracademy.com/admission/" className="inline-block bg-brand-primary text-white px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-xl">
                             Contact Our Experts
                         </Link>
                     </section>
@@ -3030,9 +3030,9 @@ export const blogData = [
                             Every student at The Krisar Academy learns in a fully equipped smart class environment, supported by advanced laboratories and an AI and Robotics Laboratory that extends digital learning into practical application.
                         </p>
                         <p className="text-xl font-bold leading-relaxed mb-4 max-w-2xl mx-auto">Contact
-                            <Link to="https://thekrisaracademy.com/admission-form2/" className="underline decoration-2 underline-offset-4 hover:text-white transition-colors"> The Krisar Academy</Link> to arrange a campus visit and see the smart classroom setup in person.
+                            <Link to="https://thekrisaracademy.com/admission/" className="underline decoration-2 underline-offset-4 hover:text-white transition-colors"> The Krisar Academy</Link> to arrange a campus visit and see the smart classroom setup in person.
                         </p>
-                        <Link to="https://thekrisaracademy.com/admission-form2/" className="inline-block bg-brand-primary text-white px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-xl">
+                        <Link to="https://thekrisaracademy.com/admission/" className="inline-block bg-brand-primary text-white px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-xl">
                             Contact Our Experts
                         </Link>
 
@@ -3387,9 +3387,9 @@ export const blogData = [
                             Every classroom, every laboratory, every sports session, and every performance is part of a coherent holistic curriculum that prepares students for their academic future and for the full range of challenges that life beyond school presents.
                         </p>
                         <p className="text-xl font-bold leading-relaxed mb-4 max-w-3xl mx-auto">Contact
-                            <Link to="https://thekrisaracademy.com/admission-form2/" className="underline decoration-2 underline-offset-4 hover:text-white transition-colors"> The Krisar Academy</Link> to arrange a campus visit and see holistic learning in action.
+                            <Link to="https://thekrisaracademy.com/admission/" className="underline decoration-2 underline-offset-4 hover:text-white transition-colors"> The Krisar Academy</Link> to arrange a campus visit and see holistic learning in action.
                         </p>
-                        <Link to="https://thekrisaracademy.com/admission-form2/" className="inline-block bg-brand-primary text-white px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-xl">
+                        <Link to="https://thekrisaracademy.com/admission/" className="inline-block bg-brand-primary text-white px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-xl">
                             Contact Our Experts
                         </Link>
                         
