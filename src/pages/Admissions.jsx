@@ -143,7 +143,7 @@ const Admissions = () => {
             }
         } catch (error) {
             console.error('Error submitting application:', error);
-            setSubmitError('An error occurred. Please try again.');
+            setSubmitError(`Error: ${error.message || 'An error occurred. Please try again.'}`);
         } finally {
             setIsSubmitting(false);
         }

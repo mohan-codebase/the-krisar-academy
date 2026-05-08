@@ -23,6 +23,15 @@ app.use((req, res, next) => {
 
 // Common logic for sending email
 const handleEmailRequest = async (req, res) => {
+    // Basic CORS for the function
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
+    if (req.method === 'OPTIONS') {
+        return res.status(200).end();
+    }
+
     const { type, data } = req.body;
 
     if (!type || !data) {
@@ -48,8 +57,11 @@ const handleEmailRequest = async (req, res) => {
         secure: process.env.SMTP_SECURE === 'true' || process.env.SMTP_PORT === '465',
         auth: {
             user: process.env.SMTP_USER,
-            pass: process.env.SMTP_PASS.replace(/\s+/g, ''),
+            pass: (process.env.SMTP_PASS || '').replace(/\s+/g, ''),
         },
+        // Add timeout to prevent long-hanging functions
+        connectionTimeout: 10000, 
+        greetingTimeout: 10000,
     });
 
     const styles = {

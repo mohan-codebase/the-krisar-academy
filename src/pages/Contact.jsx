@@ -45,11 +45,11 @@ const Contact = () => {
             } else {
                 const errorData = await response.json().catch(() => ({}));
                 console.error('Submission failed:', response.status, response.statusText, errorData);
-                setStatus('error');
+                setStatus(`Error: ${errorData.message || 'Submission failed'}`);
             }
         } catch (error) {
             console.error('Error submitting form:', error);
-            setStatus('error');
+            setStatus(`Error: ${error.message || 'Connection error'}`);
         }
     };
 
@@ -216,7 +216,9 @@ const Contact = () => {
                                         <p className="text-green-400 mt-2 text-sm">Message sent successfully!</p>
                                     )}
                                     {status === 'error' && (
-                                        <p className="text-red-400 mt-2 text-sm">Failed to send message. Please try again.</p>
+                                        <p className="text-red-400 mt-2 text-sm">
+                                            {typeof status === 'string' && status.startsWith('Error:') ? status : 'Failed to send message. Please try again.'}
+                                        </p>
                                     )}
                                 </div>
 

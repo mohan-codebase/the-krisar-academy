@@ -121,7 +121,7 @@ const AdmissionEnquiry = () => {
             }
         } catch (error) {
             console.error('Submission error:', error);
-            setSubmitError('An error occurred. Please check your internet connection and try again.');
+            setSubmitError(`Error: ${error.message || 'An error occurred. Please check your internet connection and try again.'}`);
         } finally {
             setIsSubmitting(false);
         }

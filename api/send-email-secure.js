@@ -2,6 +2,15 @@
 import nodemailer from 'nodemailer';
 
 export default async function handler(req, res) {
+    // Add CORS headers for serverless environment
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
+    if (req.method === 'OPTIONS') {
+        return res.status(200).end();
+    }
+
     // Only allow POST
     if (req.method !== 'POST') {
         return res.status(405).json({ message: 'Method not allowed' });
@@ -32,8 +41,11 @@ export default async function handler(req, res) {
         secure: process.env.SMTP_SECURE === 'true' || process.env.SMTP_PORT === '465',
         auth: {
             user: process.env.SMTP_USER,
-            pass: process.env.SMTP_PASS.replace(/\s+/g, ''),
+            pass: (process.env.SMTP_PASS || '').replace(/\s+/g, ''),
         },
+        // Standard timeouts
+        connectionTimeout: 10000,
+        greetingTimeout: 10000,
     });
 
     const styles = {
