@@ -7,6 +7,10 @@
     {
       "source": "/send-email",
       "destination": "/api/send-email-secure"
+    },
+    {
+      "source": "/((?!api/).*)",
+      "destination": "/index.html"
     }
   ]
 }
