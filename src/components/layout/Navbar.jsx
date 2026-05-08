@@ -65,7 +65,7 @@ const Navbar = () => {
 
               <li className="text-brand-secondary text-sm"><Link to="/erp-and-payment" onClick={() => setIsMenuOpen(false)}>ERP & PAYMENT</Link></li>
               <li className="text-brand-secondary text-sm"><Link to="/cbse-disclosure" onClick={() => setIsMenuOpen(false)}>CBSE DISCLOSURE</Link></li>
-              <li className="text-brand-secondary text-sm"><Link to="/admission" onClick={() => setIsMenuOpen(false)}>ADMISSION FORM</Link></li>
+              <li className="text-brand-secondary text-sm"><Link to="/admissions" onClick={() => setIsMenuOpen(false)}>ADMISSION FORM</Link></li>
             </ul>
             <Button to="/contact" onClick={() => setIsMenuOpen(false)}>CONTACT US</Button>
           </div>

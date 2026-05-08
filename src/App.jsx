@@ -43,8 +43,8 @@ function App() {
           <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
           <Route path="/gallery" element={<PageTransition><Gallery /></PageTransition>} />
           <Route path="/admissions" element={<PageTransition><Admissions /></PageTransition>} />
-          <Route path="/admission" element={<PageTransition><Admissions /></PageTransition>} />
-          <Route path="/admission-enquiry" element={<PageTransition><AdmissionEnquiry /></PageTransition>} />
+          <Route path="/admission" element={<PageTransition><AdmissionEnquiry /></PageTransition>} />
+          <Route path="/admission-form" element={<PageTransition><Admissions /></PageTransition>} />
           <Route path="/cbse-disclosure" element={<PageTransition><CBSEDisclosure /></PageTransition>} />
           <Route path="/erp-and-payment" element={<PageTransition><ERPAndPayment /></PageTransition>} />
           <Route path="*" element={<PageTransition><NotFound /></PageTransition>} />

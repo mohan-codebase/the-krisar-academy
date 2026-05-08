@@ -38,7 +38,8 @@ const slides = [
             title: <>Future<br />Preparation</>,
             desc: "The school prepares students for the future through leadership and growth."
         },
-        buttonText: "Learn More"
+        buttonText: "Learn More",
+        buttonLink: "/projects"
     },
     {
         id: 2,
@@ -48,7 +49,8 @@ const slides = [
         badge: "CBSE Academic Affiliation",
         title: <>CBSE Academic <span className="text-brand-secondary">Affiliation</span></>,
         description: "Our academy is proudly affiliated with the CBSE board, ensuring that the school provides nationally recognised education with intellectual depth and academic standards.",
-        buttonText: "View Curriculum"
+        buttonText: "View Curriculum",
+        buttonLink: "/uat-academics"
     },
     // {
     //     id: 3,
@@ -73,7 +75,8 @@ const slides = [
         badge: "Engineering the Future",
         title: <>Engineering <span className="text-brand-secondary">the Future</span></>,
         description: "Our advanced visionary steps ensure students move beyond traditional classroom experiences. We elevate learners from passive users to active creators through a curriculum designed for the future.",
-        buttonText: "Explore More"
+        buttonText: "Explore More",
+        buttonLink: "/facilities"
     },
     {
         id: 5,
@@ -82,7 +85,8 @@ const slides = [
         badge: "Learning Beyond the Traditional Classroom",
         title: <>Beyond the <span className="text-brand-secondary">Traditional Classroom</span></>,
         description: <span>Practical exposure, project-based learning,<br /> and technology-driven <br />instruction help students <br />  connect academicknowledge <br />with real-world applications.</span>,
-        buttonText: "See More"
+        buttonText: "See More",
+        buttonLink: "/uat-beyond-academics"
     },
     {
         id: 6,
@@ -98,7 +102,8 @@ const slides = [
             title: <>Advanced<br />Robotics</>,
             desc: "World-class facilities for students to master modern technology."
         },
-        buttonText: "Enquire Now"
+        buttonText: "Enquire Now",
+        buttonLink: "/contact"
     },
     {
         id: 7,
@@ -107,7 +112,8 @@ const slides = [
         badge: "NEET & JEE Coaching",
         title: <><span className="text-brand-secondary">NEET & JEE</span> Coaching Success</>,
         description: "Our academy's specialised coaching and mentorship help students succeed in competitive examinations, guiding learners toward careers in medicine and engineering.",
-        buttonText: "Admission Now"
+        buttonText: "Admission Now",
+        buttonLink: "/admission"
     },
     // {
     //     id: 8,
@@ -224,7 +230,7 @@ const Banner = () => {
 
                                             {/* CTA Button */}
                                             <Button
-                                                href="tel:+917540088387"
+                                                to={slide.buttonLink || "/admission"}
                                                 className="flex items-center gap-3 transition-colors cursor-pointer bg-brand-secondary text-brand-primary hover:bg-white border-none font-bold px-8 py-3 md:py-4 text-base md:text-lg"
                                             >
                                                 {slide.buttonText} <ArrowRight size={24} />
@@ -264,7 +270,7 @@ const Banner = () => {
                                             {/* CTA Button */}
                                             <div className="hidden md:block">
                                                 <Button
-                                                    href="tel:+917540088387"
+                                                    to={slide.buttonLink || "/admission"}
                                                     className="flex items-center gap-3 transition-colors cursor-pointer bg-brand-secondary text-brand-primary hover:bg-white border-none font-bold px-8 py-3 md:py-4 text-base md:text-lg"
                                                 >
                                                     {slide.buttonText} <ArrowRight size={24} />
@@ -312,7 +318,7 @@ const Banner = () => {
                                             {/* CTA Button - Desktop Only */}
                                             <div className="hidden md:block">
                                                 <Button
-                                                    href="tel:+917540088387"
+                                                    to={slide.buttonLink || "/admission"}
                                                     className="flex items-center gap-3 transition-colors cursor-pointer bg-brand-secondary text-brand-primary hover:bg-white border-none font-bold px-8 py-4 text-lg"
                                                 >
                                                     {slide.buttonText} <ArrowRight size={24} />
@@ -372,7 +378,7 @@ const Banner = () => {
                                             {/* Center Spacer */}
                                             <div className="flex justify-center mb-20 md:mt-98">
                                                 <Button
-                                                    href="/contact"
+                                                    to={slide.buttonLink || "/contact"}
                                                     className="flex items-center gap-3 transition-colors cursor-pointer"
                                                 >
                                                     {slide.buttonText || "Enquire Now"} <ArrowRight size={20} />
@@ -411,7 +417,7 @@ const Banner = () => {
 
                                             {/* CTA Button */}
                                             <Button
-                                                href="tel:+917540088387"
+                                                to={slide.buttonLink || "/admission"}
                                                 className={`inline-flex items-center gap-2 transition-colors cursor-pointer mt-4 ${slide.buttonStyle === 'secondary' ? 'hover:bg-yellow-400' : 'hover:bg-white/20'}`}
                                             >
                                                 {slide.buttonText || "Enquire Now"} <ArrowRight size={20} />
