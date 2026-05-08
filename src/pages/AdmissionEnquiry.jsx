@@ -19,6 +19,36 @@ const allImagesModules = import.meta.glob('../assets/images/gallery/*.{png,jpg,j
 const allImages = Object.values(allImagesModules).map(mod => mod.default);
 
 // A modern, simplified "Expression of Interest" admission page optimized for mobile / social links
+const InputField = ({ label, name, type = "text", value, onChange, placeholder, required = false, options = null }) => (
+    <div className="flex flex-col gap-1.5 mb-4">
+        <label className="text-gray-300 text-sm font-medium">{label} {required && <span className="text-yellow-400">*</span>}</label>
+        {options ? (
+            <select
+                name={name}
+                value={value}
+                onChange={onChange}
+                className="bg-[#151E38] border border-gray-700 text-white rounded-lg px-4 py-3 focus:outline-none focus:border-yellow-400 transition-colors w-full cursor-pointer"
+                required={required}
+            >
+                <option value="" disabled>Select {label}</option>
+                {options.map(opt => (
+                    <option key={opt} value={opt}>{opt}</option>
+                ))}
+            </select>
+        ) : (
+            <input
+                type={type}
+                name={name}
+                value={value}
+                onChange={onChange}
+                placeholder={placeholder}
+                className="bg-[#151E38] border border-gray-700 text-white rounded-lg px-4 py-3 focus:outline-none focus:border-yellow-400 transition-colors w-full"
+                required={required}
+            />
+        )}
+    </div>
+);
+
 const AdmissionEnquiry = () => {
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -85,44 +115,19 @@ const AdmissionEnquiry = () => {
             if (response.ok) {
                 setIsSubmitted(true);
             } else {
-                setSubmitError('Failed to submit enquiry. Please try again.');
+                const errorData = await response.json().catch(() => ({}));
+                setSubmitError(errorData.message || 'Failed to submit enquiry. Please try again.');
+                console.error('Submission failed:', response.status, response.statusText, errorData);
             }
         } catch (error) {
-            setSubmitError('An error occurred. Please try again later.');
+            console.error('Submission error:', error);
+            setSubmitError('An error occurred. Please check your internet connection and try again.');
         } finally {
             setIsSubmitting(false);
         }
     };
 
-    const InputField = ({ label, name, type = "text", value, onChange, placeholder, required = false, options = null }) => (
-        <div className="flex flex-col gap-1.5 mb-4">
-            <label className="text-gray-300 text-sm font-medium">{label} {required && <span className="text-yellow-400">*</span>}</label>
-            {options ? (
-                <select
-                    name={name}
-                    value={value}
-                    onChange={onChange}
-                    className="bg-[#151E38] border border-gray-700 text-white rounded-lg px-4 py-3 focus:outline-none focus:border-yellow-400 transition-colors w-full appearance-none"
-                    required={required}
-                >
-                    <option value="" disabled>Select {label}</option>
-                    {options.map(opt => (
-                        <option key={opt} value={opt}>{opt}</option>
-                    ))}
-                </select>
-            ) : (
-                <input
-                    type={type}
-                    name={name}
-                    value={value}
-                    onChange={onChange}
-                    placeholder={placeholder}
-                    className="bg-[#151E38] border border-gray-700 text-white rounded-lg px-4 py-3 focus:outline-none focus:border-yellow-400 transition-colors w-full"
-                    required={required}
-                />
-            )}
-        </div>
-    );
+
 
     return (
         <div className="bg-[#0B1221] text-white min-h-screen">
@@ -280,7 +285,7 @@ const AdmissionEnquiry = () => {
                                     name="addressArea" 
                                     value={formData.addressArea} 
                                     onChange={handleChange} 
-                                    options={['Area 1', 'Area 2', 'Area 3', 'Other']} 
+                                    options={['Arcot', 'Ranipet', 'Walajapet', 'Visharam', 'Sathuvachari', 'Katpadi', 'Other']} 
                                     required 
                                 />
 

@@ -10,7 +10,7 @@ import { dirname, join } from 'path';
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3005;
 
 app.use(cors());
 app.use(express.json());
@@ -100,13 +100,56 @@ const handleEmailRequest = async (req, res) => {
                         <h1 style="${styles.headerTitle}">Admission <span style="color: #FFC107;">Application</span></h1>
                     </div>
                     <div style="${styles.content}">
+                        <h2 style="${styles.sectionTitle}">Student Information</h2>
                         ${getFieldHtml('Full Name', `${data.firstName || ''} ${data.lastName || ''}`)}
-                        ${getFieldHtml('Grade', data.grade)}
+                        ${getFieldHtml('Grade Seeking', data.grade)}
+                        ${getFieldHtml('Place', data.place)}
+                        
+                        <h2 style="${styles.sectionTitle}">Parent Information</h2>
+                        ${getFieldHtml('Father Name', data.fatherName)}
+                        ${getFieldHtml('Mother Name', data.motherName)}
+                        
+                        <h2 style="${styles.sectionTitle}">Contact Details</h2>
                         ${getFieldHtml('Phone', data.contactNo)}
                         ${getFieldHtml('Email', data.emailId)}
+                        ${getFieldHtml('Address', data.address)}
                     </div>
                 </div>
             `;
+        } else if (type === 'admissions_enquiry') {
+            subject = `New Admission EOI: ${data.parentFirstName || ''} ${data.parentLastName || ''}`;
+            htmlContent = `
+                <div style="${styles.container}">
+                    <div style="${styles.header}">
+                        <h1 style="${styles.headerTitle}">Admission <span style="color: #FFC107;">Enquiry (EOI)</span></h1>
+                    </div>
+                    
+                    <div style="${styles.content}">
+                        <h2 style="${styles.sectionTitle}">Parent Information</h2>
+                        ${getFieldHtml('Parent Name', `${data.parentFirstName || ''} ${data.parentLastName || ''}`)}
+                        ${getFieldHtml('Mobile Number', `+91 ${data.mobileNumber || ''}`)}
+                        ${getFieldHtml('Email Address', data.parentEmail)}
+                        
+                        <h2 style="${styles.sectionTitle}">Admission Details</h2>
+                        ${getFieldHtml('Admission Type', data.admissionType)}
+                        ${getFieldHtml('Session Applying For', data.sessionApplyingFor)}
+                        
+                        <h2 style="${styles.sectionTitle}">Location Details</h2>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                            ${getFieldHtml('State', data.addressState)}
+                            ${getFieldHtml('City', data.addressCity)}
+                            ${getFieldHtml('Area', data.addressArea)}
+                        </div>
+
+                        <div style="margin-top: 20px; padding: 10px; background-color: #e3f2fd; border-radius: 4px; color: #0d47a1; font-size: 12px;">
+                            <strong>Consent Given:</strong> ${data.consent ? 'Yes' : 'No'}
+                        </div>
+                    </div>
+                </div>
+            `;
+        } else {
+            console.warn(`Invalid form type: ${type}`);
+            return res.status(400).json({ message: `Invalid form type: ${type}` });
         }
 
         await transporter.sendMail({
@@ -114,7 +157,7 @@ const handleEmailRequest = async (req, res) => {
             to: receiverEmail,
             subject: subject,
             html: htmlContent,
-            replyTo: data.email || data.emailId
+            replyTo: data.email || data.emailId || data.parentEmail
         });
 
         return res.status(200).json({ message: 'Email sent successfully' });

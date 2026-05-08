@@ -11,8 +11,8 @@ export default defineConfig({
   },
   server: {
     proxy: {
-      '/send-email-secure': {
-        target: 'http://localhost:3001',
+      '/api': {
+        target: 'http://localhost:3005',
         changeOrigin: true,
       },
     },
