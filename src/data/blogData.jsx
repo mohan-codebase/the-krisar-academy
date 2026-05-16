@@ -26,6 +26,7 @@ import independenceImg from '../assets/images/gallery/krisar_img_085.jpeg';
 import blog18 from '../assets/images/academics/Academic Approach.avif';
 import blog18Inner from '../assets/images/academics/Beyond Academicss.avif';
 import blog19 from '../assets/images/academics/Kindergarten.avif';
+import blog20 from '../assets/images/gallery/krisar_img_076.jpeg';
 
 // Gallery Images for Blog
 import gallery1 from '../assets/images/gallery/krisar_img_076.jpeg';
@@ -3431,6 +3432,342 @@ export const blogData = [
 
                     <p className="text-center text-white/30 text-sm mt-4 italic">The Krisar Academy | CBSE Affiliated | Est. 2018 | Pre-KG to Grade 12</p>
                 </div>
+            </>
+        )
+    },
+    {
+        id: 20,
+        slug: "schools-in-ranipet",
+        title: "Best Schools in Ranipet | The Krisar Academy | CBSE Education",
+        date: "May 16, 2026",
+        image: blog20,
+        category: "Education",
+        icon: "BookOpen",
+        description: "Looking for the right school in Ranipet District? The Krisar Academy offers CBSE curriculum, smart classrooms, holistic education, and well equipped labs for students from Pre-KG to Grade 12.",
+        content: (
+            <>
+                <h2 className="text-3xl font-bold mb-8 text-brand-secondary">Schools in Ranipet | The Krisar Academy | CBSE Education</h2>
+                
+                <section className="bg-white/5 p-8 rounded-3xl border border-white/10 mb-10">
+                    <h3 className="text-xl font-bold mb-6 text-white border-l-4 border-brand-secondary pl-4">Key Takeaways</h3>
+                    <ul className="space-y-4 text-lg leading-relaxed text-white/80">
+                        <li className="flex items-start">
+                            <span className="text-brand-secondary mr-3 text-xl">✓</span>
+                            <span>The Krisar Academy is a CBSE-affiliated school in Ranipet District offering classes from Pre-KG to Grade 12 with a strong academic foundation and holistic development programmes.</span>
+                        </li>
+                        <li className="flex items-start">
+                            <span className="text-brand-secondary mr-3 text-xl">✓</span>
+                            <span>Every classroom is a fully air-conditioned smart classroom. The school also has an AI and Robotics Laboratory, well equipped labs for science subjects, and a 1,000-seat auditorium.</span>
+                        </li>
+                        <li className="flex items-start">
+                            <span className="text-brand-secondary mr-3 text-xl">✓</span>
+                            <span>The CBSE curriculum at Krisar is built around NCERT textbooks, directly aligning with JEE and NEET preparation from the earliest years.</span>
+                        </li>
+                        <li className="flex items-start">
+                            <span className="text-brand-secondary mr-3 text-xl">✓</span>
+                            <span>Sports, performing arts, and co-curricular programmes covering Music, Dance, Skating, Archery, Silambam, and Yoga are delivered by trained instructors, not listed as additions.</span>
+                        </li>
+                        <li className="flex items-start">
+                            <span className="text-brand-secondary mr-3 text-xl">✓</span>
+                            <span>Admissions are open for the current academic year across all grades.</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <p className="mb-6 text-xl font-medium leading-relaxed text-brand-secondary">
+                    Introduction: Finding the Right School in Ranipet District
+                </p>
+                <p className="mb-6 text-lg leading-relaxed text-white">
+                    For parents in Ranipet District, choosing a school is one of the most consequential decisions they make for their child.
+                </p>
+                <p className="mb-6 text-lg leading-relaxed text-white">
+                    The right school does more than deliver academic content. It builds the foundation for how a child thinks, learns, relates to others, and approaches challenges across their entire life. That foundation, laid from Pre-KG onward, shapes academic achievement, personal confidence, and the skills a student carries into higher education and professional life.
+                </p>
+                <p className="mb-10 text-lg leading-relaxed text-white">
+                    Ranipet District has grown significantly as an educational hub serving families across Ranipet, Arcot, Walajapet, Arani, and surrounding areas. Among the schools in Ranipet, The Krisar Academy stands as the established CBSE school built to deliver quality education without requiring families to relocate to Vellore city.
+                </p>
+
+                <h3 className="text-2xl font-bold mb-6 text-brand-secondary border-l-4 border-brand-secondary pl-4">The Krisar Academy: A CBSE School in Ranipet District</h3>
+                <p className="mb-6 text-lg leading-relaxed text-white">
+                    The Krisar Academy was established in 2018 and is managed by the Sri Krisar Trust. It is affiliated with the Central Board of Secondary Education and offers classes from Pre-KG through Grade 12.
+                </p>
+                <p className="mb-6 text-lg leading-relaxed text-white">
+                    The school is located on the Arcot to Arani Main Road at Paradarami Village, Ranipet District, directly accessible for families from Ranipet, Arcot, Walajapet, Arani, Timiri, and Vellore. School transport covers all these routes.
+                </p>
+                <div className="bg-brand-primary/20 p-4 rounded-xl border border-brand-primary/30 mb-8 inline-block">
+                    <p className="text-lg text-white font-medium">CBSE affiliation number: <span className="text-brand-secondary font-bold">1931107</span>, valid through 2027.</p>
+                </div>
+                <p className="mb-10 text-lg leading-relaxed text-white">
+                    The school was built with a clear purpose: to bring academic excellence and holistic education to the Arani-Arcot-Ranipet belt within reach of every family in the region.
+                </p>
+
+                <section className="bg-gradient-to-r from-brand-secondary/10 to-transparent p-8 rounded-3xl border border-white/10 mb-12">
+                    <h3 className="text-2xl font-bold mb-6 text-brand-secondary">Why CBSE Matters for Students in Ranipet</h3>
+                    <p className="text-lg leading-relaxed text-white mb-6">
+                        The choice between CBSE and state board education has long-term consequences that parents in Ranipet District need to understand clearly.
+                    </p>
+                    <p className="text-lg leading-relaxed text-white mb-6">
+                        The CBSE curriculum is built around NCERT textbooks, the same framework that structures JEE and NEET, India's most competitive national entrance examinations for engineering and medicine. A student studying under CBSE from Class 1 builds the conceptual depth that competitive exam preparation requires. A student entering JEE or NEET coaching from a state board background typically needs to relearn significant portions of the syllabus. That gap costs time, money, and rank.
+                    </p>
+                    <p className="text-lg leading-relaxed text-white mb-6">
+                        CBSE affiliation also requires schools to meet nationally standardised criteria for teacher qualifications, classroom infrastructure, and student-teacher ratios. These are audited periodically, providing parents with a level of accountability that varies more widely under state board regulation.
+                    </p>
+                    <p className="text-lg leading-relaxed text-white font-medium italic">
+                        For families with aspirations toward engineering, medicine, or national-level competitive exams, a CBSE school in Ranipet District is the stronger foundation. For families who may relocate due to government or corporate employment, a CBSE school record transfers seamlessly across India.
+                    </p>
+                </section>
+
+                <h3 className="text-2xl font-bold mb-6 text-brand-secondary border-l-4 border-brand-secondary pl-4">Academic Excellence at The Krisar Academy</h3>
+                
+                <div className="space-y-8 mb-12">
+                    <div className="p-8 bg-white/5 rounded-3xl border border-white/10">
+                        <h4 className="text-xl font-bold text-white mb-4">Smart Classrooms Across Every Grade</h4>
+                        <p className="text-white/80 leading-relaxed">
+                            Every classroom at The Krisar Academy is a fully air-conditioned smart classroom equipped with modern teaching technology.
+                        </p>
+                        <p className="text-white/80 leading-relaxed mt-4">
+                            This is not a single showcase room. It is the standard across the school, available to every student from Pre-KG through Grade 12. Teachers deliver lessons using interactive displays, multimedia presentations, and digital tools that make complex concepts clearer and keep young minds actively engaged.
+                        </p>
+                        <p className="text-white/80 leading-relaxed mt-4">
+                            Students learn through visual demonstration, collaborative problem solving, and interactive engagement rather than passive note-taking. This builds critical thinking and academic skills that serve students through board examinations, competitive exams, and higher education.
+                        </p>
+                    </div>
+
+                    <div className="p-8 bg-white/5 rounded-3xl border border-white/10">
+                        <h4 className="text-xl font-bold text-white mb-4">Well Equipped Labs for Science and Technology</h4>
+                        <p className="text-white/80 leading-relaxed">
+                            Science subjects at Krisar are taught with practical laboratory exposure built into the curriculum, not treated as occasional additions.
+                        </p>
+                        <p className="text-white/80 leading-relaxed mt-4">
+                            Well equipped labs for physics, chemistry, and biology give students hands on learning experience that deepens understanding of what NCERT textbooks cover in theory. For students preparing for NEET and JEE, laboratory familiarity built during school years is a direct academic advantage.
+                        </p>
+                        <p className="text-white/80 leading-relaxed mt-4">
+                            The AI and Robotics Laboratory extends this further. Students gain hands on experience with artificial intelligence and robotics at school level, a facility that most private engineering colleges in Tamil Nadu did not have a decade ago. For young minds with curiosity about technology and science, this is an environment that actively nurtures that curiosity into structured knowledge and real skills.
+                        </p>
+                    </div>
+
+                    <div className="p-8 bg-white/5 rounded-3xl border border-white/10">
+                        <h4 className="text-xl font-bold text-white mb-4">Integrated NEET and JEE Coaching</h4>
+                        <p className="text-white/80 leading-relaxed">
+                            Krisar Academy does not treat competitive exam preparation as an afterthought or outsource it to an external institute.
+                        </p>
+                        <p className="text-white/80 leading-relaxed mt-4">
+                            Integrated NEET and JEE coaching is built into the academic programme. Students develop the academic foundation, study habits, and subject depth needed for national entrance examinations within the same school environment where they also develop as complete individuals. The CBSE curriculum and NCERT textbook framework provide the direct alignment to JEE and NEET syllabi that makes this integration effective.
+                        </p>
+                    </div>
+
+                    <div className="p-8 bg-white/5 rounded-3xl border border-white/10">
+                        <h4 className="text-xl font-bold text-white mb-4">Library and Access to Knowledge</h4>
+                        <p className="text-white/80 leading-relaxed">
+                            A well-stocked library supports the academic programme at Krisar, giving students access to reference materials, supplementary reading, and resources across all subjects. Students are encouraged to pursue ideas beyond the classroom and develop the independent learning habits that lifelong learning requires.
+                        </p>
+                    </div>
+                </div>
+
+                <h3 className="text-2xl font-bold mb-6 text-brand-secondary border-l-4 border-brand-secondary pl-4">Holistic Education: Beyond Academic Achievement</h3>
+                <p className="mb-8 text-lg leading-relaxed text-white">
+                    Academic excellence is the foundation. Holistic development is the structure built on it.
+                </p>
+                <p className="mb-10 text-lg leading-relaxed text-white">
+                    The Krisar Academy's approach to holistic education recognises that the skills students need to succeed in the world—critical thinking, creativity, confidence, interpersonal skills, physical fitness, and ethical development—are developed through experiences that extend beyond academic subjects alone.
+                </p>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    <div className="p-8 bg-brand-primary rounded-3xl border border-white/10">
+                        <h4 className="text-xl font-bold text-white mb-4">Sports with Professional Coaching</h4>
+                        <p className="text-white/80 leading-relaxed mb-4">
+                            Sports at Krisar are delivered by trained instructors as structured programmes, not supervised free time.
+                        </p>
+                        <p className="text-white/80 leading-relaxed mb-4">
+                            Students participate in Skating, Archery, Silambam, and Yoga with coaching that develops physical fitness, discipline, focus, and the confidence to take on challenges. Team and individual sports build the resilience and commitment that carry across every area of a student's life.
+                        </p>
+                        <p className="text-white/80 leading-relaxed">
+                            The sports programme at Krisar develops character as directly as any classroom subject. Students learn to handle setbacks, work toward long-term goals, and perform under pressure—skills that academic learning alone cannot produce.
+                        </p>
+                    </div>
+                    
+                    <div className="p-8 bg-brand-primary rounded-3xl border border-white/10">
+                        <h4 className="text-xl font-bold text-white mb-4">Performing Arts: Music and Dance</h4>
+                        <p className="text-white/80 leading-relaxed mb-4">
+                            Music and Dance at Krisar are taught by trained instructors as part of the school's co-curricular structure.
+                        </p>
+                        <p className="text-white/80 leading-relaxed mb-4">
+                            Performing arts develop creativity, emotional expression, self confidence, and the ability to communicate with an audience. Students who perform regularly build a kind of confidence that is qualitatively different from classroom participation. Standing on a stage in front of an audience and delivering a performance is an experience that shapes how a young person sees themselves and what they believe they are capable of.
+                        </p>
+                        <p className="text-white/80 leading-relaxed">
+                            The 1,000-seat indoor auditorium at Krisar means students perform for real audiences from an early age. Events, cultural programmes, and inter-school competitions happen in-house, on a stage built for the purpose.
+                        </p>
+                    </div>
+                </div>
+
+                <div className="mb-12 p-8 bg-brand-secondary/10 rounded-3xl border border-brand-secondary/20 relative overflow-hidden">
+                    <div className="relative z-10">
+                        <h4 className="text-xl font-bold text-brand-secondary mb-4">A Nurturing Environment for Every Student</h4>
+                        <p className="text-white/80 leading-relaxed mb-4">
+                            Holistic development happens in schools where students feel safe, seen, and supported.
+                        </p>
+                        <p className="text-white/80 leading-relaxed mb-4">
+                            The Krisar Academy's campus provides a green, clean, and calm learning environment away from city congestion. Teachers at Krisar are committed to understanding diverse needs across the student community and creating a classroom culture where pupils are encouraged to share new ideas, ask questions, and develop at their own pace without fear of failure.
+                        </p>
+                        <p className="text-white/80 leading-relaxed font-light">
+                            This nurturing environment is particularly important in the early years, where a child's confidence in themselves as a learner is formed. A student who discovers in Class 1 that curiosity is welcomed, not managed, carries that orientation toward learning throughout their entire academic journey.
+                        </p>
+                    </div>
+                </div>
+
+                <h3 className="text-2xl font-bold mb-6 text-brand-secondary border-l-4 border-brand-secondary pl-4">What The Krisar Academy Offers: Complete Overview</h3>
+                <div className="overflow-x-auto mb-12">
+                    <table className="w-full text-left border-collapse bg-white/5 rounded-2xl overflow-hidden">
+                        <thead>
+                            <tr className="bg-brand-primary/50 text-brand-secondary">
+                                <th className="p-4 border border-white/10 w-1/3">Programme</th>
+                                <th className="p-4 border border-white/10">Details</th>
+                            </tr>
+                        </thead>
+                        <tbody className="text-white/80">
+                            {[
+                                ["Affiliation", "CBSE (Affiliation No. 1931107)"],
+                                ["Classes", "Pre-KG to Grade 12"],
+                                ["Classrooms", "Fully air-conditioned smart classrooms across all grades"],
+                                ["Science Labs", "Well equipped labs for physics, chemistry, and biology"],
+                                ["Technology", "AI and Robotics Laboratory"],
+                                ["Competitive Exams", "Integrated NEET and JEE coaching"],
+                                ["Sports", "Skating, Archery, Silambam, Yoga with trained instructors"],
+                                ["Performing Arts", "Music and Dance with trained instructors"],
+                                ["Auditorium", "1,000-seat indoor auditorium"],
+                                ["Meals", "Free healthy lunch for all students"],
+                                ["Transport", "School transport covering Ranipet, Arcot, Walajapet, Arani, Timiri, Vellore"],
+                                ["Campus", "Green campus, Paradarami Village, Arcot to Arani Main Road"]
+                            ].map((row, idx) => (
+                                <tr key={idx} className={idx % 2 === 0 ? '' : 'bg-white/5'}>
+                                    <td className="p-4 border border-white/10 font-bold">{row[0]}</td>
+                                    <td className="p-4 border border-white/10">{row[1]}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    <div className="p-8 bg-white/5 rounded-3xl border border-white/10">
+                        <h4 className="text-xl font-bold text-white mb-4">Free Healthy Lunch Programme</h4>
+                        <p className="text-white/80 leading-relaxed mb-4">
+                            Every student at The Krisar Academy receives a free healthy lunch every school day.
+                        </p>
+                        <p className="text-white/80 leading-relaxed">
+                            This reflects the school's understanding that a child's ability to focus, participate, and learn is directly affected by their physical well being. Nutrition is part of the school's commitment to the whole child, not a separate welfare initiative.
+                        </p>
+                    </div>
+
+                    <div className="p-8 bg-white/5 rounded-3xl border border-white/10">
+                        <h4 className="text-xl font-bold text-white mb-4">Transport Covering Ranipet District and Beyond</h4>
+                        <p className="text-white/80 leading-relaxed mb-4">
+                            School transport covers Ranipet, Arcot, Walajapet, Arani, Timiri, and Vellore.
+                        </p>
+                        <p className="text-white/80 leading-relaxed mb-4">
+                            For families across Ranipet District, this removes the logistical barrier that prevents many students from accessing quality CBSE education. Parents who would otherwise need to relocate or manage complex daily commutes for their child can enrol at Krisar with transport arranged from their locality.
+                        </p>
+                        <p className="text-brand-secondary font-medium mt-4">
+                            Contact the transport team directly at +91 75400 98387 for route details and pickup point confirmation.
+                        </p>
+                    </div>
+                </div>
+
+                <section className="bg-brand-primary p-10 rounded-[3rem] border border-white/10 mb-12">
+                    <h3 className="text-2xl font-bold mb-6 text-brand-secondary">A Track Record of Achievement</h3>
+                    <p className="text-lg leading-relaxed text-white mb-6">
+                        In 2025, more than 400 Krisar Academy students set a verified world record, creating and reciting over 2,000 original proverbs within two hours. This required creativity, language depth, coordination, and discipline across hundreds of students simultaneously.
+                    </p>
+                    <p className="text-lg leading-relaxed text-white mb-6">
+                        The school has also received national recognition at a ceremony in Bengaluru for excellence in education, placing Krisar among schools measured against national standards, not only local ones.
+                    </p>
+                    <p className="text-lg font-bold text-brand-secondary italic">
+                        These achievements reflect what a school's culture actually produces, not what it claims to.
+                    </p>
+                </section>
+
+                <h3 className="text-2xl font-bold mb-6 text-brand-secondary border-l-4 border-brand-secondary pl-4">Admissions at The Krisar Academy</h3>
+                <p className="mb-6 text-lg leading-relaxed text-white">
+                    Admissions are open for the current academic year across all grades from Pre-KG to Grade 12.
+                </p>
+                <p className="mb-8 text-lg leading-relaxed text-white">
+                    The process begins with an inquiry call or visit to the campus. The admissions team guides families through the documentation requirements, available grades, and transport arrangements.
+                </p>
+
+                <div className="bg-white/5 p-8 rounded-3xl border border-white/10 mb-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <ul className="space-y-4">
+                            <li className="flex items-center text-white/80">
+                                <span className="text-brand-secondary mr-3 text-xl">📞</span> 
+                                <span><strong>Admissions contact:</strong> <a href="tel:+917540088387" className="hover:text-brand-secondary transition">+91 75400 88387</a></span>
+                            </li>
+                            <li className="flex items-center text-white/80">
+                                <span className="text-brand-secondary mr-3 text-xl">🚌</span> 
+                                <span><strong>Transport enquiries:</strong> <a href="tel:+917540098387" className="hover:text-brand-secondary transition">+91 75400 98387</a></span>
+                            </li>
+                            <li className="flex items-center text-white/80">
+                                <span className="text-brand-secondary mr-3 text-xl">ℹ️</span> 
+                                <span><strong>General enquiries:</strong> <a href="tel:+917540096387" className="hover:text-brand-secondary transition">+91 75400 96387</a></span>
+                            </li>
+                            <li className="flex items-center text-white/80">
+                                <span className="text-brand-secondary mr-3 text-xl">📧</span> 
+                                <span><strong>Email:</strong> <a href="mailto:info.thekrisaracademy@gmail.com" className="hover:text-brand-secondary transition">info.thekrisaracademy@gmail.com</a></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul className="space-y-4">
+                            <li className="flex items-start text-white/80">
+                                <span className="text-brand-secondary mr-3 text-xl mt-1">📍</span> 
+                                <span><strong>Address:</strong><br />#136/6, Arcot to Arani Main Road, Paradarami Village, Arcot Taluk, Ranipet District, Tamil Nadu 632512</span>
+                            </li>
+                            <li className="flex items-start text-white/80">
+                                <span className="text-brand-secondary mr-3 text-xl mt-1">🕒</span> 
+                                <span><strong>School hours:</strong><br />Monday to Saturday, 9:00 AM to 4:30 PM</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <section className="pt-8 border-t border-white/10 mb-12">
+                    <h3 className="text-2xl font-bold mb-8 text-white">Frequently Asked Questions</h3>
+                    <div className="space-y-6">
+                        {[
+                            { q: "1. Which is the best CBSE school in Ranipet District?", a: "The Krisar Academy, located on the Arcot to Arani Main Road at Paradarami Village, is the leading CBSE-affiliated school in Ranipet District. It offers classes from Pre-KG to Grade 12 with smart classrooms, well equipped labs, an AI and Robotics Laboratory, integrated NEET and JEE coaching, professional sports coaching, and performing arts programmes. CBSE affiliation number 1931107 is valid through 2027 and can be verified at cbseaff.nic.in." },
+                            { q: "2. What makes The Krisar Academy different from other schools in Ranipet?", a: "Krisar combines full CBSE affiliation and NCERT-based curriculum with infrastructure that most schools in this region do not have: fully air-conditioned smart classrooms across all grades, an AI and Robotics Laboratory, advanced science labs, a 1,000-seat auditorium, professional sports and performing arts coaching, and a free healthy lunch programme. Integrated NEET and JEE coaching is built into the academic programme rather than outsourced." },
+                            { q: "3. Does The Krisar Academy offer transport from Ranipet and surrounding areas?", a: "Yes. School transport covers Ranipet, Arcot, Walajapet, Arani, Timiri, and Vellore. Contact the transport team at +91 75400 98387 to confirm pickup points and route availability from your locality." },
+                            { q: "4. From which grade does The Krisar Academy begin admissions?", a: "Admissions are open from Pre-KG through Grade 12. The school accepts students at all levels subject to seat availability in each grade. Contact the admissions team at +91 75400 88387 for current availability." },
+                            { q: "5. How does the CBSE curriculum at Krisar prepare students for competitive exams?", a: "The CBSE curriculum is built on NCERT textbooks, which directly map to JEE and NEET syllabi. Integrated NEET and JEE coaching at Krisar reinforces this alignment from the secondary years onward. Well equipped labs for physics, chemistry, and biology provide the practical foundation that both board examinations and competitive exams require. Students who build this foundation through CBSE from the early years avoid the relearning gap that state board students typically face when entering competitive exam preparation." },
+                            { q: "6. What sports and arts programmes does Krisar offer?", a: "Sports programmes at Krisar include Skating, Archery, Silambam, and Yoga, all delivered by trained instructors. Performing arts include Music and Dance. These are structured programmes with regular instruction, not listed activities. The 1,000-seat auditorium hosts performances, cultural events, and competitions in-house. Students are encouraged to participate actively and discover their strengths across both academic and co-curricular areas." },
+                            { q: "7. Is the campus environment suitable for young children?", a: "Yes. The Krisar Academy campus is a green campus located away from city congestion on the Arcot to Arani Main Road. It provides a calm, clean, and safe learning environment that is particularly well suited for young children from Pre-KG onward. All classrooms are fully air-conditioned. A free healthy lunch is provided to every student daily." }
+                        ].map((faq, idx) => (
+                            <div key={idx} className="p-6 bg-white/5 rounded-2xl border border-white/10">
+                                <h5 className="font-bold text-brand-secondary mb-3">{faq.q}</h5>
+                                <p className="text-white/70 italic leading-relaxed font-light">{faq.a}</p>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+
+                <section className="bg-brand-secondary p-12 rounded-[3rem] text-brand-primary text-center mt-12 mb-8 shadow-xl">
+                    <h3 className="text-3xl font-bold mb-6">Visit The Krisar Academy</h3>
+                    <p className="text-lg font-medium leading-relaxed mb-6 max-w-2xl mx-auto">
+                        The difference between reading about a school and experiencing its campus, its teachers, and its learning environment is significant.
+                    </p>
+                    <p className="text-lg font-medium leading-relaxed mb-8 max-w-3xl mx-auto">
+                        Parents considering schools in Ranipet District are welcome to visit The Krisar Academy, speak with the admissions team, and see the smart classrooms, laboratories, sports facilities, and campus in person.
+                    </p>
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <a href="tel:+917540088387" className="bg-brand-primary text-white px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform flex items-center gap-2 w-full sm:w-auto justify-center">
+                            <span>📞</span> +91 75400 88387
+                        </a>
+                        <a href="mailto:info.thekrisaracademy@gmail.com" className="bg-white text-brand-primary px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform border border-brand-primary/20 flex items-center gap-2 w-full sm:w-auto justify-center">
+                            <span>✉️</span> Email Us
+                        </a>
+                    </div>
+                </section>
+
+                <p className="text-center text-white/40 text-sm mt-8 italic">The Krisar Academy | CBSE Affiliated | Affiliation No. 1931107 | Est. 2018 | Pre-KG to Grade 12 | Paradarami Village, Ranipet District, Tamil Nadu</p>
             </>
         )
     }
