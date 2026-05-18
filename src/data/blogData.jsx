@@ -3688,7 +3688,9 @@ export const blogData = [
                     </p>
                 </section>
 
-                <h3 className="text-2xl font-bold mb-6 text-brand-secondary border-l-4 border-brand-secondary pl-4">Admissions at The Krisar Academy</h3>
+                <h3 className="text-2xl font-bold mb-6 text-brand-secondary border-l-4 border-brand-secondary pl-4">
+                    <Link to="https://thekrisaracademy.com/admission/" className="underline decoration-2 underline-offset-4 hover:text-white transition-colors">Admissions at The Krisar Academy</Link> 
+                </h3>
                 <p className="mb-6 text-lg leading-relaxed text-white">
                     Admissions are open for the current academic year across all grades from Pre-KG to Grade 12.
                 </p>
