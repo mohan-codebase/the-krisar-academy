@@ -24,9 +24,11 @@ import blog15Inner from '../assets/images/blog/april2k26/April-5.png';
 import blog16 from '../assets/images/gallery/krisar_img_200.jpeg';
 import independenceImg from '../assets/images/gallery/krisar_img_085.jpeg';
 import blog18 from '../assets/images/academics/Academic Approach.avif';
+
+// may 2026 Blogs
 import blog18Inner from '../assets/images/academics/Beyond Academicss.avif';
 import blog19 from '../assets/images/academics/Kindergarten.avif';
-import blog20 from '../assets/images/gallery/krisar_img_076.jpeg';
+import blog20 from '../assets/images/gallery/krisar_img_085.jpeg';
 
 // Gallery Images for Blog
 import gallery1 from '../assets/images/gallery/krisar_img_076.jpeg';
