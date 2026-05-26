@@ -1,206 +1,235 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
+<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
 <url>
-  <loc>https://thekrisaracademy.com/</loc>
-  <lastmod>2026-03-27T06:05:17+00:00</lastmod>
-  <priority>1.00</priority>
+<loc>https://thekrisaracademy.com/</loc>
+<lastmod>2026-05-18T08:44:26+00:00</lastmod>
+<priority>1.00</priority>
 </url>
 <url>
-  <loc>https://thekrisaracademy.com/erp-and-payment/</loc>
-  <lastmod>2026-03-27T06:05:17+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://thekrisaracademy.com/erp-and-payment/</loc>
+<lastmod>2026-05-18T08:44:27+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://thekrisaracademy.com/cbse-disclosure/</loc>
-  <lastmod>2026-03-27T06:05:17+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://thekrisaracademy.com/cbse-disclosure/</loc>
+<lastmod>2026-05-18T08:44:27+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://thekrisaracademy.com/admission-form2/</loc>
-  <lastmod>2026-03-27T06:05:17+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://thekrisaracademy.com/admissions/</loc>
+<lastmod>2026-05-18T08:44:27+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://thekrisaracademy.com/projects/</loc>
-  <lastmod>2026-03-27T06:05:17+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://thekrisaracademy.com/projects/</loc>
+<lastmod>2026-05-18T08:44:26+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://thekrisaracademy.com/facilities/</loc>
-  <lastmod>2026-03-27T06:05:17+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://thekrisaracademy.com/facilities/</loc>
+<lastmod>2026-05-18T08:44:27+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://thekrisaracademy.com/uat-academics/</loc>
-  <lastmod>2026-03-27T06:05:17+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://thekrisaracademy.com/uat-academics/</loc>
+<lastmod>2026-05-18T08:44:27+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://thekrisaracademy.com/uat-beyond-academics/</loc>
-  <lastmod>2026-03-27T06:05:17+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://thekrisaracademy.com/uat-beyond-academics/</loc>
+<lastmod>2026-05-18T08:44:27+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://thekrisaracademy.com/gallery/</loc>
-  <lastmod>2026-03-27T06:05:17+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://thekrisaracademy.com/gallery/</loc>
+<lastmod>2026-05-18T08:44:27+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://thekrisaracademy.com/blogs/</loc>
-  <lastmod>2026-03-27T06:05:17+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://thekrisaracademy.com/blogs/</loc>
+<lastmod>2026-05-18T08:44:27+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://thekrisaracademy.com/contact/</loc>
-  <lastmod>2026-03-27T06:05:17+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://thekrisaracademy.com/contact/</loc>
+<lastmod>2026-05-18T08:44:27+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://thekrisaracademy.com/blogs/grand-celebration-sports-spirit-krisars-sports-fiesta-2024-2025/</loc>
-  <lastmod>2026-03-27T06:05:17+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://thekrisaracademy.com/admission/</loc>
+<lastmod>2026-05-18T08:44:27+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://thekrisaracademy.com/blogs/krisar-academy-students-create-history-world-record-proverbs-recitation/</loc>
-  <lastmod>2026-03-27T06:05:17+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://thekrisaracademy.com/blogs/grand-celebration-sports-spirit-krisars-sports-fiesta-2024-2025/</loc>
+<lastmod>2026-05-18T08:44:27+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://thekrisaracademy.com/blogs/school-receives-national-recognition-bengaluru-ceremony/</loc>
-  <lastmod>2026-03-27T06:05:17+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://thekrisaracademy.com/blogs/krisar-academy-students-create-history-world-record-proverbs-recitation/</loc>
+<lastmod>2026-05-18T08:44:27+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://thekrisaracademy.com/assets/recognition-2-DH1Wv_AP.pdf</loc>
-  <lastmod>2026-03-27T06:05:14+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://thekrisaracademy.com/blogs/school-receives-national-recognition-bengaluru-ceremony/</loc>
+<lastmod>2026-05-18T08:44:27+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://thekrisaracademy.com/assets/noc-Bi4wz_Lb.pdf</loc>
-  <lastmod>2026-03-27T06:05:14+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://thekrisaracademy.com/assets/recognition-2-DH1Wv_AP.pdf</loc>
+<lastmod>2026-05-18T08:44:24+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://thekrisaracademy.com/assets/extension-letter-Boh3qcQ3.pdf</loc>
-  <lastmod>2026-03-27T06:05:14+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://thekrisaracademy.com/assets/noc-Bi4wz_Lb.pdf</loc>
+<lastmod>2026-05-18T08:44:24+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://thekrisaracademy.com/assets/mandatory-disclosure-CAKvWBPk.pdf</loc>
-  <lastmod>2026-03-27T06:05:14+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://thekrisaracademy.com/assets/extension-letter-Boh3qcQ3.pdf</loc>
+<lastmod>2026-05-18T08:44:24+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://thekrisaracademy.com/assets/self-certification-F5ipBWok.pdf</loc>
-  <lastmod>2026-03-27T06:05:14+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://thekrisaracademy.com/assets/mandatory-disclosure-CAKvWBPk.pdf</loc>
+<lastmod>2026-05-18T08:44:24+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://thekrisaracademy.com/assets/building-safety-CjCdyVHl.pdf</loc>
-  <lastmod>2026-03-27T06:05:14+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://thekrisaracademy.com/assets/self-certification-F5ipBWok.pdf</loc>
+<lastmod>2026-05-18T08:44:24+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://thekrisaracademy.com/assets/fire-safety-ueT-7et-.pdf</loc>
-  <lastmod>2026-03-27T06:05:14+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://thekrisaracademy.com/assets/building-safety-CjCdyVHl.pdf</loc>
+<lastmod>2026-05-18T08:44:24+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://thekrisaracademy.com/assets/sanitation-BppxapUj.pdf</loc>
-  <lastmod>2026-03-27T06:05:14+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://thekrisaracademy.com/assets/fire-safety-ueT-7et-.pdf</loc>
+<lastmod>2026-05-18T08:44:24+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://thekrisaracademy.com/assets/trust-deed-Dxf21FO3.pdf</loc>
-  <lastmod>2026-03-27T06:05:14+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://thekrisaracademy.com/assets/sanitation-BppxapUj.pdf</loc>
+<lastmod>2026-05-18T08:44:24+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://thekrisaracademy.com/assets/smc-BZGkeWKk.pdf</loc>
-  <lastmod>2026-03-27T06:05:14+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://thekrisaracademy.com/assets/trust-deed-Dxf21FO3.pdf</loc>
+<lastmod>2026-05-18T08:44:24+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://thekrisaracademy.com/assets/ptc-DG7cOULG.pdf</loc>
-  <lastmod>2026-03-27T06:05:14+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://thekrisaracademy.com/assets/smc-BZGkeWKk.pdf</loc>
+<lastmod>2026-05-18T08:44:24+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://thekrisaracademy.com/assets/academic-calendar-C2PQNYp3.pdf</loc>
-  <lastmod>2026-03-27T06:05:14+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://thekrisaracademy.com/assets/ptc-DG7cOULG.pdf</loc>
+<lastmod>2026-05-18T08:44:24+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://thekrisaracademy.com/assets/d-form-ChKvHliP.pdf</loc>
-  <lastmod>2026-03-27T06:05:14+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://thekrisaracademy.com/assets/academic-calendar-C2PQNYp3.pdf</loc>
+<lastmod>2026-05-18T08:44:24+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://thekrisaracademy.com/blogs/school-honoured-prestigious-nsa-award-excellence-education-2024/</loc>
-  <lastmod>2026-03-27T06:05:17+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://thekrisaracademy.com/assets/d-form-ChKvHliP.pdf</loc>
+<lastmod>2026-05-18T08:44:24+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://thekrisaracademy.com/blogs/memorable-day-celebrity-chef-madhambatti-rangaraj-school-function-2023/</loc>
-  <lastmod>2026-03-27T06:05:17+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://thekrisaracademy.com/blogs/school-honoured-prestigious-nsa-award-excellence-education-2024/</loc>
+<lastmod>2026-05-18T08:44:27+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://thekrisaracademy.com/blogs/proud-moment-2023-school-honoured-best-school-district-collector/</loc>
-  <lastmod>2026-03-27T06:05:17+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://thekrisaracademy.com/blogs/memorable-day-celebrity-chef-madhambatti-rangaraj-school-function-2023/</loc>
+<lastmod>2026-05-18T08:44:27+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://thekrisaracademy.com/blogs/walking-green-ramp-fashion-show-nature-heart/</loc>
-  <lastmod>2026-03-27T06:05:17+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://thekrisaracademy.com/blogs/proud-moment-2023-school-honoured-best-school-district-collector/</loc>
+<lastmod>2026-05-18T08:44:27+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://thekrisaracademy.com/blogs/summer-water-awareness-drive-2019/</loc>
-  <lastmod>2026-03-27T06:05:17+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://thekrisaracademy.com/blogs/walking-green-ramp-fashion-show-nature-heart/</loc>
+<lastmod>2026-05-18T08:44:27+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://thekrisaracademy.com/blogs/millet-road-show/</loc>
-  <lastmod>2026-03-27T06:05:17+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://thekrisaracademy.com/blogs/summer-water-awareness-drive-2019/</loc>
+<lastmod>2026-05-18T08:44:27+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://thekrisaracademy.com/blogs/excellence-in-education-schools-in-arani/</loc>
-  <lastmod>2026-03-27T06:05:17+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://thekrisaracademy.com/blogs/millet-road-show/</loc>
+<lastmod>2026-05-18T08:44:27+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://thekrisaracademy.com/blogs/best-cbse-schools-in-arcot-parents-guide/</loc>
-  <lastmod>2026-03-27T06:05:17+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://thekrisaracademy.com/blogs/excellence-in-education-schools-in-arani/</loc>
+<lastmod>2026-05-18T08:44:27+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://thekrisaracademy.com/blogs/cbse-vs-state-board-syllabus-guide/</loc>
-  <lastmod>2026-03-27T06:05:17+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://thekrisaracademy.com/blogs/best-cbse-schools-in-arcot-parents-guide/</loc>
+<lastmod>2026-05-18T08:44:27+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://thekrisaracademy.com/blogs/how-to-select-the-right-school-for-your-child-guide/</loc>
-  <lastmod>2026-04-15T17:45:35+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://thekrisaracademy.com/blogs/cbse-vs-state-board-syllabus-guide/</loc>
+<lastmod>2026-05-18T08:44:27+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://thekrisaracademy.com/blogs/cbse-vs-matriculation-board-tamil-nadu-guide/</loc>
-  <lastmod>2026-04-15T22:48:56+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://thekrisaracademy.com/blogs/how-to-select-the-right-school-for-your-child-guide/</loc>
+<lastmod>2026-05-18T08:44:27+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://thekrisaracademy.com/blogs/best-schools-in-arani-admissions-guide-2025-26/</loc>
-  <lastmod>2026-04-15T22:58:29+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://thekrisaracademy.com/blogs/cbse-vs-matriculation-board-tamil-nadu-guide/</loc>
+<lastmod>2026-05-18T08:44:27+00:00</lastmod>
+<priority>0.64</priority>
 </url>
-
+<url>
+<loc>https://thekrisaracademy.com/blogs/best-schools-in-arani-admissions-guide-2026-27/</loc>
+<lastmod>2026-05-18T08:44:27+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://thekrisaracademy.com/blogs/boarding-school-vs-day-school/</loc>
+<lastmod>2026-05-18T08:44:27+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://thekrisaracademy.com/blogs/why-are-extracurricular-activities-important/</loc>
+<lastmod>2026-05-18T08:44:27+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://thekrisaracademy.com/blogs/smart-classroom/</loc>
+<lastmod>2026-05-18T08:44:27+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://thekrisaracademy.com/blogs/holistic-learning/</loc>
+<lastmod>2026-05-18T08:44:27+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://thekrisaracademy.com/blogs/schools-in-ranipet/</loc>
+<lastmod>2026-05-18T08:44:27+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://thekrisaracademy.com/admission-details</loc>
+<lastmod>2026-05-18T08:44:26+00:00</lastmod>
+<priority>0.51</priority>
+</url>
 </urlset>
