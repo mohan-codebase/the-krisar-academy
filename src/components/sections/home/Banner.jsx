@@ -8,7 +8,7 @@ import Button from '../../ui/Button'
 
 import banner1 from '../../../assets/images/home/banner/banner-1.avif'
 import banner2 from '../../../assets/images/home/banner/newbanner2.png'
-
+import bannerNew from '../../../assets/images/home/banner/Banner new.avif'
 
 import banner4 from '../../../assets/images/home/banner/banner-4.avif'
 import banner5 from '../../../assets/images/home/banner/banner-5.avif'
@@ -131,6 +131,16 @@ const slides = [
     //     },
     //     buttonText: "Join Us"
     // },
+    {
+        id: 9,
+        layout: 'left-aligned',
+        image: bannerNew,
+        badge: "Welcome to The Krisar Academy",
+        title: <>Empowering <span className="text-brand-secondary">Future Leaders</span></>,
+        description: "Discover a dynamic learning environment that embraces innovation, nurtures potential, and builds the perfect foundation for your child's success.",
+        buttonText: "Start Your Journey",
+        buttonLink: "/admission"
+    },
 ]
 
 const Banner = () => {
@@ -394,34 +404,44 @@ const Banner = () => {
                                             </div>
                                         </div>
                                     </div>
+                                ) : slide.layout === 'image-only' ? (
+                                    <div className="w-full h-full"></div>
                                 ) : (
                                     // Left Aligned Layout (Certificates)
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 w-full items-center pl-0 md:pl-16 px-4">
                                         {/* Content Column */}
                                         <div className="text-left space-y-4 md:space-y-6 max-w-2xl pt-28 md:pt-0">
                                             {/* Badge */}
-                                            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md rounded px-4 py-2 border border-white/20 w-fit">
-                                                <span className="text-brand-secondary text-xs">●</span>
-                                                <span className="text-xs md:text-sm font-medium">{slide.badge}</span>
-                                            </div>
+                                            {slide.badge && (
+                                                <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md rounded px-4 py-2 border border-white/20 w-fit">
+                                                    <span className="text-brand-secondary text-xs">●</span>
+                                                    <span className="text-xs md:text-sm font-medium">{slide.badge}</span>
+                                                </div>
+                                            )}
 
                                             {/* Heading */}
-                                            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                                                {slide.title}
-                                            </h1>
+                                            {slide.title && (
+                                                <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                                                    {slide.title}
+                                                </h1>
+                                            )}
 
                                             {/* Description */}
-                                            <p className="text-sm md:text-lg text-gray-200 leading-relaxed max-w-xl">
-                                                {slide.description}
-                                            </p>
+                                            {slide.description && (
+                                                <p className="text-sm md:text-lg text-gray-200 leading-relaxed max-w-xl">
+                                                    {slide.description}
+                                                </p>
+                                            )}
 
                                             {/* CTA Button */}
-                                            <Button
-                                                to={slide.buttonLink || "/admission"}
-                                                className={`inline-flex items-center gap-2 transition-colors cursor-pointer mt-4 ${slide.buttonStyle === 'secondary' ? 'hover:bg-yellow-400' : 'hover:bg-white/20'}`}
-                                            >
-                                                {slide.buttonText || "Enquire Now"} <ArrowRight size={20} />
-                                            </Button>
+                                            {slide.buttonText && (
+                                                <Button
+                                                    to={slide.buttonLink || "/admission"}
+                                                    className={`inline-flex items-center gap-2 transition-colors cursor-pointer mt-4 ${slide.buttonStyle === 'secondary' ? 'hover:bg-yellow-400' : 'hover:bg-white/20'}`}
+                                                >
+                                                    {slide.buttonText} <ArrowRight size={20} />
+                                                </Button>
+                                            )}
                                         </div>
 
                                         {/* Right Column (Certificates) */}
