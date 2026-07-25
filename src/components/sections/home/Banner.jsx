@@ -20,8 +20,8 @@ import wrImg4 from '../../../assets/images/home/banner/banner-6/bannertop-img-4.
 import wrLogo from '../../../assets/images/home/banner/banner-6/center-logo.webp'
 
 import bannerRoboticsNew from '../../../assets/images/home/banner/upscale-banner.jpg'
-
-
+import bannerExtra4 from '../../../assets/images/home/banner/banner-by-krisar-acadamy-4.avif'
+import bannerExtra5 from '../../../assets/images/home/banner/banner-by-krisar-acadamy-5.avif'
 
 const slides = [
     {
@@ -51,6 +51,23 @@ const slides = [
         description: "Our academy is proudly affiliated with the CBSE board, ensuring that the school provides nationally recognised education with intellectual depth and academic standards.",
         buttonText: "View Curriculum",
         buttonLink: "/uat-academics"
+    },
+    {
+        id: 10,
+        layout: 'image-only',
+        image: bannerExtra5,
+        bgPosition: 'bg-center',
+    },
+    {
+        id: 11,
+        layout: 'left-aligned',
+        image: bannerExtra4,
+        bgPosition: 'bg-center',
+        badge: "Annual Day Celebration",
+        title: <>Frequenzeee'26 <span className="text-brand-secondary">Annual Day</span></>,
+        description: "Celebrating excellence, talent, and achievements of our students at The Krisar Academy Annual Day Celebration.",
+        buttonText: "Explore Events",
+        buttonLink: "/uat-beyond-academics"
     },
     // {
     //     id: 3,
