@@ -6,7 +6,8 @@ import { FileText, Shield, Flame, Droplets, Users, Calendar, Award, CheckCircle 
 import { Download } from 'lucide-react';
 
 import recognitionPdf from '../assets/pdf/recognition-2.pdf';
-import nocPdf from '../assets/pdf/noc.pdf';
+import nocPdf from '../assets/pdf/noc/noc.pdf';
+import affiliationLetterPdf from '../assets/pdf/noc/AFFILIATION-LETTER.pdf';
 import extensionLetterPdf from '../assets/pdf/extension-letter.pdf';
 import mandatoryDisclosurePdf from '../assets/pdf/mandatory-disclosure.pdf';
 import selfCertificationPdf from '../assets/pdf/self-certification.pdf';
@@ -70,6 +71,7 @@ const CBSEDisclosure = () => {
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                             <DisclosureCard title="Recognition" icon={Award} href={recognitionPdf} />
                             <DisclosureCard title="NOC" icon={FileText} href={nocPdf} />
+                            <DisclosureCard title="Affiliation Letter" icon={FileText} href={affiliationLetterPdf} />
                             <DisclosureCard title="Extension Letter" icon={FileText} href={extensionLetterPdf} />
                             <DisclosureCard title="Mandatory Disclosure" icon={FileText} href={mandatoryDisclosurePdf} />
                             <DisclosureCard title="Self Certification" icon={Shield} href={selfCertificationPdf} />
