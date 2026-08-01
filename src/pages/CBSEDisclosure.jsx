@@ -6,9 +6,9 @@ import { FileText, Shield, Flame, Droplets, Users, Calendar, Award, CheckCircle 
 import { Download } from 'lucide-react';
 
 import recognitionPdf from '../assets/pdf/recognition-2.pdf';
-import nocPdf from '../assets/pdf/noc/noc.pdf';
-import affiliationLetterPdf from '../assets/pdf/noc/AFFILIATION-LETTER.pdf';
-import extensionLetterPdf from '../assets/pdf/extension-letter.pdf';
+import nocPdf from '../assets/pdf/01-AUG-2026/NOC.pdf';
+import affiliationLetterPdf from '../assets/pdf/01-AUG-2026/Affiliation-Extension-Letter 27.pdf';
+import extensionLetterPdf from '../assets/pdf/01-AUG-2026/AFFILIATION SENIOR SEC EXT-29.pdf';
 import mandatoryDisclosurePdf from '../assets/pdf/mandatory-disclosure.pdf';
 import selfCertificationPdf from '../assets/pdf/self-certification.pdf';
 import buildingSafetyPdf from '../assets/pdf/building-safety.pdf';
@@ -17,7 +17,7 @@ import sanitationPdf from '../assets/pdf/sanitation.pdf';
 import trustDeedPdf from '../assets/pdf/trust-deed.pdf';
 import smcPdf from '../assets/pdf/smc.pdf';
 import ptcPdf from '../assets/pdf/ptc.pdf';
-import academicCalendarPdf from '../assets/pdf/academic-calendar.pdf';
+import academicCalendarPdf from '../assets/pdf/01-AUG-2026/academy-calender.pdf';
 import dFormPdf from '../assets/pdf/d-form.pdf';
 
 const DisclosureCard = ({ title, icon: Icon, href = "#" }) => (
@@ -71,8 +71,8 @@ const CBSEDisclosure = () => {
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                             <DisclosureCard title="Recognition" icon={Award} href={recognitionPdf} />
                             <DisclosureCard title="NOC" icon={FileText} href={nocPdf} />
-                            <DisclosureCard title="Affiliation Letter" icon={FileText} href={affiliationLetterPdf} />
-                            <DisclosureCard title="Extension Letter" icon={FileText} href={extensionLetterPdf} />
+                            <DisclosureCard title="Affiliation Extension Letter" icon={FileText} href={affiliationLetterPdf} />
+                            <DisclosureCard title="Affiliation Senior Sec Extension" icon={FileText} href={extensionLetterPdf} />
                             <DisclosureCard title="Mandatory Disclosure" icon={FileText} href={mandatoryDisclosurePdf} />
                             <DisclosureCard title="Self Certification" icon={Shield} href={selfCertificationPdf} />
                         </div>
@@ -111,7 +111,7 @@ const CBSEDisclosure = () => {
                             subtitle="Academic Planning And CBSE-Related Academic Disclosures."
                         />
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            <DisclosureCard title="Academic Calendar" icon={Calendar} href={academicCalendarPdf} />
+                            <DisclosureCard title="Academy Calendar" icon={Calendar} href={academicCalendarPdf} />
                             <DisclosureCard title="D Form" icon={FileText} href={dFormPdf} />
                         </div>
                     </section>
