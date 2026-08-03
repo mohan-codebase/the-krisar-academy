@@ -1,5 +1,5 @@
 import { Phone, Mail, MapPin, Clock, Instagram, Facebook, Youtube } from 'lucide-react';
-import logo from '../../assets/images/navbar/logo.svg';
+import logo from '../../assets/images/logo/logo.png';
 
 const Footer = () => {
     return (
