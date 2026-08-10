@@ -22,6 +22,7 @@ import wrLogo from '../../../assets/images/home/banner/banner-6/center-logo.webp
 import bannerRoboticsNew from '../../../assets/images/home/banner/upscale-banner.jpg'
 import bannerExtra4 from '../../../assets/images/home/banner/banner-by-krisar-acadamy-4.avif'
 import bannerExtra5 from '../../../assets/images/home/banner/banner-by-krisar-acadamy-5.avif'
+import bannerExtra5Mobile from '../../../assets/images/home/banner/mobileview-banner.png'
 
 const slides = [
     {
@@ -56,6 +57,7 @@ const slides = [
         id: 10,
         layout: 'image-only',
         image: bannerExtra5,
+        mobileImage: bannerExtra5Mobile,
         bgPosition: 'bg-center',
     },
     {
@@ -219,7 +221,7 @@ const Banner = () => {
                         <div key={index} className="embla__slide flex-[0_0_100%] min-w-0 relative h-full">
                             {/* Background Image */}
                             <div
-                                className={`absolute inset-0 bg-cover z-0 ${slide.bgPosition || 'bg-center'}`}
+                                className={`absolute inset-0 bg-cover z-0 ${slide.bgPosition || 'bg-center'} ${slide.mobileImage ? 'hidden md:block' : ''}`}
                                 style={{ backgroundImage: `url(${slide.image})` }}
                             >
                                 {/* Gradient Overlay based on layout */}
@@ -231,6 +233,23 @@ const Banner = () => {
                                             : 'bg-brand-primary/40 md:bg-brand-primary/0'
                                     }`}></div>
                             </div>
+
+                            {/* Mobile Background Image (if provided) */}
+                            {slide.mobileImage && (
+                                <div
+                                    className={`absolute inset-0 bg-cover z-0 ${slide.bgPosition || 'bg-center'} md:hidden`}
+                                    style={{ backgroundImage: `url(${slide.mobileImage})` }}
+                                >
+                                    {/* Gradient Overlay based on layout */}
+                                    <div className={`absolute inset-0 ${slide.layout === 'image-only' ? 'hidden' :
+                                        slide.layout === 'world-record' || slide.layout === 'bottom-grid' || slide.layout === 'collage-right'
+                                            ? 'bg-brand-primary/0' // Keep transparent for these custom graphical slides if bg is already dark/styled
+                                            : slide.layout === 'left-aligned'
+                                                ? 'bg-gradient-to-r from-brand-primary via-brand-primary/80 md:via-brand-primary/10 to-brand-primary/40 md:to-transparent'
+                                                : 'bg-brand-primary/40 md:bg-brand-primary/0'
+                                        }`}></div>
+                                </div>
+                            )}
 
                             <div className='max-w-[1540px] mx-auto px-4 h-full flex items-center justify-center relative z-10'>
 
