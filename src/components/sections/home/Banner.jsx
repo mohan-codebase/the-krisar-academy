@@ -12,12 +12,6 @@ import bannerNew from '../../../assets/images/home/banner/Banner new.avif'
 
 import banner4 from '../../../assets/images/home/banner/banner-4.avif'
 import banner5 from '../../../assets/images/home/banner/banner-5.avif'
-import banner6 from '../../../assets/images/home/banner/banner-6.avif'
-import wrImg1 from '../../../assets/images/home/banner/banner-6/bannertop-img-1.png'
-import wrImg2 from '../../../assets/images/home/banner/banner-6/bannertop-img-2.png'
-import wrImg3 from '../../../assets/images/home/banner/banner-6/bannertop-img-3.png'
-import wrImg4 from '../../../assets/images/home/banner/banner-6/bannertop-img-4.png'
-import wrLogo from '../../../assets/images/home/banner/banner-6/center-logo.webp'
 
 import bannerRoboticsNew from '../../../assets/images/home/banner/upscale-banner.jpg'
 import bannerExtra4 from '../../../assets/images/home/banner/banner-by-krisar-acadamy-4.avif'

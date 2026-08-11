@@ -5,8 +5,6 @@ import '../assets/styles/fonts.css'
 import ScrollReveal from '../components/common/ScrollReveal'
 import { BookOpen, Bot, FlaskConical, Monitor, Calculator, Bus, Droplets, Stethoscope } from 'lucide-react'
 
-import { useState } from 'react'
-
 // Images
 import imgLibrary from '../assets/images/facilities/modern-library.png'
 import imgWinners from '../assets/images/facilities/winners-img.jpeg'

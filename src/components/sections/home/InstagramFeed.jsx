@@ -5,7 +5,6 @@ import Button from '../../ui/Button';
 import reel1 from '../../../assets/images/home/instagram/reel-1.jpg';
 import reel2 from '../../../assets/images/home/instagram/reel-2.jpg';
 import reel3 from '../../../assets/images/home/instagram/reel-3.jpg';
-import reel4 from '../../../assets/images/home/instagram/reel-4.jpg';
 import reel5 from '../../../assets/images/home/instagram/reel-5.jpg';
 
 // Mock data for Instagram posts

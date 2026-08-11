@@ -5,10 +5,6 @@ import img1 from '../../../assets/images/home/SuccessStories/revathi.png';
 import img2 from '../../../assets/images/home/SuccessStories/vijaya.png';
 import img3 from '../../../assets/images/home/SuccessStories/sarika.png';
 import img4 from '../../../assets/images/home/SuccessStories/lakshmi.png';
-import img5 from '../../../assets/images/home/SuccessStories/Ellipse 16.svg';
-
-import img6 from '../../../assets/images/home/SuccessStories/Ellipse 17.svg';
-import img7 from '../../../assets/images/home/SuccessStories/Ellipse 18.svg';
 
 const stories = [
     {
@@ -116,24 +112,6 @@ const SuccessStories = () => {
 
                         // If it's not one of these 3, hide it or push it back
                         if (!isActive && !isPrev && !isNext) return null;
-
-                        let transformClass = '';
-                        let opacityClass = '';
-                        let zIndexClass = '';
-
-                        if (isActive) {
-                            transformClass = 'scale-100 translate-x-0';
-                            opacityClass = 'opacity-100';
-                            zIndexClass = 'z-20';
-                        } else if (isPrev) {
-                            transformClass = 'scale-90 -translate-x-full md:-translate-x-[60%] blur-[20px]';
-                            opacityClass = 'opacity-40';
-                            zIndexClass = 'z-10';
-                        } else if (isNext) {
-                            transformClass = 'scale-90 translate-x-full md:translate-x-[60%] blur-[20px]';
-                            opacityClass = 'opacity-40';
-                            zIndexClass = 'z-10';
-                        }
 
                         return (
                             <div

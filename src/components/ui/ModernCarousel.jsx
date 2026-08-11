@@ -1,11 +1,10 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { motion, AnimatePresence, useMotionValue, useTransform } from 'framer-motion';
+import React, { useState, useRef } from 'react';
+import { motion, AnimatePresence, useMotionValue } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Share2, Info } from 'lucide-react';
 
 const ModernCarousel = ({ items = [], onItemClick, showContent = true }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [direction, setDirection] = useState(0);
-    const [isHovered, setIsHovered] = useState(false);
     const containerRef = useRef(null);
 
     const nextSlide = () => {
@@ -20,7 +19,6 @@ const ModernCarousel = ({ items = [], onItemClick, showContent = true }) => {
 
     // Drag constraints and logic
     const dragX = useMotionValue(0);
-    const dragProgress = useTransform(dragX, [-100, 100], [0.5, -0.5]);
 
     const onDragEnd = (event, info) => {
         const threshold = 50;
@@ -36,8 +34,6 @@ const ModernCarousel = ({ items = [], onItemClick, showContent = true }) => {
     return (
         <div
             className="relative w-full max-w-6xl mx-auto h-[500px] md:h-[600px] flex items-center justify-center overflow-visible px-4 select-none"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
             ref={containerRef}
         >
             <div className="relative w-full h-full flex items-center justify-center perspective-[2000px]">

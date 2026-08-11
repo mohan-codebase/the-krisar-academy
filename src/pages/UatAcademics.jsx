@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import PageHero from '../components/common/PageHero'
 import SEO from '../components/common/SEO'

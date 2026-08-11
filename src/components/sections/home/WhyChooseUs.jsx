@@ -101,7 +101,6 @@ const WhyChooseUs = () => {
 
                             // Calculate opacity/scale/visibility
                             const isActive = index === activeIndex;
-                            const isVisible = Math.abs(offset) <= 2; // Only show close neighbors
 
                             return (
                                 <div

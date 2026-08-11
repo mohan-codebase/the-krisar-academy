@@ -7,9 +7,6 @@ import ModernCarousel from '../components/ui/ModernCarousel';
 import ScrollReveal from '../components/common/ScrollReveal';
 
 import bannerImg from '../assets/images/home/banner/upscale-banner.jpg';
-import campus1 from '../assets/images/gallery/krisar_img_001.jpeg';
-import campus2 from '../assets/images/gallery/krisar_img_010.jpeg';
-import campus3 from '../assets/images/gallery/krisar_img_017.jpeg';
 
 // Generic icon for gallery items
 import iconGallery from '../assets/images/facilities/modern-library.svg';
