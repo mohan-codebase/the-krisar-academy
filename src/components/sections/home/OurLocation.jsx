@@ -2,6 +2,12 @@ import React from 'react';
 import { MapPin, Navigation } from 'lucide-react';
 import ScrollReveal from '../../common/ScrollReveal';
 
+// One query behind both the embedded map and the directions link, so the pin the
+// visitor sees and the place their maps app opens can never drift apart.
+const MAP_QUERY = 'Krisar Academy Paradarami Village Arani Main Road'
+const MAP_EMBED_SRC = `https://maps.google.com/maps?q=${encodeURIComponent(MAP_QUERY)}&z=15&output=embed`
+const MAP_DIRECTIONS_HREF = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(MAP_QUERY)}`
+
 const OurLocation = () => {
     return (
         <section className="bg-[#0B1221] py-24 px-4 relative overflow-hidden">
@@ -36,9 +42,9 @@ const OurLocation = () => {
                             </div>
 
                             <div className="mt-10 flex flex-wrap gap-4">
-                                <a 
-                                    href="https://www.google.com/maps/search/?api=1&query=Krisar+Academy+Paradarami+Village+Arani+Main+Road" 
-                                    target="_blank" 
+                                <a
+                                    href={MAP_DIRECTIONS_HREF}
+                                    target="_blank"
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center gap-3 px-8 py-4 bg-brand-secondary text-brand-primary font-bold rounded-2xl hover:scale-105 transition-transform duration-300 shadow-xl shadow-brand-secondary/20"
                                 >
@@ -48,18 +54,18 @@ const OurLocation = () => {
                             </div>
                         </div>
 
-                        {/* Interactive/Visual Map Placeholder */}
+                        {/* Embedded map. The q=…&output=embed form needs no Maps API key. */}
                         <div className="lg:col-span-5 relative group">
                             <div className="absolute -inset-4 bg-brand-secondary/20 blur-2xl rounded-[3rem] opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                            <div className="relative rounded-[2.5rem] overflow-hidden border border-white/10 bg-[#151E38] p-2 aspect-square md:aspect-video lg:aspect-square flex items-center justify-center">
-                                <div className="absolute inset-0 bg-gradient-to-br from-brand-secondary/10 to-transparent"></div>
-                                <div className="text-center p-8">
-                                    <div className="w-20 h-20 rounded-3xl bg-brand-secondary/10 flex items-center justify-center mx-auto mb-6 border border-brand-secondary/20 group-hover:rotate-12 transition-transform duration-500">
-                                        <MapPin size={40} className="text-brand-secondary" />
-                                    </div>
-                                    <h4 className="text-white font-bold text-xl mb-2">Arani Main Road</h4>
-                                    <p className="text-gray-400">Paradarami Village, Tamil Nadu</p>
-                                </div>
+                            <div className="relative rounded-[2.5rem] overflow-hidden border border-white/10 bg-[#151E38] p-2 aspect-square md:aspect-video lg:aspect-square">
+                                <iframe
+                                    title="Map showing The Krisar Academy on Arani Main Road, Paradarami Village"
+                                    src={MAP_EMBED_SRC}
+                                    className="w-full h-full rounded-[2rem] border-0"
+                                    loading="lazy"
+                                    allowFullScreen
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                ></iframe>
                             </div>
                         </div>
                     </div>

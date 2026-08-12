@@ -1,6 +1,23 @@
 @import "tailwindcss";
 @config "../tailwind.config.js";
 
+/*
+ * Swiper v14 + Tailwind CSS v4 compatibility fix.
+ *
+ * Tailwind v4's preflight sets `box-sizing: border-box` on every element via
+ * the `*` selector. Swiper's `.swiper-wrapper` relies on `content-box` sizing
+ * to calculate slide offsets — when that is overridden, the translate values
+ * the JS side computes are wrong and every slide is visible at once in a
+ * broken mosaic layout. The rules below restore the properties that the
+ * Swiper CSS file expects and that the reset clobbers.
+ */
+.swiper {
+  overflow: hidden !important;
+}
+.swiper-wrapper {
+  box-sizing: content-box !important;
+}
+
 body {
   background-color: #061E3F;
 }

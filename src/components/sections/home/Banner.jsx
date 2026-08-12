@@ -1,10 +1,8 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay } from 'swiper/modules'
 import 'swiper/css'
 import { ArrowRight, ArrowLeft } from 'lucide-react'
-import activeDot from '../../../assets/images/ui/carousel-dot-active.svg'
-import inactiveDot from '../../../assets/images/ui/carousel-dot-inactive.svg'
 import Button from '../../ui/Button'
 
 // Slide artwork. The folder carries the variant, so a slide's mobile art
@@ -162,25 +160,21 @@ const slides = [
     },
 ]
 
-// Scrim that keeps slide copy legible over the artwork. The left-to-right ramp reads
-// well on a wide screen, but on a narrow portrait one it covers the entire width and
-// smothers the photo, so mobile gets a bottom-up ramp instead: clear at the top,
-// opaque behind the copy at the bottom.
-// On mobile the copy sits below the artwork rather than on top of it, so the art
+// The copy sits below the artwork rather than on top of it at every width, so the art
 // needs no scrim for legibility — only a fade along its bottom edge so the band
 // dissolves into the brand navy the copy sits on instead of ending on a hard line.
-// The md: stops restore the full left-to-right ramp the desktop overlay layout needs,
-// and have to reset the gradient stop positions the mobile ramp sets.
-const MOBILE_FOOT_FADE = 'bg-gradient-to-t from-brand-primary from-0% via-transparent via-35% to-transparent'
+const FOOT_FADE = 'bg-gradient-to-t from-brand-primary from-0% via-transparent via-35% to-transparent'
+
+// Roughly the height the copy takes at the foot of a desktop slide — the type sizes are
+// fixed, so it only moves by a line of description either way. The arrows use it to work
+// out where the artwork band ends; nothing is laid out from it.
+const COPY_BAND = '15rem'
 
 const overlayClass = (layout) => {
     if (layout === 'image-only') {
         return 'bg-gradient-to-b from-brand-primary/70 via-transparent to-transparent'
     }
-    if (layout === 'left-aligned') {
-        return `${MOBILE_FOOT_FADE} md:bg-gradient-to-r md:from-brand-primary md:from-0% md:via-brand-primary/65 md:via-50% md:to-brand-primary/10`
-    }
-    return `${MOBILE_FOOT_FADE} md:bg-none`
+    return FOOT_FADE
 }
 
 // Renders the slide artwork. Slides with dedicated mobile art get both layers, each
@@ -190,9 +184,8 @@ const overlayClass = (layout) => {
 // off-screen slides: a background-image on an in-tree element is fetched eagerly,
 // which pulled all twelve slides (~1.7 MB) down on first paint.
 const SlideArtwork = ({ slide, eager }) => {
-    // The artwork always fills whatever band its parent gives it. On a phone that band
-    // is the top of a flex column (see the slide markup); from md up the parent goes
-    // static and this resolves against the slide itself, going full-bleed.
+    // The artwork always fills whatever band its parent gives it — the top of the
+    // slide's flex column (see the slide markup), at every width.
     const box = slide.layout === 'image-only'
         ? 'inset-x-0 top-24 bottom-16 md:top-28 md:bottom-20'
         : 'inset-0'
@@ -221,11 +214,11 @@ const SlideArtwork = ({ slide, eager }) => {
                 ))}
                 <div className={`absolute inset-0 ${overlayClass(slide.layout)}`}></div>
 
-                {/* The overlaid navbar sits on bare artwork now that the mobile scrim has
-                    moved to the foot of the band, so the logo needs its own tint to stay
-                    legible over a bright photo. Desktop gets this from its own ramp. */}
+                {/* The overlaid navbar sits on bare artwork now that the scrim has moved to
+                    the foot of the band, so the logo needs its own tint to stay legible
+                    over a bright photo. */}
                 {slide.layout !== 'image-only' && (
-                    <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-brand-primary/85 to-transparent md:hidden"></div>
+                    <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-brand-primary/85 to-transparent md:h-32"></div>
                 )}
             </div>
         </div>
@@ -234,35 +227,45 @@ const SlideArtwork = ({ slide, eager }) => {
 
 const Banner = () => {
     const swiperRef = useRef(null)
-    const [activeIndex, setActiveIndex] = useState(0)
 
-    // The banner fills what is left of the fold once NavbarTop is accounted for.
-    // NavbarTop is the only element above it, and its height is its own padding
-    // (py-2 / md:py-4) plus a line of text — hence 2rem / 3.5rem. Overshooting here
-    // pushes the pagination dots below the fold, where nobody finds them.
+    // On a phone the banner fills what is left of the fold once NavbarTop is accounted
+    // for — NavbarTop is the only element above it, and its height is its own padding
+    // (py-2) plus a line of text, hence 2rem. From md up it deliberately overruns the
+    // fold at 115svh so the artwork band reads as a full landscape photo rather than a
+    // letterbox strip; the copy beneath it starts near the bottom of the fold and is
+    // finished by scrolling.
     return (
         <section
             aria-label="School highlights"
-            className="bg-brand-primary h-[calc(100svh-2rem)] md:h-[calc(100svh-3.5rem)] min-h-[600px] md:min-h-[500px] text-white overflow-hidden relative group"
+            className="bg-brand-primary h-[calc(100svh-2rem)] md:h-[calc(115svh-3.5rem)] min-h-[600px] md:min-h-[700px] text-white overflow-hidden relative group"
         >
             {/* Navigation Arrows — hidden on mobile, where they would sit on top of the
-                slide heading. Touch swipe and the pagination dots cover navigation there. */}
-            <button
-                type="button"
-                aria-label="Previous slide"
-                className="hidden md:block absolute bottom-6 md:bottom-10 left-8 bg-white/10 hover:bg-white/20 backdrop-blur-sm p-3 rounded-xl border border-white/20 transition-colors z-30 cursor-pointer"
-                onClick={() => swiperRef.current?.slidePrev()}
+                slide heading and touch swipe covers navigation anyway.
+                They centre on the artwork band, not on the section: the copy occupies the
+                foot of every slide, so this box stops short of it (COPY_BAND) and centres
+                its two children in what is left. The box itself must not take pointer
+                events, or it would swallow the drag gesture across the whole photo. */}
+            <div
+                className="hidden md:flex absolute inset-x-0 top-0 items-center justify-between px-8 z-30 pointer-events-none"
+                style={{ bottom: COPY_BAND }}
             >
-                <ArrowLeft size={24} />
-            </button>
-            <button
-                type="button"
-                aria-label="Next slide"
-                className="hidden md:block absolute bottom-6 md:bottom-10 right-8 bg-white/10 hover:bg-white/20 backdrop-blur-sm p-3 rounded-xl border border-white/20 transition-colors z-30 cursor-pointer"
-                onClick={() => swiperRef.current?.slideNext()}
-            >
-                <ArrowRight size={24} />
-            </button>
+                <button
+                    type="button"
+                    aria-label="Previous slide"
+                    className="pointer-events-auto bg-white/10 hover:bg-white/20 backdrop-blur-sm p-3 rounded-xl border border-white/20 transition-colors cursor-pointer"
+                    onClick={() => swiperRef.current?.slidePrev()}
+                >
+                    <ArrowLeft size={24} />
+                </button>
+                <button
+                    type="button"
+                    aria-label="Next slide"
+                    className="pointer-events-auto bg-white/10 hover:bg-white/20 backdrop-blur-sm p-3 rounded-xl border border-white/20 transition-colors cursor-pointer"
+                    onClick={() => swiperRef.current?.slideNext()}
+                >
+                    <ArrowRight size={24} />
+                </button>
+            </div>
 
             <Swiper
                 modules={[Autoplay]}
@@ -271,47 +274,46 @@ const Banner = () => {
                 lazyPreloadPrevNext={1}
                 autoplay={{ delay: 4000, disableOnInteraction: false, pauseOnMouseEnter: true }}
                 onSwiper={(swiper) => { swiperRef.current = swiper }}
-                onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
                 className="h-full"
             >
                 {slides.map((slide, index) => (
                     <SwiperSlide key={slide.id ?? index} className="relative h-full">
-                        {/* On a phone the slide is a column: the artwork band takes whatever
-                            height the copy leaves it, and the copy sits beneath it on solid
-                            navy. From md up the band goes static and the copy goes absolute,
-                            so they stack again as the full-bleed overlay design. A fixed
-                            percentage band cannot do this — long copy on a short phone would
-                            ride up over the photo. */}
-                        <div className="h-full flex flex-col md:block">
-                            <div className="relative flex-1 min-h-[30%] md:static md:min-h-0">
+                        {/* The slide is a column at every width: the artwork band takes
+                            whatever height the copy leaves it, and the copy sits beneath it
+                            on solid navy. A fixed percentage band cannot do this — long copy
+                            on a short viewport would ride up over the photo. */}
+                        <div className="h-full flex flex-col">
+                            <div className="relative flex-1 min-h-[30%]">
                                 <SlideArtwork slide={slide} eager={index === 0} />
                             </div>
 
-                            <div className="shrink-0 relative z-10 md:absolute md:inset-0">
-                                <div className='max-w-[1540px] mx-auto px-4 md:h-full flex items-end md:items-center justify-center'>
+                            <div className="shrink-0 relative z-10">
+                                <div className='max-w-[1540px] mx-auto px-4 flex items-end justify-center'>
 
                                     {slide.layout === 'standard' ? (
                                         // Standard Layout (Centered Title, Split Content)
-                                        // h-auto on mobile is what lets the parent's items-end
-                                        // settle this block at the foot of the slide; pb clears
-                                        // the pagination dots.
-                                        <div className="flex flex-col items-center w-full h-auto md:h-full justify-center gap-5 md:gap-8 pt-6 pb-14 md:pt-0 md:pb-0">
-                                            {/* Main Heading */}
-                                            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-center leading-tight">
+                                        // h-auto is what lets the parent's items-end settle this
+                                        // block at the foot of the slide.
+                                        <div className="flex flex-col items-center w-full h-auto justify-center gap-4 pt-5 pb-8">
+                                            {/* Main Heading. The copy now shares the fold with the
+                                                artwork instead of overlaying it, so the type is a
+                                                step down — every pixel this band takes comes
+                                                straight off the height of the photo above it. */}
+                                            <h1 className="text-3xl font-bold text-center leading-tight">
                                                 {slide.title}
                                             </h1>
 
                                             {/* Admissions Badge */}
-                                            <div className="bg-white/10 backdrop-blur-md rounded px-4 py-2 md:px-6 md:py-2 border border-white/20 text-sm md:text-base text-center">
+                                            <div className="bg-white/10 backdrop-blur-md rounded px-4 py-1.5 border border-white/20 text-xs md:text-sm text-center">
                                                 <span className="text-brand-secondary">● </span>
                                                 {slide.badge}
                                             </div>
 
                                             {/* Content Grid */}
-                                            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 w-full items-center">
+                                            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full items-center">
                                                 {/* Left Content */}
-                                                <div className="text-center md:text-left space-y-2 md:space-y-4 max-w-sm mx-auto md:mx-0 hidden md:block">
-                                                    <h3 className="text-brand-secondary text-xl md:text-2xl font-bold">{slide.leftContent.title}</h3>
+                                                <div className="text-center md:text-left space-y-2 max-w-sm mx-auto md:mx-0 hidden md:block">
+                                                    <h3 className="text-brand-secondary text-lg md:text-xl font-bold">{slide.leftContent.title}</h3>
                                                     <p className="text-sm text-gray-300 leading-relaxed">
                                                         {slide.leftContent.desc}
                                                     </p>
@@ -321,15 +323,16 @@ const Banner = () => {
                                                 <div className="flex justify-center">
                                                     <Button
                                                         to={slide.buttonLink || "/contact"}
+                                                        size="sm"
                                                         className="flex items-center gap-3 transition-colors cursor-pointer"
                                                     >
-                                                        {slide.buttonText || "Enquire Now"} <ArrowRight size={20} />
+                                                        {slide.buttonText || "Enquire Now"} <ArrowRight size={16} />
                                                     </Button>
                                                 </div>
 
                                                 {/* Right Content */}
-                                                <div className="text-center md:text-right space-y-2 md:space-y-4 max-w-sm mx-auto md:mx-0 md:ml-auto hidden md:block">
-                                                    <h3 className="text-brand-secondary text-xl md:text-2xl font-bold">{slide.rightContent.title}</h3>
+                                                <div className="text-center md:text-right space-y-2 max-w-sm mx-auto md:mx-0 md:ml-auto hidden md:block">
+                                                    <h3 className="text-brand-secondary text-lg md:text-xl font-bold">{slide.rightContent.title}</h3>
                                                     <p className="text-sm text-gray-300 leading-relaxed">
                                                         {slide.rightContent.desc}
                                                     </p>
@@ -339,31 +342,36 @@ const Banner = () => {
                                     ) : slide.layout === 'image-only' ? (
                                         <div className="w-full h-full"></div>
                                     ) : (
-                                        // Left Aligned Layout. The empty second column is what
-                                        // holds the copy to the left half on md+ and lets the
-                                        // artwork carry the right.
-                                        // pb clears the pagination dots.
-                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 w-full items-center pl-0 md:pl-16 px-4 pt-6 pb-14 md:pt-0 md:pb-0">
-                                            {/* Content Column */}
-                                            <div className="text-left space-y-4 md:space-y-6 max-w-2xl">
+                                        // Centred Layout. The copy is capped by its own max-w
+                                        // rather than by a half-width grid column: the artwork
+                                        // no longer shares the horizontal space, and half a
+                                        // container was too narrow to hold the longest headline
+                                        // on one line.
+                                        <div className="w-full px-4 pt-5 pb-8">
+                                            {/* Content Column. Every pixel this band takes comes
+                                                straight off the height of the photo above it, so
+                                                the type and rhythm here stay deliberately tight
+                                                and the description gets a width that holds it to
+                                                two lines rather than three. */}
+                                            <div className="text-center space-y-4 max-w-3xl mx-auto">
                                                 {/* Badge */}
                                                 {slide.badge && (
-                                                    <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md rounded px-4 py-2 border border-white/20 w-fit">
+                                                    <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md rounded px-3 py-1.5 border border-white/20 w-fit">
                                                         <span className="text-brand-secondary text-xs">●</span>
-                                                        <span className="text-xs md:text-sm font-medium">{slide.badge}</span>
+                                                        <span className="text-xs font-medium">{slide.badge}</span>
                                                     </div>
                                                 )}
 
                                                 {/* Heading */}
                                                 {slide.title && (
-                                                    <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                                                    <h1 className="text-3xl font-bold leading-tight">
                                                         {slide.title}
                                                     </h1>
                                                 )}
 
                                                 {/* Description */}
                                                 {slide.description && (
-                                                    <p className="text-sm md:text-lg text-gray-200 leading-relaxed max-w-xl">
+                                                    <p className="text-sm text-gray-200 leading-relaxed max-w-xl md:max-w-2xl mx-auto">
                                                         {slide.description}
                                                     </p>
                                                 )}
@@ -372,9 +380,10 @@ const Banner = () => {
                                                 {slide.buttonText && (
                                                     <Button
                                                         to={slide.buttonLink || "/admission"}
-                                                        className="inline-flex items-center gap-2 transition-colors cursor-pointer mt-4 hover:bg-white/20"
+                                                        size="sm"
+                                                        className="inline-flex items-center gap-2 transition-colors cursor-pointer mt-4 md:mt-1 hover:bg-white/20"
                                                     >
-                                                        {slide.buttonText} <ArrowRight size={20} />
+                                                        {slide.buttonText} <ArrowRight size={16} />
                                                     </Button>
                                                 )}
                                             </div>
@@ -387,28 +396,6 @@ const Banner = () => {
                 ))}
             </Swiper>
 
-            {/* Pagination Dots */}
-            {/* Pagination Dots — 12 dots at gap-4 span the full width of a small phone,
-                so the mobile gap is tightened to keep them clear of the screen edges. */}
-            <div className="flex justify-center items-center gap-2 md:gap-4 px-4 absolute bottom-4 md:bottom-8 left-0 right-0 z-30">
-                {slides.map((_, index) => (
-                    <button
-                        key={index}
-                        type="button"
-                        aria-label={`Go to slide ${index + 1}`}
-                        aria-current={index === activeIndex}
-                        className="shrink-0 transition-all focus:outline-none cursor-pointer"
-                        onClick={() => swiperRef.current?.slideToLoop(index)}
-                    >
-                        <img
-                            src={index === activeIndex ? activeDot : inactiveDot}
-                            alt=""
-                            aria-hidden="true"
-                            className="w-2.5 h-2.5 md:w-4 md:h-4"
-                        />
-                    </button>
-                ))}
-            </div>
         </section>
     )
 }
