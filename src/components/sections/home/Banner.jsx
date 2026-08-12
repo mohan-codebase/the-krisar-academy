@@ -46,7 +46,7 @@ const slides = [
         id: 2,
         layout: 'left-aligned',
         image: slideCbseAffiliation,
-        bgPosition: 'bg-[10%_center]',
+        focus: 'object-[10%_center]',
         badge: "CBSE Academic Affiliation",
         title: <>CBSE Academic <span className="text-brand-secondary">Affiliation</span></>,
         description: "Our academy is proudly affiliated with the CBSE board, ensuring that the school provides nationally recognised education with intellectual depth and academic standards.",
@@ -58,14 +58,15 @@ const slides = [
         layout: 'image-only',
         image: slideAward2026,
         mobileImage: slideAward2026Mobile,
-        bgPosition: 'bg-center',
         bgColor: '#061A4D',
+        // This slide carries its copy inside the artwork, so the alt text has to
+        // stand in for the whole slide rather than describe decoration.
+        alt: "The Krisar Academy receives the Outstanding School in Learning Initiative & Skill Development Award 2026 at the Education Leadership Summit Awards.",
     },
     {
         id: 4,
         layout: 'left-aligned',
         image: slideAnnualDay,
-        bgPosition: 'bg-center',
         badge: "Annual Day Celebration",
         title: <>Frequenzeee'26 <span className="text-brand-secondary">Annual Day</span></>,
         description: "Celebrating excellence, talent, and achievements of our students at The Krisar Academy Annual Day Celebration.",
@@ -165,53 +166,91 @@ const slides = [
 // well on a wide screen, but on a narrow portrait one it covers the entire width and
 // smothers the photo, so mobile gets a bottom-up ramp instead: clear at the top,
 // opaque behind the copy at the bottom.
+// On mobile the copy sits below the artwork rather than on top of it, so the art
+// needs no scrim for legibility — only a fade along its bottom edge so the band
+// dissolves into the brand navy the copy sits on instead of ending on a hard line.
+// The md: stops restore the full left-to-right ramp the desktop overlay layout needs,
+// and have to reset the gradient stop positions the mobile ramp sets.
+const MOBILE_FOOT_FADE = 'bg-gradient-to-t from-brand-primary from-0% via-transparent via-35% to-transparent'
+
 const overlayClass = (layout) => {
     if (layout === 'image-only') {
         return 'bg-gradient-to-b from-brand-primary/70 via-transparent to-transparent'
     }
-    if (layout === 'world-record' || layout === 'bottom-grid' || layout === 'collage-right') {
-        // These layouts supply their own styled artwork.
-        return 'bg-brand-primary/0'
-    }
     if (layout === 'left-aligned') {
-        return 'bg-gradient-to-t from-brand-primary via-brand-primary/70 to-brand-primary/20 md:bg-gradient-to-r md:from-brand-primary md:via-brand-primary/65 md:to-brand-primary/10'
+        return `${MOBILE_FOOT_FADE} md:bg-gradient-to-r md:from-brand-primary md:from-0% md:via-brand-primary/65 md:via-50% md:to-brand-primary/10`
     }
-    return 'bg-brand-primary/40 md:bg-brand-primary/0'
+    return `${MOBILE_FOOT_FADE} md:bg-none`
 }
 
 // Renders the slide artwork. Slides with dedicated mobile art get both layers, each
 // gated by a breakpoint, so the scrim only has to be described once.
-const SlideBackground = ({ slide }) => {
+//
+// The art is an <img> rather than a CSS background so the browser can defer the
+// off-screen slides: a background-image on an in-tree element is fetched eagerly,
+// which pulled all twelve slides (~1.7 MB) down on first paint.
+const SlideArtwork = ({ slide, eager }) => {
+    // The artwork always fills whatever band its parent gives it. On a phone that band
+    // is the top of a flex column (see the slide markup); from md up the parent goes
+    // static and this resolves against the slide itself, going full-bleed.
     const box = slide.layout === 'image-only'
-        ? 'inset-x-0 top-24 bottom-16 md:top-28 md:bottom-20 bg-contain bg-no-repeat'
-        : 'inset-0 bg-cover'
+        ? 'inset-x-0 top-24 bottom-16 md:top-28 md:bottom-20'
+        : 'inset-0'
+    const fit = slide.layout === 'image-only' ? 'object-contain' : 'object-cover'
     const layers = slide.mobileImage
         ? [{ src: slide.mobileImage, visibility: 'md:hidden' }, { src: slide.image, visibility: 'hidden md:block' }]
         : [{ src: slide.image, visibility: '' }]
 
-    return layers.map(({ src, visibility }) => (
-        <div
-            key={src}
-            className={`absolute z-0 ${box} ${slide.bgPosition || 'bg-center'} ${visibility}`}
-            style={{ backgroundImage: `url(${src})`, backgroundColor: slide.bgColor }}
-        >
-            <div className={`absolute inset-0 ${overlayClass(slide.layout)}`}></div>
+    // The insets live on a wrapper rather than on the <img> itself: insets alone do not
+    // size a replaced element, so an image positioned that way falls back to its
+    // intrinsic size and object-fit has nothing to fit against. w-full/h-full against
+    // this box is what makes the cover/contain crop work.
+    return (
+        <div className="absolute inset-0 z-0" style={{ backgroundColor: slide.bgColor }}>
+            <div className={`absolute ${box}`}>
+                {layers.map(({ src, visibility }) => (
+                    <img
+                        key={src}
+                        src={src}
+                        alt={slide.alt || ''}
+                        loading={eager ? 'eager' : 'lazy'}
+                        fetchPriority={eager ? 'high' : 'auto'}
+                        decoding={eager ? 'sync' : 'async'}
+                        className={`absolute inset-0 w-full h-full ${fit} ${slide.focus || 'object-center'} ${visibility}`}
+                    />
+                ))}
+                <div className={`absolute inset-0 ${overlayClass(slide.layout)}`}></div>
+
+                {/* The overlaid navbar sits on bare artwork now that the mobile scrim has
+                    moved to the foot of the band, so the logo needs its own tint to stay
+                    legible over a bright photo. Desktop gets this from its own ramp. */}
+                {slide.layout !== 'image-only' && (
+                    <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-brand-primary/85 to-transparent md:hidden"></div>
+                )}
+            </div>
         </div>
-    ))
+    )
 }
 
 const Banner = () => {
     const swiperRef = useRef(null)
     const [activeIndex, setActiveIndex] = useState(0)
 
+    // The banner fills what is left of the fold once NavbarTop is accounted for.
+    // NavbarTop is the only element above it, and its height is its own padding
+    // (py-2 / md:py-4) plus a line of text — hence 2rem / 3.5rem. Overshooting here
+    // pushes the pagination dots below the fold, where nobody finds them.
     return (
-        <section className="bg-brand-primary h-[calc(100svh-80px)] md:h-[calc(100vh-100px)] lg:h-[calc(130vh-140px)] min-h-[600px] md:min-h-[500px] text-white overflow-hidden relative group">
+        <section
+            aria-label="School highlights"
+            className="bg-brand-primary h-[calc(100svh-2rem)] md:h-[calc(100svh-3.5rem)] min-h-[600px] md:min-h-[500px] text-white overflow-hidden relative group"
+        >
             {/* Navigation Arrows — hidden on mobile, where they would sit on top of the
                 slide heading. Touch swipe and the pagination dots cover navigation there. */}
             <button
                 type="button"
                 aria-label="Previous slide"
-                className="hidden md:block absolute top-1/2 left-8 -translate-y-1/2 bg-white/10 hover:bg-white/20 backdrop-blur-sm p-3 rounded-xl border border-white/20 transition-colors z-30 cursor-pointer"
+                className="hidden md:block absolute bottom-6 md:bottom-10 left-8 bg-white/10 hover:bg-white/20 backdrop-blur-sm p-3 rounded-xl border border-white/20 transition-colors z-30 cursor-pointer"
                 onClick={() => swiperRef.current?.slidePrev()}
             >
                 <ArrowLeft size={24} />
@@ -219,7 +258,7 @@ const Banner = () => {
             <button
                 type="button"
                 aria-label="Next slide"
-                className="hidden md:block absolute top-1/2 right-8 -translate-y-1/2 bg-white/10 hover:bg-white/20 backdrop-blur-sm p-3 rounded-xl border border-white/20 transition-colors z-30 cursor-pointer"
+                className="hidden md:block absolute bottom-6 md:bottom-10 right-8 bg-white/10 hover:bg-white/20 backdrop-blur-sm p-3 rounded-xl border border-white/20 transition-colors z-30 cursor-pointer"
                 onClick={() => swiperRef.current?.slideNext()}
             >
                 <ArrowRight size={24} />
@@ -229,6 +268,7 @@ const Banner = () => {
                 modules={[Autoplay]}
                 loop
                 speed={700}
+                lazyPreloadPrevNext={1}
                 autoplay={{ delay: 4000, disableOnInteraction: false, pauseOnMouseEnter: true }}
                 onSwiper={(swiper) => { swiperRef.current = swiper }}
                 onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
@@ -236,246 +276,113 @@ const Banner = () => {
             >
                 {slides.map((slide, index) => (
                     <SwiperSlide key={slide.id ?? index} className="relative h-full">
-                            <SlideBackground slide={slide} />
-
-                            <div className='max-w-[1540px] mx-auto px-4 h-full flex items-center justify-center relative z-10'>
-
-                                {slide.layout === 'collage-right' ? (
-                                    <div className="flex flex-col md:flex-row items-center w-full h-full relative pt-24 md:pt-0 pb-8 md:pb-0">
-
-                                        {/* Left: Text Content */}
-                                        <div className="flex flex-col items-center md:items-start text-center md:text-left z-10 w-full md:w-1/2 px-4 md:pl-16 lg:pl-24">
-                                            {/* Badge */}
-                                            <div className="bg-[#2A3C55]/20 backdrop-blur-md rounded px-4 py-2 border border-white/20 text-xs md:text-sm mb-6 inline-flex items-center gap-2 shadow-lg">
-                                                <span className="text-brand-secondary">●</span>
-                                                {slide.badge}
-                                            </div>
-
-                                            {/* Main Heading */}
-                                            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
-                                                {slide.title}
-                                            </h1>
-
-                                            {/* Description */}
-                                            <p className="text-gray-200 text-sm md:text-xl mb-8 leading-relaxed max-w-xl font-medium">
-                                                {slide.description}
-                                            </p>
-
-                                            {/* CTA Button */}
-                                            <Button
-                                                to={slide.buttonLink || "/admission"}
-                                                className="flex items-center gap-3 transition-colors cursor-pointer bg-brand-secondary text-brand-primary hover:bg-white border-none font-bold px-8 py-3 md:py-4 text-base md:text-lg"
-                                            >
-                                                {slide.buttonText} <ArrowRight size={24} />
-                                            </Button>
-                                        </div>
-
-                                        {/* Right: Side Image */}
-                                        <div className="w-full md:w-1/2 h-full flex items-center justify-center md:justify-end md:pr-12 relative z-10 mt-8 md:mt-0">
-                                            <img
-                                                src={slide.sideImage}
-                                                alt="Krisar Academy Collage"
-                                                className="w-full max-w-[500px] md:max-w-none md:w-auto md:h-[70%] object-contain drop-shadow-2xl"
-                                            />
-                                        </div>
-                                    </div>
-                                ) : slide.layout === 'bottom-grid' ? (
-                                    <div className="flex flex-col items-center w-full h-full relative justify-center pt-0 pb-8 md:pt-40 md:pb-12">
-
-                                        {/* Center Content */}
-                                        <div className="flex flex-col items-center text-center z-10 max-w-4xl mx-auto px-4 md:px-0">
-                                            {/* Badge */}
-                                            <div className="bg-[#2A3C55]/60 backdrop-blur-md rounded px-4 py-2 border border-white/20 text-xs md:text-sm mb-4 md:mb-6 inline-flex items-center gap-2 shadow-lg">
-                                                <span className="text-brand-secondary">●</span>
-                                                {slide.badge}
-                                            </div>
-
-                                            {/* Main Heading */}
-                                            <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold mb-3 md:mb-4 leading-tight">
-                                                {slide.title}
-                                            </h1>
-
-                                            {/* Description */}
-                                            <p className="text-gray-200 text-sm md:text-xl mb-6 md:mb-8 leading-relaxed max-w-2xl font-medium">
-                                                {slide.description}
-                                            </p>
-
-                                            {/* CTA Button */}
-                                            <div className="hidden md:block">
-                                                <Button
-                                                    to={slide.buttonLink || "/admission"}
-                                                    className="flex items-center gap-3 transition-colors cursor-pointer bg-brand-secondary text-brand-primary hover:bg-white border-none font-bold px-8 py-3 md:py-4 text-base md:text-lg"
-                                                >
-                                                    {slide.buttonText} <ArrowRight size={24} />
-                                                </Button>
-                                            </div>
-                                        </div>
-
-                                        {/* Bottom Images Grid */}
-                                        <div className="w-full z-20 px-4 md:px-12 max-w-[1600px] mx-auto mt-4 md:mt-auto">
-                                            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-8">
-                                                {slide.images.map((img, idx) => (
-                                                    <div key={idx} className="transform transition-transform hover:-translate-y-1 duration-300">
-                                                        <img src={img} alt={`${slide.title} highlight`} className="w-full h-28 md:h-64 object-cover rounded-sm border-2 border-white/50 shadow-lg" />
-                                                    </div>
-                                                ))}
-                                            </div>
-                                        </div>
-                                    </div>
-                                ) : slide.layout === 'world-record' ? (
-                                    <div className="flex flex-col items-center w-full h-full relative justify-center pt-0 pb-8 md:pb-0">
-
-                                        {/* Center Content */}
-                                        <div className="flex flex-col items-center text-center z-10 max-w-4xl mx-auto px-4 md:px-0">
-                                            {/* Logo */}
-                                            <div className="mb-3 md:mb-6 relative">
-                                                <img src={slide.centerLogo} alt="Kingdom World Records" className="w-24 md:w-44 h-auto drop-shadow-2xl" />
-                                            </div>
-
-                                            {/* Badge */}
-                                            <div className="bg-[#2A3C55]/80 backdrop-blur-md rounded px-3 py-1.5 md:px-6 md:py-2 border border-white/10 text-[10px] md:text-sm mb-3 md:mb-6 inline-flex items-center gap-2 shadow-lg">
-                                                <span className="text-[#FFD700] text-lg leading-none">•</span>
-                                                {slide.badge}
-                                            </div>
-
-                                            {/* Main Heading */}
-                                            <h1 className="text-xl md:text-5xl lg:text-6xl font-bold mb-2 md:mb-4 leading-tight">
-                                                {slide.title}
-                                            </h1>
-
-                                            {/* Description */}
-                                            <p className="text-gray-200 text-[10px] md:text-xl mb-0 md:mb-8 leading-relaxed max-w-2xl font-medium px-2">
-                                                {slide.description}
-                                            </p>
-
-                                            {/* CTA Button - Desktop Only */}
-                                            <div className="hidden md:block">
-                                                <Button
-                                                    to={slide.buttonLink || "/admission"}
-                                                    className="flex items-center gap-3 transition-colors cursor-pointer bg-brand-secondary text-brand-primary hover:bg-white border-none font-bold px-8 py-4 text-lg"
-                                                >
-                                                    {slide.buttonText} <ArrowRight size={24} />
-                                                </Button>
-                                            </div>
-                                        </div>
-
-                                        {/* Images Container */}
-                                        <div className="w-full md:absolute md:inset-0 md:pointer-events-none md:mt-0 z-20 mt-6">
-                                            {/* Mobile Grid View */}
-                                            <div className="grid grid-cols-2 gap-2 px-3 md:hidden">
-                                                {slide.images.map((img, idx) => (
-                                                    <img key={idx} src={img} alt="World Record Event" className="w-full h-24 object-cover" />
-                                                ))}
-                                            </div>
-
-                                            {/* Desktop Floating View */}
-                                            <div className="hidden md:block relative w-full h-full max-w-[1700px] mx-auto">
-                                                {/* Top Left */}
-                                                <img src={slide.images[2]} alt="World Record Celebration 1" className="absolute top-[40%] left-4 lg:left-12 w-92 h-44 object-contain rounded" />
-
-                                                {/* Bottom Left */}
-                                                <img src={slide.images[1]} alt="World Record Celebration 2" className="absolute bottom-[15%] left-4 lg:left-12 w-92 h-44 object-contain rounded" />
-
-                                                {/* Top Right */}
-                                                <img src={slide.images[0]} alt="World Record Celebration 3" className="absolute top-[40%] right-4 lg:right-12 w-92 h-44 object-contain rounded" />
-
-                                                {/* Bottom Right */}
-                                                <img src={slide.images[3]} alt="World Record Celebration 4" className="absolute bottom-[15%] right-4 lg:right-12 w-92 h-44 object-contain rounded" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                ) : slide.layout === 'standard' ? (
-                                    // Standard Layout (Centered Title, Split Content)
-                                    // pt clears the overlaid navbar, pb clears the pagination dots.
-                                    <div className="flex flex-col items-center w-full h-full justify-center gap-5 md:gap-8 pt-24 pb-20 md:pt-0 md:pb-0">
-                                        {/* Main Heading */}
-                                        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-center leading-tight">
-                                            {slide.title}
-                                        </h1>
-
-                                        {/* Admissions Badge */}
-                                        <div className="bg-white/10 backdrop-blur-md rounded px-4 py-2 md:px-6 md:py-2 border border-white/20 text-sm md:text-base text-center">
-                                            <span className="text-brand-secondary">● </span>
-                                            {slide.badge}
-                                        </div>
-
-                                        {/* Content Grid */}
-                                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 w-full items-center">
-                                            {/* Left Content */}
-                                            <div className="text-center md:text-left space-y-2 md:space-y-4 max-w-sm mx-auto md:mx-0 hidden md:block">
-                                                <h3 className="text-brand-secondary text-xl md:text-2xl font-bold">{slide.leftContent.title}</h3>
-                                                <p className="text-sm text-gray-300 leading-relaxed">
-                                                    {slide.leftContent.desc}
-                                                </p>
-                                            </div>
-
-                                            {/* Center Spacer */}
-                                            <div className="flex justify-center">
-                                                <Button
-                                                    to={slide.buttonLink || "/contact"}
-                                                    className="flex items-center gap-3 transition-colors cursor-pointer"
-                                                >
-                                                    {slide.buttonText || "Enquire Now"} <ArrowRight size={20} />
-                                                </Button>
-                                            </div>
-
-                                            {/* Right Content */}
-                                            <div className="text-center md:text-right space-y-2 md:space-y-4 max-w-sm mx-auto md:mx-0 md:ml-auto hidden md:block">
-                                                <h3 className="text-brand-secondary text-xl md:text-2xl font-bold">{slide.rightContent.title}</h3>
-                                                <p className="text-sm text-gray-300 leading-relaxed">
-                                                    {slide.rightContent.desc}
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                ) : slide.layout === 'image-only' ? (
-                                    <div className="w-full h-full"></div>
-                                ) : (
-                                    // Left Aligned Layout (Certificates)
-                                    // pt clears the overlaid navbar, pb clears the pagination dots.
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 w-full items-center pl-0 md:pl-16 px-4 pt-24 pb-20 md:pt-0 md:pb-0">
-                                        {/* Content Column */}
-                                        <div className="text-left space-y-4 md:space-y-6 max-w-2xl">
-                                            {/* Badge */}
-                                            {slide.badge && (
-                                                <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md rounded px-4 py-2 border border-white/20 w-fit">
-                                                    <span className="text-brand-secondary text-xs">●</span>
-                                                    <span className="text-xs md:text-sm font-medium">{slide.badge}</span>
-                                                </div>
-                                            )}
-
-                                            {/* Heading */}
-                                            {slide.title && (
-                                                <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                                                    {slide.title}
-                                                </h1>
-                                            )}
-
-                                            {/* Description */}
-                                            {slide.description && (
-                                                <p className="text-sm md:text-lg text-gray-200 leading-relaxed max-w-xl">
-                                                    {slide.description}
-                                                </p>
-                                            )}
-
-                                            {/* CTA Button */}
-                                            {slide.buttonText && (
-                                                <Button
-                                                    to={slide.buttonLink || "/admission"}
-                                                    className={`inline-flex items-center gap-2 transition-colors cursor-pointer mt-4 ${slide.buttonStyle === 'secondary' ? 'hover:bg-yellow-400' : 'hover:bg-white/20'}`}
-                                                >
-                                                    {slide.buttonText} <ArrowRight size={20} />
-                                                </Button>
-                                            )}
-                                        </div>
-
-                                        {/* Right Column (Certificates) */}
-                                        <div className="hidden md:flex justify-center md:justify-end gap-4 pr-0 md:pr-10">
-                                            {/* Certificates removed as per request */}
-                                        </div>
-                                    </div>
-                                )}
+                        {/* On a phone the slide is a column: the artwork band takes whatever
+                            height the copy leaves it, and the copy sits beneath it on solid
+                            navy. From md up the band goes static and the copy goes absolute,
+                            so they stack again as the full-bleed overlay design. A fixed
+                            percentage band cannot do this — long copy on a short phone would
+                            ride up over the photo. */}
+                        <div className="h-full flex flex-col md:block">
+                            <div className="relative flex-1 min-h-[30%] md:static md:min-h-0">
+                                <SlideArtwork slide={slide} eager={index === 0} />
                             </div>
+
+                            <div className="shrink-0 relative z-10 md:absolute md:inset-0">
+                                <div className='max-w-[1540px] mx-auto px-4 md:h-full flex items-end md:items-center justify-center'>
+
+                                    {slide.layout === 'standard' ? (
+                                        // Standard Layout (Centered Title, Split Content)
+                                        // h-auto on mobile is what lets the parent's items-end
+                                        // settle this block at the foot of the slide; pb clears
+                                        // the pagination dots.
+                                        <div className="flex flex-col items-center w-full h-auto md:h-full justify-center gap-5 md:gap-8 pt-6 pb-14 md:pt-0 md:pb-0">
+                                            {/* Main Heading */}
+                                            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-center leading-tight">
+                                                {slide.title}
+                                            </h1>
+
+                                            {/* Admissions Badge */}
+                                            <div className="bg-white/10 backdrop-blur-md rounded px-4 py-2 md:px-6 md:py-2 border border-white/20 text-sm md:text-base text-center">
+                                                <span className="text-brand-secondary">● </span>
+                                                {slide.badge}
+                                            </div>
+
+                                            {/* Content Grid */}
+                                            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 w-full items-center">
+                                                {/* Left Content */}
+                                                <div className="text-center md:text-left space-y-2 md:space-y-4 max-w-sm mx-auto md:mx-0 hidden md:block">
+                                                    <h3 className="text-brand-secondary text-xl md:text-2xl font-bold">{slide.leftContent.title}</h3>
+                                                    <p className="text-sm text-gray-300 leading-relaxed">
+                                                        {slide.leftContent.desc}
+                                                    </p>
+                                                </div>
+
+                                                {/* Center Spacer */}
+                                                <div className="flex justify-center">
+                                                    <Button
+                                                        to={slide.buttonLink || "/contact"}
+                                                        className="flex items-center gap-3 transition-colors cursor-pointer"
+                                                    >
+                                                        {slide.buttonText || "Enquire Now"} <ArrowRight size={20} />
+                                                    </Button>
+                                                </div>
+
+                                                {/* Right Content */}
+                                                <div className="text-center md:text-right space-y-2 md:space-y-4 max-w-sm mx-auto md:mx-0 md:ml-auto hidden md:block">
+                                                    <h3 className="text-brand-secondary text-xl md:text-2xl font-bold">{slide.rightContent.title}</h3>
+                                                    <p className="text-sm text-gray-300 leading-relaxed">
+                                                        {slide.rightContent.desc}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ) : slide.layout === 'image-only' ? (
+                                        <div className="w-full h-full"></div>
+                                    ) : (
+                                        // Left Aligned Layout. The empty second column is what
+                                        // holds the copy to the left half on md+ and lets the
+                                        // artwork carry the right.
+                                        // pb clears the pagination dots.
+                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 w-full items-center pl-0 md:pl-16 px-4 pt-6 pb-14 md:pt-0 md:pb-0">
+                                            {/* Content Column */}
+                                            <div className="text-left space-y-4 md:space-y-6 max-w-2xl">
+                                                {/* Badge */}
+                                                {slide.badge && (
+                                                    <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md rounded px-4 py-2 border border-white/20 w-fit">
+                                                        <span className="text-brand-secondary text-xs">●</span>
+                                                        <span className="text-xs md:text-sm font-medium">{slide.badge}</span>
+                                                    </div>
+                                                )}
+
+                                                {/* Heading */}
+                                                {slide.title && (
+                                                    <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                                                        {slide.title}
+                                                    </h1>
+                                                )}
+
+                                                {/* Description */}
+                                                {slide.description && (
+                                                    <p className="text-sm md:text-lg text-gray-200 leading-relaxed max-w-xl">
+                                                        {slide.description}
+                                                    </p>
+                                                )}
+
+                                                {/* CTA Button */}
+                                                {slide.buttonText && (
+                                                    <Button
+                                                        to={slide.buttonLink || "/admission"}
+                                                        className="inline-flex items-center gap-2 transition-colors cursor-pointer mt-4 hover:bg-white/20"
+                                                    >
+                                                        {slide.buttonText} <ArrowRight size={20} />
+                                                    </Button>
+                                                )}
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
+                            </div>
+                        </div>
                     </SwiperSlide>
                 ))}
             </Swiper>

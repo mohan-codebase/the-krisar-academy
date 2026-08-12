@@ -4,7 +4,7 @@ import '../../assets/styles/fonts.css'
 const NavbarTop = () => {
     return (
         <>
-            <div className="bg-brand-secondary overflow-hidden py-2 md:py-4 px-4 relative z-50 flex flex-col md:flex-row items-center justify-center md:justify-between gap-2 md:gap-0">
+            <div className="bg-brand-secondary overflow-hidden py-1 md:py-1.5 px-4 relative z-50 flex flex-col md:flex-row items-center justify-center md:justify-between gap-1 md:gap-0">
                 <div className='animate-marquee hidden md:block'>
                     <Link to="/" className="hover:underline">Learners Today, Leaders Tomorrow.</Link>
                 </div>
