@@ -5,7 +5,6 @@ import Button from '../components/ui/Button';
 import PageHero from '../components/common/PageHero';
 import SEO from '../components/common/SEO';
 import ScrollReveal from '../components/common/ScrollReveal';
-// import bgImage from '../assets/images/PageHero/PageHero.avif';
 
 const Contact = () => {
     const [formData, setFormData] = React.useState({

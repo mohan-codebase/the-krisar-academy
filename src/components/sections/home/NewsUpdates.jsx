@@ -4,7 +4,7 @@ import Button from '../../ui/Button';
 import { blogData } from '../../../data/blogData.jsx';
 import { Link } from 'react-router-dom';
 
-import bgImage from '../../../assets/images/home/NewsUpdates/bg.avif';
+import bgImage from '../../../assets/images/home/news-updates/bg.avif';
 
 const NewsUpdates = () => {
     // Take the first 3 items from blogData

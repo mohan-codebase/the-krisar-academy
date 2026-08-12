@@ -1,28 +1,34 @@
-import React, { useCallback } from 'react'
-import useEmblaCarousel from 'embla-carousel-react'
-import Autoplay from 'embla-carousel-autoplay'
+import React, { useRef, useState } from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Autoplay } from 'swiper/modules'
+import 'swiper/css'
 import { ArrowRight, ArrowLeft } from 'lucide-react'
-import activeDot from '../../../assets/images/home/banner/active.svg'
-import inactiveDot from '../../../assets/images/home/banner/not-active.svg'
+import activeDot from '../../../assets/images/ui/carousel-dot-active.svg'
+import inactiveDot from '../../../assets/images/ui/carousel-dot-inactive.svg'
 import Button from '../../ui/Button'
 
-import banner1 from '../../../assets/images/home/banner/banner-1.avif'
-import banner2 from '../../../assets/images/home/banner/newbanner2.png'
-import bannerNew from '../../../assets/images/home/banner/Banner new.avif'
+// Slide artwork. The folder carries the variant, so a slide's mobile art
+// shares its desktop filename: banner/desktop/slide-x.avif + banner/mobile/slide-x.avif.
+// Only slides with dedicated mobile art need a mobile/ import.
+import slideOurPurpose from '../../../assets/images/home/banner/desktop/slide-our-purpose.avif'
+import slideCbseAffiliation from '../../../assets/images/home/banner/desktop/slide-cbse-affiliation.avif'
+import slideAward2026 from '../../../assets/images/home/banner/desktop/slide-award-2026.avif'
+import slideAnnualDay from '../../../assets/images/home/banner/desktop/slide-annual-day.avif'
+import slideEquinox2026 from '../../../assets/images/home/banner/desktop/slide-equinox-2026.avif'
+import slideSpectrumLaunch from '../../../assets/images/home/banner/desktop/slide-spectrum-launch.avif'
+import slideSportsInauguration from '../../../assets/images/home/banner/desktop/slide-sports-inauguration.avif'
+import slideRobotics from '../../../assets/images/home/banner/desktop/slide-robotics.avif'
+import slideBeyondClassroom from '../../../assets/images/home/banner/desktop/slide-beyond-classroom.avif'
+import slideNeetJee from '../../../assets/images/home/banner/desktop/slide-neet-jee.avif'
+import slideWelcome from '../../../assets/images/home/banner/desktop/slide-welcome.avif'
 
-import banner4 from '../../../assets/images/home/banner/banner-4.avif'
-import banner5 from '../../../assets/images/home/banner/banner-5.avif'
-
-import bannerRoboticsNew from '../../../assets/images/home/banner/upscale-banner.jpg'
-import bannerExtra4 from '../../../assets/images/home/banner/banner-by-krisar-acadamy-4.avif'
-import bannerExtra5 from '../../../assets/images/home/banner/banner-by-krisar-acadamy-5.avif'
-import bannerExtra5Mobile from '../../../assets/images/home/banner/mobileview-banner.png'
+import slideAward2026Mobile from '../../../assets/images/home/banner/mobile/slide-award-2026.avif'
 
 const slides = [
     {
         id: 1,
         layout: 'standard',
-        image: banner1,
+        image: slideOurPurpose,
         badge: "Our School Takes Pride in Our Purpose",
         title: <>Our School Takes Pride in <span className="text-brand-secondary">Our Purpose</span></>,
         leftContent: {
@@ -39,7 +45,7 @@ const slides = [
     {
         id: 2,
         layout: 'left-aligned',
-        image: banner2,
+        image: slideCbseAffiliation,
         bgPosition: 'bg-[10%_center]',
         badge: "CBSE Academic Affiliation",
         title: <>CBSE Academic <span className="text-brand-secondary">Affiliation</span></>,
@@ -48,16 +54,17 @@ const slides = [
         buttonLink: "/uat-academics"
     },
     {
-        id: 10,
+        id: 3,
         layout: 'image-only',
-        image: bannerExtra5,
-        mobileImage: bannerExtra5Mobile,
+        image: slideAward2026,
+        mobileImage: slideAward2026Mobile,
         bgPosition: 'bg-center',
+        bgColor: '#061A4D',
     },
     {
-        id: 11,
+        id: 4,
         layout: 'left-aligned',
-        image: bannerExtra4,
+        image: slideAnnualDay,
         bgPosition: 'bg-center',
         badge: "Annual Day Celebration",
         title: <>Frequenzeee'26 <span className="text-brand-secondary">Annual Day</span></>,
@@ -65,26 +72,40 @@ const slides = [
         buttonText: "Explore Events",
         buttonLink: "/uat-beyond-academics"
     },
-    // {
-    //     id: 3,
-    //     layout: 'standard',
-    //     image: banner1,
-    //     badge: "Building Confident Learners",
-    //     title: <>Building <span className="text-brand-secondary">Confident Learners</span></>,
-    //     leftContent: {
-    //         title: <>Think<br />Independently</>,
-    //         desc: "Students are encouraged to think independently and explore new ideas."
-    //     },
-    //     rightContent: {
-    //         title: <>Succeed in<br />the World</>,
-    //         desc: "We focus on strengthening both knowledge and character for success."
-    //     },
-    //     buttonText: "Our Approach"
-    // },
     {
-        id: 4,
+        id: 5,
         layout: 'left-aligned',
-        image: bannerRoboticsNew,
+        image: slideEquinox2026,
+        badge: "Equinox 2026 – Make in India",
+        title: <>A Science Exhibition <span className="text-brand-secondary">World Record</span></>,
+        description: "Our students showcased innovation, science and entrepreneurship at Equinox 2026 – Make in India, an exhibition recognised with a world record attempt certificate.",
+        buttonText: "Explore Events",
+        buttonLink: "/uat-beyond-academics"
+    },
+    {
+        id: 6,
+        layout: 'left-aligned',
+        image: slideSpectrumLaunch,
+        badge: "Spectrum – School Anthem Launch",
+        title: <>Our School <span className="text-brand-secondary">Anthem</span></>,
+        description: "The official launch of Spectrum, the anthem of The Krisar Academy, celebrating the identity, values and shared spirit of our school community.",
+        buttonText: "Watch Highlights",
+        buttonLink: "/gallery"
+    },
+    {
+        id: 7,
+        layout: 'left-aligned',
+        image: slideSportsInauguration,
+        badge: "Sports Facilities Inauguration",
+        title: <>A New Home for <span className="text-brand-secondary">Sport</span></>,
+        description: "Our new cricket ground and sports facilities are open, giving students professional-standard space to train, compete and build discipline through sport.",
+        buttonText: "See Facilities",
+        buttonLink: "/facilities"
+    },
+    {
+        id: 8,
+        layout: 'left-aligned',
+        image: slideRobotics,
         badge: "Engineering the Future",
         title: <>Engineering <span className="text-brand-secondary">the Future</span></>,
         description: "Our advanced visionary steps ensure students move beyond traditional classroom experiences. We elevate learners from passive users to active creators through a curriculum designed for the future.",
@@ -92,19 +113,19 @@ const slides = [
         buttonLink: "/facilities"
     },
     {
-        id: 5,
+        id: 9,
         layout: 'left-aligned',
-        image: banner5,
+        image: slideBeyondClassroom,
         badge: "Learning Beyond the Traditional Classroom",
         title: <>Beyond the <span className="text-brand-secondary">Traditional Classroom</span></>,
-        description: <span>Practical exposure, project-based learning,<br /> and technology-driven <br />instruction help students <br />  connect academicknowledge <br />with real-world applications.</span>,
+        description: "Practical exposure, project-based learning, and technology-driven instruction help students connect academic knowledge with real-world applications.",
         buttonText: "See More",
         buttonLink: "/uat-beyond-academics"
     },
     {
-        id: 6,
+        id: 10,
         layout: 'standard',
-        image: bannerRoboticsNew,
+        image: slideRobotics,
         badge: "AI & Robotics",
         title: <><span className="text-brand-secondary">AI & Robotics</span> Laboratory</>,
         leftContent: {
@@ -119,35 +140,19 @@ const slides = [
         buttonLink: "/contact"
     },
     {
-        id: 7,
+        id: 11,
         layout: 'left-aligned',
-        image: banner4,
+        image: slideNeetJee,
         badge: "NEET & JEE Coaching",
         title: <><span className="text-brand-secondary">NEET & JEE</span> Coaching Success</>,
         description: "Our academy's specialised coaching and mentorship help students succeed in competitive examinations, guiding learners toward careers in medicine and engineering.",
         buttonText: "Admission Now",
         buttonLink: "/admission"
     },
-    // {
-    //     id: 8,
-    //     layout: 'standard',
-    //     image: banner1,
-    //     badge: "Montessori Kindergarten",
-    //     title: <>Montessori <span className="text-brand-secondary">Kindergarten</span></>,
-    //     leftContent: {
-    //         title: <>Independence &<br />Creativity</>,
-    //         desc: "Focusing on building a strong foundation of learning for young children."
-    //     },
-    //     rightContent: {
-    //         title: <>Curiosity &<br />Foundation</>,
-    //         desc: "Our program nurtures independent thinkers from early childhood."
-    //     },
-    //     buttonText: "Join Us"
-    // },
     {
-        id: 9,
+        id: 12,
         layout: 'left-aligned',
-        image: bannerNew,
+        image: slideWelcome,
         badge: "Welcome to The Krisar Academy",
         title: <>Empowering <span className="text-brand-secondary">Future Leaders</span></>,
         description: "Discover a dynamic learning environment that embraces innovation, nurtures potential, and builds the perfect foundation for your child's success.",
@@ -156,94 +161,82 @@ const slides = [
     },
 ]
 
+// Scrim that keeps slide copy legible over the artwork. The left-to-right ramp reads
+// well on a wide screen, but on a narrow portrait one it covers the entire width and
+// smothers the photo, so mobile gets a bottom-up ramp instead: clear at the top,
+// opaque behind the copy at the bottom.
+const overlayClass = (layout) => {
+    if (layout === 'image-only') {
+        return 'bg-gradient-to-b from-brand-primary/70 via-transparent to-transparent'
+    }
+    if (layout === 'world-record' || layout === 'bottom-grid' || layout === 'collage-right') {
+        // These layouts supply their own styled artwork.
+        return 'bg-brand-primary/0'
+    }
+    if (layout === 'left-aligned') {
+        return 'bg-gradient-to-t from-brand-primary via-brand-primary/70 to-brand-primary/20 md:bg-gradient-to-r md:from-brand-primary md:via-brand-primary/65 md:to-brand-primary/10'
+    }
+    return 'bg-brand-primary/40 md:bg-brand-primary/0'
+}
+
+// Renders the slide artwork. Slides with dedicated mobile art get both layers, each
+// gated by a breakpoint, so the scrim only has to be described once.
+const SlideBackground = ({ slide }) => {
+    const box = slide.layout === 'image-only'
+        ? 'inset-x-0 top-24 bottom-16 md:top-28 md:bottom-20 bg-contain bg-no-repeat'
+        : 'inset-0 bg-cover'
+    const layers = slide.mobileImage
+        ? [{ src: slide.mobileImage, visibility: 'md:hidden' }, { src: slide.image, visibility: 'hidden md:block' }]
+        : [{ src: slide.image, visibility: '' }]
+
+    return layers.map(({ src, visibility }) => (
+        <div
+            key={src}
+            className={`absolute z-0 ${box} ${slide.bgPosition || 'bg-center'} ${visibility}`}
+            style={{ backgroundImage: `url(${src})`, backgroundColor: slide.bgColor }}
+        >
+            <div className={`absolute inset-0 ${overlayClass(slide.layout)}`}></div>
+        </div>
+    ))
+}
+
 const Banner = () => {
-    // Memoize plugins to prevent re-initialization on every render
-    const plugins = React.useMemo(() => [Autoplay({ delay: 4000 })], [])
-    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, plugins)
-
-    const scrollPrev = useCallback(() => {
-        if (emblaApi) emblaApi.scrollPrev()
-    }, [emblaApi])
-
-    const scrollNext = useCallback(() => {
-        if (emblaApi) emblaApi.scrollNext()
-    }, [emblaApi])
-
-    // Simple dot navigation
-    const [selectedIndex, setSelectedIndex] = React.useState(0)
-    const [scrollSnaps, setScrollSnaps] = React.useState([])
-
-    const onInit = useCallback((emblaApi) => {
-        setScrollSnaps(emblaApi.scrollSnapList())
-    }, [])
-
-    const onSelect = useCallback((emblaApi) => {
-        setSelectedIndex(emblaApi.selectedScrollSnap())
-    }, [])
-
-    React.useEffect(() => {
-        if (!emblaApi) return
-
-        onInit(emblaApi)
-        onSelect(emblaApi)
-        emblaApi.on('reInit', onInit)
-        emblaApi.on('reInit', onSelect)
-        emblaApi.on('select', onSelect)
-    }, [emblaApi, onInit, onSelect])
+    const swiperRef = useRef(null)
+    const [activeIndex, setActiveIndex] = useState(0)
 
     return (
-        <section className="bg-brand-primary h-[calc(100vh-80px)] md:h-[calc(100vh-100px)] lg:h-[calc(130vh-140px)] min-h-[500px] text-white overflow-hidden relative group">
-            {/* Navigation Arrows */}
+        <section className="bg-brand-primary h-[calc(100svh-80px)] md:h-[calc(100vh-100px)] lg:h-[calc(130vh-140px)] min-h-[600px] md:min-h-[500px] text-white overflow-hidden relative group">
+            {/* Navigation Arrows — hidden on mobile, where they would sit on top of the
+                slide heading. Touch swipe and the pagination dots cover navigation there. */}
             <button
                 type="button"
-                className="absolute top-1/2 left-4 md:left-8 -translate-y-1/2 bg-white/10 hover:bg-white/20 backdrop-blur-sm p-2 md:p-3 rounded-xl border border-white/20 transition-colors z-30 cursor-pointer"
-                onClick={scrollPrev}
+                aria-label="Previous slide"
+                className="hidden md:block absolute top-1/2 left-8 -translate-y-1/2 bg-white/10 hover:bg-white/20 backdrop-blur-sm p-3 rounded-xl border border-white/20 transition-colors z-30 cursor-pointer"
+                onClick={() => swiperRef.current?.slidePrev()}
             >
                 <ArrowLeft size={24} />
             </button>
             <button
                 type="button"
-                className="absolute top-1/2 right-4 md:right-8 -translate-y-1/2 bg-white/10 hover:bg-white/20 backdrop-blur-sm p-2 md:p-3 rounded-xl border border-white/20 transition-colors z-30 cursor-pointer"
-                onClick={scrollNext}
+                aria-label="Next slide"
+                className="hidden md:block absolute top-1/2 right-8 -translate-y-1/2 bg-white/10 hover:bg-white/20 backdrop-blur-sm p-3 rounded-xl border border-white/20 transition-colors z-30 cursor-pointer"
+                onClick={() => swiperRef.current?.slideNext()}
             >
                 <ArrowRight size={24} />
             </button>
 
-            <div className="embla h-full overflow-hidden" ref={emblaRef}>
-                <div className="embla__container h-full flex">
-                    {slides.map((slide, index) => (
-                        <div key={index} className="embla__slide flex-[0_0_100%] min-w-0 relative h-full">
-                            {/* Background Image */}
-                            <div
-                                className={`absolute inset-0 bg-cover z-0 ${slide.bgPosition || 'bg-center'} ${slide.mobileImage ? 'hidden md:block' : ''}`}
-                                style={{ backgroundImage: `url(${slide.image})` }}
-                            >
-                                {/* Gradient Overlay based on layout */}
-                                <div className={`absolute inset-0 ${slide.layout === 'image-only' ? 'hidden' :
-                                    slide.layout === 'world-record' || slide.layout === 'bottom-grid' || slide.layout === 'collage-right'
-                                        ? 'bg-brand-primary/0' // Keep transparent for these custom graphical slides if bg is already dark/styled
-                                        : slide.layout === 'left-aligned'
-                                            ? 'bg-gradient-to-r from-brand-primary via-brand-primary/80 md:via-brand-primary/10 to-brand-primary/40 md:to-transparent'
-                                            : 'bg-brand-primary/40 md:bg-brand-primary/0'
-                                    }`}></div>
-                            </div>
-
-                            {/* Mobile Background Image (if provided) */}
-                            {slide.mobileImage && (
-                                <div
-                                    className={`absolute inset-0 bg-cover z-0 ${slide.bgPosition || 'bg-center'} md:hidden`}
-                                    style={{ backgroundImage: `url(${slide.mobileImage})` }}
-                                >
-                                    {/* Gradient Overlay based on layout */}
-                                    <div className={`absolute inset-0 ${slide.layout === 'image-only' ? 'hidden' :
-                                        slide.layout === 'world-record' || slide.layout === 'bottom-grid' || slide.layout === 'collage-right'
-                                            ? 'bg-brand-primary/0' // Keep transparent for these custom graphical slides if bg is already dark/styled
-                                            : slide.layout === 'left-aligned'
-                                                ? 'bg-gradient-to-r from-brand-primary via-brand-primary/80 md:via-brand-primary/10 to-brand-primary/40 md:to-transparent'
-                                                : 'bg-brand-primary/40 md:bg-brand-primary/0'
-                                        }`}></div>
-                                </div>
-                            )}
+            <Swiper
+                modules={[Autoplay]}
+                loop
+                speed={700}
+                autoplay={{ delay: 4000, disableOnInteraction: false, pauseOnMouseEnter: true }}
+                onSwiper={(swiper) => { swiperRef.current = swiper }}
+                onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+                className="h-full"
+            >
+                {slides.map((slide, index) => (
+                    <SwiperSlide key={slide.id ?? index} className="relative h-full">
+                            <SlideBackground slide={slide} />
 
                             <div className='max-w-[1540px] mx-auto px-4 h-full flex items-center justify-center relative z-10'>
 
@@ -393,20 +386,21 @@ const Banner = () => {
                                     </div>
                                 ) : slide.layout === 'standard' ? (
                                     // Standard Layout (Centered Title, Split Content)
-                                    <div className="flex flex-col items-center w-full pt-28  pb-8 md:py-1 h-full justify-center">
+                                    // pt clears the overlaid navbar, pb clears the pagination dots.
+                                    <div className="flex flex-col items-center w-full h-full justify-center gap-5 md:gap-8 pt-24 pb-20 md:pt-0 md:pb-0">
                                         {/* Main Heading */}
-                                        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-center mb-4 md:mb-0 leading-tight md:mt-42">
+                                        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-center leading-tight">
                                             {slide.title}
                                         </h1>
 
                                         {/* Admissions Badge */}
-                                        <div className="bg-white/10 backdrop-blur-md rounded px-4 py-2 md:px-6 md:py-2 mb-8 md:mb-32 md:mt-12 border border-white/20 text-sm md:text-base text-center">
+                                        <div className="bg-white/10 backdrop-blur-md rounded px-4 py-2 md:px-6 md:py-2 border border-white/20 text-sm md:text-base text-center">
                                             <span className="text-brand-secondary">● </span>
                                             {slide.badge}
                                         </div>
 
                                         {/* Content Grid */}
-                                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 w-full items-center mt-auto md:mt-0">
+                                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 w-full items-center">
                                             {/* Left Content */}
                                             <div className="text-center md:text-left space-y-2 md:space-y-4 max-w-sm mx-auto md:mx-0 hidden md:block">
                                                 <h3 className="text-brand-secondary text-xl md:text-2xl font-bold">{slide.leftContent.title}</h3>
@@ -416,7 +410,7 @@ const Banner = () => {
                                             </div>
 
                                             {/* Center Spacer */}
-                                            <div className="flex justify-center mb-20 md:mt-98">
+                                            <div className="flex justify-center">
                                                 <Button
                                                     to={slide.buttonLink || "/contact"}
                                                     className="flex items-center gap-3 transition-colors cursor-pointer"
@@ -438,9 +432,10 @@ const Banner = () => {
                                     <div className="w-full h-full"></div>
                                 ) : (
                                     // Left Aligned Layout (Certificates)
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 w-full items-center pl-0 md:pl-16 px-4">
+                                    // pt clears the overlaid navbar, pb clears the pagination dots.
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 w-full items-center pl-0 md:pl-16 px-4 pt-24 pb-20 md:pt-0 md:pb-0">
                                         {/* Content Column */}
-                                        <div className="text-left space-y-4 md:space-y-6 max-w-2xl pt-28 md:pt-0">
+                                        <div className="text-left space-y-4 md:space-y-6 max-w-2xl">
                                             {/* Badge */}
                                             {slide.badge && (
                                                 <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md rounded px-4 py-2 border border-white/20 w-fit">
@@ -481,24 +476,28 @@ const Banner = () => {
                                     </div>
                                 )}
                             </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
+                    </SwiperSlide>
+                ))}
+            </Swiper>
 
             {/* Pagination Dots */}
-            <div className="flex justify-center gap-4 absolute bottom-4 md:bottom-8 left-0 right-0 z-30">
-                {scrollSnaps.map((_, index) => (
+            {/* Pagination Dots — 12 dots at gap-4 span the full width of a small phone,
+                so the mobile gap is tightened to keep them clear of the screen edges. */}
+            <div className="flex justify-center items-center gap-2 md:gap-4 px-4 absolute bottom-4 md:bottom-8 left-0 right-0 z-30">
+                {slides.map((_, index) => (
                     <button
                         key={index}
                         type="button"
-                        className="transition-all focus:outline-none cursor-pointer"
-                        onClick={() => emblaApi && emblaApi.scrollTo(index)}
+                        aria-label={`Go to slide ${index + 1}`}
+                        aria-current={index === activeIndex}
+                        className="shrink-0 transition-all focus:outline-none cursor-pointer"
+                        onClick={() => swiperRef.current?.slideToLoop(index)}
                     >
                         <img
-                            src={index === selectedIndex ? activeDot : inactiveDot}
-                            alt={index === selectedIndex ? "Active slide" : "Inactive slide"}
-                            className="w-3 h-3 md:w-4 md:h-4"
+                            src={index === activeIndex ? activeDot : inactiveDot}
+                            alt=""
+                            aria-hidden="true"
+                            className="w-2.5 h-2.5 md:w-4 md:h-4"
                         />
                     </button>
                 ))}

@@ -10,12 +10,12 @@ import {
 } from 'lucide-react';
 import Button from '../../ui/Button';
 
-import img1 from '../../../assets/images/home/Facilities/Rectangle 20.png';
-import img2 from '../../../assets/images/home/Facilities/Rectangle 22.png';
-import img3 from '../../../assets/images/home/Facilities/Rectangle 23.png';
-import img4 from '../../../assets/images/home/Facilities/Rectangle 24.png';
-import img5 from '../../../assets/images/home/Facilities/Rectangle 4520.png';
-import img6 from '../../../assets/images/home/Facilities/Rectangle 4520 (1).png';
+import img1 from '../../../assets/images/home/facilities/academics.png';
+import img2 from '../../../assets/images/home/facilities/campus-life.png';
+import img3 from '../../../assets/images/home/facilities/transport.png';
+import img4 from '../../../assets/images/home/facilities/modern-library.png';
+import img5 from '../../../assets/images/home/facilities/beyond-academics.png';
+import img6 from '../../../assets/images/home/facilities/qualified-teachers.png';
 
 // Placeholder images - using simple colored gradients for now until generic placeholders or real images are set
 // In a real scenario, we would import images. 

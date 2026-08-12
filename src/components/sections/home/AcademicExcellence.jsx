@@ -3,12 +3,12 @@ import { ArrowRight, BookOpen } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 // Local images
-import img1 from '../../../assets/images/home/AcademicExcellence/68209124de66dcbcf4a3b32734ee40051197b4d2.png'
-import img2 from '../../../assets/images/home/AcademicExcellence/f583c67342e8778ae0ecedd4ca91d2565cbb1840.png'
-import img3 from '../../../assets/images/home/AcademicExcellence/26bef2949edf83ca4ebf20cc5a7e0f2ce4a70527.png'
-import img4 from '../../../assets/images/home/AcademicExcellence/kindergarten-new.png'
-import img5 from '../../../assets/images/home/AcademicExcellence/105700e68f1ed99bda141dfff4979d7562c32ce4.png'
-import img6 from '../../../assets/images/home/AcademicExcellence/life-skills-new.png'
+import img1 from '../../../assets/images/home/academic-excellence/academic-approach.png'
+import img2 from '../../../assets/images/home/academic-excellence/academic-curriculum.png'
+import img3 from '../../../assets/images/home/academic-excellence/beyond-academics.png'
+import img4 from '../../../assets/images/home/academic-excellence/kindergarten.png'
+import img5 from '../../../assets/images/home/academic-excellence/primary-school.png'
+import img6 from '../../../assets/images/home/academic-excellence/life-skills-teaching.png'
 
 const academics = [
     {

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { RefreshCw, ArrowRight, X } from 'lucide-react'
 import Button from '../ui/Button'
-import bgImage from '../../assets/images/VirtualTourSection/bg.png'
+import bgImage from '../../assets/images/virtual-tour/bg.png'
 
 const VirtualTourSection = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);

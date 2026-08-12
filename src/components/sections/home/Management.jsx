@@ -1,10 +1,10 @@
 import React from 'react';
 import { Users } from 'lucide-react';
 
-import img1 from '../../../assets/images/home/Management/Mr.K.K.E.V.Krishnamoorthy.png';
-import img2 from '../../../assets/images/home/Management/Mrs.K.Saroja.png';
-import img3 from '../../../assets/images/home/Management/Mr.K.K.Rajan.png';
-import img4 from '../../../assets/images/home/Management/Ms. Sindhu Rajan.png';
+import img1 from '../../../assets/images/home/management/kkev-krishnamoorthy.png';
+import img2 from '../../../assets/images/home/management/k-saroja.png';
+import img3 from '../../../assets/images/home/management/kk-rajan.png';
+import img4 from '../../../assets/images/home/management/sindhu-rajan.png';
 
 const managementTeam = [
     {
@@ -35,7 +35,7 @@ const managementTeam = [
 
 const Management = () => {
     return (
-        <section className="bg-[url('./assets/images/home/NewsUpdates/bg.avif')] bg-cover bg-center md:py-20 relative overflow-hidden">
+        <section className="bg-[url('./assets/images/home/news-updates/bg.avif')] bg-cover bg-center md:py-20 relative overflow-hidden">
             <div className="max-w-[1440px] mx-auto px-4 md:px-8">
 
                 {/* Header */}

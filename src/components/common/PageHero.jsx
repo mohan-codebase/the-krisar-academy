@@ -1,5 +1,5 @@
 import React from 'react';
-import defaultBg from '../../assets/images/home/banner/banner-3.avif';
+import defaultBg from '../../assets/images/page-hero/page-hero-default.avif';
 
 const PageHero = (props) => {
 

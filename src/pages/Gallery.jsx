@@ -17,8 +17,8 @@ const allImages = Object.values(allImagesModules).map(mod => mod.default);
 
 
 // Local Video
-import localVideo from '../assets/videos/compressed-video-1.mp4';
-import localVideoThumb from '../assets/videos/video-1-thumb.jpg';
+import localVideo from '../assets/videos/school-video-1.mp4';
+import localVideoThumb from '../assets/videos/school-video-1-thumb.jpg';
 
 const photoItems = [
     ...allImages

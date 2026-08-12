@@ -6,32 +6,31 @@ import ScrollReveal from '../components/common/ScrollReveal'
 import '../assets/styles/fonts.css'
 
 // Hero Image
-// import heroBg from '../assets/images/beyond-academics/hero-beyond-academics.png'
 
 // Sports Images
 import sports1 from '../assets/images/beyond-academics/sports-activities-1.avif'
-import sports2 from '../assets/images/beyond-academics/Sports & Activities-2.avif'
-import sports3 from '../assets/images/beyond-academics/Sports & Activities-3.avif'
+import sports2 from '../assets/images/beyond-academics/sports-and-activities-2.avif'
+import sports3 from '../assets/images/beyond-academics/sports-and-activities-3.avif'
 
 // Diet Images
-import diet1 from '../assets/images/beyond-academics/Diet & Dining-1.avif'
-import diet2 from '../assets/images/beyond-academics/Diet & Dining-2.avif'
-import diet3 from '../assets/images/beyond-academics/Diet & Dining-3.avif'
+import diet1 from '../assets/images/beyond-academics/diet-and-dining-1.avif'
+import diet2 from '../assets/images/beyond-academics/diet-and-dining-2.avif'
+import diet3 from '../assets/images/beyond-academics/diet-and-dining-3.avif'
 
 // Special Images
-import special1 from '../assets/images/beyond-academics/Special Education-1.avif'
-import special2 from '../assets/images/beyond-academics/Special Education-2.avif'
-import special3 from '../assets/images/beyond-academics/Special Education-3.avif'
+import special1 from '../assets/images/beyond-academics/special-education-1.avif'
+import special2 from '../assets/images/beyond-academics/special-education-2.avif'
+import special3 from '../assets/images/beyond-academics/special-education-3.avif'
 
 // Counselling Images
-import counsel1 from '../assets/images/beyond-academics/Rectangle 4540.avif'
-import counsel2 from '../assets/images/beyond-academics/Rectangle 4541.avif'
-import counsel3 from '../assets/images/beyond-academics/Rectangle 4542.avif'
+import counsel1 from '../assets/images/beyond-academics/counselling-1.avif'
+import counsel2 from '../assets/images/beyond-academics/counselling-2.avif'
+import counsel3 from '../assets/images/beyond-academics/counselling-3.avif'
 
 
 const UatBeyondAcademics = () => {
     return (
-        <div className="bg-[url('./assets/images/home/NewsUpdates/bg.avif')] bg-cover bg-center min-h-screen">
+        <div className="bg-[url('./assets/images/home/news-updates/bg.avif')] bg-cover bg-center min-h-screen">
             <SEO
                 title="Beyond Academics Activities | Krisar Academy Vellore"
                 description="Discover beyond academics programs at Krisar Academy, one of the top CBSE schools in Vellore and Ranipet offering sports, arts and skill development."
@@ -41,7 +40,6 @@ const UatBeyondAcademics = () => {
                 title="Beyond Academics"
                 h1={<span>Learning Does <span className="text-brand-secondary">Not End In Classrooms.</span></span>}
                 description="At Krisar Academy, Students Grow Through Experiences That Shape Character, Confidence, And Care."
-            // bgImage={heroBg}
             />
 
             <section className="max-w-[1440px] mx-auto px-4 md:px-8 py-10 pb-20">

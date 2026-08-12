@@ -2,7 +2,7 @@
 @font-face {
   font-family: 'JosefinSans';
   font-weight: 400;
-  src: url('../font/JosefinSans-Regular.ttf') format('truetype');
+  src: url('../fonts/josefin-sans-regular.ttf') format('truetype');
   font-style: normal;
   font-display: swap;
 }
@@ -11,7 +11,7 @@
 @font-face {
   font-family: 'Outfit';
   font-weight: 400;
-  src: url('../font/Outfit-Regular.ttf') format('truetype');
+  src: url('../fonts/outfit-regular.ttf') format('truetype');
   font-style: normal;
   font-display: swap;
 }

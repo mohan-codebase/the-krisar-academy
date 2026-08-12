@@ -13,7 +13,7 @@ import imgRobotics from '../assets/images/facilities/robotic-lab.png'
 import imgComputer from '../assets/images/facilities/computer-lab.png'
 import imgMaths from '../assets/images/facilities/vedic-maths-lab.png'
 import imgWinners from '../assets/images/facilities/winners-img.jpeg'
-import imgApproach from '../assets/images/academics/Academic Approach.avif'
+import imgApproach from '../assets/images/academics/academic-approach.avif'
 
 const sections = [
     {

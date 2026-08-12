@@ -6,7 +6,7 @@ import Button from '../components/ui/Button';
 import ModernCarousel from '../components/ui/ModernCarousel';
 import ScrollReveal from '../components/common/ScrollReveal';
 
-import bannerImg from '../assets/images/home/banner/upscale-banner.jpg';
+import bannerImg from '../assets/images/home/banner/desktop/slide-robotics.avif';
 
 // Generic icon for gallery items
 import iconGallery from '../assets/images/facilities/modern-library.svg';

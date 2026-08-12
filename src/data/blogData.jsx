@@ -16,23 +16,23 @@ import blog3Inner1 from '../assets/images/blog/blog-minister-inner-1.jpg';
 import blog3Inner2 from '../assets/images/blog/blog-minister-inner-2.jpg';
 
 // April 2026 Blogs
-import blog13 from '../assets/images/gallery/krisar_img_184.jpeg';
-import blog13Inner from '../assets/images/blog/april2k26/April-2.png';
-import blog14 from '../assets/images/gallery/krisar_img_076.jpeg';
-import blog16 from '../assets/images/gallery/krisar_img_200.jpeg';
-import independenceImg from '../assets/images/gallery/krisar_img_085.jpeg';
-import blog18 from '../assets/images/academics/Academic Approach.avif';
+import blog13 from '../assets/images/gallery/krisar-img-184.jpeg';
+import blog13Inner from '../assets/images/blog/2026-04/april-2.png';
+import blog14 from '../assets/images/gallery/krisar-img-076.jpeg';
+import blog16 from '../assets/images/gallery/krisar-img-200.jpeg';
+import independenceImg from '../assets/images/gallery/krisar-img-085.jpeg';
+import blog18 from '../assets/images/academics/academic-approach.avif';
 
 // may 2026 Blogs
-import blog18Inner from '../assets/images/academics/Beyond Academicss.avif';
-import blog19 from '../assets/images/academics/Kindergarten.avif';
-import blog20 from '../assets/images/gallery/krisar_img_085.jpeg';
+import blog18Inner from '../assets/images/academics/beyond-academics.avif';
+import blog19 from '../assets/images/academics/kindergarten.avif';
+import blog20 from '../assets/images/gallery/krisar-img-085.jpeg';
 
 // Gallery Images for Blog
-import gallery1 from '../assets/images/gallery/krisar_img_076.jpeg';
-import gallery2 from '../assets/images/gallery/krisar_img_120.jpeg';
-import gallery3 from '../assets/images/gallery/krisar_img_155.jpeg';
-import gallery4 from '../assets/images/gallery/krisar_img_192.jpeg';
+import gallery1 from '../assets/images/gallery/krisar-img-076.jpeg';
+import gallery2 from '../assets/images/gallery/krisar-img-120.jpeg';
+import gallery3 from '../assets/images/gallery/krisar-img-155.jpeg';
+import gallery4 from '../assets/images/gallery/krisar-img-192.jpeg';
 
 export const blogData = [
     {

@@ -6,9 +6,9 @@ import { FileText, Shield, Flame, Droplets, Users, Calendar, Award, CheckCircle 
 import { Download } from 'lucide-react';
 
 import recognitionPdf from '../assets/pdf/recognition-2.pdf';
-import nocPdf from '../assets/pdf/01-AUG-2026/NOC.pdf';
-import affiliationLetterPdf from '../assets/pdf/01-AUG-2026/Affiliation-Extension-Letter 27.pdf';
-import extensionLetterPdf from '../assets/pdf/01-AUG-2026/AFFILIATION SENIOR SEC EXT-29.pdf';
+import nocPdf from '../assets/pdf/2026-08-01/noc.pdf';
+import affiliationLetterPdf from '../assets/pdf/2026-08-01/affiliation-extension-letter-27.pdf';
+import extensionLetterPdf from '../assets/pdf/2026-08-01/affiliation-senior-sec-ext-29.pdf';
 import mandatoryDisclosurePdf from '../assets/pdf/mandatory-disclosure.pdf';
 import selfCertificationPdf from '../assets/pdf/self-certification.pdf';
 import buildingSafetyPdf from '../assets/pdf/building-safety.pdf';
@@ -17,7 +17,7 @@ import sanitationPdf from '../assets/pdf/sanitation.pdf';
 import trustDeedPdf from '../assets/pdf/trust-deed.pdf';
 import smcPdf from '../assets/pdf/smc.pdf';
 import ptcPdf from '../assets/pdf/ptc.pdf';
-import academicCalendarPdf from '../assets/pdf/01-AUG-2026/academy-calender.pdf';
+import academicCalendarPdf from '../assets/pdf/2026-08-01/academic-calendar.pdf';
 import dFormPdf from '../assets/pdf/d-form.pdf';
 
 const DisclosureCard = ({ title, icon: Icon, href = "#" }) => (
