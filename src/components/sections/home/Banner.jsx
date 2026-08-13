@@ -44,7 +44,7 @@ const slides = [
         id: 2,
         layout: 'left-aligned',
         image: slideCbseAffiliation,
-        focus: 'object-[10%_center]',
+        focus: 'md:object-[10%_center]',
         badge: "CBSE Academic Affiliation",
         title: <>CBSE Academic <span className="text-brand-secondary">Affiliation</span></>,
         description: "Our academy is proudly affiliated with the CBSE board, ensuring that the school provides nationally recognised education with intellectual depth and academic standards.",
@@ -189,8 +189,26 @@ const SlideArtwork = ({ slide, eager }) => {
     const box = slide.layout === 'image-only'
         ? 'inset-x-0 top-24 bottom-16 md:top-28 md:bottom-20'
         : 'inset-0'
-    const fit = slide.layout === 'image-only' ? 'object-contain' : 'object-cover'
-    const layers = slide.mobileImage
+    const isImageOnly = slide.layout === 'image-only'
+    const hasMobileArt = Boolean(slide.mobileImage)
+    // Every source photo here is a landscape event shot (~3:2–2:1). Cropped with
+    // object-cover into the portrait band a phone gives the artwork, that means
+    // covering the height and losing most of the width — people at the edges of a
+    // group photo vanish. Slides without their own mobile crop fall back to showing
+    // the whole frame (object-contain) on small screens, backed by a blurred,
+    // scaled-up copy of the same image so there's no empty letterbox bar. From md up
+    // the band is wide enough that object-cover reads fine, same as before.
+    const needsSafeMobileFit = !isImageOnly && !hasMobileArt
+    const fit = isImageOnly ? 'object-contain' : 'object-cover'
+    const desktopFit = isImageOnly ? 'md:object-contain' : 'md:object-cover'
+    // The section is deliberately taller than any of these ~3:2 event photos are wide
+    // (115svh, so the artwork reads as a full landscape shot rather than a letterbox
+    // strip — see the section below). object-cover has to crop roughly a third of
+    // every photo's height to fill that band; centered, that crop lands half on the
+    // top of people's heads. Biasing the window up trims the (usually empty) floor
+    // and legs at the bottom instead, so faces stay in frame.
+    const desktopFocus = slide.focus || 'md:object-[center_25%]'
+    const layers = hasMobileArt
         ? [{ src: slide.mobileImage, visibility: 'md:hidden' }, { src: slide.image, visibility: 'hidden md:block' }]
         : [{ src: slide.image, visibility: '' }]
 
@@ -201,6 +219,16 @@ const SlideArtwork = ({ slide, eager }) => {
     return (
         <div className="absolute inset-0 z-0" style={{ backgroundColor: slide.bgColor }}>
             <div className={`absolute ${box}`}>
+                {needsSafeMobileFit && (
+                    <img
+                        src={slide.image}
+                        alt=""
+                        aria-hidden="true"
+                        loading={eager ? 'eager' : 'lazy'}
+                        decoding={eager ? 'sync' : 'async'}
+                        className="absolute inset-0 w-full h-full object-cover scale-110 blur-2xl opacity-70 md:hidden"
+                    />
+                )}
                 {layers.map(({ src, visibility }) => (
                     <img
                         key={src}
@@ -209,7 +237,7 @@ const SlideArtwork = ({ slide, eager }) => {
                         loading={eager ? 'eager' : 'lazy'}
                         fetchPriority={eager ? 'high' : 'auto'}
                         decoding={eager ? 'sync' : 'async'}
-                        className={`absolute inset-0 w-full h-full ${fit} ${slide.focus || 'object-center'} ${visibility}`}
+                        className={`absolute inset-0 w-full h-full ${needsSafeMobileFit ? 'object-contain' : fit} object-center ${desktopFit} ${desktopFocus} ${visibility}`}
                     />
                 ))}
                 <div className={`absolute inset-0 ${overlayClass(slide.layout)}`}></div>
