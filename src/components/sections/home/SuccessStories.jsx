@@ -6,7 +6,7 @@ import { Star, ChevronLeft, ChevronRight, User, Quote, X } from 'lucide-react';
 import activeDot from '../../../assets/images/ui/carousel-dot-active.svg';
 import inactiveDot from '../../../assets/images/ui/carousel-dot-inactive.svg';
 
-import img1 from '../../../assets/images/home/success-stories/testimonial-1.jpeg';
+import img1 from '../../../assets/images/home/success-stories/testimonial-1.avif';
 import img2 from '../../../assets/images/home/success-stories/testimonial-2.jpeg';
 import img3 from '../../../assets/images/home/success-stories/testimonial-3.jpeg';
 import img4 from '../../../assets/images/home/success-stories/testimonial-4.jpeg';
