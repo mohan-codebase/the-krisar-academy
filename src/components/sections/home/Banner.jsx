@@ -316,7 +316,7 @@ const Banner = () => {
                             </div>
 
                             <div className="shrink-0 relative z-10">
-                                <div className='max-w-[1540px] mx-auto px-4 flex items-end justify-center'>
+                                <div className='w-full max-w-[1540px] mx-auto px-4 flex items-end justify-center'>
 
                                     {slide.layout === 'standard' ? (
                                         // Standard Layout (Centered Title, Split Content)
