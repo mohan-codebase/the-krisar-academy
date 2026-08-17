@@ -315,7 +315,7 @@ const Banner = () => {
                                 <SlideArtwork slide={slide} eager={index === 0} />
                             </div>
 
-                            <div className="shrink-0 relative z-10">
+                            <div className="shrink-0 relative z-10 w-full overflow-hidden">
                                 <div className='w-full max-w-[1540px] mx-auto px-4 flex items-end justify-center'>
 
                                     {slide.layout === 'standard' ? (
