@@ -15,7 +15,7 @@ import slideAnnualDay from '../../../assets/images/home/banner/desktop/slide-ann
 import slideEquinox2026 from '../../../assets/images/home/banner/desktop/slide-equinox-2026.avif'
 import slideSpectrumLaunch from '../../../assets/images/home/banner/desktop/slide-spectrum-launch.avif'
 import slideSportsInauguration from '../../../assets/images/home/banner/desktop/slide-sports-inauguration.avif'
-import slideRobotics from '../../../assets/images/home/banner/desktop/slide-robotics.avif'
+import slideRobotics from '../../../assets/images/home/banner/desktop/dektop-banner-2.avif'
 import slideBeyondClassroom from '../../../assets/images/home/banner/desktop/slide-beyond-classroom.avif'
 import slideNeetJee from '../../../assets/images/home/banner/desktop/slide-neet-jee.avif'
 import slideWelcome from '../../../assets/images/home/banner/desktop/slide-welcome.avif'
@@ -194,11 +194,6 @@ const SlideArtwork = ({ slide, eager }) => {
     // Every source photo here is a landscape event shot (~3:2–2:1). Cropped with
     // object-cover into the portrait band a phone gives the artwork, that means
     // covering the height and losing most of the width — people at the edges of a
-    // group photo vanish. Slides without their own mobile crop fall back to showing
-    // the whole frame (object-contain) on small screens, backed by a blurred,
-    // scaled-up copy of the same image so there's no empty letterbox bar. From md up
-    // the band is wide enough that object-cover reads fine, same as before.
-    const needsSafeMobileFit = !isImageOnly && !hasMobileArt
     const fit = isImageOnly ? 'object-contain' : 'object-cover'
     const desktopFit = isImageOnly ? 'md:object-contain' : 'md:object-cover'
     // The section is deliberately taller than any of these ~3:2 event photos are wide
@@ -219,16 +214,6 @@ const SlideArtwork = ({ slide, eager }) => {
     return (
         <div className="absolute inset-0 z-0" style={{ backgroundColor: slide.bgColor }}>
             <div className={`absolute ${box}`}>
-                {needsSafeMobileFit && (
-                    <img
-                        src={slide.image}
-                        alt=""
-                        aria-hidden="true"
-                        loading={eager ? 'eager' : 'lazy'}
-                        decoding={eager ? 'sync' : 'async'}
-                        className="absolute inset-0 w-full h-full object-cover scale-110 blur-2xl opacity-70 md:hidden"
-                    />
-                )}
                 {layers.map(({ src, visibility }) => (
                     <img
                         key={src}
@@ -237,7 +222,7 @@ const SlideArtwork = ({ slide, eager }) => {
                         loading={eager ? 'eager' : 'lazy'}
                         fetchPriority={eager ? 'high' : 'auto'}
                         decoding={eager ? 'sync' : 'async'}
-                        className={`absolute inset-0 w-full h-full ${needsSafeMobileFit ? 'object-contain' : fit} object-center ${desktopFit} ${desktopFocus} ${visibility}`}
+                        className={`absolute inset-0 w-full h-full ${fit} object-center ${desktopFit} ${desktopFocus} ${visibility}`}
                     />
                 ))}
                 <div className={`absolute inset-0 ${overlayClass(slide.layout)}`}></div>
