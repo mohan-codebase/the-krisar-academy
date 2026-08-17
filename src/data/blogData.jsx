@@ -125,7 +125,7 @@ export const blogData = [
 
                 <h3 className="text-2xl font-bold mb-4 text-brand-secondary">Judges' Verdict: A Moment of Pride</h3>
                 <p className="mb-6 text-lg leading-relaxed text-white">
-                    Speaking at the event, Mr. Santhosh Shukla remarked, <em className="text-brand-primary font-medium">"This achievement is a testament to the power of young minds and their ability to think originally and express wisdom through words. It is rare to see such a large-scale mobilization of creativity."</em>
+                    Speaking at the event, Mr. Santhosh Shukla remarked, <em className="text-blue-300 font-medium italic">"This achievement is a testament to the power of young minds and their ability to think originally and express wisdom through words. It is rare to see such a large-scale mobilization of creativity."</em>
                 </p>
                 <p className="mb-6 text-lg leading-relaxed text-white">
                     Following the official adjudication process, Ms. Ankitha Shah and Mr. Balaravindran formally issued the certificate, confirming that the Krisarites had successfully set a new world record. They congratulated the school administration for cultivating an environment where such unique talents can thrive.
