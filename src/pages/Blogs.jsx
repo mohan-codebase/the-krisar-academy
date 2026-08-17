@@ -69,7 +69,6 @@ const Blogs = () => {
                                     <h3 className="text-xl font-medium leading-snug mb-4 text-white group-hover:text-brand-secondary transition-colors line-clamp-3">
                                         {item.title}
                                     </h3>
-                                    <p className="text-gray-400 text-sm mb-2">{item.date}</p>
                                     <p className="text-white text-sm mb-4 line-clamp-2">{item.description}</p>
                                 </div>
 
