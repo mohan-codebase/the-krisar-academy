@@ -300,12 +300,14 @@ const Banner = () => {
                 loop
                 speed={700}
                 lazyPreloadPrevNext={1}
+                observer={true}
+                observeParents={true}
                 autoplay={{ delay: 4000, disableOnInteraction: false, pauseOnMouseEnter: true }}
                 onSwiper={(swiper) => { swiperRef.current = swiper }}
-                className="h-full"
+                className="h-full w-full"
             >
                 {slides.map((slide, index) => (
-                    <SwiperSlide key={slide.id ?? index} className="relative h-full">
+                    <SwiperSlide key={slide.id ?? index} className="relative h-full w-full overflow-hidden">
                         {/* The slide is a column at every width: the artwork band takes
                             whatever height the copy leaves it, and the copy sits beneath it
                             on solid navy. A fixed percentage band cannot do this — long copy
