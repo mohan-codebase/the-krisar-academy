@@ -168,7 +168,7 @@ const SuccessStories = () => {
                                                 src={story.image}
                                                 alt={`${story.name} with family at The Krisar Academy`}
                                                 loading="lazy"
-                                                className="relative z-10 max-h-full max-w-full w-auto h-auto object-contain rounded-xl drop-shadow-md"
+                                                className="relative z-10 w-full h-full object-contain rounded-xl drop-shadow-md"
                                             />
                                         </div>
                                     )}
