@@ -15,7 +15,7 @@ import slideAnnualDay from '../../../assets/images/home/banner/desktop/slide-ann
 import slideEquinox2026 from '../../../assets/images/home/banner/desktop/slide-equinox-2026.avif'
 import slideSpectrumLaunch from '../../../assets/images/home/banner/desktop/slide-spectrum-launch.avif'
 import slideSportsInauguration from '../../../assets/images/home/banner/desktop/slide-sports-inauguration.avif'
-import slideRobotics from '../../../assets/images/home/banner/desktop/dektop-banner-2.avif'
+import slideRobotics from '../../../assets/images/home/banner/desktop/dektop-banner-3.avif'
 import slideBeyondClassroom from '../../../assets/images/home/banner/desktop/slide-beyond-classroom.avif'
 import slideNeetJee from '../../../assets/images/home/banner/desktop/slide-neet-jee.avif'
 import slideWelcome from '../../../assets/images/home/banner/desktop/slide-welcome.avif'
