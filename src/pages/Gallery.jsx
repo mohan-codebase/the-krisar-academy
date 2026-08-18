@@ -175,7 +175,7 @@ const Gallery = () => {
                                         <img
                                             src={src}
                                             alt={`Gallery Image ${index + 1}`}
-                                            className="w-full h-[300px] object-cover hover:scale-105 transition-transform duration-500"
+                                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                                         />
                                         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
                                             <div className="bg-black/50 p-3 rounded-full backdrop-blur-sm">

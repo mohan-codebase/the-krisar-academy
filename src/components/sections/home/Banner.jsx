@@ -222,7 +222,7 @@ const SlideArtwork = ({ slide, eager }) => {
                         loading={eager ? 'eager' : 'lazy'}
                         fetchPriority={eager ? 'high' : 'auto'}
                         decoding={eager ? 'sync' : 'async'}
-                        className={`absolute inset-0 w-full h-full ${fit} object-center ${desktopFit} ${desktopFocus} ${visibility}`}
+                        className={`absolute inset-0 w-full h-full ${fit} object-[center_20%] ${desktopFit} ${desktopFocus} ${visibility}`}
                     />
                 ))}
                 <div className={`absolute inset-0 ${overlayClass(slide.layout)}`}></div>
