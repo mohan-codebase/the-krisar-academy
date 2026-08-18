@@ -194,25 +194,15 @@ const SlideArtwork = ({ slide, eager }) => {
     // Every source photo here is a landscape event shot (~3:2–2:1). Cropped with
     // object-cover into the portrait band a phone gives the artwork, that means
     // covering the height and losing most of the width — people at the edges of a
-    const fit = isImageOnly ? 'object-contain' : 'object-cover'
+    const fit = isImageOnly ? 'object-contain' : 'object-contain md:object-cover'
     const desktopFit = isImageOnly ? 'md:object-contain' : 'md:object-cover'
-    // The section is deliberately taller than any of these ~3:2 event photos are wide
-    // (115svh, so the artwork reads as a full landscape shot rather than a letterbox
-    // strip — see the section below). object-cover has to crop roughly a third of
-    // every photo's height to fill that band; centered, that crop lands half on the
-    // top of people's heads. Biasing the window up trims the (usually empty) floor
-    // and legs at the bottom instead, so faces stay in frame.
     const desktopFocus = slide.focus || 'md:object-[center_25%]'
     const layers = hasMobileArt
         ? [{ src: slide.mobileImage, visibility: 'md:hidden' }, { src: slide.image, visibility: 'hidden md:block' }]
         : [{ src: slide.image, visibility: '' }]
 
-    // The insets live on a wrapper rather than on the <img> itself: insets alone do not
-    // size a replaced element, so an image positioned that way falls back to its
-    // intrinsic size and object-fit has nothing to fit against. w-full/h-full against
-    // this box is what makes the cover/contain crop work.
     return (
-        <div className="absolute inset-0 z-0" style={{ backgroundColor: slide.bgColor }}>
+        <div className="absolute inset-0 z-0" style={{ backgroundColor: slide.bgColor || '#061E3F' }}>
             <div className={`absolute ${box}`}>
                 {layers.map(({ src, visibility }) => (
                     <img
@@ -222,7 +212,7 @@ const SlideArtwork = ({ slide, eager }) => {
                         loading={eager ? 'eager' : 'lazy'}
                         fetchPriority={eager ? 'high' : 'auto'}
                         decoding={eager ? 'sync' : 'async'}
-                        className={`absolute inset-0 w-full h-full ${fit} object-[center_20%] ${desktopFit} ${desktopFocus} ${visibility}`}
+                        className={`absolute inset-0 w-full h-full ${fit} object-center ${desktopFit} ${desktopFocus} ${visibility}`}
                     />
                 ))}
                 <div className={`absolute inset-0 ${overlayClass(slide.layout)}`}></div>
