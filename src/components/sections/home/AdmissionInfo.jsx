@@ -5,7 +5,7 @@ import Button from '../../ui/Button';
 
 const AdmissionInfo = () => {
     return (
-        <section className="">
+        <section className="bg-[#0B1221] px-4 py-12 relative">
             <div className="max-w-6xl mx-auto">
                 <div className="relative group overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br from-[#151E38] to-[#0B1221] p-1 md:p-1.5 focus-within:border-brand-secondary/50 transition-all duration-500">
                     <div className="relative z-10 bg-[#0B1221]/80 backdrop-blur-xl rounded-[1.8rem] p-8 md:p-16 flex flex-col md:flex-row items-center gap-12">
