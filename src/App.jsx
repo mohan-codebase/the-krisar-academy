@@ -13,6 +13,7 @@ import Contact from './pages/Contact'
 import Gallery from './pages/Gallery'
 import Admissions from './pages/Admissions'
 import AdmissionEnquiry from './pages/AdmissionEnquiry'
+import ParentsEnquiry from './pages/ParentsEnquiry'
 import CBSEDisclosure from './pages/CBSEDisclosure'
 import ERPAndPayment from './pages/ERPAndPayment'
 import NotFound from './pages/NotFound'
@@ -44,6 +45,7 @@ function App() {
           <Route path="/gallery" element={<PageTransition><Gallery /></PageTransition>} />
           <Route path="/admissions" element={<PageTransition><Admissions /></PageTransition>} />
           <Route path="/admission" element={<PageTransition><AdmissionEnquiry /></PageTransition>} />
+          <Route path="/parents-enquiry" element={<PageTransition><ParentsEnquiry /></PageTransition>} />
           <Route path="/admission-form" element={<PageTransition><Admissions /></PageTransition>} />
           <Route path="/cbse-disclosure" element={<PageTransition><CBSEDisclosure /></PageTransition>} />
           <Route path="/erp-and-payment" element={<PageTransition><ERPAndPayment /></PageTransition>} />

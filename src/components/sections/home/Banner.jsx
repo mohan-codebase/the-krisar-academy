@@ -172,7 +172,7 @@ const COPY_BAND = '15rem'
 
 const overlayClass = (layout) => {
     if (layout === 'image-only') {
-        return 'bg-gradient-to-b from-brand-primary/70 via-transparent to-transparent'
+        return 'bg-linear-to-b from-brand-primary/70 via-transparent to-transparent'
     }
     return FOOT_FADE
 }
@@ -231,7 +231,7 @@ const SlideArtwork = ({ slide, eager }) => {
                     the foot of the band, so the logo needs its own tint to stay legible
                     over a bright photo. */}
                 {slide.layout !== 'image-only' && (
-                    <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-brand-primary/85 to-transparent md:h-32"></div>
+                    <div className="absolute inset-x-0 top-0 h-28 bg-linear-to-b from-brand-primary/85 to-transparent md:h-32"></div>
                 )}
             </div>
         </div>
@@ -250,7 +250,7 @@ const Banner = () => {
     return (
         <section
             aria-label="School highlights"
-            className="bg-brand-primary h-[calc(100svh-2rem)] md:h-[calc(115svh-3.5rem)] min-h-[600px] md:min-h-[700px] text-white overflow-hidden relative group"
+            className="bg-brand-primary h-[calc(100svh-2rem)] md:h-[calc(115svh-3.5rem)] min-h-150 md:min-h-175 text-white overflow-hidden relative group"
         >
             {/* Navigation Arrows — hidden on mobile, where they would sit on top of the
                 slide heading and touch swipe covers navigation anyway.
@@ -303,7 +303,7 @@ const Banner = () => {
                             </div>
 
                             <div className="shrink-0 relative z-10 w-full overflow-hidden">
-                                <div className='w-full max-w-[1540px] mx-auto px-4 flex items-end justify-center'>
+                                <div className='w-full max-w-385 mx-auto px-4 flex items-end justify-center'>
 
                                     {slide.layout === 'standard' ? (
                                         // Standard Layout (Centered Title, Split Content)

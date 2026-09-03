@@ -533,7 +533,7 @@ export const blogData = [
                         alt="Students at Krisar Academy"
                         className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                    <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent flex items-end p-6">
                         <p className="text-white font-medium">Bright minds thriving in a supportive learning environment.</p>
                     </div>
                 </div>
@@ -689,7 +689,7 @@ export const blogData = [
                             </div>
                         </div>
 
-                        <div className="p-8 bg-gradient-to-r from-brand-secondary/10 to-transparent rounded-3xl border border-white/10">
+                        <div className="p-8 bg-linear-to-r from-brand-secondary/10 to-transparent rounded-3xl border border-white/10">
                             <h4 className="text-xl font-bold text-white mb-4">Character & Cultural Development</h4>
                             <p className="text-white/80 font-light leading-relaxed">
                                 Strong values play an important role in shaping responsible individuals. Krisar Academy promotes value-based education through programs that encourage discipline, respect, and social awareness, helping students grow into confident and responsible members of society.
@@ -705,21 +705,21 @@ export const blogData = [
 
                         <div className="space-y-6">
                             <div className="flex gap-4 p-4 rounded-xl bg-white/5 border border-white/10">
-                                <div className="w-10 h-10 rounded-full bg-brand-secondary/20 flex items-center justify-center flex-shrink-0 text-brand-secondary">🛡️</div>
+                                <div className="w-10 h-10 rounded-full bg-brand-secondary/20 flex items-center justify-center shrink-0 text-brand-secondary">🛡️</div>
                                 <div>
                                     <h5 className="font-bold text-white">Secure Campuses & Supervision</h5>
                                     <p className="text-sm text-white/60">CCTV monitoring, controlled entry points, and attentive staff create a protected environment.</p>
                                 </div>
                             </div>
                             <div className="flex gap-4 p-4 rounded-xl bg-white/5 border border-white/10">
-                                <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center flex-shrink-0 text-blue-400">🏥</div>
+                                <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center shrink-0 text-blue-400">🏥</div>
                                 <div>
                                     <h5 className="font-bold text-white">Health Facilities & Student Care</h5>
                                     <p className="text-sm text-white/60">Clean cafeterias and medical rooms provide timely support whenever needed.</p>
                                 </div>
                             </div>
                             <div className="flex gap-4 p-4 rounded-xl bg-white/5 border border-white/10">
-                                <div className="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0 text-green-400">🚌</div>
+                                <div className="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center shrink-0 text-green-400">🚌</div>
                                 <div>
                                     <h5 className="font-bold text-white">Transport & Accessibility</h5>
                                     <p className="text-sm text-white/60">GPS-enabled buses allow parents to monitor daily travel and ensure safe commuting.</p>
@@ -824,7 +824,7 @@ export const blogData = [
                                 "Continuous academic monitoring that helps teachers identify learning gaps"
                             ].map((item, index) => (
                                 <div key={index} className="flex gap-4 p-4 rounded-xl bg-brand-primary/20 border border-white/10">
-                                    <div className="w-8 h-8 rounded-full bg-brand-secondary/20 flex items-center justify-center flex-shrink-0 text-brand-secondary text-sm font-bold">{index + 1}</div>
+                                    <div className="w-8 h-8 rounded-full bg-brand-secondary/20 flex items-center justify-center shrink-0 text-brand-secondary text-sm font-bold">{index + 1}</div>
                                     <p className="text-sm text-white/80">{item}</p>
                                 </div>
                             ))}
@@ -899,7 +899,7 @@ export const blogData = [
                                 { title: "Emergency medical support through on-campus infirmaries", icon: "🏥" }
                             ].map((safety, idx) => (
                                 <div key={idx} className="flex gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-brand-secondary/50 transition-all">
-                                    <div className="w-10 h-10 rounded-full bg-brand-secondary/20 flex items-center justify-center flex-shrink-0 text-brand-secondary">{safety.icon}</div>
+                                    <div className="w-10 h-10 rounded-full bg-brand-secondary/20 flex items-center justify-center shrink-0 text-brand-secondary">{safety.icon}</div>
                                     <div className="flex items-center">
                                         <h5 className="font-bold text-white">{safety.title}</h5>
                                     </div>
@@ -1129,7 +1129,7 @@ export const blogData = [
                                 </p>
                             </div>
                         </div>
-                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[200%] h-full bg-gradient-to-b from-brand-secondary/10 to-transparent -translate-y-1/2 blur-3xl pointer-events-none group-hover:opacity-100 opacity-0 transition-opacity"></div>
+                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[200%] h-full bg-linear-to-b from-brand-secondary/10 to-transparent -translate-y-1/2 blur-3xl pointer-events-none group-hover:opacity-100 opacity-0 transition-opacity"></div>
                     </section>
                 </div>
             </>
@@ -1772,7 +1772,7 @@ export const blogData = [
                         <p className="text-white leading-relaxed mb-4 mt-4">Hybrid options exist for families who want to test the waters. Weekly boarding allows students to stay on campus five days a week and return home on weekends. Day boarding schools offer extended hours with after-school supervision while children sleep at home. These models can work well for families building toward full boarding or wanting structured evenings without full separation.</p>
                     </section>
 
-                    <section className="bg-white/5 p-8 rounded-[2rem] border border-white/10">
+                    <section className="bg-white/5 p-8 rounded-4xl border border-white/10">
                         <h3 className="text-2xl font-bold mb-6 text-brand-secondary">Academic Environment: How Each Model Supports Learning</h3>
                         <p className="text-white leading-relaxed mb-4 mt-4">Both boarding and day schools can deliver strong academic results. The difference is in when and how learning support happens.</p>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -1924,7 +1924,7 @@ export const blogData = [
                         <p className="text-white/70 leading-relaxed mt-4">Structured routines define boarding life. Students have limited unscheduled time, which reduces decision making pressure around leisure while building discipline and time management skills. Day school students have more flexibility, which works well for self-directed children and can become a challenge for those who struggle with unstructured evenings.</p>
                     </section>
 
-                    <section className="bg-brand-secondary/5 p-8 rounded-[2rem] border border-brand-secondary/20">
+                    <section className="bg-brand-secondary/5 p-8 rounded-4xl border border-brand-secondary/20">
                         <h3 className="text-2xl font-bold mb-6 text-brand-secondary text-center">Cost: Understanding the Full Picture</h3>
                         <p className="text-center text-white/70 mb-8">Cost is one of the most important factors in this decision and one of the most frequently underestimated.</p>
                         <h3 className="text-2xl font-bold mb-6 text-brand-secondary text-start">Boarding School Costs</h3>
@@ -2205,7 +2205,7 @@ export const blogData = [
                         </p>
                     </section>
 
-                    <section className="bg-white/5 p-8 rounded-[2rem] border border-white/10">
+                    <section className="bg-white/5 p-8 rounded-4xl border border-white/10">
                         <h3 className="text-2xl font-bold mb-6 text-brand-secondary">Academic Benefits: How Extracurricular Activities Improve Academic Performance</h3>
                         <p className="text-white/80 leading-relaxed mb-6 font-light">
                             The link between extracurricular involvement and academic performance is one of the most consistently supported findings in education research. 
@@ -2461,7 +2461,7 @@ export const blogData = [
                         </p>
                     </section>
 
-                    <section className="bg-white/5 p-8 rounded-[2rem] border border-white/10">
+                    <section className="bg-white/5 p-8 rounded-4xl border border-white/10">
                         <h3 className="text-2xl font-bold mb-6 text-brand-secondary">What Is a Smart Classroom?</h3>
                         <p className="text-lg leading-relaxed text-white mb-6">
                             A smart classroom is a learning space equipped with advanced technology that enables teachers to deliver lessons in ways that go beyond what traditional classrooms allow.
@@ -2551,7 +2551,7 @@ export const blogData = [
                         <h3 className="text-2xl font-bold mb-6 text-brand-secondary border-l-4 border-brand-secondary pl-4">The AI and Robotics Laboratory: Smart Learning Beyond the Classroom</h3>
                         <div className="my-8 overflow-hidden rounded-2xl shadow-2xl border border-white/10 group relative">
                             <img src={blog18Inner} alt="Students working in the AI and Robotics Laboratory at The Krisar Academy" className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                            <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent flex items-end p-6">
                                 <p className="text-white font-medium">Hands-on learning in Krisar's AI and Robotics Laboratory</p>
                             </div>
                         </div>
@@ -2571,7 +2571,7 @@ export const blogData = [
                         </div>
                     </section>
 
-                    <section className="bg-white/5 p-8 rounded-[2rem] border border-white/10">
+                    <section className="bg-white/5 p-8 rounded-4xl border border-white/10">
                         <h3 className="text-2xl font-bold mb-6 text-brand-secondary">Advanced Laboratories: Science Learning Beyond Writing Notes</h3>
                         <p className="text-lg leading-relaxed text-white mb-6">
                             The smart classroom approach at Krisar carries through into the advanced science and technology laboratories.
@@ -2747,7 +2747,7 @@ export const blogData = [
                         </p>
                     </section>
 
-                    <section className="bg-white/5 p-8 rounded-[2rem] border border-white/10">
+                    <section className="bg-white/5 p-8 rounded-4xl border border-white/10">
                         <h3 className="text-2xl font-bold mb-6 text-brand-secondary">What Is Holistic Learning?</h3>
                         <p className="text-lg leading-relaxed text-white mb-6">
                             Holistic learning is a comprehensive approach to education that develops students across multiple dimensions simultaneously.
@@ -3124,7 +3124,7 @@ export const blogData = [
                     The school was built with a clear purpose: to bring academic excellence and holistic education to the Arani-Arcot-Ranipet belt within reach of every family in the region.
                 </p>
 
-                <section className="bg-gradient-to-r from-brand-secondary/10 to-transparent p-8 rounded-3xl border border-white/10 mb-12">
+                <section className="bg-linear-to-r from-brand-secondary/10 to-transparent p-8 rounded-3xl border border-white/10 mb-12">
                     <h3 className="text-2xl font-bold mb-6 text-brand-secondary">Why CBSE Matters for Students in Ranipet</h3>
                     <p className="text-lg leading-relaxed text-white mb-6">
                         The choice between CBSE and state board education has long-term consequences that parents in Ranipet District need to understand clearly.
