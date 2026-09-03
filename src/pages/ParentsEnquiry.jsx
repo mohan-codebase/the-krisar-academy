@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 import SEO from '../components/common/SEO';
 
 const InputField = ({ label, name, type = "text", value, onChange, placeholder, required = false, options = null }) => (
-    <div className="flex flex-col gap-1.5 mb-4">
-        <label className="text-gray-300 text-xs font-semibold tracking-wide uppercase">{label} {required && <span className="text-yellow-400">*</span>}</label>
+    <div className="flex flex-col gap-1 mb-2.5">
+        <label className="text-gray-300 text-[11px] font-semibold tracking-wide uppercase">{label} {required && <span className="text-yellow-400">*</span>}</label>
         {options ? (
             <select
                 name={name}
                 value={value}
                 onChange={onChange}
-                className="bg-white/5 backdrop-blur-md border border-white/10 text-white rounded-xl px-4 py-3.5 focus:outline-none focus:border-yellow-400 focus:bg-white/10 transition-all w-full appearance-none shadow-inner"
+                className="bg-white/5 backdrop-blur-md border border-white/10 text-white rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:border-yellow-400 focus:bg-white/10 transition-all w-full appearance-none shadow-inner"
                 required={required}
             >
                 <option value="" disabled className="text-gray-900">Select {label}</option>
@@ -26,7 +26,7 @@ const InputField = ({ label, name, type = "text", value, onChange, placeholder, 
                 value={value}
                 onChange={onChange}
                 placeholder={placeholder}
-                className="bg-white/5 backdrop-blur-md border border-white/10 text-white rounded-xl px-4 py-3.5 focus:outline-none focus:border-yellow-400 focus:bg-white/10 transition-all w-full placeholder-gray-500 shadow-inner"
+                className="bg-white/5 backdrop-blur-md border border-white/10 text-white rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:border-yellow-400 focus:bg-white/10 transition-all w-full placeholder-gray-500 shadow-inner"
                 required={required}
             />
         )}
@@ -111,7 +111,7 @@ const ParentsEnquiry = () => {
                     <p className="text-gray-400 text-sm">Please fill out the form below to register your interest for upcoming admissions.</p>
                 </div>
 
-                <div className="w-full bg-white/5 backdrop-blur-2xl border border-white/10 rounded-3xl p-6 sm:p-8 shadow-2xl relative">
+                <div className="w-full bg-white/5 backdrop-blur-2xl border border-white/10 rounded-3xl p-4 sm:p-5 shadow-2xl relative">
                     
                     {isSubmitted ? (
                         <div className="text-center py-12 animate-fadeIn">
@@ -148,10 +148,10 @@ const ParentsEnquiry = () => {
                                 />
                             </div>
 
-                            <div className="flex flex-col gap-1.5 mb-4 mt-3!">
-                                <label className="text-gray-300 text-xs font-semibold tracking-wide uppercase">Mobile Number <span className="text-yellow-400">*</span></label>
+                            <div className="flex flex-col gap-1 mb-2.5 mt-1.5!">
+                                <label className="text-gray-300 text-[11px] font-semibold tracking-wide uppercase">Mobile Number <span className="text-yellow-400">*</span></label>
                                 <div className="flex shadow-inner rounded-xl overflow-hidden">
-                                    <div className="bg-white/5 backdrop-blur-md border border-r-0 border-white/10 text-gray-400 px-4 py-3.5 flex items-center font-medium">
+                                    <div className="bg-white/5 backdrop-blur-md border border-r-0 border-white/10 text-gray-400 px-3 py-2.5 text-sm flex items-center font-medium">
                                         +91
                                     </div>
                                     <input
@@ -162,13 +162,13 @@ const ParentsEnquiry = () => {
                                         placeholder="10-digit number"
                                         pattern="[0-9]{10}"
                                         title="Please enter a valid 10-digit mobile number"
-                                        className="bg-white/5 backdrop-blur-md border border-l-0 border-white/10 text-white px-4 py-3.5 focus:outline-none focus:bg-white/10 transition-all w-full placeholder-gray-500"
+                                        className="bg-white/5 backdrop-blur-md border border-l-0 border-white/10 text-white px-3 py-2.5 text-sm focus:outline-none focus:bg-white/10 transition-all w-full placeholder-gray-500"
                                         required
                                     />
                                 </div>
                             </div>
 
-                            <div className="mt-3!">
+                            <div className="mt-1.5!">
                                 <InputField 
                                     label="Email Address" 
                                     name="parentEmail" 
@@ -180,7 +180,7 @@ const ParentsEnquiry = () => {
                                 />
                             </div>
 
-                            <div className="mt-3!">
+                            <div className="mt-1.5!">
                                 <InputField 
                                     label="Admission Type" 
                                     name="admissionType" 
@@ -191,7 +191,7 @@ const ParentsEnquiry = () => {
                                 />
                             </div>
 
-                            <div className="grid grid-cols-2 gap-4 mt-3!">
+                            <div className="grid grid-cols-2 gap-4 mt-1.5!">
                                 <InputField 
                                     label="State" 
                                     name="addressState" 
@@ -210,7 +210,7 @@ const ParentsEnquiry = () => {
                                 />
                             </div>
 
-                            <div className="mt-3!">
+                            <div className="mt-1.5!">
                                 <InputField 
                                     label="Local Area" 
                                     name="addressArea" 
@@ -221,7 +221,7 @@ const ParentsEnquiry = () => {
                                 />
                             </div>
 
-                            <div className="mt-3! mb-6">
+                            <div className="mt-1.5! mb-6">
                                 <InputField 
                                     label="Session Applying For" 
                                     name="sessionApplyingFor" 
@@ -257,11 +257,11 @@ const ParentsEnquiry = () => {
                                 </div>
                             )}
 
-                            <div className="pt-6">
+                            <div className="pt-4">
                                 <button 
                                     type="submit" 
                                     disabled={isSubmitting}
-                                    className="w-full flex items-center justify-center gap-2 py-4 px-6 bg-yellow-400 hover:bg-yellow-500 text-[#0B1221] font-bold text-lg rounded-xl transition-all hover:scale-[1.02] active:scale-[0.98] shadow-[0_4px_24px_rgba(250,204,21,0.2)] disabled:opacity-70 disabled:hover:scale-100 disabled:cursor-not-allowed"
+                                    className="w-full flex items-center justify-center gap-2 py-3 px-6 text-base bg-yellow-400 hover:bg-yellow-500 text-[#0B1221] font-bold text-base rounded-xl transition-all hover:scale-[1.02] active:scale-[0.98] shadow-[0_4px_24px_rgba(250,204,21,0.2)] disabled:opacity-70 disabled:hover:scale-100 disabled:cursor-not-allowed"
                                 >
                                     {isSubmitting ? 'Submitting...' : 'Complete Enquiry'}
                                     {!isSubmitting && <ChevronRight size={22} className="opacity-80" />}
